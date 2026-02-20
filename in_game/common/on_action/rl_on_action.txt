@@ -1,0 +1,190 @@
+monthly_country_pulse = {
+    on_actions = {
+        rl_monthly_action
+    }
+}
+
+rl_monthly_action = {
+    trigger = {}
+    effect = {
+        if = {
+            limit = {
+                has_variable = num_advances
+            }
+            # If num_advances is set, this country has had its initialization
+            # We check if they have more advances rn than they had last month
+            # If they do, we fire the event, then increment the variable
+            if = {
+                limit = {
+                    num_of_advances_researched > var:num_advances
+                }
+                change_variable = {
+                    name = num_advances
+                    add = 1
+                }
+                random_list = {
+                    1 = { set_variable = { name = rl_adm_event value = 0 } }
+                    1 = { set_variable = { name = rl_adm_event value = 1 } }
+                    1 = { set_variable = { name = rl_adm_event value = 2 } }
+                    1 = { set_variable = { name = rl_adm_event value = 3 } }
+                    1 = { set_variable = { name = rl_adm_event value = 4 } }
+                    1 = { set_variable = { name = rl_adm_event value = 5 } }
+                    1 = { set_variable = { name = rl_adm_event value = 6 } }
+                    1 = { set_variable = { name = rl_adm_event value = 7 } }
+                    1 = { set_variable = { name = rl_adm_event value = 8 } }
+                    1 = { set_variable = { name = rl_adm_event value = 9 } }
+                    1 = { set_variable = { name = rl_adm_event value = 10 } }
+                    1 = { set_variable = { name = rl_adm_event value = 11 } }
+                    1 = { set_variable = { name = rl_adm_event value = 12 } }
+                    1 = { set_variable = { name = rl_adm_event value = 13 } }
+                    1 = { set_variable = { name = rl_adm_event value = 14 } }
+                    1 = { set_variable = { name = rl_adm_event value = 15 } }
+                    1 = { set_variable = { name = rl_adm_event value = 16 } }
+                    1 = { set_variable = { name = rl_adm_event value = 17 } }
+                    1 = { set_variable = { name = rl_adm_event value = 18 } }
+                    1 = { set_variable = { name = rl_adm_event value = 19 } }
+                    1 = { set_variable = { name = rl_adm_event value = 20 } }
+                    1 = { set_variable = { name = rl_adm_event value = 21 } }
+                    1 = { set_variable = { name = rl_adm_event value = 22 } }
+                    1 = { set_variable = { name = rl_adm_event value = 23 } }
+                    1 = { set_variable = { name = rl_adm_event value = 24 } }
+                    1 = { set_variable = { name = rl_adm_event value = 25 } }
+                    1 = { set_variable = { name = rl_adm_event value = 26 } }
+                    1 = { set_variable = { name = rl_adm_event value = 27 } }
+                    1 = { set_variable = { name = rl_adm_event value = 28 } }
+                    1 = { set_variable = { name = rl_adm_event value = 29 } }
+                    1 = { set_variable = { name = rl_adm_event value = 30 } }
+                    1 = { set_variable = { name = rl_adm_event value = 31 } }
+                    1 = { set_variable = { name = rl_adm_event value = 32 } }
+                    1 = { set_variable = { name = rl_adm_event value = 33 } }
+                    1 = { set_variable = { name = rl_adm_event value = 34 } }
+                    1 = { set_variable = { name = rl_adm_event value = 35 } }
+                    1 = { set_variable = { name = rl_adm_event value = 36 } }
+                    1 = { set_variable = { name = rl_adm_event value = 37 } }
+                    1 = { set_variable = { name = rl_adm_event value = 38 } }
+                    1 = { set_variable = { name = rl_adm_event value = 39 } }
+                    1 = { set_variable = { name = rl_adm_event value = 40 } }
+                    1 = { set_variable = { name = rl_adm_event value = 41 } }
+                    1 = { set_variable = { name = rl_adm_event value = 42 } }
+                    1 = { set_variable = { name = rl_adm_event value = 43 } }
+                    1 = { set_variable = { name = rl_adm_event value = 44 } }
+                    1 = { set_variable = { name = rl_adm_event value = 45 } }
+                    1 = { set_variable = { name = rl_adm_event value = 46 } }
+                    1 = { set_variable = { name = rl_adm_event value = 47 } }
+                    1 = { set_variable = { name = rl_adm_event value = 48 } }
+                    1 = { set_variable = { name = rl_adm_event value = 49 } }
+                    1 = { set_variable = { name = rl_adm_event value = 50 } }
+                    1 = { set_variable = { name = rl_adm_event value = 51 } }
+                    1 = { set_variable = { name = rl_adm_event value = 52 } }
+                    1 = { set_variable = { name = rl_adm_event value = 53 } }
+                    1 = { set_variable = { name = rl_adm_event value = 54 } }
+                    1 = { set_variable = { name = rl_adm_event value = 55 } }
+                    1 = { set_variable = { name = rl_adm_event value = 56 } }
+                    1 = { set_variable = { name = rl_adm_event value = 57 } }
+                    1 = { set_variable = { name = rl_adm_event value = 58 } }
+                }
+                random_list = {
+                    1 = { set_variable = { name = rl_dip_event value = 0 } }
+                    1 = { set_variable = { name = rl_dip_event value = 1 } }
+                    1 = { set_variable = { name = rl_dip_event value = 2 } }
+                    1 = { set_variable = { name = rl_dip_event value = 3 } }
+                    1 = { set_variable = { name = rl_dip_event value = 4 } }
+                    1 = { set_variable = { name = rl_dip_event value = 5 } }
+                    1 = { set_variable = { name = rl_dip_event value = 6 } }
+                    1 = { set_variable = { name = rl_dip_event value = 7 } }
+                    1 = { set_variable = { name = rl_dip_event value = 8 } }
+                    1 = { set_variable = { name = rl_dip_event value = 9 } }
+                    1 = { set_variable = { name = rl_dip_event value = 10 } }
+                    1 = { set_variable = { name = rl_dip_event value = 11 } }
+                    1 = { set_variable = { name = rl_dip_event value = 12 } }
+                    1 = { set_variable = { name = rl_dip_event value = 13 } }
+                    1 = { set_variable = { name = rl_dip_event value = 14 } }
+                    1 = { set_variable = { name = rl_dip_event value = 15 } }
+                    1 = { set_variable = { name = rl_dip_event value = 16 } }
+                    1 = { set_variable = { name = rl_dip_event value = 17 } }
+                    1 = { set_variable = { name = rl_dip_event value = 18 } }
+                    1 = { set_variable = { name = rl_dip_event value = 19 } }
+                    1 = { set_variable = { name = rl_dip_event value = 20 } }
+                    1 = { set_variable = { name = rl_dip_event value = 21 } }
+                    1 = { set_variable = { name = rl_dip_event value = 22 } }
+                    1 = { set_variable = { name = rl_dip_event value = 23 } }
+                    1 = { set_variable = { name = rl_dip_event value = 24 } }
+                    1 = { set_variable = { name = rl_dip_event value = 25 } }
+                    1 = { set_variable = { name = rl_dip_event value = 26 } }
+                    1 = { set_variable = { name = rl_dip_event value = 27 } }
+                    1 = { set_variable = { name = rl_dip_event value = 28 } }
+                    1 = { set_variable = { name = rl_dip_event value = 29 } }
+                    1 = { set_variable = { name = rl_dip_event value = 30 } }
+                    1 = { set_variable = { name = rl_dip_event value = 31 } }
+                    1 = { set_variable = { name = rl_dip_event value = 32 } }
+                    1 = { set_variable = { name = rl_dip_event value = 33 } }
+                    1 = { set_variable = { name = rl_dip_event value = 34 } }
+                    1 = { set_variable = { name = rl_dip_event value = 35 } }
+                    1 = { set_variable = { name = rl_dip_event value = 36 } }
+                    1 = { set_variable = { name = rl_dip_event value = 37 } }
+                    1 = { set_variable = { name = rl_dip_event value = 38 } }
+                    1 = { set_variable = { name = rl_dip_event value = 39 } }
+                    1 = { set_variable = { name = rl_dip_event value = 40 } }
+                    1 = { set_variable = { name = rl_dip_event value = 41 } }
+                    1 = { set_variable = { name = rl_dip_event value = 42 } }
+                    1 = { set_variable = { name = rl_dip_event value = 43 } }
+                    1 = { set_variable = { name = rl_dip_event value = 44 } }
+                    1 = { set_variable = { name = rl_dip_event value = 45 } }
+                    1 = { set_variable = { name = rl_dip_event value = 46 } }
+                    1 = { set_variable = { name = rl_dip_event value = 47 } }
+                    1 = { set_variable = { name = rl_dip_event value = 48 } }
+                    1 = { set_variable = { name = rl_dip_event value = 49 } }
+                    1 = { set_variable = { name = rl_dip_event value = 50 } }
+                    1 = { set_variable = { name = rl_dip_event value = 51 } }
+                }
+                random_list = {
+                    1 = { set_variable = { name = rl_mil_event value = 0 } }
+                    1 = { set_variable = { name = rl_mil_event value = 1 } }
+                    1 = { set_variable = { name = rl_mil_event value = 2 } }
+                    1 = { set_variable = { name = rl_mil_event value = 3 } }
+                    1 = { set_variable = { name = rl_mil_event value = 4 } }
+                    1 = { set_variable = { name = rl_mil_event value = 5 } }
+                    1 = { set_variable = { name = rl_mil_event value = 6 } }
+                    1 = { set_variable = { name = rl_mil_event value = 7 } }
+                    1 = { set_variable = { name = rl_mil_event value = 8 } }
+                    1 = { set_variable = { name = rl_mil_event value = 9 } }
+                    1 = { set_variable = { name = rl_mil_event value = 10 } }
+                    1 = { set_variable = { name = rl_mil_event value = 11 } }
+                    1 = { set_variable = { name = rl_mil_event value = 12 } }
+                    1 = { set_variable = { name = rl_mil_event value = 13 } }
+                    1 = { set_variable = { name = rl_mil_event value = 14 } }
+                    1 = { set_variable = { name = rl_mil_event value = 15 } }
+                    1 = { set_variable = { name = rl_mil_event value = 16 } }
+                    1 = { set_variable = { name = rl_mil_event value = 17 } }
+                    1 = { set_variable = { name = rl_mil_event value = 18 } }
+                    1 = { set_variable = { name = rl_mil_event value = 19 } }
+                    1 = { set_variable = { name = rl_mil_event value = 20 } }
+                    1 = { set_variable = { name = rl_mil_event value = 21 } }
+                    1 = { set_variable = { name = rl_mil_event value = 22 } }
+                    1 = { set_variable = { name = rl_mil_event value = 23 } }
+                    1 = { set_variable = { name = rl_mil_event value = 24 } }
+                    1 = { set_variable = { name = rl_mil_event value = 25 } }
+                    1 = { set_variable = { name = rl_mil_event value = 26 } }
+                    1 = { set_variable = { name = rl_mil_event value = 27 } }
+                    1 = { set_variable = { name = rl_mil_event value = 28 } }
+                    1 = { set_variable = { name = rl_mil_event value = 29 } }
+                    1 = { set_variable = { name = rl_mil_event value = 30 } }
+                    1 = { set_variable = { name = rl_mil_event value = 31 } }
+                    1 = { set_variable = { name = rl_mil_event value = 32 } }
+                    1 = { set_variable = { name = rl_mil_event value = 33 } }
+                    1 = { set_variable = { name = rl_mil_event value = 34 } }
+                    1 = { set_variable = { name = rl_mil_event value = 35 } }
+                }
+                trigger_event_silently = {
+                    id = rl_events.1
+                }
+            }
+        } else = {
+            # If num_advances is unset, this country has not been initialized
+            set_variable = {
+                name = num_advances
+                value = num_of_advances_researched
+            }
+        }
+    }
+}

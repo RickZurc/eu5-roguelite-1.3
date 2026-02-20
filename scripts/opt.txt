@@ -1,0 +1,2352 @@
+
+    option = {
+		name = rl_events.1.adm.0
+        trigger = { var:rl_adm_event = { compare_value = 0 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_0 }
+                change_variable = { name = var_adm_0 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_0 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = research_speed_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.1
+        trigger = { var:rl_adm_event = { compare_value = 1 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_1 }
+                change_variable = { name = var_adm_1 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_1 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_max_control_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.2
+        trigger = { var:rl_adm_event = { compare_value = 2 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_2 }
+                change_variable = { name = var_adm_2 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_2 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_distance_from_capital_speed_propagation_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.3
+        trigger = { var:rl_adm_event = { compare_value = 3 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_3 }
+                change_variable = { name = var_adm_3 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_3 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = clergy_estate_target_satisfaction_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.4
+        trigger = { var:rl_adm_event = { compare_value = 4 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_4 }
+                change_variable = { name = var_adm_4 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_4 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_crown_estate_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.5
+        trigger = { var:rl_adm_event = { compare_value = 5 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_5 }
+                change_variable = { name = var_adm_5 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_5 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_pop_promotion_speed_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.6
+        trigger = { var:rl_adm_event = { compare_value = 6 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_6 }
+                change_variable = { name = var_adm_6 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_6 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_pop_conversion_speed_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.7
+        trigger = { var:rl_adm_event = { compare_value = 7 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_7 }
+                change_variable = { name = var_adm_7 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_7 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_pop_assimilation_speed_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.8
+        trigger = { var:rl_adm_event = { compare_value = 8 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_8 }
+                change_variable = { name = var_adm_8 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_8 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = clergy_estate_max_tax_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.9
+        trigger = { var:rl_adm_event = { compare_value = 9 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_9 }
+                change_variable = { name = var_adm_9 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_9 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = legislative_efficiency_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.10
+        trigger = { var:rl_adm_event = { compare_value = 10 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_10 }
+                change_variable = { name = var_adm_10 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_10 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_war_score_cost_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.11
+        trigger = { var:rl_adm_event = { compare_value = 11 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_11 }
+                change_variable = { name = var_adm_11 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_11 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_prestige_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.12
+        trigger = { var:rl_adm_event = { compare_value = 12 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_12 }
+                change_variable = { name = var_adm_12 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_12 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_production_efficiency_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.13
+        trigger = { var:rl_adm_event = { compare_value = 13 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_13 }
+                change_variable = { name = var_adm_13 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_13 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = country_cabinet_efficiency_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.14
+        trigger = { var:rl_adm_event = { compare_value = 14 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_14 }
+                change_variable = { name = var_adm_14 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_14 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = tax_income_efficiency_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.15
+        trigger = { var:rl_adm_event = { compare_value = 15 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_15 }
+                change_variable = { name = var_adm_15 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_15 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_build_buildings_cost_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.16
+        trigger = { var:rl_adm_event = { compare_value = 16 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_16 }
+                change_variable = { name = var_adm_16 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_16 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = bank_interest_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.17
+        trigger = { var:rl_adm_event = { compare_value = 17 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_17 }
+                change_variable = { name = var_adm_17 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_17 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = build_gravel_road_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.18
+        trigger = { var:rl_adm_event = { compare_value = 18 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_18 }
+                change_variable = { name = var_adm_18 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_18 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = build_modern_road_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.19
+        trigger = { var:rl_adm_event = { compare_value = 19 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_19 }
+                change_variable = { name = var_adm_19 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_19 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = build_paved_road_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.20
+        trigger = { var:rl_adm_event = { compare_value = 20 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_20 }
+                change_variable = { name = var_adm_20 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_20 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = build_railroad_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.21
+        trigger = { var:rl_adm_event = { compare_value = 21 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_21 }
+                change_variable = { name = var_adm_21 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_21 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = building_upkeep_costs_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.22
+        trigger = { var:rl_adm_event = { compare_value = 22 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_22 }
+                change_variable = { name = var_adm_22 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_22 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = city_upgrade_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.23
+        trigger = { var:rl_adm_event = { compare_value = 23 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_23 }
+                change_variable = { name = var_adm_23 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_23 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = court_spending_cost_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.24
+        trigger = { var:rl_adm_event = { compare_value = 24 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_24 }
+                change_variable = { name = var_adm_24 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_24 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = expand_rgo_farming_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.25
+        trigger = { var:rl_adm_event = { compare_value = 25 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_25 }
+                change_variable = { name = var_adm_25 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_25 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = expand_rgo_forestry_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.26
+        trigger = { var:rl_adm_event = { compare_value = 26 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_26 }
+                change_variable = { name = var_adm_26 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_26 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = expand_rgo_gathering_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.27
+        trigger = { var:rl_adm_event = { compare_value = 27 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_27 }
+                change_variable = { name = var_adm_27 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_27 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = expand_rgo_hunting_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.28
+        trigger = { var:rl_adm_event = { compare_value = 28 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_28 }
+                change_variable = { name = var_adm_28 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_28 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = expand_rgo_mining_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.29
+        trigger = { var:rl_adm_event = { compare_value = 29 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_29 }
+                change_variable = { name = var_adm_29 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_29 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = food_purchase_cost_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.30
+        trigger = { var:rl_adm_event = { compare_value = 30 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_30 }
+                change_variable = { name = var_adm_30 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_30 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_clergy_desired_pop_scaled_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.31
+        trigger = { var:rl_adm_event = { compare_value = 31 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_31 }
+                change_variable = { name = var_adm_31 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_31 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_clergy_max_literacy_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.32
+        trigger = { var:rl_adm_event = { compare_value = 32 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_32 }
+                change_variable = { name = var_adm_32 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_32 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_institution_growth_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.33
+        trigger = { var:rl_adm_event = { compare_value = 33 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_33 }
+                change_variable = { name = var_adm_33 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_33 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_max_rgo_size_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.34
+        trigger = { var:rl_adm_event = { compare_value = 34 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_34 }
+                change_variable = { name = var_adm_34 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_34 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_monthly_development_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.35
+        trigger = { var:rl_adm_event = { compare_value = 35 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_35 }
+                change_variable = { name = var_adm_35 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_35 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_monthly_literacy_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.36
+        trigger = { var:rl_adm_event = { compare_value = 36 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_36 }
+                change_variable = { name = var_adm_36 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_36 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_monthly_prosperity_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.37
+        trigger = { var:rl_adm_event = { compare_value = 37 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_37 }
+                change_variable = { name = var_adm_37 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_37 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_population_capacity_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.38
+        trigger = { var:rl_adm_event = { compare_value = 38 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_38 }
+                change_variable = { name = var_adm_38 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_38 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_population_growth_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.39
+        trigger = { var:rl_adm_event = { compare_value = 39 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_39 }
+                change_variable = { name = var_adm_39 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_39 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_raw_material_output_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.40
+        trigger = { var:rl_adm_event = { compare_value = 40 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_40 }
+                change_variable = { name = var_adm_40 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_40 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_laborers_desired_pop_scaled_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.41
+        trigger = { var:rl_adm_event = { compare_value = 41 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_41 }
+                change_variable = { name = var_adm_41 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_41 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_laborers_max_literacy_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.42
+        trigger = { var:rl_adm_event = { compare_value = 42 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_42 }
+                change_variable = { name = var_adm_42 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_42 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = hire_advisor_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.43
+        trigger = { var:rl_adm_event = { compare_value = 43 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_43 }
+                change_variable = { name = var_adm_43 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_43 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = minting_income_factor_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.44
+        trigger = { var:rl_adm_event = { compare_value = 44 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_44 }
+                change_variable = { name = var_adm_44 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_44 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = minting_inflation_threshold_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.45
+        trigger = { var:rl_adm_event = { compare_value = 45 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_45 }
+                change_variable = { name = var_adm_45 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_45 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_absolutism_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.46
+        trigger = { var:rl_adm_event = { compare_value = 46 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_46 }
+                change_variable = { name = var_adm_46 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_46 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_centralization_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.47
+        trigger = { var:rl_adm_event = { compare_value = 47 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_47 }
+                change_variable = { name = var_adm_47 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_47 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_communalism_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.48
+        trigger = { var:rl_adm_event = { compare_value = 48 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_48 }
+                change_variable = { name = var_adm_48 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_48 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_humanist_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.49
+        trigger = { var:rl_adm_event = { compare_value = 49 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_49 }
+                change_variable = { name = var_adm_49 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_49 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_innovative_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.50
+        trigger = { var:rl_adm_event = { compare_value = 50 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_50 }
+                change_variable = { name = var_adm_50 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_50 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_inward_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.51
+        trigger = { var:rl_adm_event = { compare_value = 51 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_51 }
+                change_variable = { name = var_adm_51 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_51 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_spiritualist_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.52
+        trigger = { var:rl_adm_event = { compare_value = 52 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_52 }
+                change_variable = { name = var_adm_52 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_52 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_traditional_economy_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.53
+        trigger = { var:rl_adm_event = { compare_value = 53 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_53 }
+                change_variable = { name = var_adm_53 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_53 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_traditionalist_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.54
+        trigger = { var:rl_adm_event = { compare_value = 54 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_54 }
+                change_variable = { name = var_adm_54 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_54 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = parliament_request_issue_support_needed_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.55
+        trigger = { var:rl_adm_event = { compare_value = 55 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_55 }
+                change_variable = { name = var_adm_55 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_55 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = revoke_privilege_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.56
+        trigger = { var:rl_adm_event = { compare_value = 56 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_56 }
+                change_variable = { name = var_adm_56 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_56 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = stability_cost_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.57
+        trigger = { var:rl_adm_event = { compare_value = 57 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_57 }
+                change_variable = { name = var_adm_57 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_57 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = stability_decay_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.adm.58
+        trigger = { var:rl_adm_event = { compare_value = 58 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_adm_58 }
+                change_variable = { name = var_adm_58 add = 1 }
+            } else = {
+                set_variable = { name = var_adm_58 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_clergy_estate_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.0
+        trigger = { var:rl_dip_event = { compare_value = 0 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_0 }
+                change_variable = { name = var_dip_0 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_0 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = diplomatic_reputation_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.1
+        trigger = { var:rl_dip_event = { compare_value = 1 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_1 }
+                change_variable = { name = var_dip_1 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_1 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = diplomatic_upkeep_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.2
+        trigger = { var:rl_dip_event = { compare_value = 2 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_2 }
+                change_variable = { name = var_dip_2 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_2 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = diplomatic_capacity_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.3
+        trigger = { var:rl_dip_event = { compare_value = 3 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_3 }
+                change_variable = { name = var_dip_3 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_3 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = diplomatic_annexation_cost_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.4
+        trigger = { var:rl_dip_event = { compare_value = 4 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_4 }
+                change_variable = { name = var_dip_4 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_4 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = burghers_estate_target_satisfaction_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.5
+        trigger = { var:rl_dip_event = { compare_value = 5 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_5 }
+                change_variable = { name = var_dip_5 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_5 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = burghers_estate_max_tax_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.6
+        trigger = { var:rl_dip_event = { compare_value = 6 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_6 }
+                change_variable = { name = var_dip_6 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_6 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = navy_galley_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.7
+        trigger = { var:rl_dip_event = { compare_value = 7 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_7 }
+                change_variable = { name = var_dip_7 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_7 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = navy_heavy_ship_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.8
+        trigger = { var:rl_dip_event = { compare_value = 8 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_8 }
+                change_variable = { name = var_dip_8 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_8 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = navy_light_ship_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.9
+        trigger = { var:rl_dip_event = { compare_value = 9 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_9 }
+                change_variable = { name = var_dip_9 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_9 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = navy_transport_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.10
+        trigger = { var:rl_dip_event = { compare_value = 10 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_10 }
+                change_variable = { name = var_dip_10 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_10 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = navy_movement_speed_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.11
+        trigger = { var:rl_dip_event = { compare_value = 11 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_11 }
+                change_variable = { name = var_dip_11 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_11 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_navy_tradition_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.12
+        trigger = { var:rl_dip_event = { compare_value = 12 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_12 }
+                change_variable = { name = var_dip_12 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_12 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = naval_morale_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.13
+        trigger = { var:rl_dip_event = { compare_value = 13 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_13 }
+                change_variable = { name = var_dip_13 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_13 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = improve_relation_impact_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.14
+        trigger = { var:rl_dip_event = { compare_value = 14 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_14 }
+                change_variable = { name = var_dip_14 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_14 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = trade_efficiency_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.15
+        trigger = { var:rl_dip_event = { compare_value = 15 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_15 }
+                change_variable = { name = var_dip_15 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_15 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_maritime_presence_decay_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.16
+        trigger = { var:rl_dip_event = { compare_value = 16 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_16 }
+                change_variable = { name = var_dip_16 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_16 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = cultures_capacity_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.17
+        trigger = { var:rl_dip_event = { compare_value = 17 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_17 }
+                change_variable = { name = var_dip_17 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_17 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = antagonism_monthly_change_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.18
+        trigger = { var:rl_dip_event = { compare_value = 18 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_18 }
+                change_variable = { name = var_dip_18 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_18 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = antagonism_taking_land_giving_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.19
+        trigger = { var:rl_dip_event = { compare_value = 19 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_19 }
+                change_variable = { name = var_dip_19 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_19 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = casus_belli_creation_speed_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.20
+        trigger = { var:rl_dip_event = { compare_value = 20 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_20 }
+                change_variable = { name = var_dip_20 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_20 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = colonial_maintenance_cost_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.21
+        trigger = { var:rl_dip_event = { compare_value = 21 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_21 }
+                change_variable = { name = var_dip_21 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_21 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = colonial_migration_size_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.22
+        trigger = { var:rl_dip_event = { compare_value = 22 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_22 }
+                change_variable = { name = var_dip_22 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_22 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = colonial_range_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.23
+        trigger = { var:rl_dip_event = { compare_value = 23 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_23 }
+                change_variable = { name = var_dip_23 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_23 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = create_colonial_charter_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.24
+        trigger = { var:rl_dip_event = { compare_value = 24 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_24 }
+                change_variable = { name = var_dip_24 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_24 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = cultural_influence_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.25
+        trigger = { var:rl_dip_event = { compare_value = 25 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_25 }
+                change_variable = { name = var_dip_25 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_25 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = cultural_tradition_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.26
+        trigger = { var:rl_dip_event = { compare_value = 26 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_26 }
+                change_variable = { name = var_dip_26 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_26 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = exploration_maintenance_cost_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.27
+        trigger = { var:rl_dip_event = { compare_value = 27 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_27 }
+                change_variable = { name = var_dip_27 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_27 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = exploration_mission_speed_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.28
+        trigger = { var:rl_dip_event = { compare_value = 28 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_28 }
+                change_variable = { name = var_dip_28 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_28 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_burghers_desired_pop_scaled_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.29
+        trigger = { var:rl_dip_event = { compare_value = 29 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_29 }
+                change_variable = { name = var_dip_29 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_29 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_burghers_max_literacy_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.30
+        trigger = { var:rl_dip_event = { compare_value = 30 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_30 }
+                change_variable = { name = var_dip_30 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_30 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_merchant_capacity_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.31
+        trigger = { var:rl_dip_event = { compare_value = 31 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_31 }
+                change_variable = { name = var_dip_31 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_31 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_merchant_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.32
+        trigger = { var:rl_dip_event = { compare_value = 32 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_32 }
+                change_variable = { name = var_dip_32 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_32 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_migration_speed_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.33
+        trigger = { var:rl_dip_event = { compare_value = 33 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_33 }
+                change_variable = { name = var_dip_33 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_33 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_navy_levy_size_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.34
+        trigger = { var:rl_dip_event = { compare_value = 34 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_34 }
+                change_variable = { name = var_dip_34 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_34 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_sailors_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.35
+        trigger = { var:rl_dip_event = { compare_value = 35 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_35 }
+                change_variable = { name = var_dip_35 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_35 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_trade_center_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.36
+        trigger = { var:rl_dip_event = { compare_value = 36 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_36 }
+                change_variable = { name = var_dip_36 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_36 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_trade_protection_factor_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.37
+        trigger = { var:rl_dip_event = { compare_value = 37 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_37 }
+                change_variable = { name = var_dip_37 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_37 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = merchant_maintenance_cost_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.38
+        trigger = { var:rl_dip_event = { compare_value = 38 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_38 }
+                change_variable = { name = var_dip_38 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_38 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_capital_economy_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.39
+        trigger = { var:rl_dip_event = { compare_value = 39 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_39 }
+                change_variable = { name = var_dip_39 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_39 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_conciliatory_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.40
+        trigger = { var:rl_dip_event = { compare_value = 40 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_40 }
+                change_variable = { name = var_dip_40 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_40 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_decentralization_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.41
+        trigger = { var:rl_dip_event = { compare_value = 41 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_41 }
+                change_variable = { name = var_dip_41 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_41 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_free_subjects_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.42
+        trigger = { var:rl_dip_event = { compare_value = 42 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_42 }
+                change_variable = { name = var_dip_42 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_42 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_free_trade_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.43
+        trigger = { var:rl_dip_event = { compare_value = 43 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_43 }
+                change_variable = { name = var_dip_43 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_43 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_individualism_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.44
+        trigger = { var:rl_dip_event = { compare_value = 44 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_44 }
+                change_variable = { name = var_dip_44 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_44 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_liberalism_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.45
+        trigger = { var:rl_dip_event = { compare_value = 45 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_45 }
+                change_variable = { name = var_dip_45 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_45 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_mercantilism_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.46
+        trigger = { var:rl_dip_event = { compare_value = 46 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_46 }
+                change_variable = { name = var_dip_46 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_46 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_naval_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.47
+        trigger = { var:rl_dip_event = { compare_value = 47 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_47 }
+                change_variable = { name = var_dip_47 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_47 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_outward_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.48
+        trigger = { var:rl_dip_event = { compare_value = 48 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_48 }
+                change_variable = { name = var_dip_48 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_48 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_plutocracy_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.49
+        trigger = { var:rl_dip_event = { compare_value = 49 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_49 }
+                change_variable = { name = var_dip_49 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_49 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = port_cost_distance_from_capital_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.50
+        trigger = { var:rl_dip_event = { compare_value = 50 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_50 }
+                change_variable = { name = var_dip_50 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_50 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = subject_pays_vassal_cost_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.dip.51
+        trigger = { var:rl_dip_event = { compare_value = 51 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_dip_51 }
+                change_variable = { name = var_dip_51 add = 1 }
+            } else = {
+                set_variable = { name = var_dip_51 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_burghers_estate_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.0
+        trigger = { var:rl_mil_event = { compare_value = 0 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_0 }
+                change_variable = { name = var_mil_0 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_0 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = army_artillery_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.1
+        trigger = { var:rl_mil_event = { compare_value = 1 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_1 }
+                change_variable = { name = var_mil_1 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_1 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = army_cavalry_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.2
+        trigger = { var:rl_mil_event = { compare_value = 2 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_2 }
+                change_variable = { name = var_mil_2 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_2 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = army_infantry_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.3
+        trigger = { var:rl_mil_event = { compare_value = 3 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_3 }
+                change_variable = { name = var_mil_3 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_3 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = land_morale_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.4
+        trigger = { var:rl_mil_event = { compare_value = 4 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_4 }
+                change_variable = { name = var_mil_4 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_4 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = discipline_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.5
+        trigger = { var:rl_mil_event = { compare_value = 5 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_5 }
+                change_variable = { name = var_mil_5 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_5 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = nobles_estate_target_satisfaction_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.6
+        trigger = { var:rl_mil_event = { compare_value = 6 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_6 }
+                change_variable = { name = var_mil_6 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_6 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = nobles_estate_max_tax_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.7
+        trigger = { var:rl_mil_event = { compare_value = 7 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_7 }
+                change_variable = { name = var_mil_7 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_7 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_army_tradition_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.8
+        trigger = { var:rl_mil_event = { compare_value = 8 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_8 }
+                change_variable = { name = var_mil_8 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_8 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_integration_speed_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.9
+        trigger = { var:rl_mil_event = { compare_value = 9 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_9 }
+                change_variable = { name = var_mil_9 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_9 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = fort_maintenance_cost_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.10
+        trigger = { var:rl_mil_event = { compare_value = 10 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_10 }
+                change_variable = { name = var_mil_10 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_10 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_manpower_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.11
+        trigger = { var:rl_mil_event = { compare_value = 11 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_11 }
+                change_variable = { name = var_mil_11 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_11 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = fort_limit_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.12
+        trigger = { var:rl_mil_event = { compare_value = 12 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_12 }
+                change_variable = { name = var_mil_12 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_12 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_defensive_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.13
+        trigger = { var:rl_mil_event = { compare_value = 13 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_13 }
+                change_variable = { name = var_mil_13 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_13 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_garrison_size_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.14
+        trigger = { var:rl_mil_event = { compare_value = 14 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_14 }
+                change_variable = { name = var_mil_14 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_14 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_hostile_attrition_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.15
+        trigger = { var:rl_mil_event = { compare_value = 15 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_15 }
+                change_variable = { name = var_mil_15 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_15 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_levy_recruitment_speed_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.16
+        trigger = { var:rl_mil_event = { compare_value = 16 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_16 }
+                change_variable = { name = var_mil_16 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_16 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_levy_size_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.17
+        trigger = { var:rl_mil_event = { compare_value = 17 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_17 }
+                change_variable = { name = var_mil_17 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_17 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_mercenaries_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.18
+        trigger = { var:rl_mil_event = { compare_value = 18 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_18 }
+                change_variable = { name = var_mil_18 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_18 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_nobles_desired_pop_scaled_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.19
+        trigger = { var:rl_mil_event = { compare_value = 19 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_19 }
+                change_variable = { name = var_mil_19 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_19 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_nobles_max_literacy_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.20
+        trigger = { var:rl_mil_event = { compare_value = 20 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_20 }
+                change_variable = { name = var_mil_20 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_20 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_soldiers_desired_pop_scaled_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.21
+        trigger = { var:rl_mil_event = { compare_value = 21 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_21 }
+                change_variable = { name = var_mil_21 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_21 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_soldiers_max_literacy_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.22
+        trigger = { var:rl_mil_event = { compare_value = 22 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_22 }
+                change_variable = { name = var_mil_22 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_22 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = levy_maintenance_modifier_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.23
+        trigger = { var:rl_mil_event = { compare_value = 23 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_23 }
+                change_variable = { name = var_mil_23 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_23 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_diplomats_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.24
+        trigger = { var:rl_mil_event = { compare_value = 24 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_24 }
+                change_variable = { name = var_mil_24 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_24 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_rebel_growth_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.25
+        trigger = { var:rl_mil_event = { compare_value = 25 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_25 }
+                change_variable = { name = var_mil_25 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_25 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_aristocracy_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.26
+        trigger = { var:rl_mil_event = { compare_value = 26 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_26 }
+                change_variable = { name = var_mil_26 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_26 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_belligerent_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.27
+        trigger = { var:rl_mil_event = { compare_value = 27 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_27 }
+                change_variable = { name = var_mil_27 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_27 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_defensive_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.28
+        trigger = { var:rl_mil_event = { compare_value = 28 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_28 }
+                change_variable = { name = var_mil_28 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_28 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_land_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.29
+        trigger = { var:rl_mil_event = { compare_value = 29 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_29 }
+                change_variable = { name = var_mil_29 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_29 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_offensive_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.30
+        trigger = { var:rl_mil_event = { compare_value = 30 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_30 }
+                change_variable = { name = var_mil_30 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_30 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_quality_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.31
+        trigger = { var:rl_mil_event = { compare_value = 31 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_31 }
+                change_variable = { name = var_mil_31 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_31 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_quantity_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.32
+        trigger = { var:rl_mil_event = { compare_value = 32 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_32 }
+                change_variable = { name = var_mil_32 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_32 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_towards_serfdom_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.33
+        trigger = { var:rl_mil_event = { compare_value = 33 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_33 }
+                change_variable = { name = var_mil_33 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_33 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = monthly_war_exhaustion_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.34
+        trigger = { var:rl_mil_event = { compare_value = 34 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_34 }
+                change_variable = { name = var_mil_34 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_34 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_nobles_estate_power_fake_mod years = -1 }
+        }
+	}
+
+    option = {
+		name = rl_events.1.mil.35
+        trigger = { var:rl_mil_event = { compare_value = 35 } }
+        hidden_effect = {
+            if = {
+                limit = { has_variable = var_mil_35 }
+                change_variable = { name = var_mil_35 add = 1 }
+            } else = {
+                set_variable = { name = var_mil_35 value = 1 }
+            }
+        }
+        show_as_tooltip = {
+            add_country_modifier = { modifier = global_peasants_estate_power_fake_mod years = -1 }
+        }
+	}

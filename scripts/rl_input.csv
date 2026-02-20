@@ -1,0 +1,148 @@
+global_max_literacy,2.5,adm,Literacy
+research_speed_modifier,0.05,adm,Research Speed
+global_max_control,0.05,adm,Control
+global_distance_from_capital_speed_propagation,0.1,adm,Proximity Speed
+clergy_estate_target_satisfaction,0.05,adm,Clergy Satisfaction
+global_crown_estate_power,0.1,adm,Crown Power
+global_pop_promotion_speed_modifier,0.1,adm,Pop Promotion Speed
+global_pop_conversion_speed_modifier,0.1,adm,Conversion Speed
+global_pop_assimilation_speed_modifier,0.1,adm,Assimilation Speed
+clergy_estate_max_tax,0.025,adm,Clergy Tax
+legislative_efficiency,0.1,adm,Legislative Efficiency
+global_war_score_cost,-0.05,adm,Warscore Cost
+monthly_prestige,0.05,adm,Monthly Prestige
+global_production_efficiency,0.025,adm,Production Efficiency
+country_cabinet_efficiency,0.1,adm,Cabinet Efficiency
+tax_income_efficiency,0.025,adm,Tax Efficiency
+global_build_buildings_cost,-0.025,adm,Building Cost
+bank_interest,-0.005,adm,Bank Interest
+build_gravel_road_cost_modifier,-0.1,adm,Gravel Road Cost
+build_modern_road_cost_modifier,-0.1,adm,Modern Road Cost
+build_paved_road_cost_modifier,-0.1,adm,Paved Road Cost
+build_railroad_cost_modifier,-0.1,adm,Railroad Cost
+building_upkeep_costs,-0.05,adm,Building Upkeep Cost
+city_upgrade_cost_modifier,-0.1,adm,City Rights Cost
+court_spending_cost,-0.01,adm,Court Spending
+expand_rgo_farming_cost_modifier,-0.05,adm,Expand Farming RGO Cost
+expand_rgo_forestry_cost_modifier,-0.05,adm,Expand Forestry RGO Cost
+expand_rgo_gathering_cost_modifier,-0.05,adm,Expand Gathering RGO Cost
+expand_rgo_hunting_cost_modifier,-0.05,adm,Expand Hunting RGO Cost
+expand_rgo_mining_cost_modifier,-0.05,adm,Expand Mining RGO Cost
+food_purchase_cost,-0.1,adm,Food Spending
+global_clergy_desired_pop_scaled,0.005,adm,Clergy Amount
+global_clergy_max_literacy,5,adm,Clergy Literacy
+global_institution_growth_modifier,0.1,adm,Institution Growth
+global_max_rgo_size_modifier,0.1,adm,Max RGO Size
+global_monthly_development,0.01,adm,Monthly Development
+global_monthly_literacy,0.1,adm,Monthly Literacy
+global_monthly_prosperity,0.05,adm,Monthly Prosperity
+global_population_capacity_modifier,0.1,adm,Population Capacity
+global_population_growth,0.025,adm,Population Growth
+global_raw_material_output,0.025,adm,RGO Output
+global_laborers_desired_pop_scaled,0.05,adm,Laborer Amount
+global_laborers_max_literacy,5,adm,Laborer Literacy
+hire_advisor_cost_modifier,-0.1,adm,Cabinet Member Cost
+minting_income_factor,0.05,adm,Minting Income
+minting_inflation_threshold,0.05,adm,Minting Threshold
+monthly_towards_absolutism,0.05,adm,Monthly Absolutism
+monthly_towards_centralization,0.05,adm,Monthly Centralization
+monthly_towards_communalism,0.05,adm,Monthly Communalism
+monthly_towards_humanist,0.05,adm,Monthly Humanist
+monthly_towards_innovative,0.05,adm,Monthly Innovative
+monthly_towards_inward,0.05,adm,Monthly Inward
+monthly_towards_spiritualist,0.05,adm,Monthly Spiritualist
+monthly_towards_traditional_economy,0.05,adm,Monthly Traditional Economy
+monthly_towards_traditionalist,0.05,adm,Monthly Traditionalist
+parliament_request_issue_support_needed,-0.05,adm,Parliament Issue Support Needed
+revoke_privilege_cost_modifier,-0.1,adm,Revoke Privilege Cost
+stability_cost,-0.05,adm,Stability Investment Cost
+stability_decay,-0.00025,adm,Stability Decay
+global_clergy_estate_power,-0.1,adm,Clergy Power
+diplomatic_reputation,1,dip,Diplomatic Reputation
+diplomatic_upkeep_modifier,-0.1,dip,Diplomat Cost
+diplomatic_capacity_modifier,0.1,dip,Diplomatic Capacity
+diplomatic_annexation_cost,-0.05,dip,Annexation Cost
+burghers_estate_target_satisfaction,0.05,dip,Burgher Satisfaction
+burghers_estate_max_tax,0.025,dip,Burgher Tax
+navy_galley_power,0.05,dip,Galley Power
+navy_heavy_ship_power,0.05,dip,Heavy Ship Power
+navy_light_ship_power,0.05,dip,Light Ship Power
+navy_transport_power,0.05,dip,Transport Power
+navy_movement_speed,0.05,dip,Navy Movement Speed
+monthly_navy_tradition,0.03,dip,Monthly Navy Tradition
+naval_morale_modifier,0.05,dip,Morale of Navies
+improve_relation_impact,0.1,dip,Improve Relations
+trade_efficiency,0.025,dip,Trade Efficiency
+global_maritime_presence_decay,-0.05,dip,Maritime Presence Decay
+cultures_capacity_modifier,0.1,dip,Cultures Capacity Modifier
+antagonism_monthly_change_modifier,0.1,dip,Monthly Antagonism Decay
+antagonism_taking_land_giving_modifier,-0.1,dip,Antagonism Modifier
+casus_belli_creation_speed_modifier,0.1,dip,CB Creation Speed
+colonial_maintenance_cost,-0.1,dip,Colonial Maintenance
+colonial_migration_size_modifier,0.1,dip,Colonial Migration
+colonial_range_modifier,0.2,dip,Colonial Range
+create_colonial_charter_cost_modifier,-0.2,dip,Colonial Charter Cost
+cultural_influence_modifier,0.1,dip,Cultural Influence
+cultural_tradition_modifier,0.1,dip,Cultural Tradition
+exploration_maintenance_cost,-0.1,dip,Exploration Maintenance
+exploration_mission_speed_modifier,0.1,dip,Exploration Speed
+global_burghers_desired_pop_scaled,0.01,dip,Burgher Amount
+global_burghers_max_literacy,5,dip,Burgher Literacy
+global_merchant_capacity_modifier,0.1,dip,Trade Capacity
+global_merchant_power,0.05,dip,Trade Power
+global_migration_speed_modifier,0.05,dip,Migration Speed
+global_navy_levy_size_modifier,0.05,dip,Navy Levy Size
+global_sailors_modifier,0.05,dip,Max Sailors
+global_trade_center_power,0.05,dip,Market Attraction
+global_trade_protection_factor,0.05,dip,Market Protection
+merchant_maintenance_cost,-0.1,dip,Trade Maintenance Cost
+monthly_towards_capital_economy,0.05,dip,Monthy Capital Economy
+monthly_towards_conciliatory,0.05,dip,Monthly Concilatory
+monthly_towards_decentralization,0.05,dip,Monthly Decentralization
+monthly_towards_free_subjects,0.05,dip,Monthly Free Subjects
+monthly_towards_free_trade,0.05,dip,Monthly Free Trade
+monthly_towards_individualism,0.05,dip,Monthly Individualism
+monthly_towards_liberalism,0.05,dip,Monthly Liberalism
+monthly_towards_mercantilism,0.05,dip,Monthly Mercantalism
+monthly_towards_naval,0.05,dip,Monthly Naval
+monthly_towards_outward,0.05,dip,Monthly Outward
+monthly_towards_plutocracy,0.05,dip,Monthly Plutocracy
+port_cost_distance_from_capital,-0.1,dip,Proximity Cost from Port
+subject_pays_vassal_cost_modifier,0.1,dip,Vassal Income
+global_burghers_estate_power,-0.1,dip,Burghers Power
+army_artillery_power,0.05,mil,Artillery Power
+army_cavalry_power,0.05,mil,Cavalry Power
+army_infantry_power,0.05,mil,Infantry Power
+land_morale_modifier,0.05,mil,Morale of Armies
+discipline,0.025,mil,Discipline
+nobles_estate_target_satisfaction,0.05,mil,Noble Satisfaction
+nobles_estate_max_tax,0.025,mil,Noble Tax
+monthly_army_tradition,0.03,mil,Monthly Army Tradition
+global_integration_speed_modifier,0.1,mil,Integration Speed
+fort_maintenance_cost,-0.1,mil,Fort Maintenance
+global_manpower_modifier,0.1,mil,Max Manpower
+fort_limit_modifier,0.2,mil,Fort Limit
+global_defensive,0.1,mil,Fort Defense
+global_garrison_size_modifier,0.1,mil,Garrison Size
+global_hostile_attrition,0.2,mil,Hostile Attrition
+global_levy_recruitment_speed_modifier,0.1,mil,Levy Recruitment Speed
+global_levy_size_modifier,0.05,mil,Levy Size
+global_mercenaries_modifier,0.05,mil,Mercenaries Size
+global_nobles_desired_pop_scaled,0.005,mil,Noble Amount
+global_nobles_max_literacy,5,mil,Noble Literacy
+global_soldiers_desired_pop_scaled,0.01,mil,Soldier Amount
+global_soldiers_max_literacy,5,mil,Soldier Literacy
+levy_maintenance_modifier,-0.05,mil,Levy Maintenance
+monthly_diplomats,0.05,mil,Monthly Diplomats
+monthly_rebel_growth,-0.0005,mil,Rebel Growth
+monthly_towards_aristocracy,0.05,mil,Monthly Aristocracy
+monthly_towards_belligerent,0.05,mil,Monthly Belligerent
+monthly_towards_defensive,0.05,mil,Monthly Defensive
+monthly_towards_land,0.05,mil,Monthly Land
+monthly_towards_offensive,0.05,mil,Monthly Offensive
+monthly_towards_quality,0.05,mil,Monthly Quality
+monthly_towards_quantity,0.05,mil,Monthly Quantity
+monthly_towards_serfdom,0.05,mil,Monthly Serfdom
+monthly_war_exhaustion,-0.05,mil,Monthly War Exhastion
+global_nobles_estate_power,-0.1,mil,Noble Power
+global_peasants_estate_power,-0.1,mil,Peasants Power
