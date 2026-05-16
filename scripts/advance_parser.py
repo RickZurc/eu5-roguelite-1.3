@@ -467,16 +467,11 @@ def parse_advances_from_directory(directory: str) -> ParseResult:
 # Localization file parser
 # ---------------------------------------------------------------------------
 
-_LOC_LINE_RE = re.compile(r'^\ ([A-Za-z0-9_]+):\s*"(.*)"\s*$')
+_LOC_LINE_RE = re.compile(r'^\ ([A-Za-z0-9_]+):\s*"(.*)"\s*(?:#.*)?$')
 
 
-def parse_loc_file(path: str) -> dict[str, str]:
-    """
-    Parse a Paradox localization .yml file and return a {key: value} dict.
-    Lines starting with # are skipped. The l_english: header is skipped.
-    Values are returned as-is (including escape sequences and $...$).
-    """
-    loc: dict[str, str] = {}
+def _parse_single_loc_file(path: Path, loc: dict[str, str]) -> None:
+    """Parse one .yml loc file into *loc*, skipping already-seen keys."""
     try:
         with open(path, encoding='utf-8-sig', errors='replace') as f:
             for line in f:
@@ -485,9 +480,24 @@ def parse_loc_file(path: str) -> dict[str, str]:
                     continue
                 m = _LOC_LINE_RE.match(line)
                 if m:
-                    loc[m.group(1)] = m.group(2)
+                    loc.setdefault(m.group(1), m.group(2))
     except OSError as e:
         print(f"  [WARN] Could not read loc file {path}: {e}")
+
+
+def parse_loc_dir(directory: str) -> dict[str, str]:
+    """
+    Recursively scan *directory* for .yml files and merge all localization
+    keys into a single dict. First occurrence of a key wins.
+    """
+    loc: dict[str, str] = {}
+    base = Path(directory)
+    if not base.is_dir():
+        print(f"  [WARN] Loc directory not found: {directory}")
+        return loc
+    for yml_path in sorted(p for p in base.rglob("*.yml") if p.is_file()):
+        _parse_single_loc_file(yml_path, loc)
+    print(f"  Loaded {len(loc)} loc keys from {directory}")
     return loc
 
 
@@ -526,8 +536,8 @@ def main():
         help="Output file in EU5 script format (default: advances.txt)."
     )
     parser.add_argument(
-        "--loc-file", "-l", default=None,
-        help="Path to the advances localization .yml file."
+        "--loc-dir", "-l", default=None,
+        help="Path to a localization directory; all .yml files are searched for keys."
     )
     args = parser.parse_args()
 
@@ -630,7 +640,7 @@ def main():
     print(f"Options written to: options.txt ({len(option_sections)} entries)")
 
     # Localization output
-    loc = parse_loc_file(args.loc_file) if args.loc_file else {}
+    loc = parse_loc_dir(args.loc_dir) if args.loc_dir else {}
     loc_lines = [" l_english:"]
 
     # Modifier loc keys
