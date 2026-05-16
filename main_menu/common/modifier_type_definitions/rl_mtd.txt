@@ -1,0 +1,6 @@
+﻿rl_roll_mtd = {
+	decimals=0
+	game_data={
+		category=country
+	}
+}

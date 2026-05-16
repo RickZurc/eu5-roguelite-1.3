@@ -7,5 +7,9 @@
 	"tags":	[],
 	"relationships":	[],
 	"thumbnail" : "thumbnail.png",
-	"game_custom_data":	{}
+	"game_custom_data":	{
+		"replace_paths" :[
+			"common/advances"
+		]
+	}
 }
