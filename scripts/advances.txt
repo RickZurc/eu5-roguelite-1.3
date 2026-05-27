@@ -10,6 +10,7 @@ written_alphabet = {
 	
 	starting_technology_level = 2
 	
+	rl_roll_mtd = 1
 }
 
 cultural_traditions_law_advance = {
@@ -17,6 +18,7 @@ cultural_traditions_law_advance = {
 	requires = written_alphabet
 	unlock_law = cultural_traditions_law
 	starting_technology_level = 2
+	rl_roll_mtd = 1
 }
 
 cultural_acceptance_advance = {
@@ -25,6 +27,7 @@ cultural_acceptance_advance = {
 	cultures_capacity = 1
 	starting_technology_level = 3
 	requires = cultural_traditions_law_advance
+	rl_roll_mtd = 1
 }
 
 mapmaking = {
@@ -35,6 +38,7 @@ mapmaking = {
 	research_cost = 1.0
 	may_explore = yes
 	unlock_law = immigration_law
+	rl_roll_mtd = 1
 }
 
 colonies = {
@@ -44,6 +48,7 @@ colonies = {
 	
 	research_cost = 1.0
 	can_colonize = yes
+	rl_roll_mtd = 1
 }
 
 codified_laws = {
@@ -57,6 +62,7 @@ codified_laws = {
 	allow_council_parliament = yes
 	
 	starting_technology_level = 2
+	rl_roll_mtd = 1
 }
 
 distribution_of_power_advance = {
@@ -64,6 +70,7 @@ distribution_of_power_advance = {
 	unlock_law = distribution_of_power_law
 
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 subjects_advance = {
@@ -75,6 +82,7 @@ subjects_advance = {
 	unlock_subject_type = vassal
 	
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 taxation_advance = {
@@ -87,6 +95,7 @@ taxation_advance = {
 	unlock_law = coin_laws
 	
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 state_administration_advance = {
@@ -99,6 +108,7 @@ state_administration_advance = {
 	potential = {
 		has_tribal_government = no
 	}
+	rl_roll_mtd = 1
 }
 
 legalism_advance = {
@@ -110,6 +120,7 @@ legalism_advance = {
 	requires = codified_laws
 	
 	allow = { has_embraced_institution = institution:legalism }
+	rl_roll_mtd = 1
 }
 
 medieval_administration  = {
@@ -119,12 +130,14 @@ medieval_administration  = {
 	requires = legalism_advance
 
 	government_reform_slots = 1
+	rl_roll_mtd = 1
 }
 
 pest_house_advance = {
 	age = age_1_traditions
 	requires = medieval_administration
 	unlock_building = pest_house
+	rl_roll_mtd = 1
 }
 
 banking_country_traditions = {
@@ -142,12 +155,14 @@ banking_country_traditions = {
 		
 	requires = medieval_administration
 	
+	rl_roll_mtd = 1
 }
 
 hospital_advance = {
 	age = age_1_traditions
 	requires = pest_house_advance
 	unlock_building = hospital
+	rl_roll_mtd = 1
 }
 
 agriculture_advance = {
@@ -163,12 +178,14 @@ agriculture_advance = {
 	depth = 0
 
 	starting_technology_level = 1
+	rl_roll_mtd = 1
 }
 
 windmills_advance = {
 	age = age_1_traditions
 	unlock_building = windmill
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 aqueduct_system = {
@@ -183,6 +200,7 @@ aqueduct_system = {
 
 	unlock_building = aqueduct_system
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 alchemy_advance = {
@@ -194,6 +212,7 @@ alchemy_advance = {
 	global_disease_resistance = 0.05
 	
 	starting_technology_level = 3
+	rl_roll_mtd = 1
 }
 
 apothecary_advance = {
@@ -201,6 +220,7 @@ apothecary_advance = {
 	requires = alchemy_advance
 	
 	unlock_building = apothecary
+	rl_roll_mtd = 1
 }
 
 city_building_advance = {
@@ -211,6 +231,7 @@ city_building_advance = {
 	can_grant_town_rights = yes
 
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 ranching = {
@@ -238,6 +259,7 @@ ranching = {
 		}
 	}
 	can_extract_horses = yes
+	rl_roll_mtd = 1
 }
 
 horse_riding_advance = {
@@ -250,6 +272,7 @@ horse_riding_advance = {
 
 	
 	starting_technology_level = 1
+	rl_roll_mtd = 1
 }
 
 feudalism_advance = {
@@ -266,6 +289,7 @@ feudalism_advance = {
 	military_tactics = 1.0
 	
 	allow = { has_embraced_institution = institution:feudalism }
+	rl_roll_mtd = 1
 }
 
 trade_caravans = {
@@ -282,6 +306,7 @@ trade_caravans = {
 	}
 	
 	starting_technology_level = 1
+	rl_roll_mtd = 1
 }
 
 mining_advance = {
@@ -293,6 +318,7 @@ mining_advance = {
 	research_cost = 2.0
 	can_extract_stone = yes
 	can_extract_marble = yes
+	rl_roll_mtd = 1
 }
 
 metallurgy  = {
@@ -303,6 +329,7 @@ metallurgy  = {
 	
 	unlock_building = tools_guild
 
+	rl_roll_mtd = 1
 }
 
 mining_law_advance = {
@@ -312,6 +339,7 @@ mining_law_advance = {
 	starting_technology_level = 1
 
 	unlock_law = mining_law
+	rl_roll_mtd = 1
 }
 
 bronze_working = {
@@ -324,6 +352,7 @@ bronze_working = {
 	can_extract_tin = yes
 	can_extract_lead = yes
 
+	rl_roll_mtd = 1
 }
 
 iron_working = {
@@ -340,12 +369,14 @@ iron_working = {
 	can_extract_coal = yes
 	can_extract_iron = yes
 	unlock_building = bog_iron_smelter
+	rl_roll_mtd = 1
 }
 
 local_smelters_advance = {
 	age = age_1_traditions
 	requires = iron_working
 	unlock_building = local_smelters
+	rl_roll_mtd = 1
 }
 
 advanced_mining  = {
@@ -357,6 +388,7 @@ advanced_mining  = {
 	can_extract_saltpeter = yes
 	can_extract_alum = yes
 
+	rl_roll_mtd = 1
 }
 
 fine_metals_mining = {
@@ -367,6 +399,7 @@ fine_metals_mining = {
 	can_extract_goods_gold = yes
 	can_extract_silver = yes
 	can_extract_mercury = yes
+	rl_roll_mtd = 1
 }
 
 faster_levy_recruitment  = {
@@ -375,6 +408,7 @@ faster_levy_recruitment  = {
 	requires = iron_working
 
 	global_levy_recruitment_speed_modifier = 0.2
+	rl_roll_mtd = 1
 }
 
 ship_building_advance = {
@@ -386,6 +420,7 @@ ship_building_advance = {
 	depth = 0
 	
 	starting_technology_level = 2
+	rl_roll_mtd = 1
 }
 
 trade_advance_age_of_trad = {
@@ -397,6 +432,7 @@ trade_advance_age_of_trad = {
 	selling_efficiency = small_trade_efficiency_bonus
 	
 	starting_technology_level = 3
+	rl_roll_mtd = 1
 }
 
 more_merchants_age_of_trad = {
@@ -408,6 +444,7 @@ more_merchants_age_of_trad = {
 	global_merchant_capacity_modifier = 0.05
 	
 	starting_technology_level = 3
+	rl_roll_mtd = 1
 }
 
 slave_raid_advance = {
@@ -433,6 +470,7 @@ slave_raid_advance = {
 	can_hire_privateers = yes
 	
 	requires = trade_advance_age_of_trad
+	rl_roll_mtd = 1
 }
 
 organized_religion = {
@@ -444,6 +482,7 @@ organized_religion = {
 	depth = 0
 	starting_technology_level = 4
 	
+	rl_roll_mtd = 1
 }
 
 scholasticism = {
@@ -454,6 +493,7 @@ scholasticism = {
 	global_institution_growth_modifier = 0.20
 
 	ai_weight = { add = 2 }
+	rl_roll_mtd = 1
 }
 
 guilds = {
@@ -463,6 +503,7 @@ guilds = {
 
 	global_burghers_city_desired_pop = 0.1
 	global_burghers_max_literacy = 5
+	rl_roll_mtd = 1
 }
 
 peasant_connections_advance = {
@@ -472,6 +513,7 @@ peasant_connections_advance = {
 	requires = guilds
 
 	food_purchase_cost = -0.1
+	rl_roll_mtd = 1
 }
 
 construction_speed_traditions = {
@@ -480,6 +522,7 @@ construction_speed_traditions = {
 
 	requires = peasant_connections_advance
 	global_construction_speed = 0.05
+	rl_roll_mtd = 1
 }
 
 diplomatic_capacity_traditions = {
@@ -488,6 +531,7 @@ diplomatic_capacity_traditions = {
 
 	requires = guilds
 	diplomatic_capacity_modifier = 0.2
+	rl_roll_mtd = 1
 }
 
 rural_rgo_traditions = {
@@ -496,6 +540,7 @@ rural_rgo_traditions = {
 
 	requires = peasant_connections_advance
 	global_max_rgo_size_modifier_in_rural = 0.1
+	rl_roll_mtd = 1
 }
 
 meritocracy_advance = {
@@ -508,6 +553,7 @@ meritocracy_advance = {
 
 
 	allow = { has_embraced_institution = institution:meritocracy }
+	rl_roll_mtd = 1
 }
 
 educated_bureaucrats = {
@@ -516,6 +562,7 @@ educated_bureaucrats = {
 	requires = meritocracy_advance
 
 	global_monthly_literacy = 0.01
+	rl_roll_mtd = 1
 }
 
 efficient_bureaucracy = {
@@ -525,6 +572,7 @@ efficient_bureaucracy = {
 
 	legislative_efficiency = 0.05
 	global_bureaucracy_maintenance_cost_modifier = -0.02
+	rl_roll_mtd = 1
 }
 
 right_to_rule = {
@@ -533,6 +581,7 @@ right_to_rule = {
 	requires = efficient_bureaucracy
 
 	num_possible_artists = 1
+	rl_roll_mtd = 1
 }
 
 smooth_administration = {
@@ -541,6 +590,7 @@ smooth_administration = {
 	requires = right_to_rule
 
 	stability_cost = -0.05
+	rl_roll_mtd = 1
 }
 
 efficient_logistics = {
@@ -549,6 +599,7 @@ efficient_logistics = {
 	requires = efficient_bureaucracy
 
 	build_gravel_road_cost_modifier = -0.05
+	rl_roll_mtd = 1
 }
 
 province_governors = {
@@ -558,6 +609,7 @@ province_governors = {
 
 	global_integration_speed_modifier = 0.10
 	subject_loyalty = 5
+	rl_roll_mtd = 1
 }
 
 appointed_chain_of_command = {
@@ -569,6 +621,7 @@ appointed_chain_of_command = {
 	}
 	
 	levy_combat_efficiency_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 temporary_appointments = {
@@ -578,6 +631,7 @@ temporary_appointments = {
 	
 	set_cabinet_member_cost_modifier = -0.1
 	replace_cabinet_member_cost_modifier = -0.1
+	rl_roll_mtd = 1
 }
 
 non_inheritable_offices = {
@@ -586,6 +640,7 @@ non_inheritable_offices = {
 	requires = temporary_appointments
 
 	estate_power_from_cabinet = -0.1
+	rl_roll_mtd = 1
 }
 
 abacus_advance = {
@@ -594,6 +649,7 @@ abacus_advance = {
 	requires = meritocracy_advance
 
 	tax_income_efficiency = small_tax_income_efficiency_bonus
+	rl_roll_mtd = 1
 }
 
 power_projection_advance_1 = {
@@ -601,6 +657,7 @@ power_projection_advance_1 = {
 	icon = crown_power_advance_renaissance
 	requires = abacus_advance
 	power_projection = 10
+	rl_roll_mtd = 1
 }
 
 ledgers_double_checking = {
@@ -609,6 +666,7 @@ ledgers_double_checking = {
 	requires = abacus_advance
 
 	estate_enrichment = -0.05
+	rl_roll_mtd = 1
 }
 
 talented_traders = {
@@ -617,6 +675,7 @@ talented_traders = {
 	requires = abacus_advance
 
 	selling_efficiency = small_trade_efficiency_bonus
+	rl_roll_mtd = 1
 }
 
 government_sanctioned_celebrations = {
@@ -625,6 +684,7 @@ government_sanctioned_celebrations = {
 	requires = educated_bureaucrats
 
 	cultural_tradition_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 cathedral_advance = {
@@ -636,6 +696,7 @@ cathedral_advance = {
 	potential = { religion.group = religion_group:christian }
 
 	ai_weight = { add = 3 }
+	rl_roll_mtd = 1
 }
 
 porcelain_kiln_advance = {
@@ -649,6 +710,7 @@ porcelain_kiln_advance = {
 	unlock_building = porcelain_guild
 	
 	requires = talented_traders
+	rl_roll_mtd = 1
 }
 
 lacquerware_guild_advance = {
@@ -662,6 +724,7 @@ lacquerware_guild_advance = {
 	unlock_building = lacquerware_guild
 	
 	requires = ledgers_double_checking
+	rl_roll_mtd = 1
 }
 
 scriptorium_advance = {
@@ -670,6 +733,7 @@ scriptorium_advance = {
 	unlock_building = scriptorium
 	
 	requires = written_alphabet
+	rl_roll_mtd = 1
 }
 
 paper_guild_advance = {
@@ -678,6 +742,7 @@ paper_guild_advance = {
 	unlock_building = paper_guild
 	
 	requires = scriptorium_advance
+	rl_roll_mtd = 1
 }
 
 castle_advance = {
@@ -689,6 +754,7 @@ castle_advance = {
 	starting_technology_level = 3
 
 	ai_weight = { add = 2 }
+	rl_roll_mtd = 1
 }
 
 library_advance = {
@@ -697,6 +763,7 @@ library_advance = {
 	requires = scriptorium_advance
 	
 	unlock_building = library
+	rl_roll_mtd = 1
 }
 
 confucian_school_advance = {
@@ -720,6 +787,7 @@ confucian_school_advance = {
 	}
 	
 	unlock_building = confucian_school
+	rl_roll_mtd = 1
 }
 
 royal_court_advance = {
@@ -728,6 +796,7 @@ royal_court_advance = {
 	requires = castle_advance
 	
 	unlock_building = royal_court
+	rl_roll_mtd = 1
 }
 
 republican_assembly_advance = {
@@ -736,6 +805,7 @@ republican_assembly_advance = {
 	requires = castle_advance
 	
 	unlock_building = republican_assembly
+	rl_roll_mtd = 1
 }
 
 order_headquarters_advance = {
@@ -747,6 +817,7 @@ order_headquarters_advance = {
 	requires = castle_advance
 	
 	unlock_building = order_headquarters
+	rl_roll_mtd = 1
 }
 
 weapon_guild_advance = {
@@ -754,6 +825,7 @@ weapon_guild_advance = {
 	
 	requires = mining_law_advance
 	unlock_building = weapon_guild
+	rl_roll_mtd = 1
 }
 
 chancery_advance = {
@@ -763,6 +835,7 @@ chancery_advance = {
 	
 	
 	unlock_building = chancery
+	rl_roll_mtd = 1
 }
 
 lieutenancy_advance = {
@@ -775,6 +848,7 @@ lieutenancy_advance = {
 	requires = feudalism_advance
 	
 	unlock_building = lieutenancy
+	rl_roll_mtd = 1
 }
 
 fortress_church_advance = {
@@ -792,6 +866,7 @@ fortress_church_advance = {
 	requires = castle_advance
 	unlock_building = fortress_church
 	allow_children = no
+	rl_roll_mtd = 1
 }
 
 unlock_footmen_advance = {
@@ -802,6 +877,7 @@ unlock_footmen_advance = {
 	
 	requires = iron_working
 
+	rl_roll_mtd = 1
 }
 
 unlock_archers_advance = {
@@ -812,6 +888,7 @@ unlock_archers_advance = {
 	requires = unlock_footmen_advance	
 
 
+	rl_roll_mtd = 1
 }
 
 unlock_feudal_levy_advance = {
@@ -819,6 +896,7 @@ unlock_feudal_levy_advance = {
 	unlock_levy = levy_a_feudal_levy
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 unlock_horsemen_advance = {
@@ -827,6 +905,7 @@ unlock_horsemen_advance = {
 	
 	requires = horse_riding_advance
 	
+	rl_roll_mtd = 1
 }
 
 unlock_armored_horsemen_advance = {
@@ -844,6 +923,7 @@ unlock_armored_horsemen_advance = {
 
 	requires = unlock_horsemen_advance
 	
+	rl_roll_mtd = 1
 }
 
 unlock_dhow = {
@@ -867,6 +947,7 @@ unlock_dhow = {
 
 	unlock_unit = n_dhow
 
+	rl_roll_mtd = 1
 }
 
 unlock_traditional_galley_advance = {
@@ -881,6 +962,7 @@ unlock_traditional_galley_advance = {
 
 	unlock_unit = n_traditional_galley
 
+	rl_roll_mtd = 1
 }
 
 unlock_long_fada = {
@@ -900,6 +982,7 @@ unlock_long_fada = {
 	unlock_unit = n_long_fada
 	unlock_levy = levy_birlinn
 
+	rl_roll_mtd = 1
 }
 
 unlock_cog_advance = {
@@ -910,6 +993,7 @@ unlock_cog_advance = {
 
 	unlock_unit = n_cog
 
+	rl_roll_mtd = 1
 }
 
 settle_the_frontier_advance = {
@@ -942,6 +1026,7 @@ settle_the_frontier_advance = {
 	}
 	requires = city_building_advance
 	unlock_cabinet_action = settle_the_frontier
+	rl_roll_mtd = 1
 }
 
 fort_limit_1_advance = {
@@ -951,6 +1036,7 @@ fort_limit_1_advance = {
 	requires = castle_advance
 	
 	fort_limit_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 paper_guild_fiber_pulp_maintenance_advance = {
@@ -959,6 +1045,7 @@ paper_guild_fiber_pulp_maintenance_advance = {
 	unlock_production_method = paper_guild_fiber_pulp_maintenance
 	
 	requires = paper_guild_advance
+	rl_roll_mtd = 1
 }
 
 monarchy_reform_traditions_advance = {
@@ -966,6 +1053,7 @@ monarchy_reform_traditions_advance = {
 	government = monarchy
 	requires = codified_laws
 	unlock_government_reform = autocracy
+	rl_roll_mtd = 1
 }
 
 republic_reform_traditions_advance = {
@@ -975,6 +1063,7 @@ republic_reform_traditions_advance = {
 	unlock_government_reform = noble_elite
 	unlock_government_reform = sortition
 	
+	rl_roll_mtd = 1
 }
 
 monarchy_royal_court_advance = {
@@ -982,6 +1071,7 @@ monarchy_royal_court_advance = {
 	government = monarchy
 	requires = codified_laws
 	unlock_law = royal_court_customs_law
+	rl_roll_mtd = 1
 }
 
 theocracy_divine_cause_law_advance = {
@@ -989,6 +1079,7 @@ theocracy_divine_cause_law_advance = {
 	government = theocracy
 	requires = codified_laws
 	unlock_law = divine_cause_law
+	rl_roll_mtd = 1
 }
 
 tribal_religious_values_law_advance = {
@@ -997,6 +1088,7 @@ tribal_religious_values_law_advance = {
 	government = tribe
 	requires = codified_laws
 	unlock_law = tribal_religious_values_law
+	rl_roll_mtd = 1
 }
 
 road_building = {
@@ -1008,6 +1100,7 @@ road_building = {
 	unlock_road_type = gravel_road
 
 	requires = city_building_advance
+	rl_roll_mtd = 1
 }
 
 pis_anziani_del_popolo = {
@@ -1017,6 +1110,7 @@ pis_anziani_del_popolo = {
 		has_or_had_tag = PIS
 	}
 	monthly_republican_tradition = 0.03
+	rl_roll_mtd = 1
 }
 
 pis_maritimes_legacy = {
@@ -1028,6 +1122,7 @@ pis_maritimes_legacy = {
 
 	export_efficiency = medium_trade_efficiency_bonus
 	navy_galley_power = 0.1
+	rl_roll_mtd = 1
 }
 
 sie_artists = {
@@ -1039,6 +1134,7 @@ sie_artists = {
 
 	prestige_decay = -0.001
 	skill_of_new_artists = 0.05
+	rl_roll_mtd = 1
 }
 
 sie_studium_senese = {
@@ -1049,6 +1145,7 @@ sie_studium_senese = {
 	}
     
 	global_monthly_literacy = 0.01
+	rl_roll_mtd = 1
 }
 
 uc_bey_advance = {
@@ -1068,6 +1165,7 @@ uc_bey_advance = {
 
 	requires = feudalism_advance
 	unlock_subject_type = uc_bey
+	rl_roll_mtd = 1
 }
 
 colonial_tradition = {
@@ -1075,6 +1173,7 @@ colonial_tradition = {
 	potential = { is_subject_type = colonial_nation }
 	
 	global_population_growth = 0.002
+	rl_roll_mtd = 1
 }
 
 colonial_heritage = {
@@ -1082,6 +1181,7 @@ colonial_heritage = {
 	potential = { is_subject_type = colonial_nation }
 	
 	global_monthly_development = 0.005
+	rl_roll_mtd = 1
 }
 
 ara_a_maritime_realm = {
@@ -1097,6 +1197,7 @@ ara_a_maritime_realm = {
 	navy_galley_power = 0.2
 	
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 ara_desperta_ferro = {
@@ -1112,6 +1213,7 @@ ara_desperta_ferro = {
 	land_morale_modifier = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 network_of_cities = {
@@ -1125,6 +1227,7 @@ network_of_cities = {
     requires = city_building_advance
 
     land_cost_on_distance_from_capital_speed_propagation = 0.1
+	rl_roll_mtd = 1
 }
 
 status_by_merit = {
@@ -1139,6 +1242,7 @@ status_by_merit = {
 	
     monthly_army_tradition = 0.05
     nobles_estate_satisfaction_recovery = 0.001
+	rl_roll_mtd = 1
 }
 
 students_of_foreign_courts = {
@@ -1150,6 +1254,7 @@ students_of_foreign_courts = {
 	country_child_education = 0.1
 	global_nobles_max_literacy = 5
 	requires = chancery_advance
+	rl_roll_mtd = 1
 }
 
 bos_cultural_customs = {
@@ -1165,6 +1270,7 @@ bos_cultural_customs = {
 	cultural_tradition_modifier = 0.2
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 bos_land_of_many_churches = {
@@ -1177,6 +1283,7 @@ bos_land_of_many_churches = {
 	tolerance_heretic = 2
 
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 expansive_policies = {
@@ -1190,6 +1297,7 @@ expansive_policies = {
 	cultures_capacity_modifier = 0.2
 	
 	requires = distribution_of_power_advance
+	rl_roll_mtd = 1
 }
 
 northern_march = {
@@ -1203,6 +1311,7 @@ northern_march = {
 	global_build_buildings_cost = -0.1
 	
 	requires = windmills_advance
+	rl_roll_mtd = 1
 }
 
 breton_tradition = {
@@ -1214,6 +1323,7 @@ breton_tradition = {
 	global_sailors_modifier = 0.1
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 bulgarian_orthodox_patriarchate = {
@@ -1231,6 +1341,7 @@ bulgarian_orthodox_patriarchate = {
 	tolerance_own = 1
 
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 legacy_of_ivan_asen_ii = {
@@ -1244,11 +1355,12 @@ legacy_of_ivan_asen_ii = {
 	global_crown_estate_power = 0.1
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 bul_the_bastion_of_tseverets = {
 	age = age_1_traditions
-	icon = feudalism_advance
+	icon = bul_the_bastion_of_tseverets
 
 	potential = { 
 		has_or_had_tag = BUL 
@@ -1261,6 +1373,7 @@ bul_the_bastion_of_tseverets = {
 	monthly_republican_tradition = 0.1
 	
 	requires = faster_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 kvn_karvunan_maritime_heritage = {
@@ -1275,6 +1388,7 @@ kvn_karvunan_maritime_heritage = {
 	trade_sea_efficiency = 0.20
 	
 	requires = ship_building_advance
+	rl_roll_mtd = 1
 }
 
 vid_the_stronghold_of_baba_vida = {
@@ -1289,6 +1403,7 @@ vid_the_stronghold_of_baba_vida = {
 	global_garrison_size_modifier = 0.10
 	
 	requires = faster_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 bur_between_two_realms = {
@@ -1301,6 +1416,7 @@ bur_between_two_realms = {
 	diplomatic_capacity = 1
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 bur_knightly_prowess = {
@@ -1313,6 +1429,7 @@ bur_knightly_prowess = {
 	land_morale_modifier = 0.1
 	
 	requires = bur_between_two_realms
+	rl_roll_mtd = 1
 }
 
 byz_heart_of_orthodoxy_advance = {
@@ -1368,6 +1485,7 @@ cas_repoblaciones = {
 	global_migration_speed_modifier = 0.1
 
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 cas_the_reconquista = {
@@ -1382,6 +1500,7 @@ cas_the_reconquista = {
 	land_morale_modifier = 0.15
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 cha_go_tram_huong = {	#gỗ trầm hương
@@ -1392,6 +1511,7 @@ cha_go_tram_huong = {	#gỗ trầm hương
 	icon = rudimentary_coastal_ship_repair
 
 	global_lumber_output_modifier = 0.2
+	rl_roll_mtd = 1
 }
 
 my_son_sanctuary = {	#Mỹ Sơn Sanctuary
@@ -1409,6 +1529,7 @@ my_son_sanctuary = {	#Mỹ Sơn Sanctuary
 
 	monthly_self_control = 0.01
 	tolerance_own = 1
+	rl_roll_mtd = 1
 }
 
 chg_legacy_of_chagatai = {
@@ -1421,6 +1542,7 @@ chg_legacy_of_chagatai = {
 
 	monthly_legitimacy = 0.1
 	monthly_horde_unity = 0.1
+	rl_roll_mtd = 1
 }
 
 chg_chagatai_riders = {
@@ -1432,6 +1554,7 @@ chg_chagatai_riders = {
 	requires = chg_legacy_of_chagatai
 
 	army_light_cavalry_power = 0.2
+	rl_roll_mtd = 1
 }
 
 baihua = {
@@ -1443,6 +1566,7 @@ baihua = {
 	global_max_literacy = 5
 
 	requires = cultural_traditions_law_advance
+	rl_roll_mtd = 1
 }
 
 zaju = {
@@ -1455,6 +1579,7 @@ zaju = {
 	num_possible_artists = 1
 
 	requires = baihua
+	rl_roll_mtd = 1
 }
 
 successors_of_genghis_khan = {
@@ -1467,6 +1592,7 @@ successors_of_genghis_khan = {
 	monthly_legitimacy = 0.1
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 confucian_influences = {
@@ -1479,6 +1605,7 @@ confucian_influences = {
 	head_of_cabinet_promotion_cost_modifier = -0.33
 	
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 cir_tribal_elections = {
@@ -1493,6 +1620,7 @@ cir_tribal_elections = {
 	monthly_tribal_cohesion = 0.1
 
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 cir_mercenary_employment = {
@@ -1507,6 +1635,7 @@ cir_mercenary_employment = {
 	hire_mercenary_premium_cost_modifier = -0.1
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 cri_genghisid_legacy = {
@@ -1516,6 +1645,7 @@ cri_genghisid_legacy = {
 	}
 	icon = successors_of_genghis_khan
 	army_light_cavalry_power = 0.2
+	rl_roll_mtd = 1
 }
 
 croatian_the_glagolitic_lithurgy = {
@@ -1532,6 +1662,7 @@ croatian_the_glagolitic_lithurgy = {
 	tolerance_own = 0.5
 
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 cro_maritime_connections = {
@@ -1546,6 +1677,7 @@ cro_maritime_connections = {
     nobles_estate_satisfaction_recovery = 0.001
 
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 cro_the_bashka_tablet = {
@@ -1563,6 +1695,7 @@ cro_the_bashka_tablet = {
 	global_crown_estate_power = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 svn_the_marturina_tax_system = {
@@ -1576,6 +1709,7 @@ svn_the_marturina_tax_system = {
 	tax_income_efficiency = small_tax_income_efficiency_bonus
 
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 cth_merchant_legacy = {
@@ -1588,6 +1722,7 @@ cth_merchant_legacy = {
    	global_merchant_capacity_modifier = 0.1
 
 	icon = merchant_power_from_maritime_reformation_advance
+	rl_roll_mtd = 1
 }
 
 cth_breadbasket_of_rome = {
@@ -1600,6 +1735,7 @@ cth_breadbasket_of_rome = {
 	global_olives_output_modifier = 0.3
 
 	icon = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 dah_children_of_the_panther = {
@@ -1612,6 +1748,7 @@ dah_children_of_the_panther = {
 	monthly_legitimacy = 0.1
 	monthly_republican_tradition = 0.1
 	monthly_devotion = 0.1
+	rl_roll_mtd = 1
 }
 
 dai_lang = {	#Làng
@@ -1622,6 +1759,7 @@ dai_lang = {	#Làng
 	icon = ruthenian_rural_buildings
 
 	global_max_rural_control = 0.05
+	rl_roll_mtd = 1
 }
 
 dan_levy_recruitment = {
@@ -1634,6 +1772,7 @@ dan_levy_recruitment = {
 	levy_recovery_modifier = 0.1 
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 dan_old_naval_traditions = {
@@ -1646,6 +1785,7 @@ dan_old_naval_traditions = {
 	sea_cost_on_distance_from_capital_when_maritime = -0.5
 	
 	requires = dan_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 dlh_origin_of_hindustani = {
@@ -1653,6 +1793,7 @@ dlh_origin_of_hindustani = {
 	potential = { has_or_had_tag = DLH }
 	diplomatic_reputation = diplomatic_reputation_mild_bonus
 	requires = cultural_acceptance_advance
+	rl_roll_mtd = 1
 }
 
 dlh_indo_persian_culture = {
@@ -1661,6 +1802,7 @@ dlh_indo_persian_culture = {
 	cultural_tradition_modifier = 0.2
 	cultures_capacity_modifier = 0.5
 	requires = dlh_origin_of_hindustani
+	rl_roll_mtd = 1
 }
 
 dlh_turkic_conqueror_roots = {
@@ -1668,6 +1810,7 @@ dlh_turkic_conqueror_roots = {
 	potential = { has_or_had_tag = DLH }
 	global_war_score_efficiency = 0.1
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 english_tradition = {
@@ -1678,6 +1821,7 @@ english_tradition = {
 	army_heavy_infantry_power = 0.1
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 english_heritage = {
@@ -1687,6 +1831,7 @@ english_heritage = {
 	}
 	global_maritime_presence_modifier = 0.2
 	requires = english_tradition
+	rl_roll_mtd = 1
 }
 
 magna_carta_advance = {
@@ -1696,6 +1841,7 @@ magna_carta_advance = {
 	}
 	unlock_government_reform = magna_carta_reform
 	requires = distribution_of_power_advance
+	rl_roll_mtd = 1
 }
 
 unlock_early_longbowmen_advance = {
@@ -1714,6 +1860,7 @@ unlock_early_longbowmen_advance = {
 	}
 	unlock_levy = levy_a_early_longbowmen
 	unlock_estate_privilege = peasants_yeomanry
+	rl_roll_mtd = 1
 }
 
 the_ark_of_the_covenant = {
@@ -1726,6 +1873,7 @@ the_ark_of_the_covenant = {
 	global_pop_conversion_speed_modifier = 0.2
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 roof_of_africa = {
@@ -1737,6 +1885,7 @@ roof_of_africa = {
 	land_morale_modifier = 0.1
 	
 	requires = the_ark_of_the_covenant
+	rl_roll_mtd = 1
 }
 
 cawa_advance = {
@@ -1749,6 +1898,7 @@ cawa_advance = {
     
 	unlock_unit = a_cawa
     unlock_building = cawa_barracks
+	rl_roll_mtd = 1
 }
 
 arte_della_lana = {
@@ -1760,6 +1910,7 @@ arte_della_lana = {
 	global_fine_cloth_output_modifier = 0.1
 	
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 florino_d_oro = {
@@ -1772,6 +1923,7 @@ florino_d_oro = {
 	court_spending_cost_modifier = -0.05
 	
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 french_tradition = {
@@ -1783,6 +1935,7 @@ french_tradition = {
 	diplomatic_capacity = 1
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 french_heritage = {
@@ -1793,6 +1946,7 @@ french_heritage = {
 	nobles_estate_levy_size = 1.0
 	
 	requires = french_tradition
+	rl_roll_mtd = 1
 }
 
 genoese_banking_traditions = {
@@ -1805,6 +1959,7 @@ genoese_banking_traditions = {
 		
 	requires = medieval_administration
 	
+	rl_roll_mtd = 1
 }
 
 genoese_maritime_diplomacy = {
@@ -1814,6 +1969,7 @@ genoese_maritime_diplomacy = {
 	age = age_1_traditions
 	
 	max_diplomats = 2
+	rl_roll_mtd = 1
 }
 
 slave_manned_galleys = {
@@ -1823,6 +1979,7 @@ slave_manned_galleys = {
 	age = age_1_traditions
 	
 	unlock_building = galley_barracks
+	rl_roll_mtd = 1
 }
 
 genoese_galley = {
@@ -1830,6 +1987,7 @@ genoese_galley = {
 	potential = { has_or_had_tag = GEN }
 	age = age_1_traditions
 	unlock_unit = n_genoese_galley
+	rl_roll_mtd = 1
 }
 
 geo_legacy_of_saint_george = {
@@ -1841,6 +1999,7 @@ geo_legacy_of_saint_george = {
 	requires = scholasticism
 
 	army_heavy_infantry_power = 0.1
+	rl_roll_mtd = 1
 }
 
 geo_bagrationi_dynasty = {
@@ -1852,6 +2011,7 @@ geo_bagrationi_dynasty = {
 	requires = distribution_of_power_advance
 
 	monthly_legitimacy = 0.05
+	rl_roll_mtd = 1
 }
 
 glh_kipchak_khanate = {
@@ -1863,6 +2023,7 @@ glh_kipchak_khanate = {
 	
 	global_manpower_modifier = 0.1
 	cultures_capacity_modifier = 0.5
+	rl_roll_mtd = 1
 }
 
 glh_legacy_of_jochi = {
@@ -1874,6 +2035,7 @@ glh_legacy_of_jochi = {
 	requires = horse_riding_advance
 
 	army_light_cavalry_maintenance_cost_modifier = -0.20
+	rl_roll_mtd = 1
 }
 
 gra_banu_nasr = {
@@ -1884,6 +2046,7 @@ gra_banu_nasr = {
 	global_manpower_modifier = 0.1
 
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 gra_nasrid_art = {
@@ -1895,6 +2058,7 @@ gra_nasrid_art = {
 	global_monthly_art_start_chance = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 austrian_tradition = {
@@ -1909,6 +2073,7 @@ austrian_tradition = {
 	requires = feudalism_advance
 	monthly_diplomats = 0.1
 	monthly_prestige = 0.05
+	rl_roll_mtd = 1
 }
 
 austrian_heritage = {
@@ -1922,6 +2087,7 @@ austrian_heritage = {
 	
 	requires = austrian_tradition
 	land_morale_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 hsa_holpfennige = {
@@ -1933,6 +2099,7 @@ hsa_holpfennige = {
 	requires = legalism_advance
 	merchant_maintenance_efficiency = 0.2
 	export_efficiency = small_trade_efficiency_bonus
+	rl_roll_mtd = 1
 }
 
 hsa_the_cog = {
@@ -1943,6 +2110,7 @@ hsa_the_cog = {
 	}
 	requires = legalism_advance
 	unlock_unit = n_hanseatic_cog
+	rl_roll_mtd = 1
 }
 
 hun_composite_light_cavalry = {
@@ -1953,6 +2121,7 @@ hun_composite_light_cavalry = {
 	army_light_cavalry_power = 0.2
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 hun_castle_warriors = {
@@ -1964,6 +2133,7 @@ hun_castle_warriors = {
 	requires = hun_composite_light_cavalry
 	levy_recovery_modifier = 0.1
 	global_levy_recruitment_speed_modifier = 0.33
+	rl_roll_mtd = 1
 }
 
 chasqui = {
@@ -1978,6 +2148,7 @@ chasqui = {
 	requires = agriculture_advance
 	research_speed_modifier = 0.05
 	diplomatic_range_modifier = 0.5
+	rl_roll_mtd = 1
 }
 
 mitma = {
@@ -1990,6 +2161,7 @@ mitma = {
 	}
 	global_monthly_development = 0.001
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 inc_vertical_economy = {
@@ -2005,6 +2177,7 @@ inc_vertical_economy = {
 	hills_proximity_impact = -0.15
 
 	requires = mitma
+	rl_roll_mtd = 1
 }
 
 military_mita = {
@@ -2017,6 +2190,7 @@ military_mita = {
 	}
 	wrong_culture_levy_size = 0.15
 	requires = mitma
+	rl_roll_mtd = 1
 }
 
 warachikuy = {
@@ -2029,6 +2203,7 @@ warachikuy = {
 	}
 	monthly_army_tradition = 0.05
 	requires = military_mita
+	rl_roll_mtd = 1
 }
 
 tambo_advance = {
@@ -2042,6 +2217,7 @@ tambo_advance = {
 	}
 	unlock_building = tambo
 	requires = road_building
+	rl_roll_mtd = 1
 }
 
 inc_tambo = {
@@ -2055,6 +2231,7 @@ inc_tambo = {
 	food_consumption_modifier = -0.1
 	army_movement_speed = 0.1
 	requires = tambo_advance
+	rl_roll_mtd = 1
 }
 
 ira_sasanian_heritage = {
@@ -2067,6 +2244,7 @@ ira_sasanian_heritage = {
 	}
 	requires = feudalism_advance
 	cultural_tradition_modifier = 0.33
+	rl_roll_mtd = 1
 }
 
 ira_islamized_persia = {
@@ -2080,6 +2258,7 @@ ira_islamized_persia = {
 	}
 	requires = legalism_advance
 	monthly_towards_jurisprudence = societal_value_minor_monthly_move
+	rl_roll_mtd = 1
 }
 
 ira_shahnameh = {
@@ -2092,6 +2271,7 @@ ira_shahnameh = {
 	}
 	requires = legalism_advance
 	stability_decay = -0.00025
+	rl_roll_mtd = 1
 }
 
 ira_persian_plateau = {
@@ -2107,6 +2287,7 @@ ira_persian_plateau = {
 	hills_proximity_impact = -0.15
 
 	requires = ira_shahnameh
+	rl_roll_mtd = 1
 }
 
 sons_of_the_salur_tribe = {
@@ -2121,6 +2302,7 @@ sons_of_the_salur_tribe = {
 	diplomatic_upkeep_modifier = -0.05
 	army_tradition_decay = -0.001
 
+	rl_roll_mtd = 1
 }
 
 mehmed_beys_firman = {
@@ -2135,6 +2317,7 @@ mehmed_beys_firman = {
 	requires = cultural_traditions_law_advance
 
 	cultural_influence_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 karamanid_cavalry = {
@@ -2147,6 +2330,7 @@ karamanid_cavalry = {
 	icon = timurid_cavalry
 
 	army_light_cavalry_power = 0.1
+	rl_roll_mtd = 1
 }
 
 home_of_the_whirling_dervishes = {
@@ -2160,6 +2344,7 @@ home_of_the_whirling_dervishes = {
 	monthly_towards_mysticism = societal_value_monthly_move
 	tolerance_heretic = 2
 
+	rl_roll_mtd = 1
 }
 
 khm_religious_flexibility = {
@@ -2170,6 +2355,7 @@ khm_religious_flexibility = {
 	global_pop_conversion_speed_modifier = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 khm_royal_procession = {
@@ -2181,6 +2367,7 @@ khm_royal_procession = {
 	monthly_legitimacy = 0.1
 
 	requires = khm_religious_flexibility
+	rl_roll_mtd = 1
 }
 
 khm_ballista_elephants = {
@@ -2192,6 +2379,7 @@ khm_ballista_elephants = {
 	unlock_unit = a_khmer_ballista_elephant_infantry
 
 	requires = khm_religious_flexibility
+	rl_roll_mtd = 1
 }
 
 defense_of_the_faith = { 
@@ -2200,6 +2388,7 @@ defense_of_the_faith = {
 		has_or_had_tag = KNI
 	}
 	war_no_cb_cost_modifier = -0.05
+	rl_roll_mtd = 1
 }
 
 assistance_to_the_suffering = { 
@@ -2208,6 +2397,7 @@ assistance_to_the_suffering = {
 		has_or_had_tag = KNI
 	}
 	army_reinforce_cost = -0.2
+	rl_roll_mtd = 1
 }
 
 kon_bakongo_confederation = {
@@ -2219,6 +2409,7 @@ kon_bakongo_confederation = {
 	
 	
 	land_cost_on_distance_from_capital_speed_propagation = 0.1
+	rl_roll_mtd = 1
 }
 
 kor_fortresses_of_goguryeo = {
@@ -2231,6 +2422,7 @@ kor_fortresses_of_goguryeo = {
 	fort_limit_modifier = 0.10
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 kor_korean_artisanry = {
@@ -2241,6 +2433,7 @@ kor_korean_artisanry = {
 	has_cultural_maintenance = yes
 	num_possible_artists = 1
 	requires = kor_fortresses_of_goguryeo
+	rl_roll_mtd = 1
 }
 
 kor_korean_barracks_advance = {
@@ -2250,6 +2443,7 @@ kor_korean_barracks_advance = {
 	}
 	unlock_building = korean_barracks
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 land_of_many_religions = {
@@ -2263,6 +2457,7 @@ land_of_many_religions = {
 
 	tolerance_heretic = 1
 	tolerance_heathen = 1
+	rl_roll_mtd = 1
 }
 
 migrant_opportunities = {
@@ -2276,6 +2471,7 @@ migrant_opportunities = {
 	
 	rural_migration_attraction = 0.25
 	non_rural_migration_attraction = 0.25
+	rl_roll_mtd = 1
 }
 
 LIV_crusader_forts = {
@@ -2285,6 +2481,7 @@ LIV_crusader_forts = {
 	requires = castle_advance
 	
 	fort_limit_modifier = 0.20
+	rl_roll_mtd = 1
 }
 
 LIV_a_order_knights = {
@@ -2294,6 +2491,7 @@ LIV_a_order_knights = {
 	potential = { has_or_had_tag = LIV }
 	
 	requires = LIV_crusader_forts
+	rl_roll_mtd = 1
 }
 
 lor_mining_tradition = {
@@ -2309,6 +2507,7 @@ lor_mining_tradition = {
 	global_copper_output_modifier = 0.1
 
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 lor_cultural_diversity = {
@@ -2323,6 +2522,7 @@ lor_cultural_diversity = {
 	cultures_capacity_modifier = 0.2
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 mai_diadema_regni = {
@@ -2334,6 +2534,7 @@ mai_diadema_regni = {
 	monthly_prestige = 0.1
 
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 mai_city_and_archbishop = {
@@ -2346,6 +2547,7 @@ mai_city_and_archbishop = {
 	global_burghers_city_desired_pop = 0.1
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 maj_bubu_and_jala = {
@@ -2356,6 +2558,7 @@ maj_bubu_and_jala = {
 	requires = apothecary_advance
 	
 	unlock_building = bubu_building
+	rl_roll_mtd = 1
 }
 
 maj_home_of_the_sea_nomads = {
@@ -2366,6 +2569,7 @@ maj_home_of_the_sea_nomads = {
 	requires = feudalism_advance
 	
 	unlock_unit = n_kabang
+	rl_roll_mtd = 1
 }
 
 maj_jong_advance = {
@@ -2376,6 +2580,7 @@ maj_jong_advance = {
 	requires = feudalism_advance
 	
 	unlock_unit = n_jong
+	rl_roll_mtd = 1
 }
 
 epic_of_sundiata = {
@@ -2386,6 +2591,7 @@ epic_of_sundiata = {
 	}
 	land_morale_modifier = 0.1
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 kouroukan_fouga_advance = {
@@ -2396,6 +2602,7 @@ kouroukan_fouga_advance = {
 	}
 	unlock_government_reform = manden_kurufa_reform
 	requires = distribution_of_power_advance
+	rl_roll_mtd = 1
 }
 
 kele_koun_advance = {
@@ -2407,6 +2614,7 @@ kele_koun_advance = {
 	requires = mining_advance
 	army_light_infantry_power = 0.1
 	unlock_unit = a_jonow_auxiliary
+	rl_roll_mtd = 1
 }
 
 mandekalu_levies = {
@@ -2418,6 +2626,7 @@ mandekalu_levies = {
 	requires = kele_koun_advance
 	unlock_unit = a_mandekalu_infantry
 	unlock_unit = a_mandekalu_cavalry
+	rl_roll_mtd = 1
 }
 
 sofa_levies_advance = {
@@ -2430,6 +2639,7 @@ sofa_levies_advance = {
 	unlock_building = sofa_stockade
 	unlock_building = sofa_barracks
 	unlock_unit = a_sofa_infantry
+	rl_roll_mtd = 1
 }
 
 farari_corps_advance = {
@@ -2442,6 +2652,7 @@ farari_corps_advance = {
 	army_light_cavalry_power = 0.05
 	unlock_unit = a_farari_infantry	#Only for tooltip, recruitment of unit is done through the promotion ability
 	unlock_unit = a_farari_cavalry
+	rl_roll_mtd = 1
 }
 
 barid = {
@@ -2453,6 +2664,7 @@ barid = {
 
 	requires = meritocracy_advance
 	global_distance_from_capital_speed_propagation = 0.1
+	rl_roll_mtd = 1
 }
 
 karimi_merchants = {
@@ -2464,6 +2676,7 @@ karimi_merchants = {
 
 	requires = feudalism_advance
 	trade_land_efficiency = 0.2
+	rl_roll_mtd = 1
 }
 
 mamluk_soldiers = {
@@ -2474,6 +2687,7 @@ mamluk_soldiers = {
 	}
 	requires = feudalism_advance
 	unlock_unit = a_mamluk_unit_traditions
+	rl_roll_mtd = 1
 }
 
 mamluk_halqah = {
@@ -2484,6 +2698,7 @@ mamluk_halqah = {
 	}
 	requires = feudalism_advance
 	unlock_unit = a_halqah_unit
+	rl_roll_mtd = 1
 }
 
 mohe_ancestry = {
@@ -2498,6 +2713,7 @@ mohe_ancestry = {
 
     global_livestock_output_modifier = 0.1
     global_wheat_output_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 warka_ties = {
@@ -2511,6 +2727,7 @@ warka_ties = {
     icon = experienced_fur_hunters
 
     global_monthly_food_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 meissen_lion = {
@@ -2525,6 +2742,7 @@ meissen_lion = {
 
 	requires = feudalism_advance
 	
+	rl_roll_mtd = 1
 }
 
 a_mining_heritage = {
@@ -2539,6 +2757,7 @@ a_mining_heritage = {
 
 	requires = meissen_lion
 	
+	rl_roll_mtd = 1
 }
 
 melaka_tree = {
@@ -2553,6 +2772,7 @@ melaka_tree = {
 
     cultural_tradition_modifier = 0.1
 	cultural_influence_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 orang_laut = {
@@ -2566,6 +2786,7 @@ orang_laut = {
     requires = melaka_tree
 
     global_maritime_presence_decay = -0.002
+	rl_roll_mtd = 1
 }
 
 milanese_tradition = {
@@ -2576,6 +2797,7 @@ milanese_tradition = {
 	diplomatic_capacity = 1
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 milanese_heritage = {
@@ -2586,6 +2808,7 @@ milanese_heritage = {
 	}
 	army_heavy_infantry_power = 0.1
 	requires = milanese_tradition
+	rl_roll_mtd = 1
 }
 
 amazigh_slave_raids = {
@@ -2597,6 +2820,7 @@ amazigh_slave_raids = {
 	requires = feudalism_advance
 	
 	auto_slave_raid_different_religion = yes
+	rl_roll_mtd = 1
 }
 
 zenata_roots = {
@@ -2607,6 +2831,7 @@ zenata_roots = {
 	requires = alchemy_advance
 
 	global_wool_output_modifier = 0.25
+	rl_roll_mtd = 1
 }
 
 mor_atlas_strongholds = {
@@ -2618,6 +2843,7 @@ mor_atlas_strongholds = {
 	hills_proximity_impact = -0.2
 
 	requires = zenata_roots
+	rl_roll_mtd = 1
 }
 
 mos_skilled_tax_collectors = {
@@ -2628,6 +2854,7 @@ mos_skilled_tax_collectors = {
 	}
 	subject_income_modifier = 0.05
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 mos_dynastic_ties = {
@@ -2637,6 +2864,7 @@ mos_dynastic_ties = {
 	}
 	diplomatic_capacity = 1
 	requires = mos_skilled_tax_collectors
+	rl_roll_mtd = 1
 }
 
 settle_the_islands = {
@@ -2650,6 +2878,7 @@ settle_the_islands = {
     requires = colonies
 
     colonial_maintenance_cost = -0.2
+	rl_roll_mtd = 1
 }
 
 people_of_the_sea = {
@@ -2664,6 +2893,7 @@ people_of_the_sea = {
 
 	naval_morale_modifier = 0.1
 	monthly_navy_tradition = 0.05
+	rl_roll_mtd = 1
 }
 
 university_naples = {
@@ -2680,6 +2910,7 @@ university_naples = {
 	global_institution_growth_modifier = 0.2
 	
 	requires = library_advance
+	rl_roll_mtd = 1
 }
 
 mercantile_spirit = {
@@ -2695,6 +2926,7 @@ mercantile_spirit = {
 	selling_efficiency = small_trade_efficiency_bonus
 	
 	requires = trade_advance_age_of_trad
+	rl_roll_mtd = 1
 }
 
 nav_transatlantic_whaling = { #ADM
@@ -2709,6 +2941,7 @@ nav_transatlantic_whaling = { #ADM
 	global_fish_output_modifier = 0.1
 	
 	requires = windmills_advance
+	rl_roll_mtd = 1
 }
 
 nav_shipbuiling_experts = { #DIP
@@ -2722,6 +2955,7 @@ nav_shipbuiling_experts = { #DIP
 	ship_build_speed = 0.1
 	
 	requires = ship_building_advance
+	rl_roll_mtd = 1
 }
 
 nav_memories_reconquista = { #MIL
@@ -2735,6 +2969,7 @@ nav_memories_reconquista = { #MIL
 	land_morale_modifier = 0.1
 	
 	requires = cultural_traditions_law_advance
+	rl_roll_mtd = 1
 }
 
 netherlandish_protoindustry = {
@@ -2745,6 +2980,7 @@ netherlandish_protoindustry = {
 	global_production_efficiency = medium_production_efficiency_bonus
 
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 brb_the_four_quartiers = {
@@ -2756,6 +2992,7 @@ brb_the_four_quartiers = {
 	tax_income_efficiency = medium_tax_income_efficiency_bonus
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 fla_cloth = {
@@ -2770,6 +3007,7 @@ fla_cloth = {
 	global_fine_cloth_output_modifier = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 frisian_trading_traditions = {
@@ -2784,6 +3022,7 @@ frisian_trading_traditions = {
 	trade_range_modifier = 0.1
 
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 gel_warring_spirit = {
@@ -2794,6 +3033,7 @@ gel_warring_spirit = {
 	army_heavy_infantry_power = 0.1
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 hai_expert_embassadors = {
@@ -2804,6 +3044,7 @@ hai_expert_embassadors = {
 	diplomatic_reputation = diplomatic_reputation_mild_bonus
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 hol_sailors = {
@@ -2816,6 +3057,7 @@ hol_sailors = {
 	global_sailors_modifier = 0.1
 
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 lie_athens_north = {
@@ -2826,6 +3068,7 @@ lie_athens_north = {
 	research_speed_modifier = 0.05
 
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 lux_destined_rule = {
@@ -2837,6 +3080,7 @@ lux_destined_rule = {
 	monthly_prestige = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 utr_city_churches = {
@@ -2849,6 +3093,7 @@ utr_city_churches = {
 	global_pop_conversion_speed_modifier = 0.05
 
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 nor_seaborn_country = {
@@ -2861,6 +3106,7 @@ nor_seaborn_country = {
 	sea_cost_on_distance_from_capital_when_maritime = -0.5
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 nor_bounties_of_the_sea = {
@@ -2872,6 +3118,7 @@ nor_bounties_of_the_sea = {
 	
 	global_fish_output_modifier = 0.20
 	requires = nor_seaborn_country
+	rl_roll_mtd = 1
 }
 
 birch_bark_manuscript = {
@@ -2881,6 +3128,7 @@ birch_bark_manuscript = {
 	global_max_literacy = 5
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 novgorod_first_chronicle = {
@@ -2888,6 +3136,7 @@ novgorod_first_chronicle = {
 	
 	age = age_1_traditions
 	cultural_tradition_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 heirs_of_rollo = {
@@ -2900,6 +3149,7 @@ heirs_of_rollo = {
 
 	monthly_legitimacy = 0.05
 	diplomatic_spending_cost = -0.005
+	rl_roll_mtd = 1
 }
 
 norman_law = {
@@ -2911,6 +3161,7 @@ norman_law = {
 	requires = legalism_advance	
 	
 	unlock_policy = couteume_de_normaundie
+	rl_roll_mtd = 1
 }
 
 omani_tradition = {
@@ -2923,6 +3174,7 @@ omani_tradition = {
 	
 	export_efficiency = medium_trade_efficiency_bonus
 	
+	rl_roll_mtd = 1
 }
 
 omani_heritage = {
@@ -2934,6 +3186,7 @@ omani_heritage = {
 	requires = omani_tradition
 	global_maritime_presence_modifier = 0.2
 	
+	rl_roll_mtd = 1
 }
 
 ori_bulwark_of_the_hindu = {
@@ -2941,6 +3194,7 @@ ori_bulwark_of_the_hindu = {
 	potential = { has_or_had_tag = ORI }
 	possible_frontage_modifier = 0.1
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 ori_anka_year_system = {
@@ -2948,6 +3202,7 @@ ori_anka_year_system = {
 	potential = { has_or_had_tag = ORI }
 	monthly_legitimacy = 0.1
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 orm_a_vast_emporium  = {
@@ -2959,6 +3214,7 @@ orm_a_vast_emporium  = {
 	requires = legalism_advance
 
 	merchant_power_from_maritime_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 hormuz_toll = {
@@ -2970,6 +3226,7 @@ hormuz_toll = {
 
 	export_efficiency = medium_trade_efficiency_bonus
 	
+	rl_roll_mtd = 1
 }
 
 gate_of_the_persian_gulf = {
@@ -2980,6 +3237,7 @@ gate_of_the_persian_gulf = {
 	icon = red_sea_trade
 
 	global_maritime_presence_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 pal_palatine_lion = {
@@ -2990,6 +3248,7 @@ pal_palatine_lion = {
 	monthly_legitimacy = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 pal_castles_on_rhine = {
@@ -3000,6 +3259,7 @@ pal_castles_on_rhine = {
 	global_trade_protection_factor = 0.2
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 pap_head_of_the_church = {
@@ -3010,6 +3270,7 @@ pap_head_of_the_church = {
 	}
 	monthly_religious_influence = 0.5
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 pap_the_word_of_the_lord = {
@@ -3020,6 +3281,7 @@ pap_the_word_of_the_lord = {
 	}
 	diplomatic_reputation = diplomatic_reputation_severe_bonus
 	requires = pap_head_of_the_church
+	rl_roll_mtd = 1
 }
 
 kasztelanowie = {
@@ -3029,6 +3291,7 @@ kasztelanowie = {
 	global_distance_from_capital_speed_propagation = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 land_of_promise = {
@@ -3039,6 +3302,7 @@ land_of_promise = {
 	global_migration_speed_modifier = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 statute_of_kalisz = {
@@ -3049,6 +3313,7 @@ statute_of_kalisz = {
 	tolerance_heathen = 1
 
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 por_battle_ourique = {
@@ -3064,6 +3329,7 @@ por_battle_ourique = {
 	army_light_infantry_power = 0.1
 	
 	requires = cultural_traditions_law_advance
+	rl_roll_mtd = 1
 }
 
 por_establishment_portuguese_navy = {
@@ -3079,6 +3345,7 @@ por_establishment_portuguese_navy = {
 	navy_movement_speed = 0.1
 	
 	requires = ship_building_advance
+	rl_roll_mtd = 1
 }
 
 capetian_house_of_anjou = {
@@ -3089,6 +3356,7 @@ capetian_house_of_anjou = {
 	icon = fra_expansion_of_france
 
 	diplomatic_capacity_modifier = 0.25
+	rl_roll_mtd = 1
 }
 
 lords_of_the_rhone_corridor = {
@@ -3100,6 +3368,7 @@ lords_of_the_rhone_corridor = {
 
 	global_fort_build_buildings_cost = -0.05
 	global_defensive = 0.1
+	rl_roll_mtd = 1
 }
 
 angevin_heraldry = {
@@ -3110,6 +3379,7 @@ angevin_heraldry = {
 	icon = consolidate_the_royal_domain
 
 	diplomatic_reputation = diplomatic_reputation_mild_bonus
+	rl_roll_mtd = 1
 }
 
 rom_spqr = {
@@ -3120,6 +3390,7 @@ rom_spqr = {
 	icon = crown_power_advance_renaissance
 	
 	parliament_base_support = 0.2
+	rl_roll_mtd = 1
 }
 
 rom_pax_romana = {
@@ -3131,6 +3402,7 @@ rom_pax_romana = {
 	
 	stability_cost = -0.1
 	global_monthly_prosperity = 0.002
+	rl_roll_mtd = 1
 }
 
 sav_savoyard_flexibility = {
@@ -3143,6 +3415,7 @@ sav_savoyard_flexibility = {
 	diplomatic_capacity = 1
 
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 sav_house_of_savoy = {
@@ -3154,6 +3427,7 @@ sav_house_of_savoy = {
 	land_cost_on_distance_from_capital_speed_propagation = 0.15
 
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 sav_alpine_identity = {
@@ -3166,6 +3440,7 @@ sav_alpine_identity = {
 	hills_proximity_impact = -0.33
 
 	requires = sav_house_of_savoy
+	rl_roll_mtd = 1
 }
 
 sca_unified_scandinavia = {
@@ -3176,6 +3451,7 @@ sca_unified_scandinavia = {
 	icon = dan_scanian_regiment
 	
 	global_crown_estate_power = 0.1
+	rl_roll_mtd = 1
 }
 
 unlock_gallowglass_advance = {
@@ -3186,6 +3462,7 @@ unlock_gallowglass_advance = {
 	potential = {
 		country_has_gallowglass_trigger = yes
 	}
+	rl_roll_mtd = 1
 }
 
 scottish_salmon = {
@@ -3201,6 +3478,7 @@ scottish_salmon = {
 	global_fish_output_modifier = 0.2
 	global_sailors_modifier = 0.1
 	
+	rl_roll_mtd = 1
 }
 
 scottish_morale = {
@@ -3219,6 +3497,7 @@ scottish_morale = {
 		NOT = { has_or_had_tag = SBL }
 	}
 	land_morale_modifier = 0.15
+	rl_roll_mtd = 1
 }
 
 scottish_longbowmen = { 
@@ -3236,6 +3515,7 @@ scottish_longbowmen = {
 		}
 	}
 	unlock_levy = levy_a_early_longbowmen
+	rl_roll_mtd = 1
 }
 
 peel_towers_advance = {
@@ -3249,6 +3529,7 @@ peel_towers_advance = {
 		}
 	}
 	unlock_building = peel_towers
+	rl_roll_mtd = 1
 }
 
 scottish_highland_tradition = {
@@ -3263,6 +3544,7 @@ scottish_highland_tradition = {
 	}
 	mountains_proximity_impact = -0.33
 	hills_proximity_impact = -0.33
+	rl_roll_mtd = 1
 }
 
 serbian_zaduzbina = {
@@ -3280,6 +3562,7 @@ serbian_zaduzbina = {
 	global_build_buildings_cost = -0.1
 	
 	requires = windmills_advance
+	rl_roll_mtd = 1
 }
 
 hum_a_sheep_surrounded_by_wolves = {
@@ -3294,6 +3577,7 @@ hum_a_sheep_surrounded_by_wolves = {
 	improve_relation_impact = 0.1
 	
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 serbian_mining = {
@@ -3307,6 +3591,7 @@ serbian_mining = {
 	expand_rgo_mining_cost_modifier = -0.20
 	
 	requires = city_building_advance
+	rl_roll_mtd = 1
 }
 
 mimic_the_phoenix = {
@@ -3325,11 +3610,12 @@ mimic_the_phoenix = {
 	legislative_efficiency = 0.05
 	
 	requires = state_administration_advance
+	rl_roll_mtd = 1
 }
 
 zta_maritime_fiefdoms_of_the_adriatic = {
-	age = age_1_traditions 
-	icon = global_trade_routes_advance
+	age = age_1_traditions
+	icon = zta_maritime_fiefdoms_of_the_adriatic
 
 	potential = {
 		has_or_had_tag = ZTA
@@ -3339,6 +3625,7 @@ zta_maritime_fiefdoms_of_the_adriatic = {
 	trade_sea_efficiency = 0.10
 	
 	requires = ship_building_advance
+	rl_roll_mtd = 1
 }
 
 legacy_of_the_normans = {
@@ -3352,6 +3639,7 @@ legacy_of_the_normans = {
 	}
 	land_morale_modifier = 0.1
 	cultures_capacity_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 sic_constitions_of_melfi = {
@@ -3368,6 +3656,7 @@ sic_constitions_of_melfi = {
 	global_estate_target_satisfaction = small_permanent_target_satisfaction
 	tolerance_heretic = 0.5
 	tolerance_heathen = 0.5
+	rl_roll_mtd = 1
 }
 
 sme_jaqeli_dynasty = {
@@ -3379,6 +3668,7 @@ sme_jaqeli_dynasty = {
 	requires = cultural_traditions_law_advance
 
 	max_diplomats = 1
+	rl_roll_mtd = 1
 }
 
 diocese_of_smolensk = {
@@ -3390,6 +3680,7 @@ diocese_of_smolensk = {
 
 	tolerance_own = 1
 	clergy_estate_target_satisfaction = small_permanent_target_satisfaction
+	rl_roll_mtd = 1
 }
 
 stories_of_the_gao_empire = {
@@ -3401,6 +3692,7 @@ stories_of_the_gao_empire = {
 	monthly_army_tradition = 0.05
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 malian_military_tactics = {
@@ -3411,6 +3703,7 @@ malian_military_tactics = {
 	army_heavy_infantry_power = 0.1
 	
 	requires = stories_of_the_gao_empire
+	rl_roll_mtd = 1
 }
 
 suk_breaker_of_chains = {
@@ -3422,6 +3715,7 @@ suk_breaker_of_chains = {
 	requires = mining_advance
 
 	diplomatic_reputation = diplomatic_reputation_weak_bonus
+	rl_roll_mtd = 1
 }
 
 suk_akson_sukhothai = {
@@ -3433,6 +3727,7 @@ suk_akson_sukhothai = {
 	requires = cultural_traditions_law_advance
 
 	cultural_influence_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 seren_taun = {	#Sérén Taun
@@ -3443,6 +3738,7 @@ seren_taun = {	#Sérén Taun
 	icon = food_advance_renaissance
 	
 	global_monthly_food_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 pepper_of_the_parahyangan = {
@@ -3453,6 +3749,7 @@ pepper_of_the_parahyangan = {
 	icon = karimi_merchants
 	
 	global_pepper_output_modifier = 0.25
+	rl_roll_mtd = 1
 }
 
 pan_asian_trade = {
@@ -3463,6 +3760,7 @@ pan_asian_trade = {
 	icon = bng_bengali_trade_fleet
 	
 	export_efficiency = small_trade_efficiency_bonus
+	rl_roll_mtd = 1
 }
 
 swedish_tradition = {
@@ -3473,6 +3771,7 @@ swedish_tradition = {
 	army_heavy_infantry_power = 0.2
 		
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 swedish_heritage = {
@@ -3484,6 +3783,7 @@ swedish_heritage = {
 
 	peasants_estate_target_satisfaction = medium_permanent_target_satisfaction
 	global_peasant_enfranchisment = 0.05
+	rl_roll_mtd = 1
 }
 
 teu_crusader_discipline = {
@@ -3496,6 +3796,7 @@ teu_crusader_discipline = {
 	fort_limit = 1
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 teu_teutonic_heavy_cavalry = {
@@ -3508,6 +3809,7 @@ teu_teutonic_heavy_cavalry = {
 	army_heavy_cavalry_maintenance_cost_modifier = -0.1
 	
 	requires = teu_crusader_discipline
+	rl_roll_mtd = 1
 }
 
 sakya_hegemony = {
@@ -3519,6 +3821,7 @@ sakya_hegemony = {
 	icon = buddhist_meditation
 
 	stability_cost = -0.1
+	rl_roll_mtd = 1
 }
 
 monastic_dominance = {
@@ -3529,6 +3832,7 @@ monastic_dominance = {
 	icon = buddhist_councils
 
 	tolerance_own = 1
+	rl_roll_mtd = 1
 }
 
 the_yak = {
@@ -3540,6 +3844,7 @@ the_yak = {
 
 	global_livestock_output_modifier = 0.1
 	global_wool_output_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 drokpa = {
@@ -3555,6 +3860,7 @@ drokpa = {
 	plateau_proximity_impact = -0.33
 
 	
+	rl_roll_mtd = 1
 }
 
 timurid_cavalry = {
@@ -3564,6 +3870,7 @@ timurid_cavalry = {
 	}
 	army_light_cavalry_maintenance_cost_modifier = -0.1
 	requires = horse_riding_advance
+	rl_roll_mtd = 1
 }
 
 beacon_of_maghrebi_trade = {
@@ -3576,6 +3883,7 @@ beacon_of_maghrebi_trade = {
 	requires = legalism_advance
 
 	global_merchant_capacity_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 qalat_al_mashwar_advance = {
@@ -3588,6 +3896,7 @@ qalat_al_mashwar_advance = {
 	requires = feudalism_advance
 
 	unlock_building = qalat_al_mashwar
+	rl_roll_mtd = 1
 }
 
 pochtecayotl = {
@@ -3597,6 +3906,7 @@ pochtecayotl = {
 	}
 	spy_network_construction = 0.2
 	trade_range_modifier = 0.10
+	rl_roll_mtd = 1
 }
 
 warrior_societies = {
@@ -3611,6 +3921,7 @@ warrior_societies = {
 	unlock_building = telpochcalli
 
 	requires = faster_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 tnk_legitimate_rule = {
@@ -3618,6 +3929,7 @@ tnk_legitimate_rule = {
 	potential = { has_or_had_tag = TNK }
 	requires = feudalism_advance
 	monthly_legitimacy = 0.1
+	rl_roll_mtd = 1
 }
 
 tnk_resist_invaders = {
@@ -3625,6 +3937,7 @@ tnk_resist_invaders = {
 	potential = { has_or_had_tag = TNK }
 	global_hostile_attrition = 1
 	requires = tnk_legitimate_rule
+	rl_roll_mtd = 1
 }
 
 tre_pontic_trail_mastery = {
@@ -3636,6 +3949,7 @@ tre_pontic_trail_mastery = {
 	requires = feudalism_advance
 	
 	global_defensive = 0.1
+	rl_roll_mtd = 1
 }
 
 tre_komnenos_legacy = {
@@ -3648,6 +3962,7 @@ tre_komnenos_legacy = {
 	
 	global_crown_estate_power = 0.1
 	monthly_army_tradition = 0.05
+	rl_roll_mtd = 1
 }
 
 tre_empire_in_exile = {
@@ -3664,6 +3979,7 @@ tre_empire_in_exile = {
 	
 	allow_bureaucracy = yes
 	global_max_bureaucracy_slots = 1
+	rl_roll_mtd = 1
 }
 
 tunisian_corsairs = {
@@ -3675,6 +3991,7 @@ tunisian_corsairs = {
 
 	navy_galley_power = 0.2
 	navy_galley_maintenance_cost_modifier = -0.1
+	rl_roll_mtd = 1
 }
 
 tamazight = {
@@ -3686,6 +4003,7 @@ tamazight = {
 	requires = written_alphabet
 
 	cultures_capacity_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 guardians_of_ifriqiya = {
@@ -3697,6 +4015,7 @@ guardians_of_ifriqiya = {
 	requires = feudalism_advance
 
 	global_separatism = -0.1
+	rl_roll_mtd = 1
 }
 
 seljuk_heritage = {
@@ -3709,6 +4028,7 @@ seljuk_heritage = {
 	global_integration_speed_modifier = 0.33
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 turkic_traditions = {
@@ -3721,6 +4041,7 @@ turkic_traditions = {
 
 	requires = seljuk_heritage
 	
+	rl_roll_mtd = 1
 }
 
 ghazi = {
@@ -3732,6 +4053,7 @@ ghazi = {
 	unlock_estate_privilege = ghazi_privilege
 
 	requires = seljuk_heritage
+	rl_roll_mtd = 1
 }
 
 azeb_irregulars = {
@@ -3743,6 +4065,7 @@ azeb_irregulars = {
 	global_sailors_modifier = 0.05
 
 	requires = seljuk_heritage
+	rl_roll_mtd = 1
 }
 
 bavarian_legitimacy = {
@@ -3761,6 +4084,7 @@ bavarian_legitimacy = {
 	}
 	requires = feudalism_advance
 	monthly_legitimacy = 0.1
+	rl_roll_mtd = 1
 }
 
 bavarian_imperial_knights = {
@@ -3780,6 +4104,7 @@ bavarian_imperial_knights = {
 	}
 	requires = bavarian_legitimacy
 	army_heavy_cavalry_power = 0.1
+	rl_roll_mtd = 1
 }
 
 ven_venetian_thalassocracy = {
@@ -3790,6 +4115,7 @@ ven_venetian_thalassocracy = {
 	}
 	global_merchant_power = 0.1
 	requires = trade_advance_age_of_trad
+	rl_roll_mtd = 1
 }
 
 venetian_arsenal_advance = {
@@ -3800,6 +4126,7 @@ venetian_arsenal_advance = {
 	}
 	unlock_building = venetian_arsenal
 	requires = ven_venetian_thalassocracy
+	rl_roll_mtd = 1
 }
 
 perpetual_general_captain_of_the_people = {
@@ -3813,6 +4140,7 @@ perpetual_general_captain_of_the_people = {
 
 	monthly_legitimacy = 0.1
 	monthly_republican_tradition = 0.1
+	rl_roll_mtd = 1
 }
 
 scaligers_military_ambitions = {
@@ -3826,6 +4154,7 @@ scaligers_military_ambitions = {
 
 	antagonism_received_modifier = -0.1
 	military_tactics = 0.1
+	rl_roll_mtd = 1
 }
 
 vij_city_of_victory = {
@@ -3833,6 +4162,7 @@ vij_city_of_victory = {
 	potential = { has_or_had_tag = VIJ }
 	requires = feudalism_advance
 	global_distance_from_capital_speed_propagation = 0.1
+	rl_roll_mtd = 1
 }
 
 vij_an_army_for_city_of_victory = {
@@ -3840,6 +4170,7 @@ vij_an_army_for_city_of_victory = {
 	potential = { has_or_had_tag = VIJ }
 	global_levy_size_modifier = 0.1
 	requires = vij_city_of_victory
+	rl_roll_mtd = 1
 }
 
 arabia_felix = {
@@ -3852,6 +4183,7 @@ arabia_felix = {
 
 	global_raw_material_output = 0.1
 	global_monthly_prosperity = 0.001
+	rl_roll_mtd = 1
 }
 
 coffea_arabica = {
@@ -3863,6 +4195,7 @@ coffea_arabica = {
 	icon = origin_of_coffee
 
 	global_coffee_output_modifier = 0.33
+	rl_roll_mtd = 1
 }
 
 zaydi_scholarly_traditions = {
@@ -3877,6 +4210,7 @@ zaydi_scholarly_traditions = {
 	icon = islamic_prayer
 
 	tolerance_own = 1	
+	rl_roll_mtd = 1
 }
 
 rasulid_bureaucracy = {
@@ -3889,6 +4223,7 @@ rasulid_bureaucracy = {
 
 	tax_income_efficiency = small_tax_income_efficiency_bonus
 	country_cabinet_efficiency = 0.05
+	rl_roll_mtd = 1
 }
 
 palm_tree_masters = {
@@ -3900,6 +4235,7 @@ palm_tree_masters = {
 	requires = feudalism_advance
 	global_lumber_output_modifier = 0.1
 	unlock_building = kilwan_shipwrights
+	rl_roll_mtd = 1
 }
 
 bantu_and_perso_arabian = {
@@ -3909,6 +4245,7 @@ bantu_and_perso_arabian = {
 	}
 	requires = cultural_acceptance_advance
 	cultures_capacity = 1
+	rl_roll_mtd = 1
 }
 
 kilwan_trade_network = {
@@ -3921,6 +4258,7 @@ kilwan_trade_network = {
 	requires = feudalism_advance
 	trade_range = 150
 	unlock_unit = n_mtepe
+	rl_roll_mtd = 1
 }
 
 zmw_experienced_cattle_herder = {
@@ -3934,6 +4272,7 @@ zmw_experienced_cattle_herder = {
 	expand_rgo_farming_cost_modifier = -0.1
 
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 zmw_stone_builders = {
@@ -3947,6 +4286,7 @@ zmw_stone_builders = {
 	global_build_buildings_cost = -0.1
 
 	requires = zmw_experienced_cattle_herder
+	rl_roll_mtd = 1
 }
 
 army_country_movement_speed_advance = {
@@ -3955,6 +4295,7 @@ army_country_movement_speed_advance = {
 	
 
 	movement_speed_if_no_road = 0.10
+	rl_roll_mtd = 1
 }
 
 minting_trade_range_trad_building = {
@@ -3963,6 +4304,7 @@ minting_trade_range_trad_building = {
 	country_type = building
 	
 	trade_range_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 albanian_the_kanun = {
@@ -3980,6 +4322,7 @@ albanian_the_kanun = {
     tribes_estate_target_satisfaction = small_permanent_target_satisfaction
 
 	requires = cultural_traditions_law_advance
+	rl_roll_mtd = 1
 }
 
 albanian_prokletije = {
@@ -3997,6 +4340,7 @@ albanian_prokletije = {
 	hills_proximity_impact = -0.33
 
 	requires = albanian_the_kanun
+	rl_roll_mtd = 1
 }
 
 alb_the_arberian_principality = {
@@ -4014,6 +4358,7 @@ alb_the_arberian_principality = {
     nobles_estate_satisfaction_recovery = 0.001
 
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 alb_angevin_legitimacy = {
@@ -4034,6 +4379,7 @@ alb_angevin_legitimacy = {
 	subject_loyalty = 5
 
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 ant_born_in_the_highlands = {
@@ -4047,6 +4393,7 @@ ant_born_in_the_highlands = {
 	fort_maintenance_cost = -0.20
 
 	requires = state_administration_advance
+	rl_roll_mtd = 1
 }
 
 mtr_the_masters_of_the_karavasta = {
@@ -4060,6 +4407,7 @@ mtr_the_masters_of_the_karavasta = {
 	global_hostile_attrition = 1
 
 	requires = faster_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 mzk_the_agricultural_wealth_of_the_devoll = {
@@ -4073,6 +4421,7 @@ mzk_the_agricultural_wealth_of_the_devoll = {
 	global_monthly_food_modifier = 0.2
 
 	requires = windmills_advance
+	rl_roll_mtd = 1
 }
 
 thp_french_blood_claims = {
@@ -4086,6 +4435,7 @@ thp_french_blood_claims = {
 	monthly_diplomats = 0.2
 
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 pukara_advance = {
@@ -4095,6 +4445,7 @@ pukara_advance = {
 	}
 	unlock_building = pukara_building
 	requires = city_building_advance
+	rl_roll_mtd = 1
 }
 
 terraces_advance = {
@@ -4105,6 +4456,7 @@ terraces_advance = {
 	unlock_building = terraces
 	global_potato_output_modifier = 0.25
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 incamisana_advance = {
@@ -4114,6 +4466,7 @@ incamisana_advance = {
 	}
 	unlock_building = incamisana
 	requires = terraces_advance
+	rl_roll_mtd = 1
 }
 
 arm_legacy_of_hayk = {
@@ -4128,6 +4481,7 @@ arm_legacy_of_hayk = {
 	requires = unlock_footmen_advance
 
 	land_morale_recovery = 0.05
+	rl_roll_mtd = 1
 }
 
 arm_mount_ararat = {
@@ -4143,6 +4497,7 @@ arm_mount_ararat = {
 
 	mountains_proximity_impact = -0.4
 	monthly_war_exhaustion = -0.02
+	rl_roll_mtd = 1
 }
 
 bng_bengali_vassal_system = {
@@ -4150,6 +4505,7 @@ bng_bengali_vassal_system = {
 	potential = { culture.language = language:bengali_language }
 	subject_loyalty = 5
 	requires = subjects_advance
+	rl_roll_mtd = 1
 }
 
 bng_bengali_paik = {
@@ -4158,6 +4514,7 @@ bng_bengali_paik = {
 	global_may_build_paik_units = yes
 	army_light_infantry_power = 0.1
 	requires = bng_bengali_vassal_system
+	rl_roll_mtd = 1
 }
 
 bng_bengali_architecture = {
@@ -4165,6 +4522,7 @@ bng_bengali_architecture = {
 	potential = { culture.language = language:bengali_language }
 	global_urban_build_buildings_cost = -0.05
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 cha_matrilineal_heritage = {
@@ -4173,6 +4531,7 @@ cha_matrilineal_heritage = {
 	requires = feudalism_advance
 	unlock_heir_selection = matrilineal_salic_law
 	allow_female_cabinet = yes
+	rl_roll_mtd = 1
 }
 
 cha_religious_tolerance = {
@@ -4182,6 +4541,7 @@ cha_religious_tolerance = {
 	requires = legalism_advance
 	tolerance_heretic = 1
 	tolerance_heathen = 1
+	rl_roll_mtd = 1
 }
 
 dalmatian_the_maritime_commune_spirit = {
@@ -4199,6 +4559,7 @@ dalmatian_the_maritime_commune_spirit = {
 	global_salt_output_modifier = 0.1
 
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 dal_comune_privileges = {
@@ -4212,6 +4573,7 @@ dal_comune_privileges = {
 	global_monthly_control = 0.002
 
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 rag_the_statute_of_1272 = {
@@ -4225,6 +4587,7 @@ rag_the_statute_of_1272 = {
 	global_trades_per_burgher = 0.2
 
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 geo_georgian_highlands = {
@@ -4239,6 +4602,7 @@ geo_georgian_highlands = {
 	requires = agriculture_advance
 
 	global_defensive = 0.25
+	rl_roll_mtd = 1
 }
 
 geo_georgian_script = {
@@ -4253,6 +4617,7 @@ geo_georgian_script = {
 	requires = written_alphabet
 
 	cultural_tradition_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 arabian_horsemanship = {
@@ -4266,6 +4631,7 @@ arabian_horsemanship = {
 	army_light_cavalry_power = 0.1
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 chinese_siege_engineers = {
@@ -4278,6 +4644,7 @@ chinese_siege_engineers = {
 	siege_ability = 0.1
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 swabian_league_of_cities = {
@@ -4294,6 +4661,7 @@ swabian_league_of_cities = {
 	land_morale_modifier = 0.05
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 westphalian_monastic_traditions = {
@@ -4313,6 +4681,7 @@ westphalian_monastic_traditions = {
 	global_clergy_max_literacy = 5
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 north_german_hanseatic_traditions = {
@@ -4332,6 +4701,7 @@ north_german_hanseatic_traditions = {
 	global_merchant_capacity_modifier = 0.25
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 lub_hanseatic_coins = {
@@ -4349,6 +4719,7 @@ lub_hanseatic_coins = {
 	unlock_policy = hanseatic_coins_policy
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 hamburg_port_cities = {
@@ -4365,6 +4736,7 @@ hamburg_port_cities = {
 	global_port_build_buildings_cost = -0.2
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 greek_group_the_spirit_of_resistance_advance = {
@@ -4383,6 +4755,7 @@ greek_group_the_spirit_of_resistance_advance = {
 	selling_efficiency = small_trade_efficiency_bonus
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 epi_the_eagle_of_the_pindus_advance = {
@@ -4396,6 +4769,7 @@ epi_the_eagle_of_the_pindus_advance = {
 	global_hostile_attrition = 1
 
 	requires = faster_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 feo_gothic_hellenic_synthesis_advance = {
@@ -4410,6 +4784,7 @@ feo_gothic_hellenic_synthesis_advance = {
 	cultures_capacity = 1
 
 	requires = cultural_acceptance_advance
+	rl_roll_mtd = 1
 }
 
 gre_restoration_of_power_advance = {
@@ -4423,6 +4798,7 @@ gre_restoration_of_power_advance = {
 	global_crown_estate_power = 0.10
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 moe_the_court_of_mystras_advance = {
@@ -4437,6 +4813,7 @@ moe_the_court_of_mystras_advance = {
 	set_cabinet_member_cost_modifier = -0.2
 
 	requires = cultural_traditions_law_advance
+	rl_roll_mtd = 1
 }
 
 ths_the_wallachian_scutari_advance = {
@@ -4451,6 +4828,7 @@ ths_the_wallachian_scutari_advance = {
 	levy_recovery_modifier = 0.1 
 
 	requires = faster_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 wallachian_tradition = {
@@ -4464,6 +4842,7 @@ wallachian_tradition = {
 	cultural_tradition_modifier = 0.2
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 mol_the_moldavian_road = {
@@ -4482,11 +4861,12 @@ mol_the_moldavian_road = {
 	tax_income_efficiency = small_tax_income_efficiency_bonus
 	
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 rmn_the_descendants_of_trajan = {
 	age = age_1_traditions
-	icon = crown_power_advance_renaissance
+	icon = rmn_the_descendants_of_trajan
 
 	potential = {
 		has_or_had_tag = RMN
@@ -4495,11 +4875,12 @@ rmn_the_descendants_of_trajan = {
 	government_reform_slots = 1
 
 	requires = cultural_traditions_law_advance
+	rl_roll_mtd = 1
 }
 
 tra_the_transylvanian_autonomy = {
 	age = age_1_traditions
-	icon = offensive_army
+	icon = tra_the_transylvanian_autonomy
 
 	potential = {
 		OR = {
@@ -4512,6 +4893,7 @@ tra_the_transylvanian_autonomy = {
 	cultures_capacity_modifier = 0.2
 
 	requires = faster_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 wallachian_heritage = {
@@ -4529,6 +4911,7 @@ wallachian_heritage = {
 	discipline = 0.05
 
 	requires = faster_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 haudenosaunee_tradition = {
@@ -4539,6 +4922,7 @@ haudenosaunee_tradition = {
 	diplomatic_reputation = diplomatic_reputation_mild_bonus
 	monthly_tribal_cohesion = 0.10
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 haudenosaunee_heritage = {
@@ -4548,6 +4932,7 @@ haudenosaunee_heritage = {
 	}
 	army_light_infantry_power = 0.1
 	requires = haudenosaunee_tradition
+	rl_roll_mtd = 1
 }
 
 tree_of_peace = {
@@ -4558,6 +4943,7 @@ tree_of_peace = {
 	improve_relation_impact = 0.2
 	cultural_tradition_modifier = 0.2
 	requires = haudenosaunee_tradition
+	rl_roll_mtd = 1
 }
 
 swiss_oath_of_rutli = {
@@ -4568,6 +4954,7 @@ swiss_oath_of_rutli = {
 	peasants_estate_levy_size = 0.2
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 swiss_halberd_infantry = {
@@ -4578,6 +4965,7 @@ swiss_halberd_infantry = {
 	army_heavy_infantry_power = 0.1
 
 	requires = swiss_oath_of_rutli
+	rl_roll_mtd = 1
 }
 
 swiss_alpine_passes = {
@@ -4589,6 +4977,7 @@ swiss_alpine_passes = {
 	hills_proximity_impact = -0.33
 
 	requires = swiss_halberd_infantry
+	rl_roll_mtd = 1
 }
 
 swiss_eternal_alliance = {
@@ -4612,6 +5001,7 @@ swiss_eternal_alliance = {
 	monthly_prestige = 0.1
 
 	requires = swiss_oath_of_rutli
+	rl_roll_mtd = 1
 }
 
 catalan_galley = {
@@ -4622,6 +5012,7 @@ catalan_galley = {
 	unlock_unit = n_catalan_galley
 	
 	requires = legalism_advance
+	rl_roll_mtd = 1
 }
 
 early_iberian_caravel = {
@@ -4632,6 +5023,7 @@ early_iberian_caravel = {
 	unlock_unit = n_early_iberian_caravel
 	
 	requires = catalan_galley
+	rl_roll_mtd = 1
 }
 
 ara_almogavars = {
@@ -4649,6 +5041,7 @@ ara_almogavars = {
 	unlock_levy = levy_a_almogavars
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 ara_catalan_crossbowmen = {
@@ -4666,6 +5059,7 @@ ara_catalan_crossbowmen = {
 	unlock_unit = a_catalan_crossbowmen
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 paik_system_advance = {
@@ -4687,6 +5081,7 @@ paik_system_advance = {
 	}
 	unlock_levy = levy_a_early_paik
 	requires = unlock_feudal_levy_advance
+	rl_roll_mtd = 1
 }
 
 samanta_advance = {
@@ -4696,6 +5091,7 @@ samanta_advance = {
 	unlock_subject_type = maha_samanta
 	unlock_subject_type = pradhana_maha_samanta
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 celtic_raiders_advance = {
@@ -4710,6 +5106,7 @@ celtic_raiders_advance = {
 	army_initiative = 0.2
 
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 irish_booleying_advance = {
@@ -4727,6 +5124,7 @@ irish_booleying_advance = {
 	global_livestock_output_modifier = 0.1
 	
 	requires = celtic_raiders_advance
+	rl_roll_mtd = 1
 }
 
 irish_monastacism_advance = {
@@ -4744,6 +5142,7 @@ irish_monastacism_advance = {
 	global_clergy_rural_desired_pop = 0.01
 	
 	requires = irish_booleying_advance
+	rl_roll_mtd = 1
 }
 
 irish_travelling_bards_advance = {
@@ -4758,6 +5157,7 @@ irish_travelling_bards_advance = {
 	hire_artist_cost_modifier = -0.025
 	
 	requires = irish_monastacism_advance
+	rl_roll_mtd = 1
 }
 
 guards_of_the_shannon_advance = {
@@ -4770,6 +5170,7 @@ guards_of_the_shannon_advance = {
 	fort_maintenance_cost = -0.1
 	
 	requires = irish_travelling_bards_advance
+	rl_roll_mtd = 1
 }
 
 hiberno_norman_keeps_advance = {
@@ -4789,6 +5190,7 @@ hiberno_norman_keeps_advance = {
 	fort_limit = 1
 	
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 irish_frontier_settlement_advance = {
@@ -4804,6 +5206,7 @@ irish_frontier_settlement_advance = {
 	rural_migration_attraction = 0.1
 	
 	requires = hiberno_norman_keeps_advance
+	rl_roll_mtd = 1
 }
 
 ple_irish_viking_towns_advance = {
@@ -4817,6 +5220,7 @@ ple_irish_viking_towns_advance = {
 
 	requires = city_building_advance
 	
+	rl_roll_mtd = 1
 }
 
 ple_pale_defenseworks_advance = {
@@ -4831,6 +5235,7 @@ ple_pale_defenseworks_advance = {
 	
 	global_defensive = 0.1
 	
+	rl_roll_mtd = 1
 }
 
 cel_defensive = {
@@ -4843,6 +5248,7 @@ cel_defensive = {
 	}
 	
 	global_defensive = 0.1
+	rl_roll_mtd = 1
 }
 
 jap_bushido = {
@@ -4854,6 +5260,7 @@ jap_bushido = {
 	requires = unlock_footmen_advance
 
 	discipline = 0.05
+	rl_roll_mtd = 1
 }
 
 jap_land_of_the_rising_sun = {
@@ -4865,6 +5272,7 @@ jap_land_of_the_rising_sun = {
 	requires = written_alphabet
 
 	monthly_prestige = 0.1
+	rl_roll_mtd = 1
 }
 
 jap_ancestral_legacy = {
@@ -4879,6 +5287,7 @@ jap_ancestral_legacy = {
 	monthly_republican_tradition = 0.1
 	monthly_devotion = 0.1
 	monthly_horde_unity = 0.1
+	rl_roll_mtd = 1
 }
 
 mounted_people = {
@@ -4893,6 +5302,7 @@ mounted_people = {
 	unlock_unit = a_light_jurchen_cavalry
 	
 	requires = horse_riding_advance
+	rl_roll_mtd = 1
 }
 
 falconry_mastery = {
@@ -4904,6 +5314,7 @@ falconry_mastery = {
 	global_estate_target_satisfaction = small_permanent_target_satisfaction
 
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 maori_ta_moko_advance = {
@@ -4916,6 +5327,7 @@ maori_ta_moko_advance = {
 	}
 	
 	monthly_prestige = 0.1
+	rl_roll_mtd = 1
 }
 
 maori_ceremonial_haka_advance = {
@@ -4927,6 +5339,7 @@ maori_ceremonial_haka_advance = {
 		}
 	}
 	land_morale_modifier = 0.25
+	rl_roll_mtd = 1
 }
 
 maori_whakapapa_advance = {
@@ -4938,6 +5351,7 @@ maori_whakapapa_advance = {
 		}
 	}
 	monthly_tribal_cohesion = 0.1
+	rl_roll_mtd = 1
 }
 
 maori_te_reo_advance = {
@@ -4949,6 +5363,7 @@ maori_te_reo_advance = {
 		}
 	}
 	cultural_tradition_modifier = 0.2
+	rl_roll_mtd = 1
 }
 
 maori_rua_kumara_advance = {
@@ -4962,6 +5377,7 @@ maori_rua_kumara_advance = {
 	requires = agriculture_advance
 
 	global_food_capacity = 10
+	rl_roll_mtd = 1
 }
 
 maori_he_whakaputanga_advance = {
@@ -4975,6 +5391,7 @@ maori_he_whakaputanga_advance = {
 	requires = legalism_advance
 	
 	subject_loyalty = 5
+	rl_roll_mtd = 1
 }
 
 npl_himalayan_homeland = {
@@ -4985,6 +5402,7 @@ npl_himalayan_homeland = {
 	plateau_proximity_impact = -0.15
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 flemish_cloth_making = {
@@ -4996,6 +5414,7 @@ flemish_cloth_making = {
 	unlock_town_rights = flemish_cloth_industries_right
 	
 	requires = distribution_of_power_advance
+	rl_roll_mtd = 1
 }
 
 nomadic_legacy = {
@@ -5008,6 +5427,7 @@ nomadic_legacy = {
 	requires = horse_riding_advance
 	
 	rural_disease_resistance = 0.25
+	rl_roll_mtd = 1
 }
 
 raj_militaristic_society = {
@@ -5015,6 +5435,7 @@ raj_militaristic_society = {
 	potential = { culture.language = language:rajasthani_language }
 	army_heavy_infantry_build_cost_modifier = -0.2
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 raj_combat_training = {
@@ -5022,6 +5443,7 @@ raj_combat_training = {
 	potential = { culture.language = language:rajasthani_language }
 	army_heavy_infantry_power = 0.1
 	requires = raj_militaristic_society
+	rl_roll_mtd = 1
 }
 
 veche_advance = {
@@ -5032,6 +5454,7 @@ veche_advance = {
 	government = republic
 	requires = legalism_advance
 	unlock_heir_selection = veche_selection
+	rl_roll_mtd = 1
 }
 
 russian_integration = {
@@ -5041,6 +5464,7 @@ russian_integration = {
 	}
 	global_integration_speed_modifier = 0.1
 	requires = library_advance
+	rl_roll_mtd = 1
 }
 
 russian_resiliance = {
@@ -5050,6 +5474,7 @@ russian_resiliance = {
 	}
 	global_manpower_modifier = 0.1
 	requires = russian_integration
+	rl_roll_mtd = 1
 }
 
 flexible_loyalty = {
@@ -5063,6 +5488,7 @@ flexible_loyalty = {
 	mercenary_maintenance_efficiency = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 heritage_of_the_rus = {
@@ -5076,6 +5502,7 @@ heritage_of_the_rus = {
 	cultural_tradition_modifier = 0.1
 
 	requires = flexible_loyalty
+	rl_roll_mtd = 1
 }
 
 scandinavian_fishing_privileges_advance = {
@@ -5087,6 +5514,7 @@ scandinavian_fishing_privileges_advance = {
 	unlock_town_rights = scandinavian_fishing_privileges
 
 	requires = distribution_of_power_advance
+	rl_roll_mtd = 1
 }
 
 scandinavian_bergslag_privileges_advance = {
@@ -5098,6 +5526,7 @@ scandinavian_bergslag_privileges_advance = {
 	unlock_town_rights = scandinavian_bergslag_privileges
 
 	requires = distribution_of_power_advance
+	rl_roll_mtd = 1
 }
 
 scandinavian_thing_rights_advance = {
@@ -5109,6 +5538,7 @@ scandinavian_thing_rights_advance = {
 	unlock_town_rights = scandinavian_thing_rights
 
 	requires = distribution_of_power_advance
+	rl_roll_mtd = 1
 }
 
 scandinavian_tar_privileges_advance = {
@@ -5120,6 +5550,7 @@ scandinavian_tar_privileges_advance = {
 	unlock_town_rights = scandinavian_tar_privileges
 
 	requires = scandinavian_bergslag_privileges_advance
+	rl_roll_mtd = 1
 }
 
 slovene_the_freising_fragments = {
@@ -5136,6 +5567,7 @@ slovene_the_freising_fragments = {
 	cultural_tradition_modifier = 0.2
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 cli_the_counts_ambition = {
@@ -5150,6 +5582,7 @@ cli_the_counts_ambition = {
 	diplomatic_reputation = diplomatic_reputation_mild_bonus
 	
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 religious_melting_pot = {
@@ -5165,6 +5598,7 @@ religious_melting_pot = {
 
 	tolerance_heretic = 1
 	tolerance_heathen = 1
+	rl_roll_mtd = 1
 }
 
 akson_thai = {
@@ -5180,6 +5614,7 @@ akson_thai = {
 	requires = religious_melting_pot
 	
 	cultural_tradition_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 dai_vietnamese_architecture = {	#https://en.wikipedia.org/wiki/Vietnamese_architecture
@@ -5192,6 +5627,7 @@ dai_vietnamese_architecture = {	#https://en.wikipedia.org/wiki/Vietnamese_archit
 	}
 	requires = feudalism_advance
 	global_build_buildings_cost = -0.1
+	rl_roll_mtd = 1
 }
 
 dai_hung_dao_trans_military_feats = { #https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_H%C6%B0ng_%C4%90%E1%BA%A1o
@@ -5204,6 +5640,7 @@ dai_hung_dao_trans_military_feats = { #https://en.wikipedia.org/wiki/Tr%E1%BA%A7
 	}
 	requires = legalism_advance
 	possible_frontage_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 griot_advance = {
@@ -5214,6 +5651,7 @@ griot_advance = {
 	age = age_1_traditions
 	num_possible_artists = 1
 	set_cabinet_member_cost_modifier = -0.1
+	rl_roll_mtd = 1
 }
 
 west_african_caravan_stop_advance = {
@@ -5223,6 +5661,7 @@ west_african_caravan_stop_advance = {
 	age = age_1_traditions
 
 	unlock_building = caravan_stop
+	rl_roll_mtd = 1
 }
 
 unlock_legionaries_1_advance = {
@@ -5234,6 +5673,7 @@ unlock_legionaries_1_advance = {
 		has_or_had_tag = ROM
 	}
 	unlock_unit = a_legionaries_1
+	rl_roll_mtd = 1
 }
 
 cossack_raids = {
@@ -5244,6 +5684,7 @@ cossack_raids = {
 	amount_looted_modifier = 0.25
 
 	requires = unlock_footmen_advance
+	rl_roll_mtd = 1
 }
 
 tamed_steppes = {
@@ -5254,11 +5695,12 @@ tamed_steppes = {
 	global_monthly_food_modifier = 0.05
 
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 frankokratia_frankokratia_advance = {
 	age = age_1_traditions
-	icon = glorious_arms
+	icon = frankokratia_frankokratia_advance
 
 	potential = {
 		is_frankokratia_state = yes
@@ -5267,6 +5709,7 @@ frankokratia_frankokratia_advance = {
 	land_morale_modifier = 0.1
 
 	requires = faster_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 ach_assizes_of_romania_advance = {
@@ -5280,6 +5723,7 @@ ach_assizes_of_romania_advance = {
 	stability_cost = -0.05
 
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 arg_the_peloponnesian_diplomatic_hub_advance = {
@@ -5293,11 +5737,12 @@ arg_the_peloponnesian_diplomatic_hub_advance = {
 	diplomatic_capacity = 1
 
 	requires = medieval_administration
+	rl_roll_mtd = 1
 }
 
 ath_the_catalan_company_advance = {
 	age = age_1_traditions
-	icon = glorious_arms
+	icon = ath_the_catalan_company_advance
 
 	potential = {
 		has_or_had_tag = ATH
@@ -5307,6 +5752,7 @@ ath_the_catalan_company_advance = {
 	army_light_infantry_power = 0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 bod_guardians_of_thermopylae_advance = {
@@ -5320,6 +5766,7 @@ bod_guardians_of_thermopylae_advance = {
 	land_unit_attrition = -0.1
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 cep_cephalonian_raids_advance = {
@@ -5333,11 +5780,12 @@ cep_cephalonian_raids_advance = {
 	navy_initiative = 0.5
 
 	requires = ship_building_advance
+	rl_roll_mtd = 1
 }
 
 crt_the_trapete_of_messara_advance = {
 	age = age_1_traditions
-	icon = safe_exploration_techniques_advance
+	icon = crt_the_trapete_of_messara_advance
 
 	potential = {
 		has_or_had_tag = CRT
@@ -5347,11 +5795,12 @@ crt_the_trapete_of_messara_advance = {
 	global_sugar_output_modifier = 0.10
 
 	requires = ship_building_advance
+	rl_roll_mtd = 1
 }
 
 lat_emperor_latins_advance = {
 	age = age_1_traditions
-	icon = crown_power_advance_renaissance
+	icon = lat_emperor_latins_advance
 
 	potential = {
 		has_or_had_tag = LAT
@@ -5361,11 +5810,12 @@ lat_emperor_latins_advance = {
 	subject_income_modifier = 0.025
 
 	requires = feudalism_advance
+	rl_roll_mtd = 1
 }
 
 nax_sanudos_isles_advance = {
 	age = age_1_traditions
-	icon = merchant_power_from_maritime_reformation_advance
+	icon = nax_sanudos_isles_advance
 
 	potential = {
 		has_or_had_tag = NAX
@@ -5374,6 +5824,7 @@ nax_sanudos_isles_advance = {
 	merchant_power_from_maritime = 0.025
 
 	requires = more_merchants_age_of_trad
+	rl_roll_mtd = 1
 }
 
 neg_negropontine_navarchy_advance = {
@@ -5388,6 +5839,7 @@ neg_negropontine_navarchy_advance = {
 	navy_galley_power = 0.1
 
 	requires = ship_building_advance
+	rl_roll_mtd = 1
 }
 
 neo_neopatras_fortresses_advance = {
@@ -5402,6 +5854,7 @@ neo_neopatras_fortresses_advance = {
 	global_defensive = 0.05
 
 	requires = castle_advance
+	rl_roll_mtd = 1
 }
 
 sao_salonas_stance_advance = {
@@ -5415,6 +5868,7 @@ sao_salonas_stance_advance = {
 	global_hostile_attrition = 1
 
 	requires = faster_levy_recruitment
+	rl_roll_mtd = 1
 }
 
 pat_the_church_state_of_saint_andrew_advance = {
@@ -5428,11 +5882,12 @@ pat_the_church_state_of_saint_andrew_advance = {
 	global_manpower_modifier = 0.1
 
 	requires = organized_religion
+	rl_roll_mtd = 1
 }
 
 the_the_thessalonican_crown_advance = {
 	age = age_1_traditions
-	icon = zmw_merchant_taxes
+	icon = the_the_thessalonican_crown_advance
 
 	potential = {
 		has_or_had_tag = THE
@@ -5441,6 +5896,7 @@ the_the_thessalonican_crown_advance = {
 	tax_income_efficiency = medium_tax_income_efficiency_bonus
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 noble_knights = {
@@ -5450,6 +5906,7 @@ noble_knights = {
 	requires = feudalism_advance
 
 	unlock_levy = levy_mailed_knights
+	rl_roll_mtd = 1
 }
 
 serfdom = {
@@ -5459,6 +5916,7 @@ serfdom = {
 	
 	global_monthly_food_modifier = 0.05
 	peasants_estate_satisfaction_recovery = 0.001
+	rl_roll_mtd = 1
 }
 
 feudal_de_jure_law_advance = {
@@ -5466,6 +5924,7 @@ feudal_de_jure_law_advance = {
 	government = monarchy
 	requires = medieval_administration
 	unlock_law = feudal_de_jure_law
+	rl_roll_mtd = 1
 }
 
 salic_law_advance = {
@@ -5473,6 +5932,7 @@ salic_law_advance = {
 	government = monarchy
 	requires = feudal_de_jure_law_advance
 	unlock_heir_selection = salic_law
+	rl_roll_mtd = 1
 }
 
 semi_salic_law_advance = {
@@ -5480,6 +5940,7 @@ semi_salic_law_advance = {
 	government = monarchy
 	requires = salic_law_advance
 	unlock_heir_selection = semi_salic_law
+	rl_roll_mtd = 1
 }
 
 partition_inheritance_advance = {
@@ -5488,6 +5949,7 @@ partition_inheritance_advance = {
 	government = monarchy
 	requires = feudal_de_jure_law_advance
 	unlock_heir_selection = partition_inheritance
+	rl_roll_mtd = 1
 }
 
 bill_of_rights = {
@@ -5495,6 +5957,7 @@ bill_of_rights = {
 	government = republic
 	
 	pop_join_rebel_threshold = -0.05
+	rl_roll_mtd = 1
 }
 
 republican_foundation_law_advance = {
@@ -5502,6 +5965,7 @@ republican_foundation_law_advance = {
 	government = republic
 	requires = medieval_administration
 	unlock_law = republican_foundation_law
+	rl_roll_mtd = 1
 }
 
 horse_lords = {
@@ -5519,6 +5983,7 @@ horse_lords = {
 	
 	unlock_unit = a_steppe_horse_archers
 	unlock_unit = a_a_urughs
+	rl_roll_mtd = 1
 }
 
 kurultai_advance = {
@@ -5530,6 +5995,7 @@ kurultai_advance = {
 
 	
 	requires = horse_lords
+	rl_roll_mtd = 1
 }
 
 beyond_the_sun = {
@@ -5540,6 +6006,7 @@ beyond_the_sun = {
 	requires = horse_lords
 
 	antagonism_received_modifier = -0.1
+	rl_roll_mtd = 1
 }
 
 steppe_slave_raiding = {
@@ -5549,6 +6016,7 @@ steppe_slave_raiding = {
 	requires = beyond_the_sun
 	
 	auto_slave_raid_different_religion = yes
+	rl_roll_mtd = 1
 }
 
 caravanserai_advance = {
@@ -5558,6 +6026,7 @@ caravanserai_advance = {
 	requires = beyond_the_sun
 
 	unlock_building = caravanserai
+	rl_roll_mtd = 1
 }
 
 borjigin_blood = {
@@ -5565,6 +6034,7 @@ borjigin_blood = {
 	government = steppe_horde
 	diplomatic_capacity = 1
 	requires = cultural_traditions_law_advance
+	rl_roll_mtd = 1
 }
 
 turco_mongol_tradition = {
@@ -5572,6 +6042,7 @@ turco_mongol_tradition = {
 	government = steppe_horde
 	cultures_capacity = 1
 	requires = codified_laws
+	rl_roll_mtd = 1
 }
 
 yams_of_the_great_khan = {
@@ -5582,6 +6053,7 @@ yams_of_the_great_khan = {
 
 	global_distance_from_capital_speed_propagation = 0.1
 
+	rl_roll_mtd = 1
 }
 
 servants_of_god = {
@@ -5590,6 +6062,7 @@ servants_of_god = {
 
 	peasants_estate_target_satisfaction = small_permanent_target_satisfaction
 	global_clergy_desired_pop = 0.02
+	rl_roll_mtd = 1
 }
 
 by_the_grace_of_god = {
@@ -5597,6 +6070,7 @@ by_the_grace_of_god = {
 	government = theocracy
 	
 	military_tactics = 0.025
+	rl_roll_mtd = 1
 }
 
 state_of_clerics = {
@@ -5605,6 +6079,7 @@ state_of_clerics = {
 	requires = medieval_administration
 	clergy_estate_target_satisfaction = small_permanent_target_satisfaction
 	legislative_efficiency = 0.05
+	rl_roll_mtd = 1
 }
 
 kgk_omi_genji = {
@@ -5619,6 +6094,7 @@ kgk_omi_genji = {
 	
 
 	army_maintenance_efficiency = 0.1
+	rl_roll_mtd = 1
 }
 
 akt_march_of_akita = {
@@ -5630,6 +6106,7 @@ akt_march_of_akita = {
 	requires = mining_advance
 
 	army_initiative = 0.1
+	rl_roll_mtd = 1
 }
 
 asa_legacy_of_emperor_keitai = {
@@ -5642,6 +6119,7 @@ asa_legacy_of_emperor_keitai = {
 	requires = written_alphabet
 
 	antagonism_received_modifier = -0.1
+	rl_roll_mtd = 1
 }
 
 cba_lineage_of_taira = {
@@ -5653,6 +6131,7 @@ cba_lineage_of_taira = {
 	requires = written_alphabet
 
 	diplomatic_reputation = diplomatic_reputation_weak_bonus
+	rl_roll_mtd = 1
 }
 
 cba_katori_jingu = {
@@ -5664,6 +6143,7 @@ cba_katori_jingu = {
 	requires = written_alphabet
 
 	army_heavy_infantry_power = 0.05
+	rl_roll_mtd = 1
 }
 
 csk_clans_of_tosa = {
@@ -5675,6 +6155,7 @@ csk_clans_of_tosa = {
 	requires = written_alphabet
 
 	global_manpower_modifier = 0.075
+	rl_roll_mtd = 1
 }
 
 dte_fujiwara_hokke = {
@@ -5687,6 +6168,7 @@ dte_fujiwara_hokke = {
 	requires = written_alphabet
 
 	monthly_legitimacy = 0.05
+	rl_roll_mtd = 1
 }
 
 htk_hatakeyama_heritage = {
@@ -5699,6 +6181,7 @@ htk_hatakeyama_heritage = {
 	requires = mining_advance
 
 	land_morale_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 hsk_rising_clan = {
@@ -5710,6 +6193,7 @@ hsk_rising_clan = {
 	requires = mining_advance
 
 	global_manpower_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 isk_sanindo_gate = {
@@ -5721,6 +6205,7 @@ isk_sanindo_gate = {
 	requires = agriculture_advance
 
 	global_merchant_power = 0.1
+	rl_roll_mtd = 1
 }
 
 ito_gokenin_family = {
@@ -5733,6 +6218,7 @@ ito_gokenin_family = {
 	requires = written_alphabet
 
 	monthly_prestige = 0.1
+	rl_roll_mtd = 1
 }
 
 kkc_disinguished_family_in_kyushu = {
@@ -5744,6 +6230,7 @@ kkc_disinguished_family_in_kyushu = {
 	requires = written_alphabet
 
 	monthly_legitimacy = 0.1
+	rl_roll_mtd = 1
 }
 
 ktb_southern_court = {
@@ -5756,6 +6243,7 @@ ktb_southern_court = {
 	requires = written_alphabet
 
 	diplomatic_reputation = diplomatic_reputation_weak_bonus
+	rl_roll_mtd = 1
 }
 
 kno_shugo_of_iyo = {
@@ -5769,6 +6257,7 @@ kno_shugo_of_iyo = {
 
 	navy_maintenance_efficiency = 0.1
 	global_sailors_modifier = 0.05
+	rl_roll_mtd = 1
 }
 
 mri_descendant_of_oe_hiromoto = {
@@ -5781,6 +6270,7 @@ mri_descendant_of_oe_hiromoto = {
 	requires = written_alphabet
 
 	monthly_legitimacy = 0.1
+	rl_roll_mtd = 1
 }
 
 nbu_genji_in_the_north = {
@@ -5793,6 +6283,7 @@ nbu_genji_in_the_north = {
 	requires = written_alphabet
 
 	land_morale_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 oda_uninspiring_clan = {
@@ -5805,6 +6296,7 @@ oda_uninspiring_clan = {
 	requires = written_alphabet
 
 	land_morale_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 ogs_ogasawara_ryu = {
@@ -5817,6 +6309,7 @@ ogs_ogasawara_ryu = {
 	requires = written_alphabet
 
 	monthly_army_tradition = 0.05
+	rl_roll_mtd = 1
 }
 
 otm_lord_of_bungo = {
@@ -5829,6 +6322,7 @@ otm_lord_of_bungo = {
 	requires = written_alphabet
 
 	global_raw_material_output = 0.1
+	rl_roll_mtd = 1
 }
 
 ouc_descendant_of_baekje = {
@@ -5841,6 +6335,7 @@ ouc_descendant_of_baekje = {
 	requires = written_alphabet
 
 	diplomatic_reputation = diplomatic_reputation_weak_bonus
+	rl_roll_mtd = 1
 }
 
 stk_hitachi_genji = {
@@ -5853,6 +6348,7 @@ stk_hitachi_genji = {
 	requires = written_alphabet
 
 	monthly_army_tradition = 0.05
+	rl_roll_mtd = 1
 }
 
 sba_multiple_shugo = {
@@ -5865,6 +6361,7 @@ sba_multiple_shugo = {
 	requires = written_alphabet
 
 	global_raw_material_output = 0.1
+	rl_roll_mtd = 1
 }
 
 smz_satsuma_shugo = {
@@ -5877,6 +6374,7 @@ smz_satsuma_shugo = {
 	requires = written_alphabet
 
 	army_heavy_infantry_power = 0.1
+	rl_roll_mtd = 1
 }
 
 shn_vice_minister_of_dazaifu = {
@@ -5889,6 +6387,7 @@ shn_vice_minister_of_dazaifu = {
 	requires = written_alphabet
 
 	diplomatic_reputation = diplomatic_reputation_weak_bonus
+	rl_roll_mtd = 1
 }
 
 soo_tradition_of_wakou = {
@@ -5901,6 +6400,7 @@ soo_tradition_of_wakou = {
 
 	navy_galley_power = 0.1
 	navy_tradition_decay = -0.001
+	rl_roll_mtd = 1
 }
 
 tkd_kai_shugo = {
@@ -5913,6 +6413,7 @@ tkd_kai_shugo = {
 	requires = horse_riding_advance
 
 	army_light_cavalry_build_cost_modifier = -0.1
+	rl_roll_mtd = 1
 }
 
 tki_genji_in_mino = {
@@ -5925,6 +6426,7 @@ tki_genji_in_mino = {
 	requires = written_alphabet
 
 	army_movement_speed = 0.15
+	rl_roll_mtd = 1
 }
 
 ues_strong_dynastic_ties = {
@@ -5937,6 +6439,7 @@ ues_strong_dynastic_ties = {
 	requires = written_alphabet
 
 	diplomatic_capacity_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 utn_fujiwara_descendant = {
@@ -5949,6 +6452,7 @@ utn_fujiwara_descendant = {
 	requires = written_alphabet
 
 	max_diplomats = 1
+	rl_roll_mtd = 1
 }
 
 ymn_descendant_of_nitta = {
@@ -5961,6 +6465,7 @@ ymn_descendant_of_nitta = {
 	requires = written_alphabet
 
 	max_diplomats = 1
+	rl_roll_mtd = 1
 }
 
 slave_raiding_wars = {
@@ -5975,6 +6480,7 @@ slave_raiding_wars = {
 	
 	requires = agriculture_advance
 
+	rl_roll_mtd = 1
 }
 
 nomadic_tendencies = {
@@ -5996,6 +6502,7 @@ nomadic_tendencies = {
 	global_distance_from_capital_speed_propagation = 0.1
 
 	requires = slave_raiding_wars
+	rl_roll_mtd = 1
 }
 
 land_of_the_ancestors = {
@@ -6019,6 +6526,7 @@ land_of_the_ancestors = {
 	monthly_tribal_cohesion = 0.1
 
 	requires = nomadic_tendencies
+	rl_roll_mtd = 1
 }
 
 wandering_scholars = {
@@ -6039,6 +6547,7 @@ wandering_scholars = {
 	tolerance_heathen = 1
 
 	requires = land_of_the_ancestors
+	rl_roll_mtd = 1
 }
 
 community_of_the_faithful = {
@@ -6058,6 +6567,7 @@ community_of_the_faithful = {
 	cultures_capacity = 1
 
 	requires = wandering_scholars
+	rl_roll_mtd = 1
 }
 
 bound_by_service = {
@@ -6077,6 +6587,7 @@ bound_by_service = {
 	global_manpower_modifier = 0.1
 
 	requires = land_of_the_ancestors
+	rl_roll_mtd = 1
 }
 
 regnal_chronicles = {
@@ -6097,6 +6608,7 @@ regnal_chronicles = {
 	global_clergy_max_literacy = 10
 
 	requires = wandering_scholars
+	rl_roll_mtd = 1
 }
 
 hand_cannon_guild_advance  = {
@@ -6106,6 +6618,7 @@ hand_cannon_guild_advance  = {
 	}
 	requires = metallurgy
 	unlock_building = hand_cannon_guild
+	rl_roll_mtd = 1
 }
 
 saquiyah = {
@@ -6124,6 +6637,7 @@ saquiyah = {
 	}
 	requires = agriculture_advance
 	irrigant_cap_level = 2
+	rl_roll_mtd = 1
 }
 
 eastern_african_trade = {
@@ -6139,6 +6653,7 @@ eastern_african_trade = {
 	requires = slave_raiding_wars
 	trade_sea_efficiency = 0.66
 	allow_tributary_subject = yes
+	rl_roll_mtd = 1
 }
 
 indonesia_outer_islands_archipelago = {
@@ -6151,6 +6666,7 @@ indonesia_outer_islands_archipelago = {
 	sea_cost_on_distance_from_capital_when_maritime = -0.5
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 italian_universities = {
@@ -6164,6 +6680,7 @@ italian_universities = {
 	global_monthly_literacy = 0.01
 
 	requires = guilds
+	rl_roll_mtd = 1
 }
 
 three_sisters = {
@@ -6178,6 +6695,7 @@ three_sisters = {
 	global_legumes_output_modifier = 0.20
 	global_fruit_output_modifier = 0.20
 	requires = agriculture_advance
+	rl_roll_mtd = 1
 }
 
 moundbuilding_advance = {
@@ -6201,6 +6719,7 @@ moundbuilding_advance = {
 	global_masonry_output_modifier = 0.15
 
 	requires = three_sisters
+	rl_roll_mtd = 1
 }
 
 medicinal_infusions = {
@@ -6225,6 +6744,7 @@ medicinal_infusions = {
 	global_life_expectancy = 2
 
 	requires = three_sisters
+	rl_roll_mtd = 1
 }
 
 canoe_travels = {
@@ -6243,6 +6763,7 @@ canoe_travels = {
 	trade_sea_efficiency = 0.10
 
 	requires = medicinal_infusions
+	rl_roll_mtd = 1
 }
 
 seasonal_economy = {
@@ -6266,6 +6787,7 @@ seasonal_economy = {
 	global_monthly_prosperity = 0.001
 
 	requires = medicinal_infusions
+	rl_roll_mtd = 1
 }
 
 fishing_habits = {
@@ -6283,6 +6805,7 @@ fishing_habits = {
 	global_fish_output_modifier = 0.15
 
 	requires = canoe_travels
+	rl_roll_mtd = 1
 }
 
 whale_hunters = {
@@ -6300,6 +6823,7 @@ whale_hunters = {
 	ship_build_speed = 0.1
 
 	requires = fishing_habits
+	rl_roll_mtd = 1
 }
 
 shared_brotherhood = {
@@ -6316,6 +6840,7 @@ shared_brotherhood = {
 	allow = { has_unlocked_advance_trigger = { type = inigo_architecture } }
 	global_pop_assimilation_speed_modifier = 0.1
 	stability_investment = small_stability_investment
+	rl_roll_mtd = 1
 }
 
 system_of_tributaries = {
@@ -6328,6 +6853,7 @@ system_of_tributaries = {
 	}
 	subject_income_modifier = 0.025
 	subject_loyalty = 5
+	rl_roll_mtd = 1
 }
 
 pyramid_architecture = {
@@ -6339,6 +6865,7 @@ pyramid_architecture = {
 	global_build_buildings_cost = -0.1
 
 	requires = system_of_tributaries
+	rl_roll_mtd = 1
 }
 
 ball_game = {
@@ -6351,6 +6878,7 @@ ball_game = {
 	monthly_rebel_growth = -0.0005
 
 	requires = pyramid_architecture
+	rl_roll_mtd = 1
 }
 
 war_bonfires = {
@@ -6363,6 +6891,7 @@ war_bonfires = {
 	fort_maintenance_cost = -0.1
 
 	requires = system_of_tributaries
+	rl_roll_mtd = 1
 }
 
 merchant_officials = {
@@ -6376,6 +6905,7 @@ merchant_officials = {
 	spy_network_construction = 0.1
 
 	requires = ball_game
+	rl_roll_mtd = 1
 }
 
 copperworking = {
@@ -6390,6 +6920,7 @@ copperworking = {
 	unlock_production_method = copper_base
 
 	requires = war_bonfires
+	rl_roll_mtd = 1
 }
 
 valley_irrigation = {
@@ -6400,6 +6931,7 @@ valley_irrigation = {
 		is_capital_in_south_america_or_carribean = yes
 	}
 	global_monthly_food_modifier = 0.1
+	rl_roll_mtd = 1
 }
 
 artisan_migration = {
@@ -6411,6 +6943,7 @@ artisan_migration = {
 	global_urban_build_buildings_cost = -0.05
 
 	requires = valley_irrigation
+	rl_roll_mtd = 1
 }
 
 terrace_farming = {
@@ -6421,6 +6954,7 @@ terrace_farming = {
 	global_monthly_development = 0.001
 
 	requires = valley_irrigation
+	rl_roll_mtd = 1
 }
 
 mountain_cities = {
@@ -6431,6 +6965,7 @@ mountain_cities = {
 	global_defensive = 0.2
 
 	requires = terrace_farming
+	rl_roll_mtd = 1
 }
 
 river_trade = {
@@ -6441,6 +6976,7 @@ river_trade = {
 	merchant_maintenance_efficiency = 0.2
 
 	requires = artisan_migration
+	rl_roll_mtd = 1
 }
 
 rainforests_and_mountaintops = {
@@ -6451,6 +6987,7 @@ rainforests_and_mountaintops = {
 	global_hostile_attrition = 1
 
 	requires = mountain_cities
+	rl_roll_mtd = 1
 }
 
 knot_system = {
@@ -6462,6 +6999,7 @@ knot_system = {
 	legislative_efficiency = 0.05
 
 	requires = river_trade
+	rl_roll_mtd = 1
 }
 
 llama_farming = {
@@ -6473,6 +7011,7 @@ llama_farming = {
 	global_wool_output_modifier = 0.1
 
 	requires = mountain_cities
+	rl_roll_mtd = 1
 }
 
 mountain_roads = {
@@ -6483,6 +7022,7 @@ mountain_roads = {
 	global_road_building_time = -0.2
 
 	requires = rainforests_and_mountaintops
+	rl_roll_mtd = 1
 }
 
 the_sahel_trade = {
@@ -6501,6 +7041,7 @@ the_sahel_trade = {
 	requires = slave_raiding_wars
 	trade_land_efficiency = 0.66
 	allow_tributary_subject = yes
+	rl_roll_mtd = 1
 }
 
 skilled_cavalry_raids = {
@@ -6513,6 +7054,7 @@ skilled_cavalry_raids = {
 	army_light_cavalry_power = 0.1
 
 	requires = nomadic_tendencies
+	rl_roll_mtd = 1
 }
 
 four_noble_truths = {
@@ -6525,6 +7067,7 @@ four_noble_truths = {
 	global_devastation_recovery = 0.005
 	
 	requires = organized_religion
+	rl_roll_mtd = 1
 }
 
 noble_eightfold_path = {
@@ -6541,6 +7084,7 @@ noble_eightfold_path = {
 	cultural_tradition_modifier = 0.1
 	
 	requires = four_noble_truths
+	rl_roll_mtd = 1
 }
 
 middle_way = {
@@ -6557,6 +7101,7 @@ middle_way = {
 	minting_inflation_threshold = 0.01
 	
 	requires = four_noble_truths
+	rl_roll_mtd = 1
 }
 
 three_jewels = {
@@ -6572,6 +7117,7 @@ three_jewels = {
 	stability_investment = tiny_stability_investment
 	
 	requires = middle_way
+	rl_roll_mtd = 1
 }
 
 buddhist_syncretism = {
@@ -6587,6 +7133,7 @@ buddhist_syncretism = {
 	tolerance_heathen = 1
 	
 	requires = scholasticism
+	rl_roll_mtd = 1
 }
 
 res_publica_christiana = {
@@ -6597,6 +7144,7 @@ res_publica_christiana = {
 	monthly_diplomats = 0.05
 	
 	requires = organized_religion
+	rl_roll_mtd = 1
 }
 
 roman_orthodoxy = {
@@ -6608,6 +7156,7 @@ roman_orthodoxy = {
 	cultural_tradition_modifier = 0.1
 	
 	requires = res_publica_christiana
+	rl_roll_mtd = 1
 }
 
 marian_devotion = {
@@ -6622,6 +7171,7 @@ marian_devotion = {
 	requires = roman_orthodoxy
 
 	ai_weight = { add = 10 }
+	rl_roll_mtd = 1
 }
 
 crusading_knights = {
@@ -6635,6 +7185,7 @@ crusading_knights = {
 	monthly_army_tradition = 0.05
 	
 	requires = res_publica_christiana
+	rl_roll_mtd = 1
 }
 
 catholic_pilgrimages = {
@@ -6648,6 +7199,7 @@ catholic_pilgrimages = {
 	monthly_religious_influence = 0.1
 	
 	requires = roman_orthodoxy
+	rl_roll_mtd = 1
 }
 
 epic_poetry_advance = {
@@ -6662,6 +7214,7 @@ epic_poetry_advance = {
 	host_olympiad_cost_modifier = -0.25
 	
 	requires = organized_religion
+	rl_roll_mtd = 1
 }
 
 makaron_nisoi_advance = {
@@ -6675,6 +7228,7 @@ makaron_nisoi_advance = {
 	tolerance_own = 1
 	
 	requires = organized_religion
+	rl_roll_mtd = 1
 }
 
 sruti = {
@@ -6687,6 +7241,7 @@ sruti = {
 	research_speed_modifier = 0.025
 	
 	requires = organized_religion
+	rl_roll_mtd = 1
 }
 
 vedah = {
@@ -6699,6 +7254,7 @@ vedah = {
 	global_clergy_max_literacy = 5
 	
 	requires = sruti
+	rl_roll_mtd = 1
 }
 
 smrti = {
@@ -6711,6 +7267,7 @@ smrti = {
 	global_institution_growth_modifier = 0.1
 	
 	requires = sruti
+	rl_roll_mtd = 1
 }
 
 mahabarata = {
@@ -6723,6 +7280,7 @@ mahabarata = {
 	cultural_influence_modifier = 0.1
 	
 	requires = smrti
+	rl_roll_mtd = 1
 }
 
 ramayana = {
@@ -6736,6 +7294,7 @@ ramayana = {
 	cultural_tradition_modifier = 0.1
 	
 	requires = smrti
+	rl_roll_mtd = 1
 }
 
 second_council_of_ephesus = {
@@ -6746,6 +7305,7 @@ second_council_of_ephesus = {
 	monthly_prestige = 0.1
 	
 	requires = organized_religion
+	rl_roll_mtd = 1
 }
 
 rejection_of_chalcedon = {
@@ -6756,6 +7316,7 @@ rejection_of_chalcedon = {
 	stability_investment = tiny_stability_investment
 	
 	requires = second_council_of_ephesus
+	rl_roll_mtd = 1
 }
 
 monophysite_vs_miaphysite = {
@@ -6766,6 +7327,7 @@ monophysite_vs_miaphysite = {
 	tolerance_heretic = 1
 	
 	requires = scholasticism
+	rl_roll_mtd = 1
 }
 
 original_christianity = {
@@ -6776,6 +7338,7 @@ original_christianity = {
 	monthly_legitimacy = 0.1
 	
 	requires = scholasticism
+	rl_roll_mtd = 1
 }
 
 beyond_the_borders = {
@@ -6786,6 +7349,7 @@ beyond_the_borders = {
 	global_pop_conversion_speed_modifier = 0.1
 	
 	requires = original_christianity
+	rl_roll_mtd = 1
 }
 
 people_of_allah = {
@@ -6796,6 +7360,7 @@ people_of_allah = {
 	tolerance_own = 1
 	
 	requires = organized_religion
+	rl_roll_mtd = 1
 }
 
 holy_revelation = {
@@ -6806,6 +7371,7 @@ holy_revelation = {
 	cultural_tradition_modifier = 0.1
 	
 	requires = people_of_allah
+	rl_roll_mtd = 1
 }
 
 islamic_calligraphy = {
@@ -6817,6 +7383,7 @@ islamic_calligraphy = {
 	num_possible_artists = 1
 	
 	requires = people_of_allah
+	rl_roll_mtd = 1
 }
 
 islamic_prayer = {
@@ -6827,6 +7394,7 @@ islamic_prayer = {
 	pilgrimage_action_cost_modifier = -0.1
 	
 	requires = holy_revelation
+	rl_roll_mtd = 1
 }
 
 zakah = {
@@ -6839,6 +7407,7 @@ zakah = {
 	unemployed_slave_promotion = 0.001
 	
 	requires = holy_revelation
+	rl_roll_mtd = 1
 }
 
 the_pentarchy = {
@@ -6849,6 +7418,7 @@ the_pentarchy = {
 	monthly_prestige = 0.1
 
 	requires = scriptorium_advance
+	rl_roll_mtd = 1
 }
 
 imperial_creed = {
@@ -6863,6 +7433,7 @@ imperial_creed = {
 	monthly_tribal_cohesion = 0.1
 
 	requires = the_pentarchy
+	rl_roll_mtd = 1
 }
 
 filioque_issue = {
@@ -6873,6 +7444,7 @@ filioque_issue = {
 	tolerance_own = 1
 
 	requires = the_pentarchy
+	rl_roll_mtd = 1
 }
 
 septuagint = {
@@ -6883,6 +7455,7 @@ septuagint = {
 	cultural_influence_modifier = 0.1
 
 	requires = imperial_creed
+	rl_roll_mtd = 1
 }
 
 anagignoskomena = {
@@ -6893,6 +7466,7 @@ anagignoskomena = {
 	global_clergy_max_literacy = 10
 
 	requires = septuagint
+	rl_roll_mtd = 1
 }
 
 heian_kyo = {
@@ -6906,6 +7480,7 @@ heian_kyo = {
 
 	
 	requires = organized_religion
+	rl_roll_mtd = 1
 }
 
 matsuri = {
@@ -6916,6 +7491,7 @@ matsuri = {
 	requires = heian_kyo
 
 	peasants_estate_target_satisfaction = medium_permanent_target_satisfaction
+	rl_roll_mtd = 1
 }
 
 onmyodo = {
@@ -6926,6 +7502,7 @@ onmyodo = {
 	requires = scholasticism
 
 	monthly_purity = 0.05
+	rl_roll_mtd = 1
 }
 
 sumo = {
@@ -6936,6 +7513,7 @@ sumo = {
 	requires = peasant_connections_advance
 
 	army_tradition_decay = -0.0005
+	rl_roll_mtd = 1
 }
 
 manufactories_advance = {
@@ -13545,7 +14123,7 @@ kvn_the_free_port_of_varna = {
 
 vid_the_codex_shishman = {
 	age = age_6_revolutions
-	icon = legalism_advance
+	icon = vid_the_codex_shishman
 
 	potential = { 
 		has_or_had_tag = VID
@@ -20452,8 +21030,8 @@ home_of_hussars = {
 }
 
 hum_the_kosaca_iron_fist  = {
-	age = age_2_renaissance 
-	icon = regiment_reinforcement_speed_renaissance
+	age = age_2_renaissance
+	icon = hum_the_kosaca_iron_fist
 
 	potential = {
 		has_or_had_tag = HUM
@@ -20581,7 +21159,7 @@ zta_the_retreat_to_the_karst = {
 
 serbian_the_icon_of_saint_sava = {
 	age = age_4_reformation
-	icon = religious_icon_power_advance
+	icon = serbian_the_icon_of_saint_sava
 
 	potential = {
 		OR = {
@@ -24978,7 +25556,7 @@ romanian_the_foundation_of_the_voivodeship_tradition = {
 
 mol_the_banner_of_the_golden_bull = {
 	age = age_2_renaissance
-	icon = glorious_arms
+	icon = mol_the_banner_of_the_golden_bull
 
 	potential = {
 		OR = {
@@ -25102,7 +25680,7 @@ tra_the_transylvanian_trade_guilds = {
 
 wal_the_order_of_the_dragon_influence = {
 	age = age_3_discovery
-	icon = offensive_army
+	icon = wal_the_order_of_the_dragon_influence
 
 	potential = {
 		OR = {
@@ -27022,6 +27600,7 @@ unlock_byzantine_cataphracts_2_advance = {
 	requires = armory_advance
 	potential = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
+		culture = { has_culture_group = culture_group:greek_group }
 	}
 	rl_roll_mtd = 1
 }
@@ -27032,6 +27611,7 @@ unlock_byzantine_cataphracts_3_advance = {
 	requires = training_fields_advance
 	potential = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
+		culture = { has_culture_group = culture_group:greek_group }
 	}
 	rl_roll_mtd = 1
 }
@@ -27042,6 +27622,7 @@ unlock_byzantine_cataphracts_4_advance = {
 	requires = barracks_advance
 	potential = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
+		culture = { has_culture_group = culture_group:greek_group }
 	}
 	rl_roll_mtd = 1
 }
@@ -27052,6 +27633,7 @@ unlock_byzantine_cataphracts_5_advance = {
 	requires = military_revolution_advance
 	potential = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
+		culture = { has_culture_group = culture_group:greek_group }
 	}
 	rl_roll_mtd = 1
 }
@@ -27062,6 +27644,7 @@ unlock_byzantine_cataphracts_6_advance = {
 	allow_children	= no
 	potential = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
+		culture = { has_culture_group = culture_group:greek_group }
 	}
 	rl_roll_mtd = 1
 }
@@ -27914,7 +28497,7 @@ frankokratia_the_latin_enlightenment_advance = {
 
 ach_villehardouins_valor_advance = {
 	age = age_6_revolutions
-	icon = offensive_army
+	icon = ach_villehardouins_valor_advance
 
 	potential = {
 		has_or_had_tag = ACH

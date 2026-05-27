@@ -348,9 +348,8 @@ def _strip_advance_text(advance: dict) -> str:
     # Collapse runs of blank lines left by removed entries down to one
     output = re.sub(r'\n{3,}', '\n\n', output)
 
-    if had_modifiers:
-        # Insert the injected modifier just before the final closing brace
-        output = re.sub(r'(\n}\s*)$', '\n' + INJECTED_MODIFIER + r'\1', output)
+    # Insert the injected modifier just before the final closing brace
+    output = re.sub(r'(\n}\s*)$', '\n' + INJECTED_MODIFIER + r'\1', output)
 
     return output
 
@@ -548,7 +547,10 @@ def main():
 
     # Main output
     sections: list[str] = []
-    sections.extend(result.traditions_raw)
+    sections.extend(
+        re.sub(r'(\n}\s*)$', '\n' + INJECTED_MODIFIER + r'\1', t)
+        for t in result.traditions_raw
+    )
     sections.extend(_strip_advance_text(a) for a in result.advances)
     out_path = Path(args.output)
     out_path.write_text("\n\n".join(sections), encoding='utf-8')
