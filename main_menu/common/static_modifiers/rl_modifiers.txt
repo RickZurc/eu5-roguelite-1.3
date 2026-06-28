@@ -1,4 +1,4 @@
-﻿modifier_manufactories_advance = {
+modifier_manufactories_advance = {
 	global_max_rgo_size_modifier = 0.10
 }
 
@@ -750,6 +750,10 @@ modifier_spy_construction_renaissance = {
 
 modifier_route_to_the_indies_advance = {
 	exploration_preparation_time_modifier = -0.1
+}
+
+modifier_pound_lock_canals_advance = {
+	starting_technology_level = 3
 }
 
 modifier_expanded_aqueduct_system = {

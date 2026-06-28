@@ -364,18 +364,20 @@ def _strip_advance_text(advance: dict) -> str:
 
 def _generate_dummy_advances(advance: dict) -> str:
     """
-    For each unlock_* key present on *advance*, generate a dummy advance block:
+    Generate a single dummy advance block containing every unlock_* line
+    present on *advance*:
 
         dummy_<advance_name> = {
             age = age_1_traditions
             icon = <icon>
-            <unlock line extracted verbatim from _source_text>
-            allow = { has_variable = flag_dummy_<advance_name> }
+            <unlock line 1 extracted verbatim from _source_text>
+            <unlock line 2>
+            ...
+            potential = { has_variable = flag_dummy_<advance_name> }
             requires = dummy_parent_advance
         }
 
-    One dummy block is produced per unlock line. Returns all dummy blocks
-    joined by double newlines, or an empty string if the advance has no unlocks.
+    Returns the dummy block text, or an empty string if the advance has no unlocks.
     """
     if not (set(advance.keys()) & _UNLOCK_KEYS):
         return ""
@@ -383,28 +385,25 @@ def _generate_dummy_advances(advance: dict) -> str:
     name = advance["_name"]
     icon = advance.get("icon", "")
 
-    # Extract unlock lines verbatim from the resolved source text
+    # Extract all unlock lines verbatim from the resolved source text
     unlock_line_pattern = re.compile(
         r'^[ \t]*(?:' + '|'.join(re.escape(k) for k in _UNLOCK_KEYS) + r')[ \t]*[=<>!][^\n]*',
         re.MULTILINE,
     )
     unlock_lines = unlock_line_pattern.findall(advance["_source_text"])
 
-    blocks = []
+    lines = [f"dummy_{name} = {{", f"\tage = {TRADITIONS_AGE}"]
+    if icon:
+        lines.append(f"\ticon = {icon}")
     for unlock_line in unlock_lines:
-        stripped_unlock = unlock_line.strip()
-        lines = [f"dummy_{name} = {{", f"\tage = {TRADITIONS_AGE}"]
-        if icon:
-            lines.append(f"\ticon = {icon}")
-        lines += [
-            f"\t{stripped_unlock}",
-            f"\tallow = {{ has_variable = flag_dummy_{name} }}",
-            f"\trequires = dummy_parent_advance",
-            f"}}",
-        ]
-        blocks.append("\n".join(lines))
+        lines.append(f"\t{unlock_line.strip()}")
+    lines += [
+        f"\tpotential = {{ has_variable = flag_dummy_{name} }}",
+        f"\trequires = dummy_parent_advance",
+        f"}}",
+    ]
 
-    return "\n\n".join(blocks)
+    return "\n".join(lines)
 
 
 class ParseResult:
@@ -545,10 +544,6 @@ def main():
     )
     parser.add_argument("directory", help="Directory to scan.")
     parser.add_argument(
-        "--output", "-o", default="advances.txt",
-        help="Output file in EU5 script format (default: advances.txt)."
-    )
-    parser.add_argument(
         "--loc-dir", "-l", default=None,
         help="Path to a localization directory; all .yml files are searched for keys."
     )
@@ -575,18 +570,30 @@ def main():
     sections.append(DUMMY_PARENT_ADVANCE)
     sections.extend(dummy_sections)
 
-    out_path = Path(args.output)
+    out_dir = Path("../in_game/common/advances")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / "rl_advances.txt"
     out_path.write_text("\n\n".join(sections), encoding='utf-8')
     print(f"Output written to: {out_path}")
 
     # Random list output
     rl_lines = [
-        f"\t1 = {{ trigger = {{ NOT = {{ has_variable = var_{a['_name']} }} }}"
-        f" set_variable = {{ name = rl_event value = {i} }} }}"
+        f"\t\t1 = {{ trigger = {{ NOT = {{ has_variable = var_{a['_name']} }} }}"
+        f" set_variable = {{ name = rl_event_$v$ value = {i} }} }}"
         for i, a in enumerate(result.advances)
     ]
-    Path("random_list.txt").write_text("\n".join(rl_lines), encoding='utf-8')
-    print(f"Random list written to: random_list.txt ({len(rl_lines)} entries)")
+    rl_output = (
+        "rl_rand_se = {\n"
+        "\trandom_list = {\n"
+        + "\n".join(rl_lines) + "\n"
+        "\t}\n"
+        "}"
+    )
+    rl_dir = Path("../in_game/common/scripted_effects")
+    rl_dir.mkdir(parents=True, exist_ok=True)
+    rl_path = rl_dir / "rl_scripted_effects.txt"
+    rl_path.write_text(rl_output, encoding='utf-8')
+    print(f"Random list written to: {rl_path} ({len(rl_lines)} entries)")
 
     # Static modifiers output — one block per advance that had modifiers removed
     static_sections = []
@@ -602,8 +609,11 @@ def main():
                 lines.append(f"\t{key} = {value}")
         lines.append("}")
         static_sections.append("\n".join(lines))
-    Path("static_modifiers.txt").write_text("\n\n".join(static_sections), encoding='utf-8')
-    print(f"Static modifiers written to: static_modifiers.txt ({len(static_sections)} entries)")
+    static_dir = Path("../main_menu/common/static_modifiers")
+    static_dir.mkdir(parents=True, exist_ok=True)
+    static_path = static_dir / "rl_modifiers.txt"
+    static_path.write_text("\n\n".join(static_sections), encoding='utf-8')
+    print(f"Static modifiers written to: {static_path} ({len(static_sections)} entries)")
 
     # Options output
     option_sections = []
@@ -638,6 +648,7 @@ def main():
             lines.append("\thidden_effect = {")
             lines.append(f"\t\tset_variable = flag_dummy_{name}")
             lines.append(f"\t\tresearch_advance = advance_type:dummy_{name}")
+            lines.append(f"\t\tchange_variable = {{ name = num_advances add = 1 }}")
             lines.append(f"\t\tset_variable = var_{name}")
             lines.append("\t}")
             lines.append("\tshow_as_tooltip = {")
@@ -652,8 +663,32 @@ def main():
         lines.append("}")
         option_sections.append("\n".join(lines))
 
-    Path("options.txt").write_text("\n\n".join(option_sections), encoding='utf-8')
-    print(f"Options written to: options.txt ({len(option_sections)} entries)")
+    options_joined = "\n\n".join(option_sections)
+    # Indent every line of the options block one extra tab so it nests correctly
+    indented_options = "\n".join(
+        f"\t{line}" if line else line
+        for line in options_joined.splitlines()
+    )
+
+    events_output = (
+        "namespace = rl_events\n"
+        "\n"
+        "rl_events.1 = {\n"
+        "\ttype = country_event\n"
+        "\ttitle = rl_events.1.title\n"
+        "\tdesc = rl_events.1.desc\n"
+        "\n"
+        "\toutcome = positive\n"
+        "\n"
+        f"{indented_options}\n"
+        "}"
+    )
+
+    events_dir = Path("../in_game/events")
+    events_dir.mkdir(parents=True, exist_ok=True)
+    events_path = events_dir / "rl_events.txt"
+    events_path.write_text(events_output, encoding='utf-8')
+    print(f"Options written to: {events_path} ({len(option_sections)} entries)")
 
     # Localization output
     loc = parse_loc_dir(args.loc_dir) if args.loc_dir else {}
@@ -696,8 +731,11 @@ def main():
                 loc_lines.append(f' dummy_{name}: "{tooltip_text}"')
                 loc_lines.append(f' dummy_{name}_desc: "{tooltip_text}"')
 
-    Path("localization.yml").write_text("\n".join(loc_lines) + "\n", encoding='utf-8-sig')
-    print(f"Localization written to: localization.yml")
+    loc_dir_out = Path("../main_menu/localization/english")
+    loc_dir_out.mkdir(parents=True, exist_ok=True)
+    loc_path = loc_dir_out / "rl_generated_loc_l_english.yml"
+    loc_path.write_text("\n".join(loc_lines) + "\n", encoding='utf-8-sig')
+    print(f"Localization written to: {loc_path}")
     print("(Full data including modifiers/unlocks retained in memory only.)")
 
 

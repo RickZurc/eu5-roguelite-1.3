@@ -32866,19 +32866,7 @@ dummy_native_policy_advance = {
 dummy_plantation_buildings_advance = {
 	age = age_1_traditions
 	unlock_building = sugar_plantation
-	allow = { has_variable = flag_dummy_plantation_buildings_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_plantation_buildings_advance = {
-	age = age_1_traditions
 	unlock_building = tobacco_plantation
-	allow = { has_variable = flag_dummy_plantation_buildings_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_plantation_buildings_advance = {
-	age = age_1_traditions
 	unlock_building = cotton_plantation
 	allow = { has_variable = flag_dummy_plantation_buildings_advance }
 	requires = dummy_parent_advance
@@ -32895,69 +32883,13 @@ dummy_town_rights_enable = {
 	age = age_1_traditions
 	icon = town_rights_advance
 	unlock_town_rights = royal_tooling_rights
-	allow = { has_variable = flag_dummy_town_rights_enable }
-	requires = dummy_parent_advance
-}
-
-dummy_town_rights_enable = {
-	age = age_1_traditions
-	icon = town_rights_advance
 	unlock_town_rights = royal_jewelry_rights
-	allow = { has_variable = flag_dummy_town_rights_enable }
-	requires = dummy_parent_advance
-}
-
-dummy_town_rights_enable = {
-	age = age_1_traditions
-	icon = town_rights_advance
 	unlock_town_rights = royal_naval_rights
-	allow = { has_variable = flag_dummy_town_rights_enable }
-	requires = dummy_parent_advance
-}
-
-dummy_town_rights_enable = {
-	age = age_1_traditions
-	icon = town_rights_advance
 	unlock_town_rights = royal_textile_rights
-	allow = { has_variable = flag_dummy_town_rights_enable }
-	requires = dummy_parent_advance
-}
-
-dummy_town_rights_enable = {
-	age = age_1_traditions
-	icon = town_rights_advance
 	unlock_town_rights = royal_weaponry_rights
-	allow = { has_variable = flag_dummy_town_rights_enable }
-	requires = dummy_parent_advance
-}
-
-dummy_town_rights_enable = {
-	age = age_1_traditions
-	icon = town_rights_advance
 	unlock_town_rights = royal_book_rights
-	allow = { has_variable = flag_dummy_town_rights_enable }
-	requires = dummy_parent_advance
-}
-
-dummy_town_rights_enable = {
-	age = age_1_traditions
-	icon = town_rights_advance
 	unlock_town_rights = royal_artisan_rights
-	allow = { has_variable = flag_dummy_town_rights_enable }
-	requires = dummy_parent_advance
-}
-
-dummy_town_rights_enable = {
-	age = age_1_traditions
-	icon = town_rights_advance
 	unlock_town_rights = royal_brewing_rights
-	allow = { has_variable = flag_dummy_town_rights_enable }
-	requires = dummy_parent_advance
-}
-
-dummy_town_rights_enable = {
-	age = age_1_traditions
-	icon = town_rights_advance
 	unlock_town_rights = royal_masonry_rights
 	allow = { has_variable = flag_dummy_town_rights_enable }
 	requires = dummy_parent_advance
@@ -32974,53 +32906,11 @@ dummy_trade_companies_advance = {
 	age = age_1_traditions
 	icon = expanded_supply_trains
 	unlock_subject_type = trade_company
-	allow = { has_variable = flag_dummy_trade_companies_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_trade_companies_advance = {
-	age = age_1_traditions
-	icon = expanded_supply_trains
 	unlock_building = trade_company_headquarters
-	allow = { has_variable = flag_dummy_trade_companies_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_trade_companies_advance = {
-	age = age_1_traditions
-	icon = expanded_supply_trains
 	unlock_building = trade_company_governance
-	allow = { has_variable = flag_dummy_trade_companies_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_trade_companies_advance = {
-	age = age_1_traditions
-	icon = expanded_supply_trains
 	unlock_building = trade_company_garrison
-	allow = { has_variable = flag_dummy_trade_companies_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_trade_companies_advance = {
-	age = age_1_traditions
-	icon = expanded_supply_trains
 	unlock_building = trade_company_harbor
-	allow = { has_variable = flag_dummy_trade_companies_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_trade_companies_advance = {
-	age = age_1_traditions
-	icon = expanded_supply_trains
 	unlock_building = trade_company_local_venture
-	allow = { has_variable = flag_dummy_trade_companies_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_trade_companies_advance = {
-	age = age_1_traditions
-	icon = expanded_supply_trains
 	unlock_building = trade_company_foreign_influence
 	allow = { has_variable = flag_dummy_trade_companies_advance }
 	requires = dummy_parent_advance
@@ -33684,12 +33574,6 @@ dummy_confucian_academy_advance = {
 dummy_university_advance = {
 	age = age_1_traditions
 	unlock_building = university
-	allow = { has_variable = flag_dummy_university_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_university_advance = {
-	age = age_1_traditions
 	unlock_law = education_elites_law
 	allow = { has_variable = flag_dummy_university_advance }
 	requires = dummy_parent_advance
@@ -33824,12 +33708,6 @@ dummy_modern_council_hall_advance = {
 dummy_unlock_men_at_arms_advance = {
 	age = age_1_traditions
 	unlock_unit = a_men_at_arms
-	allow = { has_variable = flag_dummy_unlock_men_at_arms_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_unlock_men_at_arms_advance = {
-	age = age_1_traditions
 	unlock_levy = levy_a_men_at_arms
 	allow = { has_variable = flag_dummy_unlock_men_at_arms_advance }
 	requires = dummy_parent_advance
@@ -33845,12 +33723,6 @@ dummy_unlock_crossbowmen_advance = {
 dummy_unlock_reformed_crusader_knights_advance = {
 	age = age_1_traditions
 	unlock_unit = a_late_crusader_knights
-	allow = { has_variable = flag_dummy_unlock_reformed_crusader_knights_advance }
-	requires = dummy_parent_advance
-}
-
-dummy_unlock_reformed_crusader_knights_advance = {
-	age = age_1_traditions
 	unlock_levy = levy_late_crusader_knights
 	allow = { has_variable = flag_dummy_unlock_reformed_crusader_knights_advance }
 	requires = dummy_parent_advance
@@ -34778,12 +34650,6 @@ dummy_ira_religious_state = {
 dummy_ira_the_ghilman = {
 	age = age_1_traditions
 	unlock_building = ghilman_barracks
-	allow = { has_variable = flag_dummy_ira_the_ghilman }
-	requires = dummy_parent_advance
-}
-
-dummy_ira_the_ghilman = {
-	age = age_1_traditions
 	unlock_unit = a_ghilman
 	allow = { has_variable = flag_dummy_ira_the_ghilman }
 	requires = dummy_parent_advance
@@ -34834,12 +34700,6 @@ dummy_kbo_ribat_fortifications = {
 dummy_kor_korean_gunnery = {
 	age = age_1_traditions
 	unlock_building = korean_gunnery_land_defense
-	allow = { has_variable = flag_dummy_kor_korean_gunnery }
-	requires = dummy_parent_advance
-}
-
-dummy_kor_korean_gunnery = {
-	age = age_1_traditions
 	unlock_building = korean_gunnery_coastal_defense
 	allow = { has_variable = flag_dummy_kor_korean_gunnery }
 	requires = dummy_parent_advance
@@ -35043,12 +34903,6 @@ dummy_scottish_highlander_advance = {
 dummy_scottish_whisky = {
 	age = age_1_traditions
 	unlock_production_method = scottish_whisky_distillery_maintenance
-	allow = { has_variable = flag_dummy_scottish_whisky }
-	requires = dummy_parent_advance
-}
-
-dummy_scottish_whisky = {
-	age = age_1_traditions
 	unlock_production_method = scottish_whisky_distillery_mill_maintenance
 	allow = { has_variable = flag_dummy_scottish_whisky }
 	requires = dummy_parent_advance
@@ -35165,12 +35019,6 @@ dummy_a_revolutions_janissaries_advance = {
 dummy_bavarian_brewing_expertise = {
 	age = age_1_traditions
 	unlock_production_method = bavarian_brewery_maintenance
-	allow = { has_variable = flag_dummy_bavarian_brewing_expertise }
-	requires = dummy_parent_advance
-}
-
-dummy_bavarian_brewing_expertise = {
-	age = age_1_traditions
 	unlock_production_method = bavarian_beer_workshop_maintenance
 	allow = { has_variable = flag_dummy_bavarian_brewing_expertise }
 	requires = dummy_parent_advance

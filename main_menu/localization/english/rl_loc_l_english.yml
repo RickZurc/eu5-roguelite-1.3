@@ -5,5 +5,5 @@
  MODIFIER_TYPE_NAME_rl_roll_mtd: "Technology Rolls"
  MODIFIER_TYPE_DESC_rl_roll_mtd: "Technology Rolls"
 
- dummy_parent_advance: "Roguelite Unlock System"
+ dummy_parent_advance: "Roguelite Unlock System (Ignore)"
  dummy_parent_advance_desc: "Do not research this technology. It will be unlocked automatically after 1 month (it will not actually give you an extra technology roll)."
