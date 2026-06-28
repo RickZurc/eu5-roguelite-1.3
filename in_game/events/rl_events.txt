@@ -7,7 +7,7 @@ rl_events.1 = {
 
 	outcome = positive
 
-	option = {
+    option = {
         name = rl_events.1.0
         trigger = {
             OR = {
@@ -1369,9 +1369,13 @@ rl_events.1 = {
                 var:rl_event_3 = 88
             }
         }
-        add_country_modifier = { modifier = modifier_town_rights_enable years = -1 }
         hidden_effect = {
+            set_variable = flag_dummy_town_rights_enable
+            research_advance = advance_type:dummy_town_rights_enable
             set_variable = var_town_rights_enable
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_town_rights_enable
         }
     }
 
@@ -2921,7 +2925,6 @@ rl_events.1 = {
                 var:rl_event_3 = 190
             }
         }
-        add_country_modifier = { modifier = modifier_pound_lock_canals_advance years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_pound_lock_canals_advance
             research_advance = advance_type:dummy_pound_lock_canals_advance
@@ -14495,7 +14498,6 @@ rl_events.1 = {
                 var:rl_event_3 = 900
             }
         }
-        add_country_modifier = { modifier = modifier_a_reformation_cawa_advance years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_a_reformation_cawa_advance
             research_advance = advance_type:dummy_a_reformation_cawa_advance
@@ -14515,7 +14517,6 @@ rl_events.1 = {
                 var:rl_event_3 = 901
             }
         }
-        add_country_modifier = { modifier = modifier_a_absolutism_cawa_advance years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_a_absolutism_cawa_advance
             research_advance = advance_type:dummy_a_absolutism_cawa_advance
@@ -14973,7 +14974,6 @@ rl_events.1 = {
                 var:rl_event_3 = 930
             }
         }
-        add_country_modifier = { modifier = modifier_alberghi_28_advance years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_alberghi_28_advance
             research_advance = advance_type:dummy_alberghi_28_advance
@@ -15983,7 +15983,6 @@ rl_events.1 = {
                 var:rl_event_3 = 997
             }
         }
-        add_country_modifier = { modifier = modifier_hun_found_the_black_army years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_hun_found_the_black_army
             research_advance = advance_type:dummy_hun_found_the_black_army
@@ -16033,7 +16032,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1000
             }
         }
-        add_country_modifier = { modifier = modifier_hun_hungarian_hussars years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_hun_hungarian_hussars
             research_advance = advance_type:dummy_hun_hungarian_hussars
@@ -17691,7 +17689,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1106
             }
         }
-        add_country_modifier = { modifier = modifier_statutes_of_lithuania years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_statutes_of_lithuania
             research_advance = advance_type:dummy_statutes_of_lithuania
@@ -18182,7 +18179,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1137
             }
         }
-        add_country_modifier = { modifier = modifier_reform_the_mamluk_corps years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_reform_the_mamluk_corps
             research_advance = advance_type:dummy_reform_the_mamluk_corps
@@ -21001,7 +20997,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1322
             }
         }
-        add_country_modifier = { modifier = modifier_winged_hussars_advance years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_winged_hussars_advance
             research_advance = advance_type:dummy_winged_hussars_advance
@@ -21036,7 +21031,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1324
             }
         }
-        add_country_modifier = { modifier = modifier_late_winged_hussars_advance years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_late_winged_hussars_advance
             research_advance = advance_type:dummy_late_winged_hussars_advance
@@ -21808,7 +21802,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1374
             }
         }
-        add_country_modifier = { modifier = modifier_scottish_highlander_advance years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_scottish_highlander_advance
             research_advance = advance_type:dummy_scottish_highlander_advance
@@ -23111,7 +23104,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1459
             }
         }
-        add_country_modifier = { modifier = modifier_hakkapelitta years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_hakkapelitta
             research_advance = advance_type:dummy_hakkapelitta
@@ -23131,7 +23123,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1460
             }
         }
-        add_country_modifier = { modifier = modifier_caroleans_advance years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_caroleans_advance
             research_advance = advance_type:dummy_caroleans_advance
@@ -27368,7 +27359,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1734
             }
         }
-        add_country_modifier = { modifier = modifier_austrian_grenzhussar years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_austrian_grenzhussar
             research_advance = advance_type:dummy_austrian_grenzhussar
@@ -28665,7 +28655,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1818
             }
         }
-        add_country_modifier = { modifier = modifier_ara_late_almogavars years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_ara_late_almogavars
             research_advance = advance_type:dummy_ara_late_almogavars
@@ -28685,7 +28674,6 @@ rl_events.1 = {
                 var:rl_event_3 = 1819
             }
         }
-        add_country_modifier = { modifier = modifier_cas_lanzas_de_castilla years = -1 }
         hidden_effect = {
             set_variable = flag_dummy_cas_lanzas_de_castilla
             research_advance = advance_type:dummy_cas_lanzas_de_castilla
@@ -30950,6 +30938,6374 @@ rl_events.1 = {
         add_country_modifier = { modifier = modifier_cossacks_serf_autonomy years = -1 }
         hidden_effect = {
             set_variable = var_cossacks_serf_autonomy
+        }
+    }
+
+    option = {
+        name = rl_events.1.1961
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1961
+                var:rl_event_2 = 1961
+                var:rl_event_3 = 1961
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_cossacks_colonization_advance
+            research_advance = advance_type:dummy_cossacks_colonization_advance
+            set_variable = var_cossacks_colonization_advance
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_cossacks_colonization_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1962
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1962
+                var:rl_event_2 = 1962
+                var:rl_event_3 = 1962
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_cossacks_registered
+            research_advance = advance_type:dummy_cossacks_registered
+            set_variable = var_cossacks_registered
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_cossacks_registered
+        }
+    }
+
+    option = {
+        name = rl_events.1.1963
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1963
+                var:rl_event_2 = 1963
+                var:rl_event_3 = 1963
+            }
+        }
+        add_country_modifier = { modifier = modifier_cossack_reputation years = -1 }
+        hidden_effect = {
+            set_variable = var_cossack_reputation
+        }
+    }
+
+    option = {
+        name = rl_events.1.1964
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1964
+                var:rl_event_2 = 1964
+                var:rl_event_3 = 1964
+            }
+        }
+        add_country_modifier = { modifier = modifier_frankokratia_synthesized_levies_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_frankokratia_synthesized_levies_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1965
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1965
+                var:rl_event_2 = 1965
+                var:rl_event_3 = 1965
+            }
+        }
+        add_country_modifier = { modifier = modifier_ach_morean_silk_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_ach_morean_silk_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1966
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1966
+                var:rl_event_2 = 1966
+                var:rl_event_3 = 1966
+            }
+        }
+        add_country_modifier = { modifier = modifier_arg_the_heraldry_of_the_brienne_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_arg_the_heraldry_of_the_brienne_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1967
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1967
+                var:rl_event_2 = 1967
+                var:rl_event_3 = 1967
+            }
+        }
+        add_country_modifier = { modifier = modifier_ath_thebes_textiles_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_ath_thebes_textiles_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1968
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1968
+                var:rl_event_2 = 1968
+                var:rl_event_3 = 1968
+            }
+        }
+        add_country_modifier = { modifier = modifier_bod_the_curia_of_the_three_keys_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_bod_the_curia_of_the_three_keys_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1969
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1969
+                var:rl_event_2 = 1969
+                var:rl_event_3 = 1969
+            }
+        }
+        add_country_modifier = { modifier = modifier_cep_ionian_sea_wall_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_cep_ionian_sea_wall_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1970
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1970
+                var:rl_event_2 = 1970
+                var:rl_event_3 = 1970
+            }
+        }
+        add_country_modifier = { modifier = modifier_crt_the_galley_assembly_line_of_suda_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_crt_the_galley_assembly_line_of_suda_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1971
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1971
+                var:rl_event_2 = 1971
+                var:rl_event_3 = 1971
+            }
+        }
+        add_country_modifier = { modifier = modifier_lat_hegemony_over_the_bosphorus_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_lat_hegemony_over_the_bosphorus_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1972
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1972
+                var:rl_event_2 = 1972
+                var:rl_event_3 = 1972
+            }
+        }
+        add_country_modifier = { modifier = modifier_nax_archipelagic_vigil_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_nax_archipelagic_vigil_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1973
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1973
+                var:rl_event_2 = 1973
+                var:rl_event_3 = 1973
+            }
+        }
+        add_country_modifier = { modifier = modifier_neg_the_three_fold_defense_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_neg_the_three_fold_defense_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1974
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1974
+                var:rl_event_2 = 1974
+                var:rl_event_3 = 1974
+            }
+        }
+        add_country_modifier = { modifier = modifier_neo_the_consulate_of_the_sea_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_neo_the_consulate_of_the_sea_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1975
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1975
+                var:rl_event_2 = 1975
+                var:rl_event_3 = 1975
+            }
+        }
+        add_country_modifier = { modifier = modifier_pat_the_pilgrimage_tolls_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_pat_the_pilgrimage_tolls_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1976
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1976
+                var:rl_event_2 = 1976
+                var:rl_event_3 = 1976
+            }
+        }
+        add_country_modifier = { modifier = modifier_sao_the_parnassus_mines_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_sao_the_parnassus_mines_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1977
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1977
+                var:rl_event_2 = 1977
+                var:rl_event_3 = 1977
+            }
+        }
+        add_country_modifier = { modifier = modifier_the_the_fair_of_saint_demetrios years = -1 }
+        hidden_effect = {
+            set_variable = var_the_the_fair_of_saint_demetrios
+        }
+    }
+
+    option = {
+        name = rl_events.1.1978
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1978
+                var:rl_event_2 = 1978
+                var:rl_event_3 = 1978
+            }
+        }
+        add_country_modifier = { modifier = modifier_frankokratia_union_of_the_soul_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_frankokratia_union_of_the_soul_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1979
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1979
+                var:rl_event_2 = 1979
+                var:rl_event_3 = 1979
+            }
+        }
+        add_country_modifier = { modifier = modifier_ach_knights_of_the_peloponnese_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_ach_knights_of_the_peloponnese_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1980
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1980
+                var:rl_event_2 = 1980
+                var:rl_event_3 = 1980
+            }
+        }
+        add_country_modifier = { modifier = modifier_arg_the_gibraltar_of_the_levant_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_arg_the_gibraltar_of_the_levant_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1981
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1981
+                var:rl_event_2 = 1981
+                var:rl_event_3 = 1981
+            }
+        }
+        add_country_modifier = { modifier = modifier_ath_the_parthenon_dukes_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_ath_the_parthenon_dukes_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1982
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1982
+                var:rl_event_2 = 1982
+                var:rl_event_3 = 1982
+            }
+        }
+        add_country_modifier = { modifier = modifier_bod_the_alpine_skirmishers_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_bod_the_alpine_skirmishers_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1983
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1983
+                var:rl_event_2 = 1983
+                var:rl_event_3 = 1983
+            }
+        }
+        add_country_modifier = { modifier = modifier_cep_the_currant_trade_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_cep_the_currant_trade_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1984
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1984
+                var:rl_event_2 = 1984
+                var:rl_event_3 = 1984
+            }
+        }
+        add_country_modifier = { modifier = modifier_crt_the_malvasia_wine_export_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_crt_the_malvasia_wine_export_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1985
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1985
+                var:rl_event_2 = 1985
+                var:rl_event_3 = 1985
+            }
+        }
+        add_country_modifier = { modifier = modifier_lat_the_new_praetorian_guard_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_lat_the_new_praetorian_guard_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1986
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1986
+                var:rl_event_2 = 1986
+                var:rl_event_3 = 1986
+            }
+        }
+        add_country_modifier = { modifier = modifier_nax_the_marble_trade_of_paros_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_nax_the_marble_trade_of_paros_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1987
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1987
+                var:rl_event_2 = 1987
+                var:rl_event_3 = 1987
+            }
+        }
+        add_country_modifier = { modifier = modifier_neg_bridgehead_of_the_euripus_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_neg_bridgehead_of_the_euripus_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1988
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1988
+                var:rl_event_2 = 1988
+                var:rl_event_3 = 1988
+            }
+        }
+        add_country_modifier = { modifier = modifier_neo_the_great_companys_code_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_neo_the_great_companys_code_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1989
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1989
+                var:rl_event_2 = 1989
+                var:rl_event_3 = 1989
+            }
+        }
+        add_country_modifier = { modifier = modifier_pat_uniate_liturgical_printing_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_pat_uniate_liturgical_printing_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1990
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1990
+                var:rl_event_2 = 1990
+                var:rl_event_3 = 1990
+            }
+        }
+        add_country_modifier = { modifier = modifier_sao_the_asceticism_of_the_crissaean_crags_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_sao_the_asceticism_of_the_crissaean_crags_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1991
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1991
+                var:rl_event_2 = 1991
+                var:rl_event_3 = 1991
+            }
+        }
+        add_country_modifier = { modifier = modifier_the_the_lombard_guard_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_the_the_lombard_guard_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1992
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1992
+                var:rl_event_2 = 1992
+                var:rl_event_3 = 1992
+            }
+        }
+        add_country_modifier = { modifier = modifier_frankokratia_levantine_trades_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_frankokratia_levantine_trades_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1993
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1993
+                var:rl_event_2 = 1993
+                var:rl_event_3 = 1993
+            }
+        }
+        add_country_modifier = { modifier = modifier_ach_a_system_of_forts_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_ach_a_system_of_forts_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1994
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1994
+                var:rl_event_2 = 1994
+                var:rl_event_3 = 1994
+            }
+        }
+        add_country_modifier = { modifier = modifier_arg_the_artillery_school_of_argos_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_arg_the_artillery_school_of_argos_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1995
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1995
+                var:rl_event_2 = 1995
+                var:rl_event_3 = 1995
+            }
+        }
+        add_country_modifier = { modifier = modifier_ath_the_piraeus_arsenal_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_ath_the_piraeus_arsenal_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1996
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1996
+                var:rl_event_2 = 1996
+                var:rl_event_3 = 1996
+            }
+        }
+        add_country_modifier = { modifier = modifier_bod_the_maritime_consulates_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_bod_the_maritime_consulates_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1997
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1997
+                var:rl_event_2 = 1997
+                var:rl_event_3 = 1997
+            }
+        }
+        add_country_modifier = { modifier = modifier_cep_the_chancery_of_the_three_tongues_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_cep_the_chancery_of_the_three_tongues_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1998
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1998
+                var:rl_event_2 = 1998
+                var:rl_event_3 = 1998
+            }
+        }
+        add_country_modifier = { modifier = modifier_crt_the_cretan_labyrinth_of_fortifications_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_crt_the_cretan_labyrinth_of_fortifications_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.1999
+        trigger = {
+            OR = {
+                var:rl_event_1 = 1999
+                var:rl_event_2 = 1999
+                var:rl_event_3 = 1999
+            }
+        }
+        add_country_modifier = { modifier = modifier_lat_the_golden_gate_customs_house_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_lat_the_golden_gate_customs_house_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2000
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2000
+                var:rl_event_2 = 2000
+                var:rl_event_3 = 2000
+            }
+        }
+        add_country_modifier = { modifier = modifier_nax_naxian_sea_knights_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_nax_naxian_sea_knights_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2001
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2001
+                var:rl_event_2 = 2001
+                var:rl_event_3 = 2001
+            }
+        }
+        add_country_modifier = { modifier = modifier_neg_the_eubean_tidal_mills_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_neg_the_eubean_tidal_mills_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2002
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2002
+                var:rl_event_2 = 2002
+                var:rl_event_3 = 2002
+            }
+        }
+        add_country_modifier = { modifier = modifier_neo_the_neopatras_horse_breeding_program_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_neo_the_neopatras_horse_breeding_program_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2003
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2003
+                var:rl_event_2 = 2003
+                var:rl_event_3 = 2003
+            }
+        }
+        add_country_modifier = { modifier = modifier_pat_the_patrine_mint_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_pat_the_patrine_mint_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2004
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2004
+                var:rl_event_2 = 2004
+                var:rl_event_3 = 2004
+            }
+        }
+        add_country_modifier = { modifier = modifier_sao_the_phocian_mule_chancery_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_sao_the_phocian_mule_chancery_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2005
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2005
+                var:rl_event_2 = 2005
+                var:rl_event_3 = 2005
+            }
+        }
+        add_country_modifier = { modifier = modifier_the_the_via_egnatia_restoration_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_the_the_via_egnatia_restoration_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2006
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2006
+                var:rl_event_2 = 2006
+                var:rl_event_3 = 2006
+            }
+        }
+        add_country_modifier = { modifier = modifier_frankokratia_the_frankish_greek_symbiosis_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_frankokratia_the_frankish_greek_symbiosis_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2007
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2007
+                var:rl_event_2 = 2007
+                var:rl_event_3 = 2007
+            }
+        }
+        add_country_modifier = { modifier = modifier_ach_achaean_enlightenment_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_ach_achaean_enlightenment_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2008
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2008
+                var:rl_event_2 = 2008
+                var:rl_event_3 = 2008
+            }
+        }
+        add_country_modifier = { modifier = modifier_arg_argive_maritime_insurance_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_arg_argive_maritime_insurance_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2009
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2009
+                var:rl_event_2 = 2009
+                var:rl_event_3 = 2009
+            }
+        }
+        add_country_modifier = { modifier = modifier_ath_the_athenian_bureaucracy_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_ath_the_athenian_bureaucracy_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2010
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2010
+                var:rl_event_2 = 2010
+                var:rl_event_3 = 2010
+            }
+        }
+        add_country_modifier = { modifier = modifier_bod_the_spercheios_civil_chancellery_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_bod_the_spercheios_civil_chancellery_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2011
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2011
+                var:rl_event_2 = 2011
+                var:rl_event_3 = 2011
+            }
+        }
+        add_country_modifier = { modifier = modifier_cep_the_arsenal_of_argostoli_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_cep_the_arsenal_of_argostoli_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2012
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2012
+                var:rl_event_2 = 2012
+                var:rl_event_3 = 2012
+            }
+        }
+        add_country_modifier = { modifier = modifier_crt_the_council_of_the_two_peoples_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_crt_the_council_of_the_two_peoples_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2013
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2013
+                var:rl_event_2 = 2013
+                var:rl_event_3 = 2013
+            }
+        }
+        add_country_modifier = { modifier = modifier_lat_codex_latinus_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_lat_codex_latinus_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2014
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2014
+                var:rl_event_2 = 2014
+                var:rl_event_3 = 2014
+            }
+        }
+        add_country_modifier = { modifier = modifier_nax_aegean_waystation_networks_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_nax_aegean_waystation_networks_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2015
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2015
+                var:rl_event_2 = 2015
+                var:rl_event_3 = 2015
+            }
+        }
+        add_country_modifier = { modifier = modifier_neg_the_triarchic_naval_academy_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_neg_the_triarchic_naval_academy_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2016
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2016
+                var:rl_event_2 = 2016
+                var:rl_event_3 = 2016
+            }
+        }
+        add_country_modifier = { modifier = modifier_neo_the_ordinance_of_the_viles_noves_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_neo_the_ordinance_of_the_viles_noves_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2017
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2017
+                var:rl_event_2 = 2017
+                var:rl_event_3 = 2017
+            }
+        }
+        add_country_modifier = { modifier = modifier_pat_the_seminary_of_diplomats_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_pat_the_seminary_of_diplomats_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2018
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2018
+                var:rl_event_2 = 2018
+                var:rl_event_3 = 2018
+            }
+        }
+        add_country_modifier = { modifier = modifier_sao_the_parnassian_wolf_pacts_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_sao_the_parnassian_wolf_pacts_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2019
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2019
+                var:rl_event_2 = 2019
+                var:rl_event_3 = 2019
+            }
+        }
+        add_country_modifier = { modifier = modifier_the_the_macedonian_fur_trade_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_the_the_macedonian_fur_trade_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2020
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2020
+                var:rl_event_2 = 2020
+                var:rl_event_3 = 2020
+            }
+        }
+        add_country_modifier = { modifier = modifier_frankokratia_the_latin_enlightenment_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_frankokratia_the_latin_enlightenment_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2021
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2021
+                var:rl_event_2 = 2021
+                var:rl_event_3 = 2021
+            }
+        }
+        add_country_modifier = { modifier = modifier_ach_villehardouins_valor_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_ach_villehardouins_valor_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2022
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2022
+                var:rl_event_2 = 2022
+                var:rl_event_3 = 2022
+            }
+        }
+        add_country_modifier = { modifier = modifier_arg_the_curia_of_the_two_benches_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_arg_the_curia_of_the_two_benches_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2023
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2023
+                var:rl_event_2 = 2023
+                var:rl_event_3 = 2023
+            }
+        }
+        add_country_modifier = { modifier = modifier_ath_the_attican_gunpowder_mills_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_ath_the_attican_gunpowder_mills_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2024
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2024
+                var:rl_event_2 = 2024
+                var:rl_event_3 = 2024
+            }
+        }
+        add_country_modifier = { modifier = modifier_bod_the_oeta_riflemen_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_bod_the_oeta_riflemen_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2025
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2025
+                var:rl_event_2 = 2025
+                var:rl_event_3 = 2025
+            }
+        }
+        add_country_modifier = { modifier = modifier_cep_the_ionian_merchant_experts_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_cep_the_ionian_merchant_experts_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2026
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2026
+                var:rl_event_2 = 2026
+                var:rl_event_3 = 2026
+            }
+        }
+        add_country_modifier = { modifier = modifier_crt_academy_of_the_stratioti_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_crt_academy_of_the_stratioti_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2027
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2027
+                var:rl_event_2 = 2027
+                var:rl_event_3 = 2027
+            }
+        }
+        add_country_modifier = { modifier = modifier_lat_the_order_of_the_star_of_the_east_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_lat_the_order_of_the_star_of_the_east_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2028
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2028
+                var:rl_event_2 = 2028
+                var:rl_event_3 = 2028
+            }
+        }
+        add_country_modifier = { modifier = modifier_nax_the_aegean_hydrographic_bureau_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_nax_the_aegean_hydrographic_bureau_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2029
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2029
+                var:rl_event_2 = 2029
+                var:rl_event_3 = 2029
+            }
+        }
+        add_country_modifier = { modifier = modifier_neg_the_glassworks_of_chalkis_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_neg_the_glassworks_of_chalkis_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2030
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2030
+                var:rl_event_2 = 2030
+                var:rl_event_3 = 2030
+            }
+        }
+        add_country_modifier = { modifier = modifier_neo_the_academy_of_administration_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_neo_the_academy_of_administration_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2031
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2031
+                var:rl_event_2 = 2031
+                var:rl_event_3 = 2031
+            }
+        }
+        add_country_modifier = { modifier = modifier_pat_the_port_of_sanctuary_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_pat_the_port_of_sanctuary_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2032
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2032
+                var:rl_event_2 = 2032
+                var:rl_event_3 = 2032
+            }
+        }
+        add_country_modifier = { modifier = modifier_sao_the_legacy_of_the_alpha_protector_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_sao_the_legacy_of_the_alpha_protector_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2033
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2033
+                var:rl_event_2 = 2033
+                var:rl_event_3 = 2033
+            }
+        }
+        add_country_modifier = { modifier = modifier_the_the_university_of_thessalonica_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_the_the_university_of_thessalonica_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2034
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2034
+                var:rl_event_2 = 2034
+                var:rl_event_3 = 2034
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_aristocracy
+            research_advance = advance_type:dummy_aristocracy
+            set_variable = var_aristocracy
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_aristocracy
+        }
+    }
+
+    option = {
+        name = rl_events.1.2035
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2035
+                var:rl_event_2 = 2035
+                var:rl_event_3 = 2035
+            }
+        }
+        add_country_modifier = { modifier = modifier_local_nobility years = -1 }
+        hidden_effect = {
+            set_variable = var_local_nobility
+        }
+    }
+
+    option = {
+        name = rl_events.1.2036
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2036
+                var:rl_event_2 = 2036
+                var:rl_event_3 = 2036
+            }
+        }
+        add_country_modifier = { modifier = modifier_military_traditions years = -1 }
+        hidden_effect = {
+            set_variable = flag_dummy_military_traditions
+            research_advance = advance_type:dummy_military_traditions
+            set_variable = var_military_traditions
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_military_traditions
+        }
+    }
+
+    option = {
+        name = rl_events.1.2037
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2037
+                var:rl_event_2 = 2037
+                var:rl_event_3 = 2037
+            }
+        }
+        add_country_modifier = { modifier = modifier_noble_officers years = -1 }
+        hidden_effect = {
+            set_variable = flag_dummy_noble_officers
+            research_advance = advance_type:dummy_noble_officers
+            set_variable = var_noble_officers
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_noble_officers
+        }
+    }
+
+    option = {
+        name = rl_events.1.2038
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2038
+                var:rl_event_2 = 2038
+                var:rl_event_3 = 2038
+            }
+        }
+        add_country_modifier = { modifier = modifier_noble_resilience years = -1 }
+        hidden_effect = {
+            set_variable = flag_dummy_noble_resilience
+            research_advance = advance_type:dummy_noble_resilience
+            set_variable = var_noble_resilience
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_noble_resilience
+        }
+    }
+
+    option = {
+        name = rl_events.1.2039
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2039
+                var:rl_event_2 = 2039
+                var:rl_event_3 = 2039
+            }
+        }
+        add_country_modifier = { modifier = modifier_international_nobility years = -1 }
+        hidden_effect = {
+            set_variable = flag_dummy_international_nobility
+            research_advance = advance_type:dummy_international_nobility
+            set_variable = var_international_nobility
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_international_nobility
+        }
+    }
+
+    option = {
+        name = rl_events.1.2040
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2040
+                var:rl_event_2 = 2040
+                var:rl_event_3 = 2040
+            }
+        }
+        add_country_modifier = { modifier = modifier_plutocracy years = -1 }
+        hidden_effect = {
+            set_variable = var_plutocracy
+        }
+    }
+
+    option = {
+        name = rl_events.1.2041
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2041
+                var:rl_event_2 = 2041
+                var:rl_event_3 = 2041
+            }
+        }
+        add_country_modifier = { modifier = modifier_abolished_serfdom years = -1 }
+        hidden_effect = {
+            set_variable = var_abolished_serfdom
+        }
+    }
+
+    option = {
+        name = rl_events.1.2042
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2042
+                var:rl_event_2 = 2042
+                var:rl_event_3 = 2042
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_republican_election_law_advance
+            research_advance = advance_type:dummy_republican_election_law_advance
+            set_variable = var_republican_election_law_advance
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_republican_election_law_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2043
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2043
+                var:rl_event_2 = 2043
+                var:rl_event_3 = 2043
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_republican_electorate_law_advance
+            research_advance = advance_type:dummy_republican_electorate_law_advance
+            set_variable = var_republican_electorate_law_advance
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_republican_electorate_law_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2044
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2044
+                var:rl_event_2 = 2044
+                var:rl_event_3 = 2044
+            }
+        }
+        add_country_modifier = { modifier = modifier_tradition_of_payment years = -1 }
+        hidden_effect = {
+            set_variable = var_tradition_of_payment
+        }
+    }
+
+    option = {
+        name = rl_events.1.2045
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2045
+                var:rl_event_2 = 2045
+                var:rl_event_3 = 2045
+            }
+        }
+        add_country_modifier = { modifier = modifier_free_merchants years = -1 }
+        hidden_effect = {
+            set_variable = var_free_merchants
+        }
+    }
+
+    option = {
+        name = rl_events.1.2046
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2046
+                var:rl_event_2 = 2046
+                var:rl_event_3 = 2046
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_republican_power_law_advance
+            research_advance = advance_type:dummy_republican_power_law_advance
+            set_variable = var_republican_power_law_advance
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_republican_power_law_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2047
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2047
+                var:rl_event_2 = 2047
+                var:rl_event_3 = 2047
+            }
+        }
+        add_country_modifier = { modifier = modifier_free_cities years = -1 }
+        hidden_effect = {
+            set_variable = var_free_cities
+        }
+    }
+
+    option = {
+        name = rl_events.1.2048
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2048
+                var:rl_event_2 = 2048
+                var:rl_event_3 = 2048
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_principle_of_administration_law_advance
+            research_advance = advance_type:dummy_principle_of_administration_law_advance
+            set_variable = var_principle_of_administration_law_advance
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_principle_of_administration_law_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2049
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2049
+                var:rl_event_2 = 2049
+                var:rl_event_3 = 2049
+            }
+        }
+        add_country_modifier = { modifier = modifier_free_subjects years = -1 }
+        hidden_effect = {
+            set_variable = var_free_subjects
+        }
+    }
+
+    option = {
+        name = rl_events.1.2050
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2050
+                var:rl_event_2 = 2050
+                var:rl_event_3 = 2050
+            }
+        }
+        add_country_modifier = { modifier = modifier_emancipation years = -1 }
+        hidden_effect = {
+            set_variable = var_emancipation
+        }
+    }
+
+    option = {
+        name = rl_events.1.2051
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2051
+                var:rl_event_2 = 2051
+                var:rl_event_3 = 2051
+            }
+        }
+        add_country_modifier = { modifier = modifier_mandate_of_the_khan years = -1 }
+        hidden_effect = {
+            set_variable = var_mandate_of_the_khan
+        }
+    }
+
+    option = {
+        name = rl_events.1.2052
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2052
+                var:rl_event_2 = 2052
+                var:rl_event_3 = 2052
+            }
+        }
+        add_country_modifier = { modifier = modifier_there_shall_be_no_grass years = -1 }
+        hidden_effect = {
+            set_variable = var_there_shall_be_no_grass
+        }
+    }
+
+    option = {
+        name = rl_events.1.2053
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2053
+                var:rl_event_2 = 2053
+                var:rl_event_3 = 2053
+            }
+        }
+        add_country_modifier = { modifier = modifier_slavery_before_death years = -1 }
+        hidden_effect = {
+            set_variable = var_slavery_before_death
+        }
+    }
+
+    option = {
+        name = rl_events.1.2054
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2054
+                var:rl_event_2 = 2054
+                var:rl_event_3 = 2054
+            }
+        }
+        add_country_modifier = { modifier = modifier_horde_loyalty years = -1 }
+        hidden_effect = {
+            set_variable = var_horde_loyalty
+        }
+    }
+
+    option = {
+        name = rl_events.1.2055
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2055
+                var:rl_event_2 = 2055
+                var:rl_event_3 = 2055
+            }
+        }
+        add_country_modifier = { modifier = modifier_horde_loot_discovery_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_horde_loot_discovery_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2056
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2056
+                var:rl_event_2 = 2056
+                var:rl_event_3 = 2056
+            }
+        }
+        add_country_modifier = { modifier = modifier_trampling_horde years = -1 }
+        hidden_effect = {
+            set_variable = var_trampling_horde
+        }
+    }
+
+    option = {
+        name = rl_events.1.2057
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2057
+                var:rl_event_2 = 2057
+                var:rl_event_3 = 2057
+            }
+        }
+        add_country_modifier = { modifier = modifier_watchers_of_the_silk_road years = -1 }
+        hidden_effect = {
+            set_variable = var_watchers_of_the_silk_road
+        }
+    }
+
+    option = {
+        name = rl_events.1.2058
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2058
+                var:rl_event_2 = 2058
+                var:rl_event_3 = 2058
+            }
+        }
+        add_country_modifier = { modifier = modifier_logistics_of_khan years = -1 }
+        hidden_effect = {
+            set_variable = var_logistics_of_khan
+        }
+    }
+
+    option = {
+        name = rl_events.1.2059
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2059
+                var:rl_event_2 = 2059
+                var:rl_event_3 = 2059
+            }
+        }
+        add_country_modifier = { modifier = modifier_populating_the_steppes years = -1 }
+        hidden_effect = {
+            set_variable = var_populating_the_steppes
+        }
+    }
+
+    option = {
+        name = rl_events.1.2060
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2060
+                var:rl_event_2 = 2060
+                var:rl_event_3 = 2060
+            }
+        }
+        add_country_modifier = { modifier = modifier_a_magnanimous_empire years = -1 }
+        hidden_effect = {
+            set_variable = var_a_magnanimous_empire
+        }
+    }
+
+    option = {
+        name = rl_events.1.2061
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2061
+                var:rl_event_2 = 2061
+                var:rl_event_3 = 2061
+            }
+        }
+        add_country_modifier = { modifier = modifier_horde_ardor years = -1 }
+        hidden_effect = {
+            set_variable = var_horde_ardor
+        }
+    }
+
+    option = {
+        name = rl_events.1.2062
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2062
+                var:rl_event_2 = 2062
+                var:rl_event_3 = 2062
+            }
+        }
+        add_country_modifier = { modifier = modifier_friends_in_high_places years = -1 }
+        hidden_effect = {
+            set_variable = var_friends_in_high_places
+        }
+    }
+
+    option = {
+        name = rl_events.1.2063
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2063
+                var:rl_event_2 = 2063
+                var:rl_event_3 = 2063
+            }
+        }
+        add_country_modifier = { modifier = modifier_flesh_is_weak years = -1 }
+        hidden_effect = {
+            set_variable = var_flesh_is_weak
+        }
+    }
+
+    option = {
+        name = rl_events.1.2064
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2064
+                var:rl_event_2 = 2064
+                var:rl_event_3 = 2064
+            }
+        }
+        add_country_modifier = { modifier = modifier_alpha_and_omega years = -1 }
+        hidden_effect = {
+            set_variable = var_alpha_and_omega
+        }
+    }
+
+    option = {
+        name = rl_events.1.2065
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2065
+                var:rl_event_2 = 2065
+                var:rl_event_3 = 2065
+            }
+        }
+        add_country_modifier = { modifier = modifier_printing_of_religious_texts years = -1 }
+        hidden_effect = {
+            set_variable = var_printing_of_religious_texts
+        }
+    }
+
+    option = {
+        name = rl_events.1.2066
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2066
+                var:rl_event_2 = 2066
+                var:rl_event_3 = 2066
+            }
+        }
+        add_country_modifier = { modifier = modifier_conviction_of_sin years = -1 }
+        hidden_effect = {
+            set_variable = var_conviction_of_sin
+        }
+    }
+
+    option = {
+        name = rl_events.1.2067
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2067
+                var:rl_event_2 = 2067
+                var:rl_event_3 = 2067
+            }
+        }
+        add_country_modifier = { modifier = modifier_martyrs years = -1 }
+        hidden_effect = {
+            set_variable = var_martyrs
+        }
+    }
+
+    option = {
+        name = rl_events.1.2068
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2068
+                var:rl_event_2 = 2068
+                var:rl_event_3 = 2068
+            }
+        }
+        add_country_modifier = { modifier = modifier_divine_passion years = -1 }
+        hidden_effect = {
+            set_variable = var_divine_passion
+        }
+    }
+
+    option = {
+        name = rl_events.1.2069
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2069
+                var:rl_event_2 = 2069
+                var:rl_event_3 = 2069
+            }
+        }
+        add_country_modifier = { modifier = modifier_kgk_emerging_clan years = -1 }
+        hidden_effect = {
+            set_variable = var_kgk_emerging_clan
+        }
+    }
+
+    option = {
+        name = rl_events.1.2070
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2070
+                var:rl_event_2 = 2070
+                var:rl_event_3 = 2070
+            }
+        }
+        add_country_modifier = { modifier = modifier_akt_ezo_kanrei years = -1 }
+        hidden_effect = {
+            set_variable = var_akt_ezo_kanrei
+        }
+    }
+
+    option = {
+        name = rl_events.1.2071
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2071
+                var:rl_event_2 = 2071
+                var:rl_event_3 = 2071
+            }
+        }
+        add_country_modifier = { modifier = modifier_asa_control_of_buddhist_sects years = -1 }
+        hidden_effect = {
+            set_variable = var_asa_control_of_buddhist_sects
+        }
+    }
+
+    option = {
+        name = rl_events.1.2072
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2072
+                var:rl_event_2 = 2072
+                var:rl_event_3 = 2072
+            }
+        }
+        add_country_modifier = { modifier = modifier_cba_dream_of_masakado years = -1 }
+        hidden_effect = {
+            set_variable = var_cba_dream_of_masakado
+        }
+    }
+
+    option = {
+        name = rl_events.1.2073
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2073
+                var:rl_event_2 = 2073
+                var:rl_event_3 = 2073
+            }
+        }
+        add_country_modifier = { modifier = modifier_csk_god_of_arts years = -1 }
+        hidden_effect = {
+            set_variable = var_csk_god_of_arts
+        }
+    }
+
+    option = {
+        name = rl_events.1.2074
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2074
+                var:rl_event_2 = 2074
+                var:rl_event_3 = 2074
+            }
+        }
+        add_country_modifier = { modifier = modifier_dte_oshu_shugo years = -1 }
+        hidden_effect = {
+            set_variable = var_dte_oshu_shugo
+        }
+    }
+
+    option = {
+        name = rl_events.1.2075
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2075
+                var:rl_event_2 = 2075
+                var:rl_event_3 = 2075
+            }
+        }
+        add_country_modifier = { modifier = modifier_htk_shogunate_ties years = -1 }
+        hidden_effect = {
+            set_variable = var_htk_shogunate_ties
+        }
+    }
+
+    option = {
+        name = rl_events.1.2076
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2076
+                var:rl_event_2 = 2076
+                var:rl_event_3 = 2076
+            }
+        }
+        add_country_modifier = { modifier = modifier_hsk_branches_and_retainers years = -1 }
+        hidden_effect = {
+            set_variable = var_hsk_branches_and_retainers
+        }
+    }
+
+    option = {
+        name = rl_events.1.2077
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2077
+                var:rl_event_2 = 2077
+                var:rl_event_3 = 2077
+            }
+        }
+        add_country_modifier = { modifier = modifier_img_claim_to_shogunate years = -1 }
+        hidden_effect = {
+            set_variable = var_img_claim_to_shogunate
+        }
+    }
+
+    option = {
+        name = rl_events.1.2078
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2078
+                var:rl_event_2 = 2078
+                var:rl_event_3 = 2078
+            }
+        }
+        add_country_modifier = { modifier = modifier_isk_minister_of_samurai_dokoro years = -1 }
+        hidden_effect = {
+            set_variable = var_isk_minister_of_samurai_dokoro
+        }
+    }
+
+    option = {
+        name = rl_events.1.2079
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2079
+                var:rl_event_2 = 2079
+                var:rl_event_3 = 2079
+            }
+        }
+        add_country_modifier = { modifier = modifier_kkc_resistance_against_foreign_intervention years = -1 }
+        hidden_effect = {
+            set_variable = var_kkc_resistance_against_foreign_intervention
+        }
+    }
+
+    option = {
+        name = rl_events.1.2080
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2080
+                var:rl_event_2 = 2080
+                var:rl_event_3 = 2080
+            }
+        }
+        add_country_modifier = { modifier = modifier_ktb_control_of_ise years = -1 }
+        hidden_effect = {
+            set_variable = var_ktb_control_of_ise
+        }
+    }
+
+    option = {
+        name = rl_events.1.2081
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2081
+                var:rl_event_2 = 2081
+                var:rl_event_3 = 2081
+            }
+        }
+        add_country_modifier = { modifier = modifier_ktb_blessing_of_amaterasu years = -1 }
+        hidden_effect = {
+            set_variable = var_ktb_blessing_of_amaterasu
+        }
+    }
+
+    option = {
+        name = rl_events.1.2082
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2082
+                var:rl_event_2 = 2082
+                var:rl_event_3 = 2082
+            }
+        }
+        add_country_modifier = { modifier = modifier_kno_ruler_of_inland_sea years = -1 }
+        hidden_effect = {
+            set_variable = var_kno_ruler_of_inland_sea
+        }
+    }
+
+    option = {
+        name = rl_events.1.2083
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2083
+                var:rl_event_2 = 2083
+                var:rl_event_3 = 2083
+            }
+        }
+        add_country_modifier = { modifier = modifier_nbu_fight_against_famines years = -1 }
+        hidden_effect = {
+            set_variable = var_nbu_fight_against_famines
+        }
+    }
+
+    option = {
+        name = rl_events.1.2084
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2084
+                var:rl_event_2 = 2084
+                var:rl_event_3 = 2084
+            }
+        }
+        add_country_modifier = { modifier = modifier_ogs_shinano_shugo years = -1 }
+        hidden_effect = {
+            set_variable = var_ogs_shinano_shugo
+        }
+    }
+
+    option = {
+        name = rl_events.1.2085
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2085
+                var:rl_event_2 = 2085
+                var:rl_event_3 = 2085
+            }
+        }
+        add_country_modifier = { modifier = modifier_suw_suwa_taisha years = -1 }
+        hidden_effect = {
+            set_variable = var_suw_suwa_taisha
+        }
+    }
+
+    option = {
+        name = rl_events.1.2086
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2086
+                var:rl_event_2 = 2086
+                var:rl_event_3 = 2086
+            }
+        }
+        add_country_modifier = { modifier = modifier_otm_domination_of_kyushu years = -1 }
+        hidden_effect = {
+            set_variable = var_otm_domination_of_kyushu
+        }
+    }
+
+    option = {
+        name = rl_events.1.2087
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2087
+                var:rl_event_2 = 2087
+                var:rl_event_3 = 2087
+            }
+        }
+        add_country_modifier = { modifier = modifier_ouc_korea_trade years = -1 }
+        hidden_effect = {
+            set_variable = var_ouc_korea_trade
+        }
+    }
+
+    option = {
+        name = rl_events.1.2088
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2088
+                var:rl_event_2 = 2088
+                var:rl_event_3 = 2088
+            }
+        }
+        add_country_modifier = { modifier = modifier_stk_kashima_jingu years = -1 }
+        hidden_effect = {
+            set_variable = var_stk_kashima_jingu
+        }
+    }
+
+    option = {
+        name = rl_events.1.2089
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2089
+                var:rl_event_2 = 2089
+                var:rl_event_3 = 2089
+            }
+        }
+        add_country_modifier = { modifier = modifier_sba_access_to_northern_japan years = -1 }
+        hidden_effect = {
+            set_variable = var_sba_access_to_northern_japan
+        }
+    }
+
+    option = {
+        name = rl_events.1.2090
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2090
+                var:rl_event_2 = 2090
+                var:rl_event_3 = 2090
+            }
+        }
+        add_country_modifier = { modifier = modifier_shn_defender_against_mongols years = -1 }
+        hidden_effect = {
+            set_variable = var_shn_defender_against_mongols
+        }
+    }
+
+    option = {
+        name = rl_events.1.2091
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2091
+                var:rl_event_2 = 2091
+                var:rl_event_3 = 2091
+            }
+        }
+        add_country_modifier = { modifier = modifier_soo_fight_for_tsushima years = -1 }
+        hidden_effect = {
+            set_variable = var_soo_fight_for_tsushima
+        }
+    }
+
+    option = {
+        name = rl_events.1.2092
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2092
+                var:rl_event_2 = 2092
+                var:rl_event_3 = 2092
+            }
+        }
+        add_country_modifier = { modifier = modifier_tkd_takeda_ryu years = -1 }
+        hidden_effect = {
+            set_variable = var_tkd_takeda_ryu
+        }
+    }
+
+    option = {
+        name = rl_events.1.2093
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2093
+                var:rl_event_2 = 2093
+                var:rl_event_3 = 2093
+            }
+        }
+        add_country_modifier = { modifier = modifier_tki_banner_of_bellflower years = -1 }
+        hidden_effect = {
+            set_variable = var_tki_banner_of_bellflower
+        }
+    }
+
+    option = {
+        name = rl_events.1.2094
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2094
+                var:rl_event_2 = 2094
+                var:rl_event_3 = 2094
+            }
+        }
+        add_country_modifier = { modifier = modifier_ues_double_shugo years = -1 }
+        hidden_effect = {
+            set_variable = var_ues_double_shugo
+        }
+    }
+
+    option = {
+        name = rl_events.1.2095
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2095
+                var:rl_event_2 = 2095
+                var:rl_event_3 = 2095
+            }
+        }
+        add_country_modifier = { modifier = modifier_utn_legacy_of_nasu_no_yoichi years = -1 }
+        hidden_effect = {
+            set_variable = var_utn_legacy_of_nasu_no_yoichi
+        }
+    }
+
+    option = {
+        name = rl_events.1.2096
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2096
+                var:rl_event_2 = 2096
+                var:rl_event_3 = 2096
+            }
+        }
+        add_country_modifier = { modifier = modifier_ymn_mediate_succession_disputes years = -1 }
+        hidden_effect = {
+            set_variable = var_ymn_mediate_succession_disputes
+        }
+    }
+
+    option = {
+        name = rl_events.1.2097
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2097
+                var:rl_event_2 = 2097
+                var:rl_event_3 = 2097
+            }
+        }
+        add_country_modifier = { modifier = modifier_akt_ainu_trade years = -1 }
+        hidden_effect = {
+            set_variable = var_akt_ainu_trade
+        }
+    }
+
+    option = {
+        name = rl_events.1.2098
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2098
+                var:rl_event_2 = 2098
+                var:rl_event_3 = 2098
+            }
+        }
+        add_country_modifier = { modifier = modifier_csk_unification_of_shikoku years = -1 }
+        hidden_effect = {
+            set_variable = var_csk_unification_of_shikoku
+        }
+    }
+
+    option = {
+        name = rl_events.1.2099
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2099
+                var:rl_event_2 = 2099
+                var:rl_event_3 = 2099
+            }
+        }
+        add_country_modifier = { modifier = modifier_hsk_control_of_izumi_sea years = -1 }
+        hidden_effect = {
+            set_variable = var_hsk_control_of_izumi_sea
+        }
+    }
+
+    option = {
+        name = rl_events.1.2100
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2100
+                var:rl_event_2 = 2100
+                var:rl_event_3 = 2100
+            }
+        }
+        add_country_modifier = { modifier = modifier_img_supreme_ruler_of_tokaido years = -1 }
+        hidden_effect = {
+            set_variable = var_img_supreme_ruler_of_tokaido
+        }
+    }
+
+    option = {
+        name = rl_events.1.2101
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2101
+                var:rl_event_2 = 2101
+                var:rl_event_3 = 2101
+            }
+        }
+        add_country_modifier = { modifier = modifier_ktb_the_march_of_kitabatake_akiee years = -1 }
+        hidden_effect = {
+            set_variable = var_ktb_the_march_of_kitabatake_akiee
+        }
+    }
+
+    option = {
+        name = rl_events.1.2102
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2102
+                var:rl_event_2 = 2102
+                var:rl_event_3 = 2102
+            }
+        }
+        add_country_modifier = { modifier = modifier_nbu_northern_horses years = -1 }
+        hidden_effect = {
+            set_variable = var_nbu_northern_horses
+        }
+    }
+
+    option = {
+        name = rl_events.1.2103
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2103
+                var:rl_event_2 = 2103
+                var:rl_event_3 = 2103
+            }
+        }
+        add_country_modifier = { modifier = modifier_oda_generals years = -1 }
+        hidden_effect = {
+            set_variable = var_oda_generals
+        }
+    }
+
+    option = {
+        name = rl_events.1.2104
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2104
+                var:rl_event_2 = 2104
+                var:rl_event_3 = 2104
+            }
+        }
+        add_country_modifier = { modifier = modifier_ogs_kiso_uma years = -1 }
+        hidden_effect = {
+            set_variable = var_ogs_kiso_uma
+        }
+    }
+
+    option = {
+        name = rl_events.1.2105
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2105
+                var:rl_event_2 = 2105
+                var:rl_event_3 = 2105
+            }
+        }
+        add_country_modifier = { modifier = modifier_otm_nanban_trade years = -1 }
+        hidden_effect = {
+            set_variable = var_otm_nanban_trade
+        }
+    }
+
+    option = {
+        name = rl_events.1.2106
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2106
+                var:rl_event_2 = 2106
+                var:rl_event_3 = 2106
+            }
+        }
+        add_country_modifier = { modifier = modifier_ouc_fight_against_wokou years = -1 }
+        hidden_effect = {
+            set_variable = var_ouc_fight_against_wokou
+        }
+    }
+
+    option = {
+        name = rl_events.1.2107
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2107
+                var:rl_event_2 = 2107
+                var:rl_event_3 = 2107
+            }
+        }
+        add_country_modifier = { modifier = modifier_sba_shiba_retainers years = -1 }
+        hidden_effect = {
+            set_variable = var_sba_shiba_retainers
+        }
+    }
+
+    option = {
+        name = rl_events.1.2108
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2108
+                var:rl_event_2 = 2108
+                var:rl_event_3 = 2108
+            }
+        }
+        add_country_modifier = { modifier = modifier_smz_tsurinobuse years = -1 }
+        hidden_effect = {
+            set_variable = var_smz_tsurinobuse
+        }
+    }
+
+    option = {
+        name = rl_events.1.2109
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2109
+                var:rl_event_2 = 2109
+                var:rl_event_3 = 2109
+            }
+        }
+        add_country_modifier = { modifier = modifier_shn_diplomacy_through_tsushima years = -1 }
+        hidden_effect = {
+            set_variable = var_shn_diplomacy_through_tsushima
+        }
+    }
+
+    option = {
+        name = rl_events.1.2110
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2110
+                var:rl_event_2 = 2110
+                var:rl_event_3 = 2110
+            }
+        }
+        add_country_modifier = { modifier = modifier_soo_bahan_ship years = -1 }
+        hidden_effect = {
+            set_variable = var_soo_bahan_ship
+        }
+    }
+
+    option = {
+        name = rl_events.1.2111
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2111
+                var:rl_event_2 = 2111
+                var:rl_event_3 = 2111
+            }
+        }
+        add_country_modifier = { modifier = modifier_tki_flood_control_of_three_rivers years = -1 }
+        hidden_effect = {
+            set_variable = var_tki_flood_control_of_three_rivers
+        }
+    }
+
+    option = {
+        name = rl_events.1.2112
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2112
+                var:rl_event_2 = 2112
+                var:rl_event_3 = 2112
+            }
+        }
+        add_country_modifier = { modifier = modifier_ues_eastern_power years = -1 }
+        hidden_effect = {
+            set_variable = var_ues_eastern_power
+        }
+    }
+
+    option = {
+        name = rl_events.1.2113
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2113
+                var:rl_event_2 = 2113
+                var:rl_event_3 = 2113
+            }
+        }
+        add_country_modifier = { modifier = modifier_utn_mediator_of_kanto years = -1 }
+        hidden_effect = {
+            set_variable = var_utn_mediator_of_kanto
+        }
+    }
+
+    option = {
+        name = rl_events.1.2114
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2114
+                var:rl_event_2 = 2114
+                var:rl_event_3 = 2114
+            }
+        }
+        add_country_modifier = { modifier = modifier_ymn_leader_of_western_army years = -1 }
+        hidden_effect = {
+            set_variable = var_ymn_leader_of_western_army
+        }
+    }
+
+    option = {
+        name = rl_events.1.2115
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2115
+                var:rl_event_2 = 2115
+                var:rl_event_3 = 2115
+            }
+        }
+        add_country_modifier = { modifier = modifier_ask_defender_of_the_imperial_court years = -1 }
+        hidden_effect = {
+            set_variable = var_ask_defender_of_the_imperial_court
+        }
+    }
+
+    option = {
+        name = rl_events.1.2116
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2116
+                var:rl_event_2 = 2116
+                var:rl_event_3 = 2116
+            }
+        }
+        add_country_modifier = { modifier = modifier_ask_bugyoshu_and_hokushu years = -1 }
+        hidden_effect = {
+            set_variable = var_ask_bugyoshu_and_hokushu
+        }
+    }
+
+    option = {
+        name = rl_events.1.2117
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2117
+                var:rl_event_2 = 2117
+                var:rl_event_3 = 2117
+            }
+        }
+        add_country_modifier = { modifier = modifier_ask_higashiyama_culture years = -1 }
+        hidden_effect = {
+            set_variable = var_ask_higashiyama_culture
+        }
+    }
+
+    option = {
+        name = rl_events.1.2118
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2118
+                var:rl_event_2 = 2118
+                var:rl_event_3 = 2118
+            }
+        }
+        add_country_modifier = { modifier = modifier_cba_irrigation_of_southern_kanto years = -1 }
+        hidden_effect = {
+            set_variable = var_cba_irrigation_of_southern_kanto
+        }
+    }
+
+    option = {
+        name = rl_events.1.2119
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2119
+                var:rl_event_2 = 2119
+                var:rl_event_3 = 2119
+            }
+        }
+        add_country_modifier = { modifier = modifier_csk_expand_the_navy years = -1 }
+        hidden_effect = {
+            set_variable = var_csk_expand_the_navy
+        }
+    }
+
+    option = {
+        name = rl_events.1.2120
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2120
+                var:rl_event_2 = 2120
+                var:rl_event_3 = 2120
+            }
+        }
+        add_country_modifier = { modifier = modifier_dte_dragon_of_oshu years = -1 }
+        hidden_effect = {
+            set_variable = var_dte_dragon_of_oshu
+        }
+    }
+
+    option = {
+        name = rl_events.1.2121
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2121
+                var:rl_event_2 = 2121
+                var:rl_event_3 = 2121
+            }
+        }
+        add_country_modifier = { modifier = modifier_htk_clan_spread years = -1 }
+        hidden_effect = {
+            set_variable = var_htk_clan_spread
+        }
+    }
+
+    option = {
+        name = rl_events.1.2122
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2122
+                var:rl_event_2 = 2122
+                var:rl_event_3 = 2122
+            }
+        }
+        add_country_modifier = { modifier = modifier_img_unlikely_alliances years = -1 }
+        hidden_effect = {
+            set_variable = var_img_unlikely_alliances
+        }
+    }
+
+    option = {
+        name = rl_events.1.2123
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2123
+                var:rl_event_2 = 2123
+                var:rl_event_3 = 2123
+            }
+        }
+        add_country_modifier = { modifier = modifier_ito_sympathy_to_foreign_faiths years = -1 }
+        hidden_effect = {
+            set_variable = var_ito_sympathy_to_foreign_faiths
+        }
+    }
+
+    option = {
+        name = rl_events.1.2124
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2124
+                var:rl_event_2 = 2124
+                var:rl_event_3 = 2124
+            }
+        }
+        add_country_modifier = { modifier = modifier_kno_murakami_suigun years = -1 }
+        hidden_effect = {
+            set_variable = var_kno_murakami_suigun
+        }
+    }
+
+    option = {
+        name = rl_events.1.2125
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2125
+                var:rl_event_2 = 2125
+                var:rl_event_3 = 2125
+            }
+        }
+        add_country_modifier = { modifier = modifier_mri_munakata_three_goddesses years = -1 }
+        hidden_effect = {
+            set_variable = var_mri_munakata_three_goddesses
+        }
+    }
+
+    option = {
+        name = rl_events.1.2126
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2126
+                var:rl_event_2 = 2126
+                var:rl_event_3 = 2126
+            }
+        }
+        add_country_modifier = { modifier = modifier_oda_tenka_fubu years = -1 }
+        hidden_effect = {
+            set_variable = var_oda_tenka_fubu
+        }
+    }
+
+    option = {
+        name = rl_events.1.2127
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2127
+                var:rl_event_2 = 2127
+                var:rl_event_3 = 2127
+            }
+        }
+        add_country_modifier = { modifier = modifier_oda_triple_firing years = -1 }
+        hidden_effect = {
+            set_variable = var_oda_triple_firing
+        }
+    }
+
+    option = {
+        name = rl_events.1.2128
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2128
+                var:rl_event_2 = 2128
+                var:rl_event_3 = 2128
+            }
+        }
+        add_country_modifier = { modifier = modifier_ogs_improvment_of_nakasendo years = -1 }
+        hidden_effect = {
+            set_variable = var_ogs_improvment_of_nakasendo
+        }
+    }
+
+    option = {
+        name = rl_events.1.2129
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2129
+                var:rl_event_2 = 2129
+                var:rl_event_3 = 2129
+            }
+        }
+        add_country_modifier = { modifier = modifier_otm_christian_conversion years = -1 }
+        hidden_effect = {
+            set_variable = var_otm_christian_conversion
+        }
+    }
+
+    option = {
+        name = rl_events.1.2130
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2130
+                var:rl_event_2 = 2130
+                var:rl_event_3 = 2130
+            }
+        }
+        add_country_modifier = { modifier = modifier_ouc_welcome_missionaries years = -1 }
+        hidden_effect = {
+            set_variable = var_ouc_welcome_missionaries
+        }
+    }
+
+    option = {
+        name = rl_events.1.2131
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2131
+                var:rl_event_2 = 2131
+                var:rl_event_3 = 2131
+            }
+        }
+        add_country_modifier = { modifier = modifier_stk_eastern_coalitions years = -1 }
+        hidden_effect = {
+            set_variable = var_stk_eastern_coalitions
+        }
+    }
+
+    option = {
+        name = rl_events.1.2132
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2132
+                var:rl_event_2 = 2132
+                var:rl_event_3 = 2132
+            }
+        }
+        add_country_modifier = { modifier = modifier_smz_shimazu_charge years = -1 }
+        hidden_effect = {
+            set_variable = var_smz_shimazu_charge
+        }
+    }
+
+    option = {
+        name = rl_events.1.2133
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2133
+                var:rl_event_2 = 2133
+                var:rl_event_3 = 2133
+            }
+        }
+        add_country_modifier = { modifier = modifier_smz_tanegashima years = -1 }
+        hidden_effect = {
+            set_variable = var_smz_tanegashima
+        }
+    }
+
+    option = {
+        name = rl_events.1.2134
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2134
+                var:rl_event_2 = 2134
+                var:rl_event_3 = 2134
+            }
+        }
+        add_country_modifier = { modifier = modifier_tkd_tiger_of_kai years = -1 }
+        hidden_effect = {
+            set_variable = var_tkd_tiger_of_kai
+        }
+    }
+
+    option = {
+        name = rl_events.1.2135
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2135
+                var:rl_event_2 = 2135
+                var:rl_event_3 = 2135
+            }
+        }
+        add_country_modifier = { modifier = modifier_tkd_fuurinkazan years = -1 }
+        hidden_effect = {
+            set_variable = var_tkd_fuurinkazan
+        }
+    }
+
+    option = {
+        name = rl_events.1.2136
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2136
+                var:rl_event_2 = 2136
+                var:rl_event_3 = 2136
+            }
+        }
+        add_country_modifier = { modifier = modifier_ues_dragon_of_echigo years = -1 }
+        hidden_effect = {
+            set_variable = var_ues_dragon_of_echigo
+        }
+    }
+
+    option = {
+        name = rl_events.1.2137
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2137
+                var:rl_event_2 = 2137
+                var:rl_event_3 = 2137
+            }
+        }
+        add_country_modifier = { modifier = modifier_ymn_isolated_heartland years = -1 }
+        hidden_effect = {
+            set_variable = var_ymn_isolated_heartland
+        }
+    }
+
+    option = {
+        name = rl_events.1.2138
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2138
+                var:rl_event_2 = 2138
+                var:rl_event_3 = 2138
+            }
+        }
+        add_country_modifier = { modifier = modifier_ask_shugo_system years = -1 }
+        hidden_effect = {
+            set_variable = var_ask_shugo_system
+        }
+    }
+
+    option = {
+        name = rl_events.1.2139
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2139
+                var:rl_event_2 = 2139
+                var:rl_event_3 = 2139
+            }
+        }
+        add_country_modifier = { modifier = modifier_dte_intensive_domain_development years = -1 }
+        hidden_effect = {
+            set_variable = var_dte_intensive_domain_development
+        }
+    }
+
+    option = {
+        name = rl_events.1.2140
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2140
+                var:rl_event_2 = 2140
+                var:rl_event_3 = 2140
+            }
+        }
+        add_country_modifier = { modifier = modifier_img_march_to_kyoto years = -1 }
+        hidden_effect = {
+            set_variable = var_img_march_to_kyoto
+        }
+    }
+
+    option = {
+        name = rl_events.1.2141
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2141
+                var:rl_event_2 = 2141
+                var:rl_event_3 = 2141
+            }
+        }
+        add_country_modifier = { modifier = modifier_oda_influential_strongholds years = -1 }
+        hidden_effect = {
+            set_variable = var_oda_influential_strongholds
+        }
+    }
+
+    option = {
+        name = rl_events.1.2142
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2142
+                var:rl_event_2 = 2142
+                var:rl_event_3 = 2142
+            }
+        }
+        add_country_modifier = { modifier = modifier_oda_patronization_of_the_west years = -1 }
+        hidden_effect = {
+            set_variable = var_oda_patronization_of_the_west
+        }
+    }
+
+    option = {
+        name = rl_events.1.2143
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2143
+                var:rl_event_2 = 2143
+                var:rl_event_3 = 2143
+            }
+        }
+        add_country_modifier = { modifier = modifier_smz_early_westernization years = -1 }
+        hidden_effect = {
+            set_variable = var_smz_early_westernization
+        }
+    }
+
+    option = {
+        name = rl_events.1.2144
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2144
+                var:rl_event_2 = 2144
+                var:rl_event_3 = 2144
+            }
+        }
+        add_country_modifier = { modifier = modifier_expanded_slave_trade years = -1 }
+        hidden_effect = {
+            set_variable = var_expanded_slave_trade
+        }
+    }
+
+    option = {
+        name = rl_events.1.2145
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2145
+                var:rl_event_2 = 2145
+                var:rl_event_3 = 2145
+            }
+        }
+        add_country_modifier = { modifier = modifier_gifts_and_hostages years = -1 }
+        hidden_effect = {
+            set_variable = var_gifts_and_hostages
+        }
+    }
+
+    option = {
+        name = rl_events.1.2146
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2146
+                var:rl_event_2 = 2146
+                var:rl_event_3 = 2146
+            }
+        }
+        add_country_modifier = { modifier = modifier_people_of_ornaments years = -1 }
+        hidden_effect = {
+            set_variable = var_people_of_ornaments
+        }
+    }
+
+    option = {
+        name = rl_events.1.2147
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2147
+                var:rl_event_2 = 2147
+                var:rl_event_3 = 2147
+            }
+        }
+        add_country_modifier = { modifier = modifier_courtly_competition years = -1 }
+        hidden_effect = {
+            set_variable = var_courtly_competition
+        }
+    }
+
+    option = {
+        name = rl_events.1.2148
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2148
+                var:rl_event_2 = 2148
+                var:rl_event_3 = 2148
+            }
+        }
+        add_country_modifier = { modifier = modifier_overnight_army years = -1 }
+        hidden_effect = {
+            set_variable = var_overnight_army
+        }
+    }
+
+    option = {
+        name = rl_events.1.2149
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2149
+                var:rl_event_2 = 2149
+                var:rl_event_3 = 2149
+            }
+        }
+        add_country_modifier = { modifier = modifier_mining_tradition years = -1 }
+        hidden_effect = {
+            set_variable = var_mining_tradition
+        }
+    }
+
+    option = {
+        name = rl_events.1.2150
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2150
+                var:rl_event_2 = 2150
+                var:rl_event_3 = 2150
+            }
+        }
+        add_country_modifier = { modifier = modifier_intercontinental_trade years = -1 }
+        hidden_effect = {
+            set_variable = var_intercontinental_trade
+        }
+    }
+
+    option = {
+        name = rl_events.1.2151
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2151
+                var:rl_event_2 = 2151
+                var:rl_event_3 = 2151
+            }
+        }
+        add_country_modifier = { modifier = modifier_expanded_grazing_grounds years = -1 }
+        hidden_effect = {
+            set_variable = var_expanded_grazing_grounds
+        }
+    }
+
+    option = {
+        name = rl_events.1.2152
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2152
+                var:rl_event_2 = 2152
+                var:rl_event_3 = 2152
+            }
+        }
+        add_country_modifier = { modifier = modifier_african_sturdy_grains_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_african_sturdy_grains_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2153
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2153
+                var:rl_event_2 = 2153
+                var:rl_event_3 = 2153
+            }
+        }
+        add_country_modifier = { modifier = modifier_riches_of_asia years = -1 }
+        hidden_effect = {
+            set_variable = var_riches_of_asia
+        }
+    }
+
+    option = {
+        name = rl_events.1.2154
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2154
+                var:rl_event_2 = 2154
+                var:rl_event_3 = 2154
+            }
+        }
+        add_country_modifier = { modifier = modifier_silk_road years = -1 }
+        hidden_effect = {
+            set_variable = var_silk_road
+        }
+    }
+
+    option = {
+        name = rl_events.1.2155
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2155
+                var:rl_event_2 = 2155
+                var:rl_event_3 = 2155
+            }
+        }
+        add_country_modifier = { modifier = modifier_exchange_of_ideas years = -1 }
+        hidden_effect = {
+            set_variable = var_exchange_of_ideas
+        }
+    }
+
+    option = {
+        name = rl_events.1.2156
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2156
+                var:rl_event_2 = 2156
+                var:rl_event_3 = 2156
+            }
+        }
+        add_country_modifier = { modifier = modifier_legacy_of_great_empires years = -1 }
+        hidden_effect = {
+            set_variable = var_legacy_of_great_empires
+        }
+    }
+
+    option = {
+        name = rl_events.1.2157
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2157
+                var:rl_event_2 = 2157
+                var:rl_event_3 = 2157
+            }
+        }
+        add_country_modifier = { modifier = modifier_arduous_terrain years = -1 }
+        hidden_effect = {
+            set_variable = var_arduous_terrain
+        }
+    }
+
+    option = {
+        name = rl_events.1.2158
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2158
+                var:rl_event_2 = 2158
+                var:rl_event_3 = 2158
+            }
+        }
+        add_country_modifier = { modifier = modifier_fertile_lands years = -1 }
+        hidden_effect = {
+            set_variable = var_fertile_lands
+        }
+    }
+
+    option = {
+        name = rl_events.1.2159
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2159
+                var:rl_event_2 = 2159
+                var:rl_event_3 = 2159
+            }
+        }
+        add_country_modifier = { modifier = modifier_crossroads_of_religions years = -1 }
+        hidden_effect = {
+            set_variable = var_crossroads_of_religions
+        }
+    }
+
+    option = {
+        name = rl_events.1.2160
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2160
+                var:rl_event_2 = 2160
+                var:rl_event_3 = 2160
+            }
+        }
+        add_country_modifier = { modifier = modifier_religious_syncretism years = -1 }
+        hidden_effect = {
+            set_variable = var_religious_syncretism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2161
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2161
+                var:rl_event_2 = 2161
+                var:rl_event_3 = 2161
+            }
+        }
+        add_country_modifier = { modifier = modifier_source_of_knowledge years = -1 }
+        hidden_effect = {
+            set_variable = var_source_of_knowledge
+        }
+    }
+
+    option = {
+        name = rl_events.1.2162
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2162
+                var:rl_event_2 = 2162
+                var:rl_event_3 = 2162
+            }
+        }
+        add_country_modifier = { modifier = modifier_structured_society years = -1 }
+        hidden_effect = {
+            set_variable = var_structured_society
+        }
+    }
+
+    option = {
+        name = rl_events.1.2163
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2163
+                var:rl_event_2 = 2163
+                var:rl_event_3 = 2163
+            }
+        }
+        add_country_modifier = { modifier = modifier_incense_preeminence years = -1 }
+        hidden_effect = {
+            set_variable = var_incense_preeminence
+        }
+    }
+
+    option = {
+        name = rl_events.1.2164
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2164
+                var:rl_event_2 = 2164
+                var:rl_event_3 = 2164
+            }
+        }
+        add_country_modifier = { modifier = modifier_incense_trade_route years = -1 }
+        hidden_effect = {
+            set_variable = var_incense_trade_route
+        }
+    }
+
+    option = {
+        name = rl_events.1.2165
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2165
+                var:rl_event_2 = 2165
+                var:rl_event_3 = 2165
+            }
+        }
+        add_country_modifier = { modifier = modifier_wake_of_the_mongol_horde years = -1 }
+        hidden_effect = {
+            set_variable = var_wake_of_the_mongol_horde
+        }
+    }
+
+    option = {
+        name = rl_events.1.2166
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2166
+                var:rl_event_2 = 2166
+                var:rl_event_3 = 2166
+            }
+        }
+        add_country_modifier = { modifier = modifier_cultural_melting_pot years = -1 }
+        hidden_effect = {
+            set_variable = var_cultural_melting_pot
+        }
+    }
+
+    option = {
+        name = rl_events.1.2167
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2167
+                var:rl_event_2 = 2167
+                var:rl_event_3 = 2167
+            }
+        }
+        add_country_modifier = { modifier = modifier_rise_of_great_individuals years = -1 }
+        hidden_effect = {
+            set_variable = var_rise_of_great_individuals
+        }
+    }
+
+    option = {
+        name = rl_events.1.2168
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2168
+                var:rl_event_2 = 2168
+                var:rl_event_3 = 2168
+            }
+        }
+        add_country_modifier = { modifier = modifier_sepak_takraw years = -1 }
+        hidden_effect = {
+            set_variable = var_sepak_takraw
+        }
+    }
+
+    option = {
+        name = rl_events.1.2169
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2169
+                var:rl_event_2 = 2169
+                var:rl_event_3 = 2169
+            }
+        }
+        add_country_modifier = { modifier = modifier_three_teachings years = -1 }
+        hidden_effect = {
+            set_variable = var_three_teachings
+        }
+    }
+
+    option = {
+        name = rl_events.1.2170
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2170
+                var:rl_event_2 = 2170
+                var:rl_event_3 = 2170
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_baghlah_advance
+            research_advance = advance_type:dummy_baghlah_advance
+            set_variable = var_baghlah_advance
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_baghlah_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2171
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2171
+                var:rl_event_2 = 2171
+                var:rl_event_3 = 2171
+            }
+        }
+        add_country_modifier = { modifier = modifier_expansionist_ambitions years = -1 }
+        hidden_effect = {
+            set_variable = var_expansionist_ambitions
+        }
+    }
+
+    option = {
+        name = rl_events.1.2172
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2172
+                var:rl_event_2 = 2172
+                var:rl_event_3 = 2172
+            }
+        }
+        add_country_modifier = { modifier = modifier_poklisars years = -1 }
+        hidden_effect = {
+            set_variable = var_poklisars
+        }
+    }
+
+    option = {
+        name = rl_events.1.2173
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2173
+                var:rl_event_2 = 2173
+                var:rl_event_3 = 2173
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_balkan_hajduks
+            research_advance = advance_type:dummy_balkan_hajduks
+            set_variable = var_balkan_hajduks
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_balkan_hajduks
+        }
+    }
+
+    option = {
+        name = rl_events.1.2174
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2174
+                var:rl_event_2 = 2174
+                var:rl_event_3 = 2174
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_cro_pandurs_recruitment
+            research_advance = advance_type:dummy_cro_pandurs_recruitment
+            set_variable = var_cro_pandurs_recruitment
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_cro_pandurs_recruitment
+        }
+    }
+
+    option = {
+        name = rl_events.1.2175
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2175
+                var:rl_event_2 = 2175
+                var:rl_event_3 = 2175
+            }
+        }
+        add_country_modifier = { modifier = modifier_ukrainian_farmlands years = -1 }
+        hidden_effect = {
+            set_variable = var_ukrainian_farmlands
+        }
+    }
+
+    option = {
+        name = rl_events.1.2176
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2176
+                var:rl_event_2 = 2176
+                var:rl_event_3 = 2176
+            }
+        }
+        add_country_modifier = { modifier = modifier_indonesia_naval_supremacy years = -1 }
+        hidden_effect = {
+            set_variable = var_indonesia_naval_supremacy
+        }
+    }
+
+    option = {
+        name = rl_events.1.2177
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2177
+                var:rl_event_2 = 2177
+                var:rl_event_3 = 2177
+            }
+        }
+        add_country_modifier = { modifier = modifier_indonesia_trading_hub_of_the_east years = -1 }
+        hidden_effect = {
+            set_variable = var_indonesia_trading_hub_of_the_east
+        }
+    }
+
+    option = {
+        name = rl_events.1.2178
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2178
+                var:rl_event_2 = 2178
+                var:rl_event_3 = 2178
+            }
+        }
+        add_country_modifier = { modifier = modifier_indonesia_archipelago_of_many_faiths years = -1 }
+        hidden_effect = {
+            set_variable = var_indonesia_archipelago_of_many_faiths
+        }
+    }
+
+    option = {
+        name = rl_events.1.2179
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2179
+                var:rl_event_2 = 2179
+                var:rl_event_3 = 2179
+            }
+        }
+        add_country_modifier = { modifier = modifier_italy_great_families years = -1 }
+        hidden_effect = {
+            set_variable = var_italy_great_families
+        }
+    }
+
+    option = {
+        name = rl_events.1.2180
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2180
+                var:rl_event_2 = 2180
+                var:rl_event_3 = 2180
+            }
+        }
+        add_country_modifier = { modifier = modifier_italian_innovativeness years = -1 }
+        hidden_effect = {
+            set_variable = var_italian_innovativeness
+        }
+    }
+
+    option = {
+        name = rl_events.1.2181
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2181
+                var:rl_event_2 = 2181
+                var:rl_event_3 = 2181
+            }
+        }
+        add_country_modifier = { modifier = modifier_italian_condottieri years = -1 }
+        hidden_effect = {
+            set_variable = var_italian_condottieri
+        }
+    }
+
+    option = {
+        name = rl_events.1.2182
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2182
+                var:rl_event_2 = 2182
+                var:rl_event_3 = 2182
+            }
+        }
+        add_country_modifier = { modifier = modifier_maple_syrup years = -1 }
+        hidden_effect = {
+            set_variable = var_maple_syrup
+        }
+    }
+
+    option = {
+        name = rl_events.1.2183
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2183
+                var:rl_event_2 = 2183
+                var:rl_event_3 = 2183
+            }
+        }
+        add_country_modifier = { modifier = modifier_stickball_game years = -1 }
+        hidden_effect = {
+            set_variable = var_stickball_game
+        }
+    }
+
+    option = {
+        name = rl_events.1.2184
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2184
+                var:rl_event_2 = 2184
+                var:rl_event_3 = 2184
+            }
+        }
+        add_country_modifier = { modifier = modifier_bison_hunters years = -1 }
+        hidden_effect = {
+            set_variable = var_bison_hunters
+        }
+    }
+
+    option = {
+        name = rl_events.1.2185
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2185
+                var:rl_event_2 = 2185
+                var:rl_event_3 = 2185
+            }
+        }
+        add_country_modifier = { modifier = modifier_federal_constitution years = -1 }
+        hidden_effect = {
+            set_variable = var_federal_constitution
+        }
+    }
+
+    option = {
+        name = rl_events.1.2186
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2186
+                var:rl_event_2 = 2186
+                var:rl_event_3 = 2186
+            }
+        }
+        add_country_modifier = { modifier = modifier_shared_knowledge years = -1 }
+        hidden_effect = {
+            set_variable = var_shared_knowledge
+        }
+    }
+
+    option = {
+        name = rl_events.1.2187
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2187
+                var:rl_event_2 = 2187
+                var:rl_event_3 = 2187
+            }
+        }
+        add_country_modifier = { modifier = modifier_slash_and_burn years = -1 }
+        hidden_effect = {
+            set_variable = var_slash_and_burn
+        }
+    }
+
+    option = {
+        name = rl_events.1.2188
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2188
+                var:rl_event_2 = 2188
+                var:rl_event_3 = 2188
+            }
+        }
+        add_country_modifier = { modifier = modifier_council_of_elders years = -1 }
+        hidden_effect = {
+            set_variable = var_council_of_elders
+        }
+    }
+
+    option = {
+        name = rl_events.1.2189
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2189
+                var:rl_event_2 = 2189
+                var:rl_event_3 = 2189
+            }
+        }
+        add_country_modifier = { modifier = modifier_experienced_fur_hunters years = -1 }
+        hidden_effect = {
+            set_variable = var_experienced_fur_hunters
+        }
+    }
+
+    option = {
+        name = rl_events.1.2190
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2190
+                var:rl_event_2 = 2190
+                var:rl_event_3 = 2190
+            }
+        }
+        add_country_modifier = { modifier = modifier_wampum years = -1 }
+        hidden_effect = {
+            set_variable = var_wampum
+        }
+    }
+
+    option = {
+        name = rl_events.1.2191
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2191
+                var:rl_event_2 = 2191
+                var:rl_event_3 = 2191
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_refined_obsidian_weaponry
+            research_advance = advance_type:dummy_refined_obsidian_weaponry
+            set_variable = var_refined_obsidian_weaponry
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_refined_obsidian_weaponry
+        }
+    }
+
+    option = {
+        name = rl_events.1.2192
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2192
+                var:rl_event_2 = 2192
+                var:rl_event_3 = 2192
+            }
+        }
+        add_country_modifier = { modifier = modifier_precious_stones_art years = -1 }
+        hidden_effect = {
+            set_variable = var_precious_stones_art
+        }
+    }
+
+    option = {
+        name = rl_events.1.2193
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2193
+                var:rl_event_2 = 2193
+                var:rl_event_3 = 2193
+            }
+        }
+        add_country_modifier = { modifier = modifier_cultivate_the_land years = -1 }
+        hidden_effect = {
+            set_variable = var_cultivate_the_land
+        }
+    }
+
+    option = {
+        name = rl_events.1.2194
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2194
+                var:rl_event_2 = 2194
+                var:rl_event_3 = 2194
+            }
+        }
+        add_country_modifier = { modifier = modifier_feathered_serpent years = -1 }
+        hidden_effect = {
+            set_variable = var_feathered_serpent
+        }
+    }
+
+    option = {
+        name = rl_events.1.2195
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2195
+                var:rl_event_2 = 2195
+                var:rl_event_3 = 2195
+            }
+        }
+        add_country_modifier = { modifier = modifier_ritual_bloodletting years = -1 }
+        hidden_effect = {
+            set_variable = var_ritual_bloodletting
+        }
+    }
+
+    option = {
+        name = rl_events.1.2196
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2196
+                var:rl_event_2 = 2196
+                var:rl_event_3 = 2196
+            }
+        }
+        add_country_modifier = { modifier = modifier_tears_of_the_sun years = -1 }
+        hidden_effect = {
+            set_variable = var_tears_of_the_sun
+        }
+    }
+
+    option = {
+        name = rl_events.1.2197
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2197
+                var:rl_event_2 = 2197
+                var:rl_event_3 = 2197
+            }
+        }
+        add_country_modifier = { modifier = modifier_hidden_cities years = -1 }
+        hidden_effect = {
+            set_variable = var_hidden_cities
+        }
+    }
+
+    option = {
+        name = rl_events.1.2198
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2198
+                var:rl_event_2 = 2198
+                var:rl_event_3 = 2198
+            }
+        }
+        add_country_modifier = { modifier = modifier_potato_production years = -1 }
+        hidden_effect = {
+            set_variable = var_potato_production
+        }
+    }
+
+    option = {
+        name = rl_events.1.2199
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2199
+                var:rl_event_2 = 2199
+                var:rl_event_3 = 2199
+            }
+        }
+        add_country_modifier = { modifier = modifier_head_hunters years = -1 }
+        hidden_effect = {
+            set_variable = var_head_hunters
+        }
+    }
+
+    option = {
+        name = rl_events.1.2200
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2200
+                var:rl_event_2 = 2200
+                var:rl_event_3 = 2200
+            }
+        }
+        add_country_modifier = { modifier = modifier_border_raiders years = -1 }
+        hidden_effect = {
+            set_variable = var_border_raiders
+        }
+    }
+
+    option = {
+        name = rl_events.1.2201
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2201
+                var:rl_event_2 = 2201
+                var:rl_event_3 = 2201
+            }
+        }
+        add_country_modifier = { modifier = modifier_sutra years = -1 }
+        hidden_effect = {
+            set_variable = var_sutra
+        }
+    }
+
+    option = {
+        name = rl_events.1.2202
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2202
+                var:rl_event_2 = 2202
+                var:rl_event_3 = 2202
+            }
+        }
+        add_country_modifier = { modifier = modifier_buddhist_councils years = -1 }
+        hidden_effect = {
+            set_variable = var_buddhist_councils
+        }
+    }
+
+    option = {
+        name = rl_events.1.2203
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2203
+                var:rl_event_2 = 2203
+                var:rl_event_3 = 2203
+            }
+        }
+        add_country_modifier = { modifier = modifier_buddhist_canon years = -1 }
+        hidden_effect = {
+            set_variable = var_buddhist_canon
+        }
+    }
+
+    option = {
+        name = rl_events.1.2204
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2204
+                var:rl_event_2 = 2204
+                var:rl_event_3 = 2204
+            }
+        }
+        add_country_modifier = { modifier = modifier_pali_canon years = -1 }
+        hidden_effect = {
+            set_variable = var_pali_canon
+        }
+    }
+
+    option = {
+        name = rl_events.1.2205
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2205
+                var:rl_event_2 = 2205
+                var:rl_event_3 = 2205
+            }
+        }
+        add_country_modifier = { modifier = modifier_buddhist_universities years = -1 }
+        hidden_effect = {
+            set_variable = var_buddhist_universities
+        }
+    }
+
+    option = {
+        name = rl_events.1.2206
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2206
+                var:rl_event_2 = 2206
+                var:rl_event_3 = 2206
+            }
+        }
+        add_country_modifier = { modifier = modifier_xuanzang_travels years = -1 }
+        hidden_effect = {
+            set_variable = var_xuanzang_travels
+        }
+    }
+
+    option = {
+        name = rl_events.1.2207
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2207
+                var:rl_event_2 = 2207
+                var:rl_event_3 = 2207
+            }
+        }
+        add_country_modifier = { modifier = modifier_silk_road_transmission years = -1 }
+        hidden_effect = {
+            set_variable = var_silk_road_transmission
+        }
+    }
+
+    option = {
+        name = rl_events.1.2208
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2208
+                var:rl_event_2 = 2208
+                var:rl_event_3 = 2208
+            }
+        }
+        add_country_modifier = { modifier = modifier_bodhisattva years = -1 }
+        hidden_effect = {
+            set_variable = var_bodhisattva
+        }
+    }
+
+    option = {
+        name = rl_events.1.2209
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2209
+                var:rl_event_2 = 2209
+                var:rl_event_3 = 2209
+            }
+        }
+        add_country_modifier = { modifier = modifier_avalokitesvara years = -1 }
+        hidden_effect = {
+            set_variable = var_avalokitesvara
+        }
+    }
+
+    option = {
+        name = rl_events.1.2210
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2210
+                var:rl_event_2 = 2210
+                var:rl_event_3 = 2210
+            }
+        }
+        add_country_modifier = { modifier = modifier_maitreya years = -1 }
+        hidden_effect = {
+            set_variable = var_maitreya
+        }
+    }
+
+    option = {
+        name = rl_events.1.2211
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2211
+                var:rl_event_2 = 2211
+                var:rl_event_3 = 2211
+            }
+        }
+        add_country_modifier = { modifier = modifier_mount_meru years = -1 }
+        hidden_effect = {
+            set_variable = var_mount_meru
+        }
+    }
+
+    option = {
+        name = rl_events.1.2212
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2212
+                var:rl_event_2 = 2212
+                var:rl_event_3 = 2212
+            }
+        }
+        add_country_modifier = { modifier = modifier_naraka years = -1 }
+        hidden_effect = {
+            set_variable = var_naraka
+        }
+    }
+
+    option = {
+        name = rl_events.1.2213
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2213
+                var:rl_event_2 = 2213
+                var:rl_event_3 = 2213
+            }
+        }
+        add_country_modifier = { modifier = modifier_four_heavenly_kings years = -1 }
+        hidden_effect = {
+            set_variable = var_four_heavenly_kings
+        }
+    }
+
+    option = {
+        name = rl_events.1.2214
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2214
+                var:rl_event_2 = 2214
+                var:rl_event_3 = 2214
+            }
+        }
+        add_country_modifier = { modifier = modifier_vegetarianism years = -1 }
+        hidden_effect = {
+            set_variable = var_vegetarianism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2215
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2215
+                var:rl_event_2 = 2215
+                var:rl_event_3 = 2215
+            }
+        }
+        add_country_modifier = { modifier = modifier_edicts_of_ashoka years = -1 }
+        hidden_effect = {
+            set_variable = var_edicts_of_ashoka
+        }
+    }
+
+    option = {
+        name = rl_events.1.2216
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2216
+                var:rl_event_2 = 2216
+                var:rl_event_3 = 2216
+            }
+        }
+        add_country_modifier = { modifier = modifier_five_precepts years = -1 }
+        hidden_effect = {
+            set_variable = var_five_precepts
+        }
+    }
+
+    option = {
+        name = rl_events.1.2217
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2217
+                var:rl_event_2 = 2217
+                var:rl_event_3 = 2217
+            }
+        }
+        add_country_modifier = { modifier = modifier_monastic_communities years = -1 }
+        hidden_effect = {
+            set_variable = var_monastic_communities
+        }
+    }
+
+    option = {
+        name = rl_events.1.2218
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2218
+                var:rl_event_2 = 2218
+                var:rl_event_3 = 2218
+            }
+        }
+        add_country_modifier = { modifier = modifier_prestigious_schools years = -1 }
+        hidden_effect = {
+            set_variable = var_prestigious_schools
+        }
+    }
+
+    option = {
+        name = rl_events.1.2219
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2219
+                var:rl_event_2 = 2219
+                var:rl_event_3 = 2219
+            }
+        }
+        add_country_modifier = { modifier = modifier_offerings years = -1 }
+        hidden_effect = {
+            set_variable = var_offerings
+        }
+    }
+
+    option = {
+        name = rl_events.1.2220
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2220
+                var:rl_event_2 = 2220
+                var:rl_event_3 = 2220
+            }
+        }
+        add_country_modifier = { modifier = modifier_incense_burning years = -1 }
+        hidden_effect = {
+            set_variable = var_incense_burning
+        }
+    }
+
+    option = {
+        name = rl_events.1.2221
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2221
+                var:rl_event_2 = 2221
+                var:rl_event_3 = 2221
+            }
+        }
+        add_country_modifier = { modifier = modifier_ascetic_practices years = -1 }
+        hidden_effect = {
+            set_variable = var_ascetic_practices
+        }
+    }
+
+    option = {
+        name = rl_events.1.2222
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2222
+                var:rl_event_2 = 2222
+                var:rl_event_3 = 2222
+            }
+        }
+        add_country_modifier = { modifier = modifier_mindfulness years = -1 }
+        hidden_effect = {
+            set_variable = var_mindfulness
+        }
+    }
+
+    option = {
+        name = rl_events.1.2223
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2223
+                var:rl_event_2 = 2223
+                var:rl_event_3 = 2223
+            }
+        }
+        add_country_modifier = { modifier = modifier_dana years = -1 }
+        hidden_effect = {
+            set_variable = var_dana
+        }
+    }
+
+    option = {
+        name = rl_events.1.2224
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2224
+                var:rl_event_2 = 2224
+                var:rl_event_3 = 2224
+            }
+        }
+        add_country_modifier = { modifier = modifier_ahimsa years = -1 }
+        hidden_effect = {
+            set_variable = var_ahimsa
+        }
+    }
+
+    option = {
+        name = rl_events.1.2225
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2225
+                var:rl_event_2 = 2225
+                var:rl_event_3 = 2225
+            }
+        }
+        add_country_modifier = { modifier = modifier_resistance_to_persecution years = -1 }
+        hidden_effect = {
+            set_variable = var_resistance_to_persecution
+        }
+    }
+
+    option = {
+        name = rl_events.1.2226
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2226
+                var:rl_event_2 = 2226
+                var:rl_event_3 = 2226
+            }
+        }
+        add_country_modifier = { modifier = modifier_buddhist_meditation years = -1 }
+        hidden_effect = {
+            set_variable = var_buddhist_meditation
+        }
+    }
+
+    option = {
+        name = rl_events.1.2227
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2227
+                var:rl_event_2 = 2227
+                var:rl_event_3 = 2227
+            }
+        }
+        hidden_effect = {
+            set_variable = flag_dummy_inquisition_advance
+            research_advance = advance_type:dummy_inquisition_advance
+            set_variable = var_inquisition_advance
+        }
+        show_as_tooltip = {
+            custom_tooltip = rl_tt_inquisition_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2228
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2228
+                var:rl_event_2 = 2228
+                var:rl_event_3 = 2228
+            }
+        }
+        add_country_modifier = { modifier = modifier_preaching_friars years = -1 }
+        hidden_effect = {
+            set_variable = var_preaching_friars
+        }
+    }
+
+    option = {
+        name = rl_events.1.2229
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2229
+                var:rl_event_2 = 2229
+                var:rl_event_3 = 2229
+            }
+        }
+        add_country_modifier = { modifier = modifier_devotio_moderna years = -1 }
+        hidden_effect = {
+            set_variable = var_devotio_moderna
+        }
+    }
+
+    option = {
+        name = rl_events.1.2230
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2230
+                var:rl_event_2 = 2230
+                var:rl_event_3 = 2230
+            }
+        }
+        add_country_modifier = { modifier = modifier_denounce_heretics years = -1 }
+        hidden_effect = {
+            set_variable = var_denounce_heretics
+        }
+    }
+
+    option = {
+        name = rl_events.1.2231
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2231
+                var:rl_event_2 = 2231
+                var:rl_event_3 = 2231
+            }
+        }
+        add_country_modifier = { modifier = modifier_beguins_and_beghards years = -1 }
+        hidden_effect = {
+            set_variable = var_beguins_and_beghards
+        }
+    }
+
+    option = {
+        name = rl_events.1.2232
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2232
+                var:rl_event_2 = 2232
+                var:rl_event_3 = 2232
+            }
+        }
+        add_country_modifier = { modifier = modifier_conquistador_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_conquistador_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2233
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2233
+                var:rl_event_2 = 2233
+                var:rl_event_3 = 2233
+            }
+        }
+        add_country_modifier = { modifier = modifier_grand_display_of_faith years = -1 }
+        hidden_effect = {
+            set_variable = var_grand_display_of_faith
+        }
+    }
+
+    option = {
+        name = rl_events.1.2234
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2234
+                var:rl_event_2 = 2234
+                var:rl_event_3 = 2234
+            }
+        }
+        add_country_modifier = { modifier = modifier_monastery_productions years = -1 }
+        hidden_effect = {
+            set_variable = var_monastery_productions
+        }
+    }
+
+    option = {
+        name = rl_events.1.2235
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2235
+                var:rl_event_2 = 2235
+                var:rl_event_3 = 2235
+            }
+        }
+        add_country_modifier = { modifier = modifier_reform_church_music years = -1 }
+        hidden_effect = {
+            set_variable = var_reform_church_music
+        }
+    }
+
+    option = {
+        name = rl_events.1.2236
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2236
+                var:rl_event_2 = 2236
+                var:rl_event_3 = 2236
+            }
+        }
+        add_country_modifier = { modifier = modifier_frequent_councils years = -1 }
+        hidden_effect = {
+            set_variable = var_frequent_councils
+        }
+    }
+
+    option = {
+        name = rl_events.1.2237
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2237
+                var:rl_event_2 = 2237
+                var:rl_event_3 = 2237
+            }
+        }
+        add_country_modifier = { modifier = modifier_mendicant_orders years = -1 }
+        hidden_effect = {
+            set_variable = var_mendicant_orders
+        }
+    }
+
+    option = {
+        name = rl_events.1.2238
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2238
+                var:rl_event_2 = 2238
+                var:rl_event_3 = 2238
+            }
+        }
+        add_country_modifier = { modifier = modifier_exsurge_domine years = -1 }
+        hidden_effect = {
+            set_variable = var_exsurge_domine
+        }
+    }
+
+    option = {
+        name = rl_events.1.2239
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2239
+                var:rl_event_2 = 2239
+                var:rl_event_3 = 2239
+            }
+        }
+        add_country_modifier = { modifier = modifier_confutatio_augustana years = -1 }
+        hidden_effect = {
+            set_variable = var_confutatio_augustana
+        }
+    }
+
+    option = {
+        name = rl_events.1.2240
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2240
+                var:rl_event_2 = 2240
+                var:rl_event_3 = 2240
+            }
+        }
+        add_country_modifier = { modifier = modifier_roman_catechism years = -1 }
+        hidden_effect = {
+            set_variable = var_roman_catechism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2241
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2241
+                var:rl_event_2 = 2241
+                var:rl_event_3 = 2241
+            }
+        }
+        add_country_modifier = { modifier = modifier_oversea_missions years = -1 }
+        hidden_effect = {
+            set_variable = var_oversea_missions
+        }
+    }
+
+    option = {
+        name = rl_events.1.2242
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2242
+                var:rl_event_2 = 2242
+                var:rl_event_3 = 2242
+            }
+        }
+        add_country_modifier = { modifier = modifier_baptism_books years = -1 }
+        hidden_effect = {
+            set_variable = var_baptism_books
+        }
+    }
+
+    option = {
+        name = rl_events.1.2243
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2243
+                var:rl_event_2 = 2243
+                var:rl_event_3 = 2243
+            }
+        }
+        add_country_modifier = { modifier = modifier_second_scholasticism years = -1 }
+        hidden_effect = {
+            set_variable = var_second_scholasticism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2244
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2244
+                var:rl_event_2 = 2244
+                var:rl_event_3 = 2244
+            }
+        }
+        add_country_modifier = { modifier = modifier_catholic_sunday_schools years = -1 }
+        hidden_effect = {
+            set_variable = var_catholic_sunday_schools
+        }
+    }
+
+    option = {
+        name = rl_events.1.2245
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2245
+                var:rl_event_2 = 2245
+                var:rl_event_3 = 2245
+            }
+        }
+        add_country_modifier = { modifier = modifier_index_librorum_prohibitorum years = -1 }
+        hidden_effect = {
+            set_variable = var_index_librorum_prohibitorum
+        }
+    }
+
+    option = {
+        name = rl_events.1.2246
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2246
+                var:rl_event_2 = 2246
+                var:rl_event_3 = 2246
+            }
+        }
+        add_country_modifier = { modifier = modifier_catholic_cuius_regio_eius_religio years = -1 }
+        hidden_effect = {
+            set_variable = var_catholic_cuius_regio_eius_religio
+        }
+    }
+
+    option = {
+        name = rl_events.1.2247
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2247
+                var:rl_event_2 = 2247
+                var:rl_event_3 = 2247
+            }
+        }
+        add_country_modifier = { modifier = modifier_embellish_baroque_art years = -1 }
+        hidden_effect = {
+            set_variable = var_embellish_baroque_art
+        }
+    }
+
+    option = {
+        name = rl_events.1.2248
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2248
+                var:rl_event_2 = 2248
+                var:rl_event_3 = 2248
+            }
+        }
+        add_country_modifier = { modifier = modifier_national_churches years = -1 }
+        hidden_effect = {
+            set_variable = var_national_churches
+        }
+    }
+
+    option = {
+        name = rl_events.1.2249
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2249
+                var:rl_event_2 = 2249
+                var:rl_event_3 = 2249
+            }
+        }
+        add_country_modifier = { modifier = modifier_entrenched_church years = -1 }
+        hidden_effect = {
+            set_variable = var_entrenched_church
+        }
+    }
+
+    option = {
+        name = rl_events.1.2250
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2250
+                var:rl_event_2 = 2250
+                var:rl_event_3 = 2250
+            }
+        }
+        add_country_modifier = { modifier = modifier_catholic_enlightenment years = -1 }
+        hidden_effect = {
+            set_variable = var_catholic_enlightenment
+        }
+    }
+
+    option = {
+        name = rl_events.1.2251
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2251
+                var:rl_event_2 = 2251
+                var:rl_event_3 = 2251
+            }
+        }
+        add_country_modifier = { modifier = modifier_divine_church_music years = -1 }
+        hidden_effect = {
+            set_variable = var_divine_church_music
+        }
+    }
+
+    option = {
+        name = rl_events.1.2252
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2252
+                var:rl_event_2 = 2252
+                var:rl_event_3 = 2252
+            }
+        }
+        add_country_modifier = { modifier = modifier_continue_missionary_works years = -1 }
+        hidden_effect = {
+            set_variable = var_continue_missionary_works
+        }
+    }
+
+    option = {
+        name = rl_events.1.2253
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2253
+                var:rl_event_2 = 2253
+                var:rl_event_3 = 2253
+            }
+        }
+        add_country_modifier = { modifier = modifier_religious_dialects_hellenic_faith_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_religious_dialects_hellenic_faith_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2254
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2254
+                var:rl_event_2 = 2254
+                var:rl_event_3 = 2254
+            }
+        }
+        add_country_modifier = { modifier = modifier_offerings_to_the_moirai_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_offerings_to_the_moirai_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2255
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2255
+                var:rl_event_2 = 2255
+                var:rl_event_3 = 2255
+            }
+        }
+        add_country_modifier = { modifier = modifier_on_hubris_and_morality_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_on_hubris_and_morality_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2256
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2256
+                var:rl_event_2 = 2256
+                var:rl_event_3 = 2256
+            }
+        }
+        add_country_modifier = { modifier = modifier_variety_in_divine_identity_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_variety_in_divine_identity_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2257
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2257
+                var:rl_event_2 = 2257
+                var:rl_event_3 = 2257
+            }
+        }
+        add_country_modifier = { modifier = modifier_mystai_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_mystai_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2258
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2258
+                var:rl_event_2 = 2258
+                var:rl_event_3 = 2258
+            }
+        }
+        add_country_modifier = { modifier = modifier_preserve_theogony_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_preserve_theogony_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2259
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2259
+                var:rl_event_2 = 2259
+                var:rl_event_3 = 2259
+            }
+        }
+        add_country_modifier = { modifier = modifier_unify_priestly_class_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_unify_priestly_class_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2260
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2260
+                var:rl_event_2 = 2260
+                var:rl_event_3 = 2260
+            }
+        }
+        add_country_modifier = { modifier = modifier_purana years = -1 }
+        hidden_effect = {
+            set_variable = var_purana
+        }
+    }
+
+    option = {
+        name = rl_events.1.2261
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2261
+                var:rl_event_2 = 2261
+                var:rl_event_3 = 2261
+            }
+        }
+        add_country_modifier = { modifier = modifier_atman years = -1 }
+        hidden_effect = {
+            set_variable = var_atman
+        }
+    }
+
+    option = {
+        name = rl_events.1.2262
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2262
+                var:rl_event_2 = 2262
+                var:rl_event_3 = 2262
+            }
+        }
+        add_country_modifier = { modifier = modifier_nastika_schools years = -1 }
+        hidden_effect = {
+            set_variable = var_nastika_schools
+        }
+    }
+
+    option = {
+        name = rl_events.1.2263
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2263
+                var:rl_event_2 = 2263
+                var:rl_event_3 = 2263
+            }
+        }
+        add_country_modifier = { modifier = modifier_astika_schools years = -1 }
+        hidden_effect = {
+            set_variable = var_astika_schools
+        }
+    }
+
+    option = {
+        name = rl_events.1.2264
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2264
+                var:rl_event_2 = 2264
+                var:rl_event_3 = 2264
+            }
+        }
+        add_country_modifier = { modifier = modifier_diversity_of_beliefs years = -1 }
+        hidden_effect = {
+            set_variable = var_diversity_of_beliefs
+        }
+    }
+
+    option = {
+        name = rl_events.1.2265
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2265
+                var:rl_event_2 = 2265
+                var:rl_event_3 = 2265
+            }
+        }
+        add_country_modifier = { modifier = modifier_ishvara years = -1 }
+        hidden_effect = {
+            set_variable = var_ishvara
+        }
+    }
+
+    option = {
+        name = rl_events.1.2266
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2266
+                var:rl_event_2 = 2266
+                var:rl_event_3 = 2266
+            }
+        }
+        add_country_modifier = { modifier = modifier_sanskritization years = -1 }
+        hidden_effect = {
+            set_variable = var_sanskritization
+        }
+    }
+
+    option = {
+        name = rl_events.1.2267
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2267
+                var:rl_event_2 = 2267
+                var:rl_event_3 = 2267
+            }
+        }
+        add_country_modifier = { modifier = modifier_bhakti_movement years = -1 }
+        hidden_effect = {
+            set_variable = var_bhakti_movement
+        }
+    }
+
+    option = {
+        name = rl_events.1.2268
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2268
+                var:rl_event_2 = 2268
+                var:rl_event_3 = 2268
+            }
+        }
+        add_country_modifier = { modifier = modifier_yoga years = -1 }
+        hidden_effect = {
+            set_variable = var_yoga
+        }
+    }
+
+    option = {
+        name = rl_events.1.2269
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2269
+                var:rl_event_2 = 2269
+                var:rl_event_3 = 2269
+            }
+        }
+        add_country_modifier = { modifier = modifier_diwali years = -1 }
+        hidden_effect = {
+            set_variable = var_diwali
+        }
+    }
+
+    option = {
+        name = rl_events.1.2270
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2270
+                var:rl_event_2 = 2270
+                var:rl_event_3 = 2270
+            }
+        }
+        add_country_modifier = { modifier = modifier_holi years = -1 }
+        hidden_effect = {
+            set_variable = var_holi
+        }
+    }
+
+    option = {
+        name = rl_events.1.2271
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2271
+                var:rl_event_2 = 2271
+                var:rl_event_3 = 2271
+            }
+        }
+        add_country_modifier = { modifier = modifier_holy_rivers years = -1 }
+        hidden_effect = {
+            set_variable = var_holy_rivers
+        }
+    }
+
+    option = {
+        name = rl_events.1.2272
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2272
+                var:rl_event_2 = 2272
+                var:rl_event_3 = 2272
+            }
+        }
+        add_country_modifier = { modifier = modifier_advaita_vedanta years = -1 }
+        hidden_effect = {
+            set_variable = var_advaita_vedanta
+        }
+    }
+
+    option = {
+        name = rl_events.1.2273
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2273
+                var:rl_event_2 = 2273
+                var:rl_event_3 = 2273
+            }
+        }
+        add_country_modifier = { modifier = modifier_hindu_muslim_relations years = -1 }
+        hidden_effect = {
+            set_variable = var_hindu_muslim_relations
+        }
+    }
+
+    option = {
+        name = rl_events.1.2274
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2274
+                var:rl_event_2 = 2274
+                var:rl_event_3 = 2274
+            }
+        }
+        add_country_modifier = { modifier = modifier_hindu_unification years = -1 }
+        hidden_effect = {
+            set_variable = var_hindu_unification
+        }
+    }
+
+    option = {
+        name = rl_events.1.2275
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2275
+                var:rl_event_2 = 2275
+                var:rl_event_3 = 2275
+            }
+        }
+        add_country_modifier = { modifier = modifier_hindu_architecture years = -1 }
+        hidden_effect = {
+            set_variable = var_hindu_architecture
+        }
+    }
+
+    option = {
+        name = rl_events.1.2276
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2276
+                var:rl_event_2 = 2276
+                var:rl_event_3 = 2276
+            }
+        }
+        add_country_modifier = { modifier = modifier_varna_system years = -1 }
+        hidden_effect = {
+            set_variable = var_varna_system
+        }
+    }
+
+    option = {
+        name = rl_events.1.2277
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2277
+                var:rl_event_2 = 2277
+                var:rl_event_3 = 2277
+            }
+        }
+        add_country_modifier = { modifier = modifier_extreme_pacifism years = -1 }
+        hidden_effect = {
+            set_variable = var_extreme_pacifism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2278
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2278
+                var:rl_event_2 = 2278
+                var:rl_event_3 = 2278
+            }
+        }
+        add_country_modifier = { modifier = modifier_hindu_empires years = -1 }
+        hidden_effect = {
+            set_variable = var_hindu_empires
+        }
+    }
+
+    option = {
+        name = rl_events.1.2279
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2279
+                var:rl_event_2 = 2279
+                var:rl_event_3 = 2279
+            }
+        }
+        add_country_modifier = { modifier = modifier_sacred_cattle years = -1 }
+        hidden_effect = {
+            set_variable = var_sacred_cattle
+        }
+    }
+
+    option = {
+        name = rl_events.1.2280
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2280
+                var:rl_event_2 = 2280
+                var:rl_event_3 = 2280
+            }
+        }
+        add_country_modifier = { modifier = modifier_isolated_reaches years = -1 }
+        hidden_effect = {
+            set_variable = var_isolated_reaches
+        }
+    }
+
+    option = {
+        name = rl_events.1.2281
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2281
+                var:rl_event_2 = 2281
+                var:rl_event_3 = 2281
+            }
+        }
+        add_country_modifier = { modifier = modifier_independent_leaders years = -1 }
+        hidden_effect = {
+            set_variable = var_independent_leaders
+        }
+    }
+
+    option = {
+        name = rl_events.1.2282
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2282
+                var:rl_event_2 = 2282
+                var:rl_event_3 = 2282
+            }
+        }
+        add_country_modifier = { modifier = modifier_jerusalem_focus years = -1 }
+        hidden_effect = {
+            set_variable = var_jerusalem_focus
+        }
+    }
+
+    option = {
+        name = rl_events.1.2283
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2283
+                var:rl_event_2 = 2283
+                var:rl_event_3 = 2283
+            }
+        }
+        add_country_modifier = { modifier = modifier_acceptance_of_old_testament years = -1 }
+        hidden_effect = {
+            set_variable = var_acceptance_of_old_testament
+        }
+    }
+
+    option = {
+        name = rl_events.1.2284
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2284
+                var:rl_event_2 = 2284
+                var:rl_event_3 = 2284
+            }
+        }
+        add_country_modifier = { modifier = modifier_primacy_of_alexandria years = -1 }
+        hidden_effect = {
+            set_variable = var_primacy_of_alexandria
+        }
+    }
+
+    option = {
+        name = rl_events.1.2285
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2285
+                var:rl_event_2 = 2285
+                var:rl_event_3 = 2285
+            }
+        }
+        add_country_modifier = { modifier = modifier_school_of_alexandria years = -1 }
+        hidden_effect = {
+            set_variable = var_school_of_alexandria
+        }
+    }
+
+    option = {
+        name = rl_events.1.2286
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2286
+                var:rl_event_2 = 2286
+                var:rl_event_3 = 2286
+            }
+        }
+        add_country_modifier = { modifier = modifier_preserving_of_local_languages years = -1 }
+        hidden_effect = {
+            set_variable = var_preserving_of_local_languages
+        }
+    }
+
+    option = {
+        name = rl_events.1.2287
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2287
+                var:rl_event_2 = 2287
+                var:rl_event_3 = 2287
+            }
+        }
+        add_country_modifier = { modifier = modifier_double_patriarchate years = -1 }
+        hidden_effect = {
+            set_variable = var_double_patriarchate
+        }
+    }
+
+    option = {
+        name = rl_events.1.2288
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2288
+                var:rl_event_2 = 2288
+                var:rl_event_3 = 2288
+            }
+        }
+        add_country_modifier = { modifier = modifier_eastern_christianity years = -1 }
+        hidden_effect = {
+            set_variable = var_eastern_christianity
+        }
+    }
+
+    option = {
+        name = rl_events.1.2289
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2289
+                var:rl_event_2 = 2289
+                var:rl_event_3 = 2289
+            }
+        }
+        add_country_modifier = { modifier = modifier_life_among_infidels years = -1 }
+        hidden_effect = {
+            set_variable = var_life_among_infidels
+        }
+    }
+
+    option = {
+        name = rl_events.1.2290
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2290
+                var:rl_event_2 = 2290
+                var:rl_event_3 = 2290
+            }
+        }
+        add_country_modifier = { modifier = modifier_gradual_departure years = -1 }
+        hidden_effect = {
+            set_variable = var_gradual_departure
+        }
+    }
+
+    option = {
+        name = rl_events.1.2291
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2291
+                var:rl_event_2 = 2291
+                var:rl_event_3 = 2291
+            }
+        }
+        add_country_modifier = { modifier = modifier_thrive_under_persecution years = -1 }
+        hidden_effect = {
+            set_variable = var_thrive_under_persecution
+        }
+    }
+
+    option = {
+        name = rl_events.1.2292
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2292
+                var:rl_event_2 = 2292
+                var:rl_event_3 = 2292
+            }
+        }
+        add_country_modifier = { modifier = modifier_preserver_of_national_identity years = -1 }
+        hidden_effect = {
+            set_variable = var_preserver_of_national_identity
+        }
+    }
+
+    option = {
+        name = rl_events.1.2293
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2293
+                var:rl_event_2 = 2293
+                var:rl_event_3 = 2293
+            }
+        }
+        add_country_modifier = { modifier = modifier_defense_against_heretics years = -1 }
+        hidden_effect = {
+            set_variable = var_defense_against_heretics
+        }
+    }
+
+    option = {
+        name = rl_events.1.2294
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2294
+                var:rl_event_2 = 2294
+                var:rl_event_3 = 2294
+            }
+        }
+        add_country_modifier = { modifier = modifier_remote_patriarchates years = -1 }
+        hidden_effect = {
+            set_variable = var_remote_patriarchates
+        }
+    }
+
+    option = {
+        name = rl_events.1.2295
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2295
+                var:rl_event_2 = 2295
+                var:rl_event_3 = 2295
+            }
+        }
+        add_country_modifier = { modifier = modifier_further_reaches years = -1 }
+        hidden_effect = {
+            set_variable = var_further_reaches
+        }
+    }
+
+    option = {
+        name = rl_events.1.2296
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2296
+                var:rl_event_2 = 2296
+                var:rl_event_3 = 2296
+            }
+        }
+        add_country_modifier = { modifier = modifier_internal_communion years = -1 }
+        hidden_effect = {
+            set_variable = var_internal_communion
+        }
+    }
+
+    option = {
+        name = rl_events.1.2297
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2297
+                var:rl_event_2 = 2297
+                var:rl_event_3 = 2297
+            }
+        }
+        add_country_modifier = { modifier = modifier_cradle_of_monasticism years = -1 }
+        hidden_effect = {
+            set_variable = var_cradle_of_monasticism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2298
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2298
+                var:rl_event_2 = 2298
+                var:rl_event_3 = 2298
+            }
+        }
+        add_country_modifier = { modifier = modifier_unique_architecture years = -1 }
+        hidden_effect = {
+            set_variable = var_unique_architecture
+        }
+    }
+
+    option = {
+        name = rl_events.1.2299
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2299
+                var:rl_event_2 = 2299
+                var:rl_event_3 = 2299
+            }
+        }
+        add_country_modifier = { modifier = modifier_muslim_lineage years = -1 }
+        hidden_effect = {
+            set_variable = var_muslim_lineage
+        }
+    }
+
+    option = {
+        name = rl_events.1.2300
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2300
+                var:rl_event_2 = 2300
+                var:rl_event_3 = 2300
+            }
+        }
+        add_country_modifier = { modifier = modifier_muslim_caravans years = -1 }
+        hidden_effect = {
+            set_variable = var_muslim_caravans
+        }
+    }
+
+    option = {
+        name = rl_events.1.2301
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2301
+                var:rl_event_2 = 2301
+                var:rl_event_3 = 2301
+            }
+        }
+        add_country_modifier = { modifier = modifier_islamic_golden_age years = -1 }
+        hidden_effect = {
+            set_variable = var_islamic_golden_age
+        }
+    }
+
+    option = {
+        name = rl_events.1.2302
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2302
+                var:rl_event_2 = 2302
+                var:rl_event_3 = 2302
+            }
+        }
+        add_country_modifier = { modifier = modifier_ramadan years = -1 }
+        hidden_effect = {
+            set_variable = var_ramadan
+        }
+    }
+
+    option = {
+        name = rl_events.1.2303
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2303
+                var:rl_event_2 = 2303
+                var:rl_event_3 = 2303
+            }
+        }
+        add_country_modifier = { modifier = modifier_sunnah years = -1 }
+        hidden_effect = {
+            set_variable = var_sunnah
+        }
+    }
+
+    option = {
+        name = rl_events.1.2304
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2304
+                var:rl_event_2 = 2304
+                var:rl_event_3 = 2304
+            }
+        }
+        add_country_modifier = { modifier = modifier_imamate years = -1 }
+        hidden_effect = {
+            set_variable = var_imamate
+        }
+    }
+
+    option = {
+        name = rl_events.1.2305
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2305
+                var:rl_event_2 = 2305
+                var:rl_event_3 = 2305
+            }
+        }
+        add_country_modifier = { modifier = modifier_indian_sea_trade years = -1 }
+        hidden_effect = {
+            set_variable = var_indian_sea_trade
+        }
+    }
+
+    option = {
+        name = rl_events.1.2306
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2306
+                var:rl_event_2 = 2306
+                var:rl_event_3 = 2306
+            }
+        }
+        add_country_modifier = { modifier = modifier_muslim_trade_communities years = -1 }
+        hidden_effect = {
+            set_variable = var_muslim_trade_communities
+        }
+    }
+
+    option = {
+        name = rl_events.1.2307
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2307
+                var:rl_event_2 = 2307
+                var:rl_event_3 = 2307
+            }
+        }
+        add_country_modifier = { modifier = modifier_expansionist_faith years = -1 }
+        hidden_effect = {
+            set_variable = var_expansionist_faith
+        }
+    }
+
+    option = {
+        name = rl_events.1.2308
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2308
+                var:rl_event_2 = 2308
+                var:rl_event_3 = 2308
+            }
+        }
+        add_country_modifier = { modifier = modifier_blend_of_influences years = -1 }
+        hidden_effect = {
+            set_variable = var_blend_of_influences
+        }
+    }
+
+    option = {
+        name = rl_events.1.2309
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2309
+                var:rl_event_2 = 2309
+                var:rl_event_3 = 2309
+            }
+        }
+        add_country_modifier = { modifier = modifier_islamic_schoolars years = -1 }
+        hidden_effect = {
+            set_variable = var_islamic_schoolars
+        }
+    }
+
+    option = {
+        name = rl_events.1.2310
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2310
+                var:rl_event_2 = 2310
+                var:rl_event_3 = 2310
+            }
+        }
+        add_country_modifier = { modifier = modifier_gunpowder_empires years = -1 }
+        hidden_effect = {
+            set_variable = var_gunpowder_empires
+        }
+    }
+
+    option = {
+        name = rl_events.1.2311
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2311
+                var:rl_event_2 = 2311
+                var:rl_event_3 = 2311
+            }
+        }
+        add_country_modifier = { modifier = modifier_established_holy_sites years = -1 }
+        hidden_effect = {
+            set_variable = var_established_holy_sites
+        }
+    }
+
+    option = {
+        name = rl_events.1.2312
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2312
+                var:rl_event_2 = 2312
+                var:rl_event_3 = 2312
+            }
+        }
+        add_country_modifier = { modifier = modifier_islamic_courts years = -1 }
+        hidden_effect = {
+            set_variable = var_islamic_courts
+        }
+    }
+
+    option = {
+        name = rl_events.1.2313
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2313
+                var:rl_event_2 = 2313
+                var:rl_event_3 = 2313
+            }
+        }
+        add_country_modifier = { modifier = modifier_schools_of_thought years = -1 }
+        hidden_effect = {
+            set_variable = var_schools_of_thought
+        }
+    }
+
+    option = {
+        name = rl_events.1.2314
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2314
+                var:rl_event_2 = 2314
+                var:rl_event_3 = 2314
+            }
+        }
+        add_country_modifier = { modifier = modifier_distant_trade_ventures years = -1 }
+        hidden_effect = {
+            set_variable = var_distant_trade_ventures
+        }
+    }
+
+    option = {
+        name = rl_events.1.2315
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2315
+                var:rl_event_2 = 2315
+                var:rl_event_3 = 2315
+            }
+        }
+        add_country_modifier = { modifier = modifier_resilient_merchants years = -1 }
+        hidden_effect = {
+            set_variable = var_resilient_merchants
+        }
+    }
+
+    option = {
+        name = rl_events.1.2316
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2316
+                var:rl_event_2 = 2316
+                var:rl_event_3 = 2316
+            }
+        }
+        add_country_modifier = { modifier = modifier_jewels_of_the_desert years = -1 }
+        hidden_effect = {
+            set_variable = var_jewels_of_the_desert
+        }
+    }
+
+    option = {
+        name = rl_events.1.2317
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2317
+                var:rl_event_2 = 2317
+                var:rl_event_3 = 2317
+            }
+        }
+        add_country_modifier = { modifier = modifier_comprehensive_land_survey years = -1 }
+        hidden_effect = {
+            set_variable = var_comprehensive_land_survey
+        }
+    }
+
+    option = {
+        name = rl_events.1.2318
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2318
+                var:rl_event_2 = 2318
+                var:rl_event_3 = 2318
+            }
+        }
+        add_country_modifier = { modifier = modifier_counting_the_people years = -1 }
+        hidden_effect = {
+            set_variable = var_counting_the_people
+        }
+    }
+
+    option = {
+        name = rl_events.1.2319
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2319
+                var:rl_event_2 = 2319
+                var:rl_event_3 = 2319
+            }
+        }
+        add_country_modifier = { modifier = modifier_cosmopolitan_court years = -1 }
+        hidden_effect = {
+            set_variable = var_cosmopolitan_court
+        }
+    }
+
+    option = {
+        name = rl_events.1.2320
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2320
+                var:rl_event_2 = 2320
+                var:rl_event_3 = 2320
+            }
+        }
+        add_country_modifier = { modifier = modifier_caliphate years = -1 }
+        hidden_effect = {
+            set_variable = var_caliphate
+        }
+    }
+
+    option = {
+        name = rl_events.1.2321
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2321
+                var:rl_event_2 = 2321
+                var:rl_event_3 = 2321
+            }
+        }
+        add_country_modifier = { modifier = modifier_ibadi_imamate years = -1 }
+        hidden_effect = {
+            set_variable = var_ibadi_imamate
+        }
+    }
+
+    option = {
+        name = rl_events.1.2322
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2322
+                var:rl_event_2 = 2322
+                var:rl_event_3 = 2322
+            }
+        }
+        add_country_modifier = { modifier = modifier_contacts_network years = -1 }
+        hidden_effect = {
+            set_variable = var_contacts_network
+        }
+    }
+
+    option = {
+        name = rl_events.1.2323
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2323
+                var:rl_event_2 = 2323
+                var:rl_event_3 = 2323
+            }
+        }
+        add_country_modifier = { modifier = modifier_infiltration_tactics years = -1 }
+        hidden_effect = {
+            set_variable = var_infiltration_tactics
+        }
+    }
+
+    option = {
+        name = rl_events.1.2324
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2324
+                var:rl_event_2 = 2324
+                var:rl_event_3 = 2324
+            }
+        }
+        add_country_modifier = { modifier = modifier_unified_armies years = -1 }
+        hidden_effect = {
+            set_variable = var_unified_armies
+        }
+    }
+
+    option = {
+        name = rl_events.1.2325
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2325
+                var:rl_event_2 = 2325
+                var:rl_event_3 = 2325
+            }
+        }
+        add_country_modifier = { modifier = modifier_harsh_environments years = -1 }
+        hidden_effect = {
+            set_variable = var_harsh_environments
+        }
+    }
+
+    option = {
+        name = rl_events.1.2326
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2326
+                var:rl_event_2 = 2326
+                var:rl_event_3 = 2326
+            }
+        }
+        add_country_modifier = { modifier = modifier_religious_icon_power_advance years = -1 }
+        hidden_effect = {
+            set_variable = var_religious_icon_power_advance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2327
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2327
+                var:rl_event_2 = 2327
+                var:rl_event_3 = 2327
+            }
+        }
+        add_country_modifier = { modifier = modifier_church_guidance years = -1 }
+        hidden_effect = {
+            set_variable = var_church_guidance
+        }
+    }
+
+    option = {
+        name = rl_events.1.2328
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2328
+                var:rl_event_2 = 2328
+                var:rl_event_3 = 2328
+            }
+        }
+        add_country_modifier = { modifier = modifier_unchanging_tradition years = -1 }
+        hidden_effect = {
+            set_variable = var_unchanging_tradition
+        }
+    }
+
+    option = {
+        name = rl_events.1.2329
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2329
+                var:rl_event_2 = 2329
+                var:rl_event_3 = 2329
+            }
+        }
+        add_country_modifier = { modifier = modifier_church_councils years = -1 }
+        hidden_effect = {
+            set_variable = var_church_councils
+        }
+    }
+
+    option = {
+        name = rl_events.1.2330
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2330
+                var:rl_event_2 = 2330
+                var:rl_event_3 = 2330
+            }
+        }
+        add_country_modifier = { modifier = modifier_greek_rite years = -1 }
+        hidden_effect = {
+            set_variable = var_greek_rite
+        }
+    }
+
+    option = {
+        name = rl_events.1.2331
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2331
+                var:rl_event_2 = 2331
+                var:rl_event_3 = 2331
+            }
+        }
+        add_country_modifier = { modifier = modifier_physical_body_of_christ years = -1 }
+        hidden_effect = {
+            set_variable = var_physical_body_of_christ
+        }
+    }
+
+    option = {
+        name = rl_events.1.2332
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2332
+                var:rl_event_2 = 2332
+                var:rl_event_3 = 2332
+            }
+        }
+        add_country_modifier = { modifier = modifier_sight_veneration years = -1 }
+        hidden_effect = {
+            set_variable = var_sight_veneration
+        }
+    }
+
+    option = {
+        name = rl_events.1.2333
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2333
+                var:rl_event_2 = 2333
+                var:rl_event_3 = 2333
+            }
+        }
+        add_country_modifier = { modifier = modifier_theotokos years = -1 }
+        hidden_effect = {
+            set_variable = var_theotokos
+        }
+    }
+
+    option = {
+        name = rl_events.1.2334
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2334
+                var:rl_event_2 = 2334
+                var:rl_event_3 = 2334
+            }
+        }
+        add_country_modifier = { modifier = modifier_heavenly_architecture years = -1 }
+        hidden_effect = {
+            set_variable = var_heavenly_architecture
+        }
+    }
+
+    option = {
+        name = rl_events.1.2335
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2335
+                var:rl_event_2 = 2335
+                var:rl_event_3 = 2335
+            }
+        }
+        add_country_modifier = { modifier = modifier_iconostasis years = -1 }
+        hidden_effect = {
+            set_variable = var_iconostasis
+        }
+    }
+
+    option = {
+        name = rl_events.1.2336
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2336
+                var:rl_event_2 = 2336
+                var:rl_event_3 = 2336
+            }
+        }
+        add_country_modifier = { modifier = modifier_julian_calendar years = -1 }
+        hidden_effect = {
+            set_variable = var_julian_calendar
+        }
+    }
+
+    option = {
+        name = rl_events.1.2337
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2337
+                var:rl_event_2 = 2337
+                var:rl_event_3 = 2337
+            }
+        }
+        add_country_modifier = { modifier = modifier_paschal_cycle years = -1 }
+        hidden_effect = {
+            set_variable = var_paschal_cycle
+        }
+    }
+
+    option = {
+        name = rl_events.1.2338
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2338
+                var:rl_event_2 = 2338
+                var:rl_event_3 = 2338
+            }
+        }
+        add_country_modifier = { modifier = modifier_oktoechos years = -1 }
+        hidden_effect = {
+            set_variable = var_oktoechos
+        }
+    }
+
+    option = {
+        name = rl_events.1.2339
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2339
+                var:rl_event_2 = 2339
+                var:rl_event_3 = 2339
+            }
+        }
+        add_country_modifier = { modifier = modifier_prestigious_monasticism years = -1 }
+        hidden_effect = {
+            set_variable = var_prestigious_monasticism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2340
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2340
+                var:rl_event_2 = 2340
+                var:rl_event_3 = 2340
+            }
+        }
+        add_country_modifier = { modifier = modifier_national_rites years = -1 }
+        hidden_effect = {
+            set_variable = var_national_rites
+        }
+    }
+
+    option = {
+        name = rl_events.1.2341
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2341
+                var:rl_event_2 = 2341
+                var:rl_event_3 = 2341
+            }
+        }
+        add_country_modifier = { modifier = modifier_heirs_of_rome years = -1 }
+        hidden_effect = {
+            set_variable = var_heirs_of_rome
+        }
+    }
+
+    option = {
+        name = rl_events.1.2342
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2342
+                var:rl_event_2 = 2342
+                var:rl_event_3 = 2342
+            }
+        }
+        add_country_modifier = { modifier = modifier_legacy_of_saint_andrew years = -1 }
+        hidden_effect = {
+            set_variable = var_legacy_of_saint_andrew
+        }
+    }
+
+    option = {
+        name = rl_events.1.2343
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2343
+                var:rl_event_2 = 2343
+                var:rl_event_3 = 2343
+            }
+        }
+        add_country_modifier = { modifier = modifier_christianization_of_the_slavs years = -1 }
+        hidden_effect = {
+            set_variable = var_christianization_of_the_slavs
+        }
+    }
+
+    option = {
+        name = rl_events.1.2344
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2344
+                var:rl_event_2 = 2344
+                var:rl_event_3 = 2344
+            }
+        }
+        add_country_modifier = { modifier = modifier_cyril_and_methodius years = -1 }
+        hidden_effect = {
+            set_variable = var_cyril_and_methodius
+        }
+    }
+
+    option = {
+        name = rl_events.1.2345
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2345
+                var:rl_event_2 = 2345
+                var:rl_event_3 = 2345
+            }
+        }
+        add_country_modifier = { modifier = modifier_interaction_between_church_and_state years = -1 }
+        hidden_effect = {
+            set_variable = var_interaction_between_church_and_state
+        }
+    }
+
+    option = {
+        name = rl_events.1.2346
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2346
+                var:rl_event_2 = 2346
+                var:rl_event_3 = 2346
+            }
+        }
+        add_country_modifier = { modifier = modifier_outwards_expansion years = -1 }
+        hidden_effect = {
+            set_variable = var_outwards_expansion
+        }
+    }
+
+    option = {
+        name = rl_events.1.2347
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2347
+                var:rl_event_2 = 2347
+                var:rl_event_3 = 2347
+            }
+        }
+        add_country_modifier = { modifier = modifier_justified_holy_wars years = -1 }
+        hidden_effect = {
+            set_variable = var_justified_holy_wars
+        }
+    }
+
+    option = {
+        name = rl_events.1.2348
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2348
+                var:rl_event_2 = 2348
+                var:rl_event_3 = 2348
+            }
+        }
+        add_country_modifier = { modifier = modifier_resistance_to_the_infidels years = -1 }
+        hidden_effect = {
+            set_variable = var_resistance_to_the_infidels
+        }
+    }
+
+    option = {
+        name = rl_events.1.2349
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2349
+                var:rl_event_2 = 2349
+                var:rl_event_3 = 2349
+            }
+        }
+        add_country_modifier = { modifier = modifier_eastern_ecumenism years = -1 }
+        hidden_effect = {
+            set_variable = var_eastern_ecumenism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2350
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2350
+                var:rl_event_2 = 2350
+                var:rl_event_3 = 2350
+            }
+        }
+        add_country_modifier = { modifier = modifier_structured_patriarchates years = -1 }
+        hidden_effect = {
+            set_variable = var_structured_patriarchates
+        }
+    }
+
+    option = {
+        name = rl_events.1.2351
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2351
+                var:rl_event_2 = 2351
+                var:rl_event_3 = 2351
+            }
+        }
+        add_country_modifier = { modifier = modifier_protestant_invite_persecuted years = -1 }
+        hidden_effect = {
+            set_variable = var_protestant_invite_persecuted
+        }
+    }
+
+    option = {
+        name = rl_events.1.2352
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2352
+                var:rl_event_2 = 2352
+                var:rl_event_3 = 2352
+            }
+        }
+        add_country_modifier = { modifier = modifier_protestant_administration_tax years = -1 }
+        hidden_effect = {
+            set_variable = var_protestant_administration_tax
+        }
+    }
+
+    option = {
+        name = rl_events.1.2353
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2353
+                var:rl_event_2 = 2353
+                var:rl_event_3 = 2353
+            }
+        }
+        add_country_modifier = { modifier = modifier_confessio_augustana years = -1 }
+        hidden_effect = {
+            set_variable = var_confessio_augustana
+        }
+    }
+
+    option = {
+        name = rl_events.1.2354
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2354
+                var:rl_event_2 = 2354
+                var:rl_event_3 = 2354
+            }
+        }
+        add_country_modifier = { modifier = modifier_devotionalism years = -1 }
+        hidden_effect = {
+            set_variable = var_devotionalism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2355
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2355
+                var:rl_event_2 = 2355
+                var:rl_event_3 = 2355
+            }
+        }
+        add_country_modifier = { modifier = modifier_protect_the_new_faith years = -1 }
+        hidden_effect = {
+            set_variable = var_protect_the_new_faith
+        }
+    }
+
+    option = {
+        name = rl_events.1.2356
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2356
+                var:rl_event_2 = 2356
+                var:rl_event_3 = 2356
+            }
+        }
+        add_country_modifier = { modifier = modifier_expulsion_of_heretics years = -1 }
+        hidden_effect = {
+            set_variable = var_expulsion_of_heretics
+        }
+    }
+
+    option = {
+        name = rl_events.1.2357
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2357
+                var:rl_event_2 = 2357
+                var:rl_event_3 = 2357
+            }
+        }
+        add_country_modifier = { modifier = modifier_repurposed_monasteries years = -1 }
+        hidden_effect = {
+            set_variable = var_repurposed_monasteries
+        }
+    }
+
+    option = {
+        name = rl_events.1.2358
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2358
+                var:rl_event_2 = 2358
+                var:rl_event_3 = 2358
+            }
+        }
+        add_country_modifier = { modifier = modifier_involved_laity years = -1 }
+        hidden_effect = {
+            set_variable = var_involved_laity
+        }
+    }
+
+    option = {
+        name = rl_events.1.2359
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2359
+                var:rl_event_2 = 2359
+                var:rl_event_3 = 2359
+            }
+        }
+        add_country_modifier = { modifier = modifier_protestant_cuius_regio_eius_religio years = -1 }
+        hidden_effect = {
+            set_variable = var_protestant_cuius_regio_eius_religio
+        }
+    }
+
+    option = {
+        name = rl_events.1.2360
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2360
+                var:rl_event_2 = 2360
+                var:rl_event_3 = 2360
+            }
+        }
+        add_country_modifier = { modifier = modifier_protestant_painters years = -1 }
+        hidden_effect = {
+            set_variable = var_protestant_painters
+        }
+    }
+
+    option = {
+        name = rl_events.1.2361
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2361
+                var:rl_event_2 = 2361
+                var:rl_event_3 = 2361
+            }
+        }
+        add_country_modifier = { modifier = modifier_protestant_sunday_schools years = -1 }
+        hidden_effect = {
+            set_variable = var_protestant_sunday_schools
+        }
+    }
+
+    option = {
+        name = rl_events.1.2362
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2362
+                var:rl_event_2 = 2362
+                var:rl_event_3 = 2362
+            }
+        }
+        add_country_modifier = { modifier = modifier_protestant_work_ethic years = -1 }
+        hidden_effect = {
+            set_variable = var_protestant_work_ethic
+        }
+    }
+
+    option = {
+        name = rl_events.1.2363
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2363
+                var:rl_event_2 = 2363
+                var:rl_event_3 = 2363
+            }
+        }
+        add_country_modifier = { modifier = modifier_embrace_romanticism years = -1 }
+        hidden_effect = {
+            set_variable = var_embrace_romanticism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2364
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2364
+                var:rl_event_2 = 2364
+                var:rl_event_3 = 2364
+            }
+        }
+        add_country_modifier = { modifier = modifier_wary_of_heretic_preachers years = -1 }
+        hidden_effect = {
+            set_variable = var_wary_of_heretic_preachers
+        }
+    }
+
+    option = {
+        name = rl_events.1.2365
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2365
+                var:rl_event_2 = 2365
+                var:rl_event_3 = 2365
+            }
+        }
+        add_country_modifier = { modifier = modifier_protestant_innovation years = -1 }
+        hidden_effect = {
+            set_variable = var_protestant_innovation
+        }
+    }
+
+    option = {
+        name = rl_events.1.2366
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2366
+                var:rl_event_2 = 2366
+                var:rl_event_3 = 2366
+            }
+        }
+        add_country_modifier = { modifier = modifier_nanto_rokushuu years = -1 }
+        hidden_effect = {
+            set_variable = var_nanto_rokushuu
+        }
+    }
+
+    option = {
+        name = rl_events.1.2367
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2367
+                var:rl_event_2 = 2367
+                var:rl_event_3 = 2367
+            }
+        }
+        add_country_modifier = { modifier = modifier_shinbutsu_shuugou years = -1 }
+        hidden_effect = {
+            set_variable = var_shinbutsu_shuugou
+        }
+    }
+
+    option = {
+        name = rl_events.1.2368
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2368
+                var:rl_event_2 = 2368
+                var:rl_event_3 = 2368
+            }
+        }
+        add_country_modifier = { modifier = modifier_honji_suijaku years = -1 }
+        hidden_effect = {
+            set_variable = var_honji_suijaku
+        }
+    }
+
+    option = {
+        name = rl_events.1.2369
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2369
+                var:rl_event_2 = 2369
+                var:rl_event_3 = 2369
+            }
+        }
+        add_country_modifier = { modifier = modifier_hachiman_worship years = -1 }
+        hidden_effect = {
+            set_variable = var_hachiman_worship
+        }
+    }
+
+    option = {
+        name = rl_events.1.2370
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2370
+                var:rl_event_2 = 2370
+                var:rl_event_3 = 2370
+            }
+        }
+        add_country_modifier = { modifier = modifier_gozan_jissetsu years = -1 }
+        hidden_effect = {
+            set_variable = var_gozan_jissetsu
+        }
+    }
+
+    option = {
+        name = rl_events.1.2371
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2371
+                var:rl_event_2 = 2371
+                var:rl_event_3 = 2371
+            }
+        }
+        add_country_modifier = { modifier = modifier_bodaiji years = -1 }
+        hidden_effect = {
+            set_variable = var_bodaiji
+        }
+    }
+
+    option = {
+        name = rl_events.1.2372
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2372
+                var:rl_event_2 = 2372
+                var:rl_event_3 = 2372
+            }
+        }
+        add_country_modifier = { modifier = modifier_kagura years = -1 }
+        hidden_effect = {
+            set_variable = var_kagura
+        }
+    }
+
+    option = {
+        name = rl_events.1.2373
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2373
+                var:rl_event_2 = 2373
+                var:rl_event_3 = 2373
+            }
+        }
+        add_country_modifier = { modifier = modifier_obon years = -1 }
+        hidden_effect = {
+            set_variable = var_obon
+        }
+    }
+
+    option = {
+        name = rl_events.1.2374
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2374
+                var:rl_event_2 = 2374
+                var:rl_event_3 = 2374
+            }
+        }
+        add_country_modifier = { modifier = modifier_neo_confucianism years = -1 }
+        hidden_effect = {
+            set_variable = var_neo_confucianism
+        }
+    }
+
+    option = {
+        name = rl_events.1.2375
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2375
+                var:rl_event_2 = 2375
+                var:rl_event_3 = 2375
+            }
+        }
+        add_country_modifier = { modifier = modifier_danka_system years = -1 }
+        hidden_effect = {
+            set_variable = var_danka_system
+        }
+    }
+
+    option = {
+        name = rl_events.1.2376
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2376
+                var:rl_event_2 = 2376
+                var:rl_event_3 = 2376
+            }
+        }
+        add_country_modifier = { modifier = modifier_harae years = -1 }
+        hidden_effect = {
+            set_variable = var_harae
+        }
+    }
+
+    option = {
+        name = rl_events.1.2377
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2377
+                var:rl_event_2 = 2377
+                var:rl_event_3 = 2377
+            }
+        }
+        add_country_modifier = { modifier = modifier_jisha_bugyou years = -1 }
+        hidden_effect = {
+            set_variable = var_jisha_bugyou
+        }
+    }
+
+    option = {
+        name = rl_events.1.2378
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2378
+                var:rl_event_2 = 2378
+                var:rl_event_3 = 2378
+            }
+        }
+        add_country_modifier = { modifier = modifier_kokugaku years = -1 }
+        hidden_effect = {
+            set_variable = var_kokugaku
+        }
+    }
+
+    option = {
+        name = rl_events.1.2379
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2379
+                var:rl_event_2 = 2379
+                var:rl_event_3 = 2379
+            }
+        }
+        add_country_modifier = { modifier = modifier_home_shrines years = -1 }
+        hidden_effect = {
+            set_variable = var_home_shrines
+        }
+    }
+
+    option = {
+        name = rl_events.1.2380
+        trigger = {
+            OR = {
+                var:rl_event_1 = 2380
+                var:rl_event_2 = 2380
+                var:rl_event_3 = 2380
+            }
+        }
+        add_country_modifier = { modifier = modifier_fukko_shinto years = -1 }
+        hidden_effect = {
+            set_variable = var_fukko_shinto
         }
     }
 

@@ -300,6 +300,14 @@ def _structure_advance(name: str, raw_fields: dict, source_text: str) -> dict:
 
 INJECTED_MODIFIER = "\trl_roll_mtd = 1"
 
+DUMMY_PARENT_ADVANCE = """dummy_parent_advance = {
+\tage = age_1_traditions
+\tdepth = 0
+\tstarting_technology_level = 4
+
+\trl_roll_mtd = 1
+}"""
+
 
 def _strip_advance_text(advance: dict) -> str:
     """
@@ -359,11 +367,11 @@ def _generate_dummy_advances(advance: dict) -> str:
     For each unlock_* key present on *advance*, generate a dummy advance block:
 
         dummy_<advance_name> = {
-            age = <age>
+            age = age_1_traditions
             icon = <icon>
             <unlock line extracted verbatim from _source_text>
             allow = { has_variable = flag_dummy_<advance_name> }
-            depth = 0
+            requires = dummy_parent_advance
         }
 
     One dummy block is produced per unlock line. Returns all dummy blocks
@@ -373,7 +381,6 @@ def _generate_dummy_advances(advance: dict) -> str:
         return ""
 
     name = advance["_name"]
-    age  = advance.get("age", "")
     icon = advance.get("icon", "")
 
     # Extract unlock lines verbatim from the resolved source text
@@ -386,13 +393,13 @@ def _generate_dummy_advances(advance: dict) -> str:
     blocks = []
     for unlock_line in unlock_lines:
         stripped_unlock = unlock_line.strip()
-        lines = [f"dummy_{name} = {{", f"\tage = {age}"]
+        lines = [f"dummy_{name} = {{", f"\tage = {TRADITIONS_AGE}"]
         if icon:
             lines.append(f"\ticon = {icon}")
         lines += [
             f"\t{stripped_unlock}",
             f"\tallow = {{ has_variable = flag_dummy_{name} }}",
-            f"\tdepth = 0",
+            f"\trequires = dummy_parent_advance",
             f"}}",
         ]
         blocks.append("\n".join(lines))
@@ -506,6 +513,7 @@ def _unlock_value_to_label(value: str) -> str:
       - If the first segment is a single letter, strip it (e.g. a_handgonners -> handgonners)
       - If the last segment is a number, replace it with "Level N" (e.g. a_legionaries_3 -> Legionaries Level 3)
       - Remaining words are Title Cased
+      - Known phrase substitutions are applied afterward: "Levy A" -> "Levy", "Cb" -> "Casus Belli"
     """
     parts = value.split('_')
 
@@ -518,7 +526,13 @@ def _unlock_value_to_label(value: str) -> str:
         level = parts[-1]
         parts = parts[:-1] + ['Level', level]
 
-    return ' '.join(word.capitalize() if not word.isdigit() else word for word in parts)
+    label = ' '.join(word.capitalize() if not word.isdigit() else word for word in parts)
+
+    # Known phrase substitutions
+    label = re.sub(r'\bLevy A\b', 'Levy', label)
+    label = re.sub(r'\bCb\b', 'Casus Belli', label)
+
+    return label
 
 
 # ---------------------------------------------------------------------------
@@ -545,25 +559,25 @@ def main():
     print(f"\nTotal advances parsed  : {len(result.advances)}")
     print(f"Traditions pass-through: {len(result.traditions_raw)}")
 
-    # Main output
+    # Main output: traditions, advances, dummy_parent_advance, dummy advances (bottom)
     sections: list[str] = []
     sections.extend(
         re.sub(r'(\n}\s*)$', '\n' + INJECTED_MODIFIER + r'\1', t)
         for t in result.traditions_raw
     )
     sections.extend(_strip_advance_text(a) for a in result.advances)
-    out_path = Path(args.output)
-    out_path.write_text("\n\n".join(sections), encoding='utf-8')
-    print(f"Output written to: {out_path}")
 
-    # Dummy advances output
     dummy_sections = [
         _generate_dummy_advances(a)
         for a in result.advances
         if set(a.keys()) & _UNLOCK_KEYS
     ]
-    Path("dummy_advances.txt").write_text("\n\n".join(dummy_sections), encoding='utf-8')
-    print("Dummy advances written to: dummy_advances.txt")
+    sections.append(DUMMY_PARENT_ADVANCE)
+    sections.extend(dummy_sections)
+
+    out_path = Path(args.output)
+    out_path.write_text("\n\n".join(sections), encoding='utf-8')
+    print(f"Output written to: {out_path}")
 
     # Random list output
     rl_lines = [
@@ -643,7 +657,7 @@ def main():
 
     # Localization output
     loc = parse_loc_dir(args.loc_dir) if args.loc_dir else {}
-    loc_lines = [" l_english:"]
+    loc_lines = ["l_english:"]
 
     # Modifier loc keys
     for a in result.advances:
@@ -652,8 +666,8 @@ def main():
         name = a["_name"]
         loc_name = loc.get(name, "")
         loc_desc = loc.get(f"{name}_desc", "")
-        loc_lines.append(f'  STATIC_MODIFIER_NAME_modifier_{name}: "{loc_name}"')
-        loc_lines.append(f'  STATIC_MODIFIER_DESC_modifier_{name}: "{loc_desc}"')
+        loc_lines.append(f' STATIC_MODIFIER_NAME_modifier_{name}: "{loc_name}"')
+        loc_lines.append(f' STATIC_MODIFIER_DESC_modifier_{name}: "{loc_desc}"')
 
     # Option name loc keys
     for i, a in enumerate(result.advances):
@@ -663,7 +677,7 @@ def main():
         if not has_modifiers and not has_unlocks:
             continue
         loc_name = loc.get(name, "")
-        loc_lines.append(f'  rl_events.1.{i}: "{loc_name}"')
+        loc_lines.append(f' rl_events.1.{i}: "{loc_name}"')
 
     # Tooltip loc keys — one per unlock key per advance
     for a in result.advances:
@@ -677,7 +691,10 @@ def main():
                 if not isinstance(v, str):
                     continue
                 label = _unlock_value_to_label(v)
-                loc_lines.append(f'  rl_tt_{name}: "Unlocks {label}"')
+                tooltip_text = f"Unlocks {label}"
+                loc_lines.append(f' rl_tt_{name}: "{tooltip_text}"')
+                loc_lines.append(f' dummy_{name}: "{tooltip_text}"')
+                loc_lines.append(f' dummy_{name}_desc: "{tooltip_text}"')
 
     Path("localization.yml").write_text("\n".join(loc_lines) + "\n", encoding='utf-8-sig')
     print(f"Localization written to: localization.yml")

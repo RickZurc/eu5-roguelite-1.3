@@ -752,10 +752,6 @@ modifier_route_to_the_indies_advance = {
 	exploration_preparation_time_modifier = -0.1
 }
 
-modifier_pound_lock_canals_advance = {
-	starting_technology_level = 3
-}
-
 modifier_expanded_aqueduct_system = {
 	aqueduct_system_max_level = 1
 }

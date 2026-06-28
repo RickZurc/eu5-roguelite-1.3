@@ -32812,3 +32812,2939 @@ fukko_shinto = {
 
 	rl_roll_mtd = 1
 }
+
+dummy_parent_advance = {
+	age = age_1_traditions
+	depth = 0
+	starting_technology_level = 4
+
+	rl_roll_mtd = 1
+}
+
+dummy_coal_improvements_absolutism = {
+	age = age_1_traditions
+	unlock_building = improved_charcoal_maker
+	allow = { has_variable = flag_dummy_coal_improvements_absolutism }
+	requires = dummy_parent_advance
+}
+
+dummy_newspapers_advance = {
+	age = age_1_traditions
+	unlock_law = press_law
+	allow = { has_variable = flag_dummy_newspapers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_naval_doctrines_advance = {
+	age = age_1_traditions
+	unlock_law = naval_doctrine_law
+	allow = { has_variable = flag_dummy_naval_doctrines_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_increase_control_area_advance = {
+	age = age_1_traditions
+	unlock_cabinet_action = increase_control_area
+	allow = { has_variable = flag_dummy_increase_control_area_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_colonial_policy_advance = {
+	age = age_1_traditions
+	unlock_law = colonial_policy
+	allow = { has_variable = flag_dummy_colonial_policy_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_native_policy_advance = {
+	age = age_1_traditions
+	unlock_law = native_policy
+	allow = { has_variable = flag_dummy_native_policy_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_plantation_buildings_advance = {
+	age = age_1_traditions
+	unlock_building = sugar_plantation
+	allow = { has_variable = flag_dummy_plantation_buildings_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_plantation_buildings_advance = {
+	age = age_1_traditions
+	unlock_building = tobacco_plantation
+	allow = { has_variable = flag_dummy_plantation_buildings_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_plantation_buildings_advance = {
+	age = age_1_traditions
+	unlock_building = cotton_plantation
+	allow = { has_variable = flag_dummy_plantation_buildings_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_patio_process_advance = {
+	age = age_1_traditions
+	unlock_building = mercury_patio
+	allow = { has_variable = flag_dummy_patio_process_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_town_rights_enable = {
+	age = age_1_traditions
+	icon = town_rights_advance
+	unlock_town_rights = royal_tooling_rights
+	allow = { has_variable = flag_dummy_town_rights_enable }
+	requires = dummy_parent_advance
+}
+
+dummy_town_rights_enable = {
+	age = age_1_traditions
+	icon = town_rights_advance
+	unlock_town_rights = royal_jewelry_rights
+	allow = { has_variable = flag_dummy_town_rights_enable }
+	requires = dummy_parent_advance
+}
+
+dummy_town_rights_enable = {
+	age = age_1_traditions
+	icon = town_rights_advance
+	unlock_town_rights = royal_naval_rights
+	allow = { has_variable = flag_dummy_town_rights_enable }
+	requires = dummy_parent_advance
+}
+
+dummy_town_rights_enable = {
+	age = age_1_traditions
+	icon = town_rights_advance
+	unlock_town_rights = royal_textile_rights
+	allow = { has_variable = flag_dummy_town_rights_enable }
+	requires = dummy_parent_advance
+}
+
+dummy_town_rights_enable = {
+	age = age_1_traditions
+	icon = town_rights_advance
+	unlock_town_rights = royal_weaponry_rights
+	allow = { has_variable = flag_dummy_town_rights_enable }
+	requires = dummy_parent_advance
+}
+
+dummy_town_rights_enable = {
+	age = age_1_traditions
+	icon = town_rights_advance
+	unlock_town_rights = royal_book_rights
+	allow = { has_variable = flag_dummy_town_rights_enable }
+	requires = dummy_parent_advance
+}
+
+dummy_town_rights_enable = {
+	age = age_1_traditions
+	icon = town_rights_advance
+	unlock_town_rights = royal_artisan_rights
+	allow = { has_variable = flag_dummy_town_rights_enable }
+	requires = dummy_parent_advance
+}
+
+dummy_town_rights_enable = {
+	age = age_1_traditions
+	icon = town_rights_advance
+	unlock_town_rights = royal_brewing_rights
+	allow = { has_variable = flag_dummy_town_rights_enable }
+	requires = dummy_parent_advance
+}
+
+dummy_town_rights_enable = {
+	age = age_1_traditions
+	icon = town_rights_advance
+	unlock_town_rights = royal_masonry_rights
+	allow = { has_variable = flag_dummy_town_rights_enable }
+	requires = dummy_parent_advance
+}
+
+dummy_lazaretto_advance = {
+	age = age_1_traditions
+	unlock_building = lazaretto
+	allow = { has_variable = flag_dummy_lazaretto_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_trade_companies_advance = {
+	age = age_1_traditions
+	icon = expanded_supply_trains
+	unlock_subject_type = trade_company
+	allow = { has_variable = flag_dummy_trade_companies_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_trade_companies_advance = {
+	age = age_1_traditions
+	icon = expanded_supply_trains
+	unlock_building = trade_company_headquarters
+	allow = { has_variable = flag_dummy_trade_companies_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_trade_companies_advance = {
+	age = age_1_traditions
+	icon = expanded_supply_trains
+	unlock_building = trade_company_governance
+	allow = { has_variable = flag_dummy_trade_companies_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_trade_companies_advance = {
+	age = age_1_traditions
+	icon = expanded_supply_trains
+	unlock_building = trade_company_garrison
+	allow = { has_variable = flag_dummy_trade_companies_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_trade_companies_advance = {
+	age = age_1_traditions
+	icon = expanded_supply_trains
+	unlock_building = trade_company_harbor
+	allow = { has_variable = flag_dummy_trade_companies_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_trade_companies_advance = {
+	age = age_1_traditions
+	icon = expanded_supply_trains
+	unlock_building = trade_company_local_venture
+	allow = { has_variable = flag_dummy_trade_companies_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_trade_companies_advance = {
+	age = age_1_traditions
+	icon = expanded_supply_trains
+	unlock_building = trade_company_foreign_influence
+	allow = { has_variable = flag_dummy_trade_companies_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_chartered_companies = {
+	age = age_1_traditions
+	icon = merchant_power_from_maritime_reformation_advance
+	unlock_casus_belli = cb_exploration
+	allow = { has_variable = flag_dummy_chartered_companies }
+	requires = dummy_parent_advance
+}
+
+dummy_patron_of_art = {
+	age = age_1_traditions
+	unlock_interaction = commission_art
+	allow = { has_variable = flag_dummy_patron_of_art }
+	requires = dummy_parent_advance
+}
+
+dummy_rebellion_support = {
+	age = age_1_traditions
+	icon = zakah
+	unlock_diplomacy = { supportrebels }
+	allow = { has_variable = flag_dummy_rebellion_support }
+	requires = dummy_parent_advance
+}
+
+dummy_pound_lock_canals_advance = {
+	age = age_1_traditions
+	unlock_building = pound_lock_canal_infrastructure
+	allow = { has_variable = flag_dummy_pound_lock_canals_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_drill_army_advance = {
+	age = age_1_traditions
+	icon = drill_army_advance
+	unlock_ability = drill_army
+	allow = { has_variable = flag_dummy_drill_army_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_slave_trade_act_advance = {
+	age = age_1_traditions
+	unlock_law = slavery_laws
+	allow = { has_variable = flag_dummy_slave_trade_act_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_march_to_the_sound_of_the_guns_advance = {
+	age = age_1_traditions
+	icon = offensive_army
+	unlock_ability = march_to_sound_of_guns
+	allow = { has_variable = flag_dummy_march_to_the_sound_of_the_guns_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_medical_school_advance = {
+	age = age_1_traditions
+	unlock_building = medical_school
+	allow = { has_variable = flag_dummy_medical_school_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_construction_center_advance = {
+	age = age_1_traditions
+	unlock_building = construction_center
+	allow = { has_variable = flag_dummy_construction_center_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_mint_advance = {
+	age = age_1_traditions
+	unlock_building = minting_office
+	allow = { has_variable = flag_dummy_mint_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_counting_house_advance = {
+	age = age_1_traditions
+	unlock_building = counting_house
+	allow = { has_variable = flag_dummy_counting_house_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_merchants_quarters_advance = {
+	age = age_1_traditions
+	unlock_building = merchants_quarters
+	allow = { has_variable = flag_dummy_merchants_quarters_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_colonial_administration_advance = {
+	age = age_1_traditions
+	unlock_building = colonial_administration
+	allow = { has_variable = flag_dummy_colonial_administration_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_grand_marketplace_advance = {
+	age = age_1_traditions
+	unlock_building = grand_marketplace
+	allow = { has_variable = flag_dummy_grand_marketplace_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_commerce_center_advance = {
+	age = age_1_traditions
+	unlock_building = commerce_center
+	allow = { has_variable = flag_dummy_commerce_center_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_port_authority_advance = {
+	age = age_1_traditions
+	unlock_building = port_authority
+	allow = { has_variable = flag_dummy_port_authority_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_gun_smith_advance = {
+	age = age_1_traditions
+	unlock_building = gun_smith
+	allow = { has_variable = flag_dummy_gun_smith_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_handgonners_advance = {
+	age = age_1_traditions
+	unlock_unit = a_handgonners
+	allow = { has_variable = flag_dummy_unlock_handgonners_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_cannon_maker_advance = {
+	age = age_1_traditions
+	unlock_building = cannon_maker
+	allow = { has_variable = flag_dummy_cannon_maker_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_slave_center_advance = {
+	age = age_1_traditions
+	unlock_building = slave_center
+	allow = { has_variable = flag_dummy_slave_center_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_weapon_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = weapon_workshop
+	allow = { has_variable = flag_dummy_weapon_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_naval_supplies_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = naval_supplies_workshop
+	allow = { has_variable = flag_dummy_naval_supplies_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_paper_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = paper_workshop
+	allow = { has_variable = flag_dummy_paper_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_printing_press_shop_advance = {
+	age = age_1_traditions
+	unlock_building = printing_press_shop
+	allow = { has_variable = flag_dummy_printing_press_shop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_beer_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = beer_workshop
+	allow = { has_variable = flag_dummy_beer_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_saltpeter_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = saltpeter_workshop
+	allow = { has_variable = flag_dummy_saltpeter_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_distillers_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = distillers_workshop
+	allow = { has_variable = flag_dummy_distillers_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_tanning_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = tanning_workshop
+	allow = { has_variable = flag_dummy_tanning_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_cloth_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = cloth_workshop
+	allow = { has_variable = flag_dummy_cloth_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_fine_cloth_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = fine_cloth_workshop
+	allow = { has_variable = flag_dummy_fine_cloth_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_tools_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = tools_workshop
+	allow = { has_variable = flag_dummy_tools_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_pottery_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = pottery_workshop
+	allow = { has_variable = flag_dummy_pottery_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_glass_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = glass_workshop
+	allow = { has_variable = flag_dummy_glass_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_dyes_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = dyes_workshop
+	allow = { has_variable = flag_dummy_dyes_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_furniture_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = furniture_workshop
+	allow = { has_variable = flag_dummy_furniture_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_cannon_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = cannon_workshop
+	allow = { has_variable = flag_dummy_cannon_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_guns_workshop_advance = {
+	age = age_1_traditions
+	unlock_building = guns_workshop
+	allow = { has_variable = flag_dummy_guns_workshop_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_naval_supplies_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = naval_supplies_manufactory
+	allow = { has_variable = flag_dummy_naval_supplies_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_firearms_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = firearms_manufactory
+	allow = { has_variable = flag_dummy_firearms_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_cloth_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = cloth_manufactory
+	allow = { has_variable = flag_dummy_cloth_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_printing_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = printing_manufactory
+	allow = { has_variable = flag_dummy_printing_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_putrefaction_works_advance = {
+	age = age_1_traditions
+	unlock_building = putrefaction_works
+	allow = { has_variable = flag_dummy_putrefaction_works_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_fine_cloth_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = fine_cloth_manufactory
+	allow = { has_variable = flag_dummy_fine_cloth_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_perfumery_advance = {
+	age = age_1_traditions
+	unlock_building = perfumery
+	allow = { has_variable = flag_dummy_perfumery_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_glassworks_advance = {
+	age = age_1_traditions
+	unlock_building = glassworks
+	allow = { has_variable = flag_dummy_glassworks_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_dyesworks_advance = {
+	age = age_1_traditions
+	unlock_building = dyesworks
+	allow = { has_variable = flag_dummy_dyesworks_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_porcelain_manufactor_advance = {
+	age = age_1_traditions
+	unlock_building = porcelain_manufactory
+	allow = { has_variable = flag_dummy_porcelain_manufactor_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_tannery_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = tannery_manufactory
+	allow = { has_variable = flag_dummy_tannery_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_pottery_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = pottery_manufactory
+	allow = { has_variable = flag_dummy_pottery_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_furniture_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = furniture_manufactory
+	allow = { has_variable = flag_dummy_furniture_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_distiller_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = distiller_manufactory
+	allow = { has_variable = flag_dummy_distiller_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_brewery_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = brewery_manufactory
+	allow = { has_variable = flag_dummy_brewery_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_winery_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = winery_manufactory
+	allow = { has_variable = flag_dummy_winery_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_lacquerware_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = lacquerware_manufactory
+	allow = { has_variable = flag_dummy_lacquerware_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_iron_foundry_advance = {
+	age = age_1_traditions
+	unlock_building = iron_foundry
+	allow = { has_variable = flag_dummy_iron_foundry_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_weapon_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = weapon_manufactory
+	allow = { has_variable = flag_dummy_weapon_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_cannon_foundry_advance = {
+	age = age_1_traditions
+	unlock_building = cannon_foundry
+	allow = { has_variable = flag_dummy_cannon_foundry_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_paper_manufactory_advance = {
+	age = age_1_traditions
+	unlock_building = paper_manufactory
+	allow = { has_variable = flag_dummy_paper_manufactory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_printing_mill_advance = {
+	age = age_1_traditions
+	unlock_building = printing_mill
+	allow = { has_variable = flag_dummy_printing_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_paper_mill_advance = {
+	age = age_1_traditions
+	unlock_building = paper_mill
+	allow = { has_variable = flag_dummy_paper_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_putrefaction_mill_advance = {
+	age = age_1_traditions
+	unlock_building = putrefaction_mill
+	allow = { has_variable = flag_dummy_putrefaction_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_tannery_mill_advance = {
+	age = age_1_traditions
+	unlock_building = tannery_mill
+	allow = { has_variable = flag_dummy_tannery_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_naval_supplies_mill_advance = {
+	age = age_1_traditions
+	unlock_building = naval_supplies_mill
+	allow = { has_variable = flag_dummy_naval_supplies_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_brewery_mill_advance = {
+	age = age_1_traditions
+	unlock_building = brewery_mill
+	allow = { has_variable = flag_dummy_brewery_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_distiller_mill_advance = {
+	age = age_1_traditions
+	unlock_building = distiller_mill
+	allow = { has_variable = flag_dummy_distiller_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_iron_mill_advance = {
+	age = age_1_traditions
+	unlock_building = iron_mill
+	allow = { has_variable = flag_dummy_iron_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_textile_mill_advance = {
+	age = age_1_traditions
+	unlock_building = textile_mill
+	allow = { has_variable = flag_dummy_textile_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_fine_cloth_mill_advance = {
+	age = age_1_traditions
+	unlock_building = fine_cloth_mill
+	allow = { has_variable = flag_dummy_fine_cloth_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_steel_mill_advance = {
+	age = age_1_traditions
+	unlock_building = steel_mill
+	allow = { has_variable = flag_dummy_steel_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_pottery_mill_advance = {
+	age = age_1_traditions
+	unlock_building = pottery_mill
+	allow = { has_variable = flag_dummy_pottery_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_glass_mill_advance = {
+	age = age_1_traditions
+	unlock_building = glass_mill
+	allow = { has_variable = flag_dummy_glass_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_dyes_mill_advance = {
+	age = age_1_traditions
+	unlock_building = dyes_mill
+	allow = { has_variable = flag_dummy_dyes_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_furniture_mill_advance = {
+	age = age_1_traditions
+	unlock_building = furniture_mill
+	allow = { has_variable = flag_dummy_furniture_mill_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_weapon_factory_advance = {
+	age = age_1_traditions
+	unlock_building = weapon_factory
+	allow = { has_variable = flag_dummy_weapon_factory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_firearms_factory_advance = {
+	age = age_1_traditions
+	unlock_building = firearms_factory
+	allow = { has_variable = flag_dummy_firearms_factory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_gun_factory_advance = {
+	age = age_1_traditions
+	unlock_building = cannons_factory
+	allow = { has_variable = flag_dummy_gun_factory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_armory_advance = {
+	age = age_1_traditions
+	unlock_building = armory
+	allow = { has_variable = flag_dummy_armory_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_training_fields_advance = {
+	age = age_1_traditions
+	unlock_building = training_fields
+	allow = { has_variable = flag_dummy_training_fields_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_barracks_advance = {
+	age = age_1_traditions
+	unlock_building = barracks
+	allow = { has_variable = flag_dummy_barracks_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_regimental_camp_advance = {
+	age = age_1_traditions
+	unlock_building = regimental_camp
+	allow = { has_variable = flag_dummy_regimental_camp_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_conscription_center_advance = {
+	age = age_1_traditions
+	unlock_building = conscription_center
+	allow = { has_variable = flag_dummy_conscription_center_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_dock_advance = {
+	age = age_1_traditions
+	unlock_building = dock
+	allow = { has_variable = flag_dummy_dock_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_protected_harbor_advance = {
+	age = age_1_traditions
+	unlock_building = protected_harbor
+	allow = { has_variable = flag_dummy_protected_harbor_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_dry_dock_advance = {
+	age = age_1_traditions
+	unlock_building = dry_dock
+	allow = { has_variable = flag_dummy_dry_dock_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_shipyard_advance = {
+	age = age_1_traditions
+	unlock_building = shipyard
+	allow = { has_variable = flag_dummy_shipyard_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_grand_shipyard_advance = {
+	age = age_1_traditions
+	unlock_building = grand_shipyard
+	allow = { has_variable = flag_dummy_grand_shipyard_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_naval_base_advance = {
+	age = age_1_traditions
+	unlock_building = naval_base
+	allow = { has_variable = flag_dummy_naval_base_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_coastal_fort_advance = {
+	age = age_1_traditions
+	unlock_building = coastal_fort
+	allow = { has_variable = flag_dummy_coastal_fort_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_naval_battery_advance = {
+	age = age_1_traditions
+	unlock_building = naval_battery
+	allow = { has_variable = flag_dummy_naval_battery_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_bastion_advance = {
+	age = age_1_traditions
+	unlock_building = bastion
+	allow = { has_variable = flag_dummy_bastion_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_star_fort_advance = {
+	age = age_1_traditions
+	unlock_building = star_fort
+	allow = { has_variable = flag_dummy_star_fort_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_fortress_advance = {
+	age = age_1_traditions
+	unlock_building = fortress
+	allow = { has_variable = flag_dummy_fortress_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_confucian_academy_advance = {
+	age = age_1_traditions
+	unlock_building = confucian_academy
+	allow = { has_variable = flag_dummy_confucian_academy_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_university_advance = {
+	age = age_1_traditions
+	unlock_building = university
+	allow = { has_variable = flag_dummy_university_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_university_advance = {
+	age = age_1_traditions
+	unlock_law = education_elites_law
+	allow = { has_variable = flag_dummy_university_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_opera_house_advance = {
+	age = age_1_traditions
+	unlock_building = opera_house
+	allow = { has_variable = flag_dummy_opera_house_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_theater_advance = {
+	age = age_1_traditions
+	unlock_building = theater
+	allow = { has_variable = flag_dummy_theater_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_art_school_advance = {
+	age = age_1_traditions
+	unlock_building = art_school
+	allow = { has_variable = flag_dummy_art_school_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_admiralty_advance = {
+	age = age_1_traditions
+	unlock_building = admiralty
+	allow = { has_variable = flag_dummy_admiralty_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_war_college_advance = {
+	age = age_1_traditions
+	unlock_building = war_college
+	allow = { has_variable = flag_dummy_war_college_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_tax_assessor_advance = {
+	age = age_1_traditions
+	unlock_building = tax_assessor
+	allow = { has_variable = flag_dummy_tax_assessor_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_supreme_court_advance = {
+	age = age_1_traditions
+	unlock_building = supreme_court
+	allow = { has_variable = flag_dummy_supreme_court_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_arts_academy_advance = {
+	age = age_1_traditions
+	unlock_building = arts_academy
+	allow = { has_variable = flag_dummy_arts_academy_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_entrepot_advance = {
+	age = age_1_traditions
+	unlock_building = entrepot
+	allow = { has_variable = flag_dummy_entrepot_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_trading_hub_advance = {
+	age = age_1_traditions
+	unlock_building = trading_hub
+	allow = { has_variable = flag_dummy_trading_hub_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_customs_house_advance = {
+	age = age_1_traditions
+	unlock_building = customs_house
+	allow = { has_variable = flag_dummy_customs_house_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_stock_exchange_advance = {
+	age = age_1_traditions
+	unlock_building = stock_exchange
+	allow = { has_variable = flag_dummy_stock_exchange_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_clearing_house_advance = {
+	age = age_1_traditions
+	unlock_building = clearing_house
+	allow = { has_variable = flag_dummy_clearing_house_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_viceroyalty_advance = {
+	age = age_1_traditions
+	unlock_building = viceroyalty
+	allow = { has_variable = flag_dummy_viceroyalty_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_house_of_parliament_advance = {
+	age = age_1_traditions
+	unlock_building = house_of_parliament
+	allow = { has_variable = flag_dummy_house_of_parliament_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_early_council_hall_advance = {
+	age = age_1_traditions
+	unlock_building = early_council_hall
+	allow = { has_variable = flag_dummy_early_council_hall_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_council_hall_advance = {
+	age = age_1_traditions
+	unlock_building = council_hall
+	allow = { has_variable = flag_dummy_council_hall_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_modern_council_hall_advance = {
+	age = age_1_traditions
+	unlock_building = modern_council_hall
+	allow = { has_variable = flag_dummy_modern_council_hall_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_men_at_arms_advance = {
+	age = age_1_traditions
+	unlock_unit = a_men_at_arms
+	allow = { has_variable = flag_dummy_unlock_men_at_arms_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_men_at_arms_advance = {
+	age = age_1_traditions
+	unlock_levy = levy_a_men_at_arms
+	allow = { has_variable = flag_dummy_unlock_men_at_arms_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_crossbowmen_advance = {
+	age = age_1_traditions
+	unlock_unit = a_crossbowmen
+	allow = { has_variable = flag_dummy_unlock_crossbowmen_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_reformed_crusader_knights_advance = {
+	age = age_1_traditions
+	unlock_unit = a_late_crusader_knights
+	allow = { has_variable = flag_dummy_unlock_reformed_crusader_knights_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_reformed_crusader_knights_advance = {
+	age = age_1_traditions
+	unlock_levy = levy_late_crusader_knights
+	allow = { has_variable = flag_dummy_unlock_reformed_crusader_knights_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_peasant_levy_advance = {
+	age = age_1_traditions
+	unlock_levy = levy_a_peasant_levy
+	allow = { has_variable = flag_dummy_unlock_peasant_levy_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_halberdiers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_halberdiers
+	allow = { has_variable = flag_dummy_unlock_halberdiers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_early_arquebusiers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_early_arquebusiers
+	allow = { has_variable = flag_dummy_unlock_early_arquebusiers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_matchlock_levy = {
+	age = age_1_traditions
+	unlock_levy = levy_a_matchlock_levy
+	allow = { has_variable = flag_dummy_unlock_matchlock_levy }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_arquebusiers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_arquebusiers
+	allow = { has_variable = flag_dummy_unlock_arquebusiers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_pikemen_advance = {
+	age = age_1_traditions
+	unlock_unit = a_pikemen
+	allow = { has_variable = flag_dummy_unlock_pikemen_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_flintlock_levy = {
+	age = age_1_traditions
+	unlock_levy = levy_a_flintlock_levy
+	allow = { has_variable = flag_dummy_unlock_flintlock_levy }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_hunters_advance = {
+	age = age_1_traditions
+	unlock_unit = a_hunters
+	allow = { has_variable = flag_dummy_unlock_hunters_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_musketeers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_musketeers
+	allow = { has_variable = flag_dummy_unlock_musketeers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_militiamen_advance = {
+	age = age_1_traditions
+	unlock_levy = levy_a_militiamen
+	allow = { has_variable = flag_dummy_militiamen_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_sharpshooters_advance = {
+	age = age_1_traditions
+	unlock_unit = a_sharpshooters
+	allow = { has_variable = flag_dummy_unlock_sharpshooters_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_fusiliers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_fusiliers
+	allow = { has_variable = flag_dummy_unlock_fusiliers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_grenadiers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_grenadiers
+	allow = { has_variable = flag_dummy_unlock_grenadiers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_conscription_advance = {
+	age = age_1_traditions
+	unlock_levy = levy_conscripts
+	allow = { has_variable = flag_dummy_conscription_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_cavalry_advance = {
+	age = age_1_traditions
+	unlock_unit = a_cavalrymen
+	allow = { has_variable = flag_dummy_unlock_cavalry_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_heavy_cavalry_advance = {
+	age = age_1_traditions
+	unlock_unit = a_heavy_cavalrymen
+	allow = { has_variable = flag_dummy_unlock_heavy_cavalry_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_lancers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_lancers
+	allow = { has_variable = flag_dummy_unlock_lancers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_light_lancers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_light_lancers
+	allow = { has_variable = flag_dummy_unlock_light_lancers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_pistoleers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_pistoleers
+	allow = { has_variable = flag_dummy_unlock_pistoleers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_heavy_lancers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_heavy_lancers
+	allow = { has_variable = flag_dummy_unlock_heavy_lancers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_hussars_advance = {
+	age = age_1_traditions
+	unlock_unit = a_hussars
+	allow = { has_variable = flag_dummy_unlock_hussars_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_gallop_cavalry_advance = {
+	age = age_1_traditions
+	unlock_unit = a_gallop_cavalry
+	allow = { has_variable = flag_dummy_unlock_gallop_cavalry_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_light_dragoons_advance = {
+	age = age_1_traditions
+	unlock_unit = a_light_dragoons
+	allow = { has_variable = flag_dummy_unlock_light_dragoons_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_cuirassiers_advance = {
+	age = age_1_traditions
+	unlock_unit = a_cuirassiers
+	allow = { has_variable = flag_dummy_unlock_cuirassiers_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_houfnice_advance = {
+	age = age_1_traditions
+	unlock_unit = a_houfnice
+	allow = { has_variable = flag_dummy_unlock_houfnice_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_falconet_advance = {
+	age = age_1_traditions
+	unlock_unit = a_falconet
+	allow = { has_variable = flag_dummy_unlock_falconet_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_chambered_cannon_advance = {
+	age = age_1_traditions
+	unlock_unit = a_chambered_cannon
+	allow = { has_variable = flag_dummy_unlock_chambered_cannon_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_royal_mortar_advance = {
+	age = age_1_traditions
+	unlock_unit = a_royal_mortar
+	allow = { has_variable = flag_dummy_unlock_royal_mortar_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_flying_battery_advance = {
+	age = age_1_traditions
+	unlock_unit = a_flying_battery
+	allow = { has_variable = flag_dummy_unlock_flying_battery_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_supply_carts = {
+	age = age_1_traditions
+	unlock_unit = a_supply_carts
+	allow = { has_variable = flag_dummy_unlock_supply_carts }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_supply_convoy = {
+	age = age_1_traditions
+	unlock_unit = a_supply_convoy
+	allow = { has_variable = flag_dummy_unlock_supply_convoy }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_baggage_train = {
+	age = age_1_traditions
+	unlock_unit = a_baggage_train
+	allow = { has_variable = flag_dummy_unlock_baggage_train }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_wagon_train = {
+	age = age_1_traditions
+	unlock_unit = a_wagon_train
+	allow = { has_variable = flag_dummy_unlock_wagon_train }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_logistics_corps = {
+	age = age_1_traditions
+	unlock_unit = a_logistics_corps
+	allow = { has_variable = flag_dummy_unlock_logistics_corps }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_early_carrack_advance = {
+	age = age_1_traditions
+	unlock_unit = n_early_carrack
+	allow = { has_variable = flag_dummy_unlock_early_carrack_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_carrack_advance = {
+	age = age_1_traditions
+	unlock_unit = n_carrack
+	allow = { has_variable = flag_dummy_unlock_carrack_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_galleon_advance = {
+	age = age_1_traditions
+	unlock_unit = n_galleon
+	allow = { has_variable = flag_dummy_unlock_galleon_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_twodecker_advance = {
+	age = age_1_traditions
+	unlock_unit = n_twodecker
+	allow = { has_variable = flag_dummy_unlock_twodecker_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_threedecker_advance = {
+	age = age_1_traditions
+	unlock_unit = n_threedecker
+	allow = { has_variable = flag_dummy_unlock_threedecker_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_ship_of_the_line_advance = {
+	age = age_1_traditions
+	unlock_unit = n_ship_of_the_line
+	allow = { has_variable = flag_dummy_unlock_ship_of_the_line_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_war_galleon = {
+	age = age_1_traditions
+	unlock_unit = n_war_galleon
+	allow = { has_variable = flag_dummy_unlock_war_galleon }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_baochuan = {
+	age = age_1_traditions
+	unlock_unit = n_baochuan
+	allow = { has_variable = flag_dummy_unlock_baochuan }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_barque_advance = {
+	age = age_1_traditions
+	unlock_unit = n_barque
+	allow = { has_variable = flag_dummy_unlock_barque_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_caravel_advance = {
+	age = age_1_traditions
+	unlock_unit = n_caravel
+	allow = { has_variable = flag_dummy_unlock_caravel_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_pinnace_advance = {
+	age = age_1_traditions
+	unlock_unit = n_pinnace
+	allow = { has_variable = flag_dummy_unlock_pinnace_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_frigate_advance = {
+	age = age_1_traditions
+	unlock_unit = n_frigate
+	allow = { has_variable = flag_dummy_unlock_frigate_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_heavy_frigate_advance = {
+	age = age_1_traditions
+	unlock_unit = n_heavy_frigate
+	allow = { has_variable = flag_dummy_unlock_heavy_frigate_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_bomb_ketch = {
+	age = age_1_traditions
+	unlock_unit = n_bomb_ketch
+	allow = { has_variable = flag_dummy_unlock_bomb_ketch }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_m_galley_advance = {
+	age = age_1_traditions
+	unlock_unit = n_mediterrannean_galley
+	allow = { has_variable = flag_dummy_unlock_m_galley_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_war_galley_advance = {
+	age = age_1_traditions
+	unlock_unit = n_war_galley
+	allow = { has_variable = flag_dummy_unlock_war_galley_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_galleass_advance = {
+	age = age_1_traditions
+	unlock_unit = n_galleass
+	allow = { has_variable = flag_dummy_unlock_galleass_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_xebec_advance = {
+	age = age_1_traditions
+	unlock_unit = n_xebec
+	allow = { has_variable = flag_dummy_unlock_xebec_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_italian_galleass = {
+	age = age_1_traditions
+	unlock_unit = n_italian_galleass
+	allow = { has_variable = flag_dummy_italian_galleass }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_archipelago_frigate = {
+	age = age_1_traditions
+	unlock_unit = n_archipelago_frigate
+	allow = { has_variable = flag_dummy_unlock_archipelago_frigate }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_cakradonya = {
+	age = age_1_traditions
+	unlock_unit = n_cakradonya
+	allow = { has_variable = flag_dummy_unlock_cakradonya }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_galiot = {
+	age = age_1_traditions
+	unlock_unit = n_galiot
+	allow = { has_variable = flag_dummy_unlock_galiot }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_sekibune = {
+	age = age_1_traditions
+	unlock_unit = n_sekibune
+	allow = { has_variable = flag_dummy_unlock_sekibune }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_atakebune = {
+	age = age_1_traditions
+	unlock_unit = n_atakebune
+	allow = { has_variable = flag_dummy_unlock_atakebune }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_long_fada_2 = {
+	age = age_1_traditions
+	unlock_unit = n_long_fada_2
+	allow = { has_variable = flag_dummy_unlock_long_fada_2 }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_hulk_advance = {
+	age = age_1_traditions
+	unlock_unit = n_hulk
+	allow = { has_variable = flag_dummy_unlock_hulk_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_flute_advance = {
+	age = age_1_traditions
+	unlock_unit = n_flute
+	allow = { has_variable = flag_dummy_unlock_flute_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_brig_advance = {
+	age = age_1_traditions
+	unlock_unit = n_brig
+	allow = { has_variable = flag_dummy_unlock_brig_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_merchantman_advance = {
+	age = age_1_traditions
+	unlock_unit = n_merchantman
+	allow = { has_variable = flag_dummy_unlock_merchantman_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_eastindiaman_advance = {
+	age = age_1_traditions
+	unlock_unit = n_eastindiaman
+	allow = { has_variable = flag_dummy_unlock_eastindiaman_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_integrate_area_advance = {
+	age = age_1_traditions
+	icon = expansionism
+	unlock_cabinet_action = integrate_area
+	allow = { has_variable = flag_dummy_integrate_area_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_send_people_to_colonial_charter_advance = {
+	age = age_1_traditions
+	unlock_cabinet_action = send_people_to_colonial_charter
+	allow = { has_variable = flag_dummy_send_people_to_colonial_charter_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_send_people_to_the_colonies_advance = {
+	age = age_1_traditions
+	icon = send_people_to_the_colonies_advance
+	unlock_cabinet_action = send_people_to_the_colonies
+	allow = { has_variable = flag_dummy_send_people_to_the_colonies_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_study_institutions_advance = {
+	age = age_1_traditions
+	unlock_cabinet_action = study_institutions
+	allow = { has_variable = flag_dummy_study_institutions_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_reduce_inflations_advance = {
+	age = age_1_traditions
+	unlock_cabinet_action = reduce_inflation
+	allow = { has_variable = flag_dummy_reduce_inflations_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_pop_promote_actions_advance = {
+	age = age_1_traditions
+	unlock_cabinet_action = pop_promote_action
+	allow = { has_variable = flag_dummy_pop_promote_actions_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_alleviate_concerns_advance = {
+	age = age_1_traditions
+	unlock_cabinet_action = alleviate_concerns
+	allow = { has_variable = flag_dummy_alleviate_concerns_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_nation_state_advance = {
+	age = age_1_traditions
+	icon = cultures_capacity_mil_choice
+	unlock_cabinet_action = merge_culture_group
+	allow = { has_variable = flag_dummy_nation_state_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_counter_espionage_action_advance = {
+	age = age_1_traditions
+	unlock_cabinet_action = counter_espionage_action
+	allow = { has_variable = flag_dummy_counter_espionage_action_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_pacify_population_advance = {
+	age = age_1_traditions
+	unlock_cabinet_action = pacify_population
+	allow = { has_variable = flag_dummy_pacify_population_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_paper_guild_cloth_maintenance_advance = {
+	age = age_1_traditions
+	unlock_production_method = paper_guild_cloth_maintenance
+	allow = { has_variable = flag_dummy_paper_guild_cloth_maintenance_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_paper_guild_wood_pulp_maintenance_advance = {
+	age = age_1_traditions
+	unlock_production_method = paper_wood_pulp_maintenance
+	allow = { has_variable = flag_dummy_paper_guild_wood_pulp_maintenance_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_national_assemblies_advance = {
+	age = age_1_traditions
+	unlock_government_reform = national_assemblies
+	allow = { has_variable = flag_dummy_national_assemblies_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_theocracy_nature_of_our_faith_law_advance = {
+	age = age_1_traditions
+	unlock_law = nature_of_our_faith_law
+	allow = { has_variable = flag_dummy_theocracy_nature_of_our_faith_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_steppe_horde_tribal_religious_values_law_advance = {
+	age = age_1_traditions
+	unlock_law = tribal_religious_values_law
+	allow = { has_variable = flag_dummy_steppe_horde_tribal_religious_values_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_steppe_horde_tribal_cultural_identity_law_advance = {
+	age = age_1_traditions
+	unlock_law = tribal_cultural_identity_law
+	allow = { has_variable = flag_dummy_steppe_horde_tribal_cultural_identity_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_steppe_horde_tribal_modernization_law_advance = {
+	age = age_1_traditions
+	unlock_law = tribal_modernization_law
+	allow = { has_variable = flag_dummy_steppe_horde_tribal_modernization_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_tribal_migration_law_advance = {
+	age = age_1_traditions
+	unlock_law = tribal_migration_law
+	allow = { has_variable = flag_dummy_tribal_migration_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_tribal_cultural_identity_law_advance = {
+	age = age_1_traditions
+	icon = laws
+	unlock_law = tribal_cultural_identity_law
+	allow = { has_variable = flag_dummy_tribal_cultural_identity_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_tribal_modernization_law_advance = {
+	age = age_1_traditions
+	icon = laws
+	unlock_law = tribal_modernization_law
+	allow = { has_variable = flag_dummy_tribal_modernization_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_nobles_rights_laws_advance = {
+	age = age_1_traditions
+	unlock_law = nobles_rights_laws
+	allow = { has_variable = flag_dummy_nobles_rights_laws_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_burghers_rights_laws_advance = {
+	age = age_1_traditions
+	unlock_law = burghers_rights_laws
+	allow = { has_variable = flag_dummy_burghers_rights_laws_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_clergy_rights_laws_advance = {
+	age = age_1_traditions
+	unlock_law = clergy_rights_laws
+	allow = { has_variable = flag_dummy_clergy_rights_laws_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_crown_rights_laws_advance = {
+	age = age_1_traditions
+	unlock_law = crown_rights_laws
+	allow = { has_variable = flag_dummy_crown_rights_laws_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_peasants_rights_laws_advance = {
+	age = age_1_traditions
+	unlock_law = peasants_rights_laws
+	allow = { has_variable = flag_dummy_peasants_rights_laws_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_intelligence_agency_advance = {
+	age = age_1_traditions
+	unlock_law = intelligence_agency
+	allow = { has_variable = flag_dummy_intelligence_agency_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_recruitment_law_advance = {
+	age = age_1_traditions
+	unlock_law = recruitment_law
+	allow = { has_variable = flag_dummy_recruitment_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_battle_leadership_law_advance = {
+	age = age_1_traditions
+	unlock_law = battle_leadership_law
+	allow = { has_variable = flag_dummy_battle_leadership_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_army_doctrine_law_advance = {
+	age = age_1_traditions
+	unlock_law = army_doctrine_law
+	allow = { has_variable = flag_dummy_army_doctrine_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_bureaucracy_law_advance = {
+	age = age_1_traditions
+	unlock_law = bureaucracy_law
+	allow = { has_variable = flag_dummy_bureaucracy_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_cabinet_laws_advance = {
+	age = age_1_traditions
+	unlock_law = cabinet_laws
+	allow = { has_variable = flag_dummy_cabinet_laws_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_economical_policies_law_advance = {
+	age = age_1_traditions
+	unlock_law = economical_policies_law
+	allow = { has_variable = flag_dummy_economical_policies_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_legitimization_of_power_law_advance = {
+	age = age_1_traditions
+	unlock_law = legitimization_of_power_law
+	allow = { has_variable = flag_dummy_legitimization_of_power_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_foreign_cultural_law_advance = {
+	age = age_1_traditions
+	unlock_law = foreign_cultural_law
+	allow = { has_variable = flag_dummy_foreign_cultural_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_paved_road_advance = {
+	age = age_1_traditions
+	unlock_road_type = paved_road
+	allow = { has_variable = flag_dummy_paved_road_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_modern_road_advance = {
+	age = age_1_traditions
+	unlock_road_type = modern_road
+	allow = { has_variable = flag_dummy_modern_road_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_railroad_advance = {
+	age = age_1_traditions
+	unlock_road_type = railroad
+	allow = { has_variable = flag_dummy_railroad_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_deus_vult = {
+	age = age_1_traditions
+	icon = teu_crusader_discipline
+	unlock_casus_belli = cb_deus_vult
+	allow = { has_variable = flag_dummy_deus_vult }
+	requires = dummy_parent_advance
+}
+
+dummy_marcher_lords = {
+	age = age_1_traditions
+	icon = diplomatic_influence
+	unlock_subject_type = march
+	allow = { has_variable = flag_dummy_marcher_lords }
+	requires = dummy_parent_advance
+}
+
+dummy_exploration = {
+	age = age_1_traditions
+	unlock_casus_belli = cb_exploration
+	allow = { has_variable = flag_dummy_exploration }
+	requires = dummy_parent_advance
+}
+
+dummy_fratricide_succesion_advance = {
+	age = age_1_traditions
+	unlock_heir_selection = fratricide_succesion
+	allow = { has_variable = flag_dummy_fratricide_succesion_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_akinji_cavalry = {
+	age = age_1_traditions
+	unlock_unit = a_akinji
+	allow = { has_variable = flag_dummy_akinji_cavalry }
+	requires = dummy_parent_advance
+}
+
+dummy_wagenburg = {
+	age = age_1_traditions
+	unlock_unit = a_wagenburg
+	allow = { has_variable = flag_dummy_wagenburg }
+	requires = dummy_parent_advance
+}
+
+dummy_soldier_king = {
+	age = age_1_traditions
+	unlock_government_reform = prussian_monarchy
+	allow = { has_variable = flag_dummy_soldier_king }
+	requires = dummy_parent_advance
+}
+
+dummy_byz_the_new_helepolis = {
+	age = age_1_traditions
+	unlock_unit = a_byz_helepolis_cannon_unit
+	allow = { has_variable = flag_dummy_byz_the_new_helepolis }
+	requires = dummy_parent_advance
+}
+
+dummy_the_red_cannon = {
+	age = age_1_traditions
+	unlock_unit = a_red_cannon
+	allow = { has_variable = flag_dummy_the_red_cannon }
+	requires = dummy_parent_advance
+}
+
+dummy_dahomey_amazons = {
+	age = age_1_traditions
+	unlock_unit = a_dahomey_amazons
+	allow = { has_variable = flag_dummy_dahomey_amazons }
+	requires = dummy_parent_advance
+}
+
+dummy_dan_expanded_dockyards = {
+	age = age_1_traditions
+	unlock_building = copenhagen_dockyard
+	allow = { has_variable = flag_dummy_dan_expanded_dockyards }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_longbowmen_advance = {
+	age = age_1_traditions
+	unlock_levy = levy_a_longbowmen
+	allow = { has_variable = flag_dummy_unlock_longbowmen_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_late_longbowmen_advance = {
+	age = age_1_traditions
+	unlock_levy = levy_a_late_longbowmen
+	allow = { has_variable = flag_dummy_unlock_late_longbowmen_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_eng_red_coats = {
+	age = age_1_traditions
+	unlock_unit = a_redcoats
+	allow = { has_variable = flag_dummy_eng_red_coats }
+	requires = dummy_parent_advance
+}
+
+dummy_eng_experimental_riflemen = {
+	age = age_1_traditions
+	unlock_unit = a_experimental_riflemen
+	allow = { has_variable = flag_dummy_eng_experimental_riflemen }
+	requires = dummy_parent_advance
+}
+
+dummy_a_renaissance_cawa_advance = {
+	age = age_1_traditions
+	unlock_unit = a_renaissance_cawa
+	allow = { has_variable = flag_dummy_a_renaissance_cawa_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_a_discovery_cawa_advance = {
+	age = age_1_traditions
+	unlock_unit = a_discovery_cawa
+	allow = { has_variable = flag_dummy_a_discovery_cawa_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_a_reformation_cawa_advance = {
+	age = age_1_traditions
+	unlock_unit = a_reformation_cawa
+	allow = { has_variable = flag_dummy_a_reformation_cawa_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_a_absolutism_cawa_advance = {
+	age = age_1_traditions
+	unlock_unit = a_absolutism_cawa
+	allow = { has_variable = flag_dummy_a_absolutism_cawa_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_a_revolutions_cawa_advance = {
+	age = age_1_traditions
+	unlock_unit = a_revolutions_cawa
+	allow = { has_variable = flag_dummy_a_revolutions_cawa_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_florentine_citizen_militia = {
+	age = age_1_traditions
+	icon = glorious_arms
+	unlock_levy = levy_a_florentine_citizen_militia
+	allow = { has_variable = flag_dummy_florentine_citizen_militia }
+	requires = dummy_parent_advance
+}
+
+dummy_tuscan_uffizi = {
+	age = age_1_traditions
+	icon = crown_power_advance_renaissance
+	unlock_building = uffizi
+	allow = { has_variable = flag_dummy_tuscan_uffizi }
+	requires = dummy_parent_advance
+}
+
+dummy_genoese_crossbowmen = {
+	age = age_1_traditions
+	unlock_unit = a_genoese_crossbowmen
+	allow = { has_variable = flag_dummy_genoese_crossbowmen }
+	requires = dummy_parent_advance
+}
+
+dummy_alberghi_28_advance = {
+	age = age_1_traditions
+	unlock_government_reform = alberghi_28
+	allow = { has_variable = flag_dummy_alberghi_28_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_hun_found_the_black_army = {
+	age = age_1_traditions
+	unlock_unit = a_the_black_army
+	allow = { has_variable = flag_dummy_hun_found_the_black_army }
+	requires = dummy_parent_advance
+}
+
+dummy_hun_hungarian_hussars = {
+	age = age_1_traditions
+	unlock_unit = a_hungarian_hussars
+	allow = { has_variable = flag_dummy_hun_hungarian_hussars }
+	requires = dummy_parent_advance
+}
+
+dummy_ira_safaviyya_order_hall = {
+	age = age_1_traditions
+	unlock_building = safaviyya_order_hall
+	allow = { has_variable = flag_dummy_ira_safaviyya_order_hall }
+	requires = dummy_parent_advance
+}
+
+dummy_ira_the_qizilbash = {
+	age = age_1_traditions
+	unlock_unit = a_discovery_qizilbash
+	allow = { has_variable = flag_dummy_ira_the_qizilbash }
+	requires = dummy_parent_advance
+}
+
+dummy_ira_religious_state = {
+	age = age_1_traditions
+	unlock_government_reform = persian_feudal_theocracy
+	allow = { has_variable = flag_dummy_ira_religious_state }
+	requires = dummy_parent_advance
+}
+
+dummy_ira_the_ghilman = {
+	age = age_1_traditions
+	unlock_building = ghilman_barracks
+	allow = { has_variable = flag_dummy_ira_the_ghilman }
+	requires = dummy_parent_advance
+}
+
+dummy_ira_the_ghilman = {
+	age = age_1_traditions
+	unlock_unit = a_ghilman
+	allow = { has_variable = flag_dummy_ira_the_ghilman }
+	requires = dummy_parent_advance
+}
+
+dummy_ira_the_tofangchi = {
+	age = age_1_traditions
+	unlock_unit = a_tofangchi
+	allow = { has_variable = flag_dummy_ira_the_tofangchi }
+	requires = dummy_parent_advance
+}
+
+dummy_ira_the_tupchi = {
+	age = age_1_traditions
+	unlock_unit = a_tupchi
+	allow = { has_variable = flag_dummy_ira_the_tupchi }
+	requires = dummy_parent_advance
+}
+
+dummy_ira_jazayerchi = {
+	age = age_1_traditions
+	unlock_unit = a_jazayerchi
+	allow = { has_variable = flag_dummy_ira_jazayerchi }
+	requires = dummy_parent_advance
+}
+
+dummy_kbo_iron_helmet_musketeers = {
+	age = age_1_traditions
+	unlock_unit = a_iron_helmet_musketeers
+	allow = { has_variable = flag_dummy_kbo_iron_helmet_musketeers }
+	requires = dummy_parent_advance
+}
+
+dummy_kbo_council_clan_heads = {
+	age = age_1_traditions
+	unlock_government_reform = kbo_clan_heads_reform
+	allow = { has_variable = flag_dummy_kbo_council_clan_heads }
+	requires = dummy_parent_advance
+}
+
+dummy_kbo_ribat_fortifications = {
+	age = age_1_traditions
+	unlock_building = ribat
+	allow = { has_variable = flag_dummy_kbo_ribat_fortifications }
+	requires = dummy_parent_advance
+}
+
+dummy_kor_korean_gunnery = {
+	age = age_1_traditions
+	unlock_building = korean_gunnery_land_defense
+	allow = { has_variable = flag_dummy_kor_korean_gunnery }
+	requires = dummy_parent_advance
+}
+
+dummy_kor_korean_gunnery = {
+	age = age_1_traditions
+	unlock_building = korean_gunnery_coastal_defense
+	allow = { has_variable = flag_dummy_kor_korean_gunnery }
+	requires = dummy_parent_advance
+}
+
+dummy_kor_hwachas_advance = {
+	age = age_1_traditions
+	unlock_unit = a_hwacha
+	allow = { has_variable = flag_dummy_kor_hwachas_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_kor_early_turtle_ship_advance = {
+	age = age_1_traditions
+	unlock_unit = n_early_turtle_ship
+	allow = { has_variable = flag_dummy_kor_early_turtle_ship_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_kor_geobukseon = {
+	age = age_1_traditions
+	unlock_unit = n_turtle_ship
+	allow = { has_variable = flag_dummy_kor_geobukseon }
+	requires = dummy_parent_advance
+}
+
+dummy_kor_panokseon_advance = {
+	age = age_1_traditions
+	unlock_unit = n_panokseon
+	allow = { has_variable = flag_dummy_kor_panokseon_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_statutes_of_lithuania = {
+	age = age_1_traditions
+	unlock_policy = statutes_of_lithuania_policy
+	allow = { has_variable = flag_dummy_statutes_of_lithuania }
+	requires = dummy_parent_advance
+}
+
+dummy_LIV_a_order_knights_2 = {
+	age = age_1_traditions
+	unlock_unit = a_order_knights_2
+	allow = { has_variable = flag_dummy_LIV_a_order_knights_2 }
+	requires = dummy_parent_advance
+}
+
+dummy_maj_bajang_ratu = {
+	age = age_1_traditions
+	unlock_building = bajang_ratu
+	allow = { has_variable = flag_dummy_maj_bajang_ratu }
+	requires = dummy_parent_advance
+}
+
+dummy_maj_late_karambit_warriors = {
+	age = age_1_traditions
+	unlock_unit = a_late_karambit_warrior
+	allow = { has_variable = flag_dummy_maj_late_karambit_warriors }
+	requires = dummy_parent_advance
+}
+
+dummy_maj_the_magic_arrow = {
+	age = age_1_traditions
+	unlock_unit = a_cetbang_cannon
+	allow = { has_variable = flag_dummy_maj_the_magic_arrow }
+	requires = dummy_parent_advance
+}
+
+dummy_maj_the_ghali = {
+	age = age_1_traditions
+	unlock_unit = n_madurese_gali
+	allow = { has_variable = flag_dummy_maj_the_ghali }
+	requires = dummy_parent_advance
+}
+
+dummy_reform_the_mamluk_corps = {
+	age = age_1_traditions
+	unlock_unit = a_mamluk_unit_renaissance
+	allow = { has_variable = flag_dummy_reform_the_mamluk_corps }
+	requires = dummy_parent_advance
+}
+
+dummy_shahbandar = {
+	age = age_1_traditions
+	icon = smooth_administration
+	unlock_government_reform = shahbandariyya_reform
+	allow = { has_variable = flag_dummy_shahbandar }
+	requires = dummy_parent_advance
+}
+
+dummy_jaysh_armies_advance = {
+	age = age_1_traditions
+	unlock_estate_privilege = jaysh_armies
+	allow = { has_variable = flag_dummy_jaysh_armies_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_black_guard = {
+	age = age_1_traditions
+	unlock_unit = a_black_guard
+	allow = { has_variable = flag_dummy_black_guard }
+	requires = dummy_parent_advance
+}
+
+dummy_mug_mughal_ibadat_khana = {
+	age = age_1_traditions
+	unlock_building = ibadat_khana
+	allow = { has_variable = flag_dummy_mug_mughal_ibadat_khana }
+	requires = dummy_parent_advance
+}
+
+dummy_brb_brabantine_rights = {
+	age = age_1_traditions
+	unlock_government_reform = joyous_entry_reform
+	allow = { has_variable = flag_dummy_brb_brabantine_rights }
+	requires = dummy_parent_advance
+}
+
+dummy_platoon_fire = {
+	age = age_1_traditions
+	icon = military_revolution_advance
+	unlock_unit = a_mauricians
+	allow = { has_variable = flag_dummy_platoon_fire }
+	requires = dummy_parent_advance
+}
+
+dummy_reforms_of_the_posadnichestvo = {
+	age = age_1_traditions
+	unlock_government_reform = expanded_posadnichestvo_office
+	allow = { has_variable = flag_dummy_reforms_of_the_posadnichestvo }
+	requires = dummy_parent_advance
+}
+
+dummy_ori_lord_of_elephants = {
+	age = age_1_traditions
+	icon = elephant_cavalry
+	unlock_unit = a_orissan_elephant_cavalry
+	allow = { has_variable = flag_dummy_ori_lord_of_elephants }
+	requires = dummy_parent_advance
+}
+
+dummy_pal_humanist_court = {
+	age = age_1_traditions
+	unlock_policy = humanist_court_policy
+	allow = { has_variable = flag_dummy_pal_humanist_court }
+	requires = dummy_parent_advance
+}
+
+dummy_winged_hussars_advance = {
+	age = age_1_traditions
+	unlock_unit = a_winged_hussars
+	allow = { has_variable = flag_dummy_winged_hussars_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_late_winged_hussars_advance = {
+	age = age_1_traditions
+	unlock_unit = a_late_winged_hussars
+	allow = { has_variable = flag_dummy_late_winged_hussars_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_por_feitorias = {
+	age = age_1_traditions
+	unlock_building = por_feitoria
+	allow = { has_variable = flag_dummy_por_feitorias }
+	requires = dummy_parent_advance
+}
+
+dummy_rom_new_corpus_juris_civilis = {
+	age = age_1_traditions
+	icon = legalism_advance
+	unlock_policy = new_corpus_juris_civilis
+	allow = { has_variable = flag_dummy_rom_new_corpus_juris_civilis }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_reformed_gallowglass_advance = {
+	age = age_1_traditions
+	icon = expand_varangian_guard_advance
+	unlock_levy = levy_a_reformed_gallowglass
+	allow = { has_variable = flag_dummy_unlock_reformed_gallowglass_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_late_gallowglass_advance = {
+	age = age_1_traditions
+	icon = expand_varangian_guard_advance
+	unlock_levy = levy_a_late_gallowglass
+	allow = { has_variable = flag_dummy_unlock_late_gallowglass_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_scottish_highlander_advance = {
+	age = age_1_traditions
+	unlock_levy = levy_a_scottish_highlander
+	allow = { has_variable = flag_dummy_scottish_highlander_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_scottish_whisky = {
+	age = age_1_traditions
+	unlock_production_method = scottish_whisky_distillery_maintenance
+	allow = { has_variable = flag_dummy_scottish_whisky }
+	requires = dummy_parent_advance
+}
+
+dummy_scottish_whisky = {
+	age = age_1_traditions
+	unlock_production_method = scottish_whisky_distillery_mill_maintenance
+	allow = { has_variable = flag_dummy_scottish_whisky }
+	requires = dummy_parent_advance
+}
+
+dummy_home_of_hussars = {
+	age = age_1_traditions
+	icon = finest_of_horses
+	unlock_unit = a_serbian_hussars
+	allow = { has_variable = flag_dummy_home_of_hussars }
+	requires = dummy_parent_advance
+}
+
+dummy_sia_advanced_elephant_warfare = {
+	age = age_1_traditions
+	icon = elephant_cavalry
+	unlock_unit = a_siamese_advanced_elephant_cavalry
+	allow = { has_variable = flag_dummy_sia_advanced_elephant_warfare }
+	requires = dummy_parent_advance
+}
+
+dummy_sko_fulani_expansion = {
+	age = age_1_traditions
+	icon = independence_from_mali
+	unlock_casus_belli = cb_deus_vult
+	allow = { has_variable = flag_dummy_sko_fulani_expansion }
+	requires = dummy_parent_advance
+}
+
+dummy_swedish_copper_coins = {
+	age = age_1_traditions
+	unlock_policy = copper_coins
+	allow = { has_variable = flag_dummy_swedish_copper_coins }
+	requires = dummy_parent_advance
+}
+
+dummy_hakkapelitta = {
+	age = age_1_traditions
+	unlock_unit = a_hakkapelitta
+	allow = { has_variable = flag_dummy_hakkapelitta }
+	requires = dummy_parent_advance
+}
+
+dummy_caroleans_advance = {
+	age = age_1_traditions
+	unlock_unit = a_caroleans
+	allow = { has_variable = flag_dummy_caroleans_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_timariots = {
+	age = age_1_traditions
+	unlock_government_reform = basic_timariot_system
+	allow = { has_variable = flag_dummy_timariots }
+	requires = dummy_parent_advance
+}
+
+dummy_lawcode_of_suleiman = {
+	age = age_1_traditions
+	unlock_policy = tur_kanum_i_osmani
+	allow = { has_variable = flag_dummy_lawcode_of_suleiman }
+	requires = dummy_parent_advance
+}
+
+dummy_ayans = {
+	age = age_1_traditions
+	unlock_estate_privilege = ayans_privilege
+	allow = { has_variable = flag_dummy_ayans }
+	requires = dummy_parent_advance
+}
+
+dummy_janissaries_advance = {
+	age = age_1_traditions
+	unlock_building = janissary_barracks
+	allow = { has_variable = flag_dummy_janissaries_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_a_renaissance_janissaries_advance = {
+	age = age_1_traditions
+	unlock_unit = a_renaissance_janissaries
+	allow = { has_variable = flag_dummy_a_renaissance_janissaries_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_a_discovery_janissaries_advance = {
+	age = age_1_traditions
+	unlock_unit = a_discovery_janissaries
+	allow = { has_variable = flag_dummy_a_discovery_janissaries_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_a_reformation_janissaries_advance = {
+	age = age_1_traditions
+	unlock_unit = a_reformation_janissaries
+	allow = { has_variable = flag_dummy_a_reformation_janissaries_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_a_absolutism_janissaries_advance = {
+	age = age_1_traditions
+	unlock_unit = a_absolutism_janissaries
+	allow = { has_variable = flag_dummy_a_absolutism_janissaries_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_a_revolutions_janissaries_advance = {
+	age = age_1_traditions
+	unlock_unit = a_revolutions_janissaries
+	allow = { has_variable = flag_dummy_a_revolutions_janissaries_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_bavarian_brewing_expertise = {
+	age = age_1_traditions
+	unlock_production_method = bavarian_brewery_maintenance
+	allow = { has_variable = flag_dummy_bavarian_brewing_expertise }
+	requires = dummy_parent_advance
+}
+
+dummy_bavarian_brewing_expertise = {
+	age = age_1_traditions
+	unlock_production_method = bavarian_beer_workshop_maintenance
+	allow = { has_variable = flag_dummy_bavarian_brewing_expertise }
+	requires = dummy_parent_advance
+}
+
+dummy_ven_venetian_palaces = {
+	age = age_1_traditions
+	unlock_building = venetian_palaces
+	allow = { has_variable = flag_dummy_ven_venetian_palaces }
+	requires = dummy_parent_advance
+}
+
+dummy_vij_the_bunds = {
+	age = age_1_traditions
+	unlock_building = bund
+	allow = { has_variable = flag_dummy_vij_the_bunds }
+	requires = dummy_parent_advance
+}
+
+dummy_the_dhow = {
+	age = age_1_traditions
+	unlock_unit = n_kilwan_dhow
+	allow = { has_variable = flag_dummy_the_dhow }
+	requires = dummy_parent_advance
+}
+
+dummy_the_kilwan_zambuc = {
+	age = age_1_traditions
+	unlock_unit = n_kilwan_zambuc
+	allow = { has_variable = flag_dummy_the_kilwan_zambuc }
+	requires = dummy_parent_advance
+}
+
+dummy_a_bedouin_cavalry_advance = {
+	age = age_1_traditions
+	unlock_unit = a_bedouin_cavalry
+	allow = { has_variable = flag_dummy_a_bedouin_cavalry_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_bng_war_elephants = {
+	age = age_1_traditions
+	icon = elephant_cavalry
+	unlock_unit = a_bengali_elephant_cavalry
+	allow = { has_variable = flag_dummy_bng_war_elephants }
+	requires = dummy_parent_advance
+}
+
+dummy_custom_union_of_the_rhine = {
+	age = age_1_traditions
+	unlock_policy = custom_union_of_the_rhine_policy
+	allow = { has_variable = flag_dummy_custom_union_of_the_rhine }
+	requires = dummy_parent_advance
+}
+
+dummy_german_river_toll_castle_advance = {
+	age = age_1_traditions
+	unlock_building = german_river_toll_castle
+	allow = { has_variable = flag_dummy_german_river_toll_castle_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_german_mountain_toll_castle_advance = {
+	age = age_1_traditions
+	unlock_building = german_mountain_toll_castle
+	allow = { has_variable = flag_dummy_german_mountain_toll_castle_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_landsknechte = {
+	age = age_1_traditions
+	unlock_unit = a_landsknechte
+	allow = { has_variable = flag_dummy_landsknechte }
+	requires = dummy_parent_advance
+}
+
+dummy_noble_society_baden_palatine = {
+	age = age_1_traditions
+	unlock_policy = society_with_the_donkey
+	allow = { has_variable = flag_dummy_noble_society_baden_palatine }
+	requires = dummy_parent_advance
+}
+
+dummy_noble_society_nassau = {
+	age = age_1_traditions
+	unlock_policy = society_lion_nassau
+	allow = { has_variable = flag_dummy_noble_society_nassau }
+	requires = dummy_parent_advance
+}
+
+dummy_noble_society_mainz = {
+	age = age_1_traditions
+	unlock_policy = society_bengler_mainz
+	allow = { has_variable = flag_dummy_noble_society_mainz }
+	requires = dummy_parent_advance
+}
+
+dummy_noble_society_franconia = {
+	age = age_1_traditions
+	unlock_policy = society_furspang_franconia
+	allow = { has_variable = flag_dummy_noble_society_franconia }
+	requires = dummy_parent_advance
+}
+
+dummy_noble_society_tyrol = {
+	age = age_1_traditions
+	unlock_policy = society_elephant_tyrol
+	allow = { has_variable = flag_dummy_noble_society_tyrol }
+	requires = dummy_parent_advance
+}
+
+dummy_noble_society_cologne = {
+	age = age_1_traditions
+	unlock_policy = society_hubertus_cologne
+	allow = { has_variable = flag_dummy_noble_society_cologne }
+	requires = dummy_parent_advance
+}
+
+dummy_saxon_defensioner = {
+	age = age_1_traditions
+	unlock_unit = a_saxon_defensioner
+	allow = { has_variable = flag_dummy_saxon_defensioner }
+	requires = dummy_parent_advance
+}
+
+dummy_prussian_grenadiers = {
+	age = age_1_traditions
+	unlock_unit = a_prussian_grenadiers
+	allow = { has_variable = flag_dummy_prussian_grenadiers }
+	requires = dummy_parent_advance
+}
+
+dummy_bavarian_jager = {
+	age = age_1_traditions
+	unlock_unit = a_bavarian_jager
+	allow = { has_variable = flag_dummy_bavarian_jager }
+	requires = dummy_parent_advance
+}
+
+dummy_hesse_jager = {
+	age = age_1_traditions
+	unlock_unit = a_hesse_jager
+	allow = { has_variable = flag_dummy_hesse_jager }
+	requires = dummy_parent_advance
+}
+
+dummy_austrian_grenzhussar = {
+	age = age_1_traditions
+	unlock_unit = a_austrian_grenzhussar
+	allow = { has_variable = flag_dummy_austrian_grenzhussar }
+	requires = dummy_parent_advance
+}
+
+dummy_austrian_grenzer = {
+	age = age_1_traditions
+	unlock_unit = a_austrian_grenzer
+	allow = { has_variable = flag_dummy_austrian_grenzer }
+	requires = dummy_parent_advance
+}
+
+dummy_gebirgsschutzen_infantry = {
+	age = age_1_traditions
+	unlock_unit = a_gebirgsschutzen_infantry
+	allow = { has_variable = flag_dummy_gebirgsschutzen_infantry }
+	requires = dummy_parent_advance
+}
+
+dummy_swiss_reislaufer = {
+	age = age_1_traditions
+	unlock_unit = a_reislaufer
+	allow = { has_variable = flag_dummy_swiss_reislaufer }
+	requires = dummy_parent_advance
+}
+
+dummy_tercio = {
+	age = age_1_traditions
+	unlock_unit = a_tercio
+	allow = { has_variable = flag_dummy_tercio }
+	requires = dummy_parent_advance
+}
+
+dummy_iberian_caravel = {
+	age = age_1_traditions
+	unlock_unit = n_iberian_caravel
+	allow = { has_variable = flag_dummy_iberian_caravel }
+	requires = dummy_parent_advance
+}
+
+dummy_early_iberian_galleon = {
+	age = age_1_traditions
+	unlock_unit = n_early_iberian_galleon
+	allow = { has_variable = flag_dummy_early_iberian_galleon }
+	requires = dummy_parent_advance
+}
+
+dummy_square_rigged_caravel = {
+	age = age_1_traditions
+	unlock_unit = n_square_rigged_caravel
+	allow = { has_variable = flag_dummy_square_rigged_caravel }
+	requires = dummy_parent_advance
+}
+
+dummy_iberian_galleon = {
+	age = age_1_traditions
+	unlock_unit = n_iberian_galleon
+	allow = { has_variable = flag_dummy_iberian_galleon }
+	requires = dummy_parent_advance
+}
+
+dummy_ara_late_almogavars = {
+	age = age_1_traditions
+	unlock_levy = levy_a_late_almogavars
+	allow = { has_variable = flag_dummy_ara_late_almogavars }
+	requires = dummy_parent_advance
+}
+
+dummy_cas_lanzas_de_castilla = {
+	age = age_1_traditions
+	unlock_unit = a_lanzas_de_castilla
+	allow = { has_variable = flag_dummy_cas_lanzas_de_castilla }
+	requires = dummy_parent_advance
+}
+
+dummy_por_cacadores = {
+	age = age_1_traditions
+	unlock_unit = a_cacadores
+	allow = { has_variable = flag_dummy_por_cacadores }
+	requires = dummy_parent_advance
+}
+
+dummy_kalaripayattu_advance = {
+	age = age_1_traditions
+	unlock_building = kalari
+	allow = { has_variable = flag_dummy_kalaripayattu_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_paik_regiments_advance = {
+	age = age_1_traditions
+	unlock_levy = levy_a_paik
+	allow = { has_variable = flag_dummy_paik_regiments_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_advanced_paik_system_advance = {
+	age = age_1_traditions
+	unlock_levy = levy_a_late_paik
+	allow = { has_variable = flag_dummy_advanced_paik_system_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_the_eight_banners = {
+	age = age_1_traditions
+	unlock_unit = a_banner_cavalry
+	allow = { has_variable = flag_dummy_the_eight_banners }
+	requires = dummy_parent_advance
+}
+
+dummy_mhr_ashta_pradhan_advance = {
+	age = age_1_traditions
+	unlock_government_reform = mhr_ashta_pradhan
+	allow = { has_variable = flag_dummy_mhr_ashta_pradhan_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_npl_gurkhas = {
+	age = age_1_traditions
+	unlock_unit = a_gurkha
+	allow = { has_variable = flag_dummy_npl_gurkhas }
+	requires = dummy_parent_advance
+}
+
+dummy_polders_advance = {
+	age = age_1_traditions
+	unlock_building = polders
+	allow = { has_variable = flag_dummy_polders_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_netherlandish_ship_building = {
+	age = age_1_traditions
+	unlock_building = north_sea_shipyards
+	allow = { has_variable = flag_dummy_netherlandish_ship_building }
+	requires = dummy_parent_advance
+}
+
+dummy_the_mestnichestvo_advance = {
+	age = age_1_traditions
+	unlock_government_reform = the_mestnichestvo
+	allow = { has_variable = flag_dummy_the_mestnichestvo_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_voivode_advance = {
+	age = age_1_traditions
+	unlock_government_reform = voivode_reform
+	allow = { has_variable = flag_dummy_voivode_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_siberian_frontier = {
+	age = age_1_traditions
+	unlock_building = pomor_outpost
+	allow = { has_variable = flag_dummy_siberian_frontier }
+	requires = dummy_parent_advance
+}
+
+dummy_ostrog_advance = {
+	age = age_1_traditions
+	unlock_building = ostrog
+	allow = { has_variable = flag_dummy_ostrog_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_thai_war_elephants = {
+	age = age_1_traditions
+	icon = elephant_cavalry
+	unlock_unit = a_thai_elephant_cavalry
+	allow = { has_variable = flag_dummy_thai_war_elephants }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_legionaries_2_advance = {
+	age = age_1_traditions
+	unlock_unit = a_legionaries_2
+	allow = { has_variable = flag_dummy_unlock_legionaries_2_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_legionaries_3_advance = {
+	age = age_1_traditions
+	unlock_unit = a_legionaries_3
+	allow = { has_variable = flag_dummy_unlock_legionaries_3_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_legionaries_4_advance = {
+	age = age_1_traditions
+	unlock_unit = a_legionaries_4
+	allow = { has_variable = flag_dummy_unlock_legionaries_4_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_legionaries_5_advance = {
+	age = age_1_traditions
+	unlock_unit = a_legionaries_5
+	allow = { has_variable = flag_dummy_unlock_legionaries_5_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_legionaries_6_advance = {
+	age = age_1_traditions
+	unlock_unit = a_legionaries_6
+	allow = { has_variable = flag_dummy_unlock_legionaries_6_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_varangians_2_advance = {
+	age = age_1_traditions
+	unlock_unit = a_varangians_2
+	allow = { has_variable = flag_dummy_unlock_varangians_2_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_varangians_3_advance = {
+	age = age_1_traditions
+	unlock_unit = a_varangians_3
+	allow = { has_variable = flag_dummy_unlock_varangians_3_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_varangians_4_advance = {
+	age = age_1_traditions
+	unlock_unit = a_varangians_4
+	allow = { has_variable = flag_dummy_unlock_varangians_4_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_varangians_5_advance = {
+	age = age_1_traditions
+	unlock_unit = a_varangians_5
+	allow = { has_variable = flag_dummy_unlock_varangians_5_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_varangians_6_advance = {
+	age = age_1_traditions
+	unlock_unit = a_varangians_6
+	allow = { has_variable = flag_dummy_unlock_varangians_6_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_byzantine_cataphracts_2_advance = {
+	age = age_1_traditions
+	unlock_unit = a_byzantine_cataphracts_2
+	allow = { has_variable = flag_dummy_unlock_byzantine_cataphracts_2_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_byzantine_cataphracts_3_advance = {
+	age = age_1_traditions
+	unlock_unit = a_byzantine_cataphracts_3
+	allow = { has_variable = flag_dummy_unlock_byzantine_cataphracts_3_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_byzantine_cataphracts_4_advance = {
+	age = age_1_traditions
+	unlock_unit = a_byzantine_cataphracts_4
+	allow = { has_variable = flag_dummy_unlock_byzantine_cataphracts_4_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_byzantine_cataphracts_5_advance = {
+	age = age_1_traditions
+	unlock_unit = a_byzantine_cataphracts_5
+	allow = { has_variable = flag_dummy_unlock_byzantine_cataphracts_5_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_unlock_byzantine_cataphracts_6_advance = {
+	age = age_1_traditions
+	unlock_unit = a_byzantine_cataphracts_6
+	allow = { has_variable = flag_dummy_unlock_byzantine_cataphracts_6_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_infiltrate_administration_advance = {
+	age = age_1_traditions
+	icon = efficient_spies
+	unlock_diplomacy = { infiltrate_administration }
+	allow = { has_variable = flag_dummy_infiltrate_administration_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_cossacks_recruitment = {
+	age = age_1_traditions
+	unlock_estate_privilege = cossacks_military_service
+	allow = { has_variable = flag_dummy_cossacks_recruitment }
+	requires = dummy_parent_advance
+}
+
+dummy_cossacks_hetmanate = {
+	age = age_1_traditions
+	unlock_estate_privilege = cossacks_rada_autonomy
+	allow = { has_variable = flag_dummy_cossacks_hetmanate }
+	requires = dummy_parent_advance
+}
+
+dummy_cossack_administration = {
+	age = age_1_traditions
+	unlock_estate_privilege = cossacks_government_positions
+	allow = { has_variable = flag_dummy_cossack_administration }
+	requires = dummy_parent_advance
+}
+
+dummy_cossacks_exploration_advance = {
+	age = age_1_traditions
+	unlock_estate_privilege = cossacks_explorers
+	allow = { has_variable = flag_dummy_cossacks_exploration_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_cossacks_colonization_advance = {
+	age = age_1_traditions
+	unlock_estate_privilege = cossacks_colonization
+	allow = { has_variable = flag_dummy_cossacks_colonization_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_cossacks_registered = {
+	age = age_1_traditions
+	unlock_estate_privilege = cossacks_register
+	allow = { has_variable = flag_dummy_cossacks_registered }
+	requires = dummy_parent_advance
+}
+
+dummy_aristocracy = {
+	age = age_1_traditions
+	unlock_levy = levy_plated_knights
+	allow = { has_variable = flag_dummy_aristocracy }
+	requires = dummy_parent_advance
+}
+
+dummy_military_traditions = {
+	age = age_1_traditions
+	unlock_levy = levy_cavaliers
+	allow = { has_variable = flag_dummy_military_traditions }
+	requires = dummy_parent_advance
+}
+
+dummy_noble_officers = {
+	age = age_1_traditions
+	unlock_levy = levy_late_cavaliers
+	allow = { has_variable = flag_dummy_noble_officers }
+	requires = dummy_parent_advance
+}
+
+dummy_noble_resilience = {
+	age = age_1_traditions
+	unlock_levy = levy_provincial_cavalry
+	allow = { has_variable = flag_dummy_noble_resilience }
+	requires = dummy_parent_advance
+}
+
+dummy_international_nobility = {
+	age = age_1_traditions
+	unlock_levy = levy_gendarmerie
+	allow = { has_variable = flag_dummy_international_nobility }
+	requires = dummy_parent_advance
+}
+
+dummy_republican_election_law_advance = {
+	age = age_1_traditions
+	unlock_law = republican_election_law
+	allow = { has_variable = flag_dummy_republican_election_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_republican_electorate_law_advance = {
+	age = age_1_traditions
+	unlock_law = republican_electorate_law
+	allow = { has_variable = flag_dummy_republican_electorate_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_republican_power_law_advance = {
+	age = age_1_traditions
+	unlock_law = republican_power_law
+	allow = { has_variable = flag_dummy_republican_power_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_principle_of_administration_law_advance = {
+	age = age_1_traditions
+	icon = laws
+	unlock_law = principle_of_administration_law
+	allow = { has_variable = flag_dummy_principle_of_administration_law_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_baghlah_advance = {
+	age = age_1_traditions
+	unlock_unit = n_baghlah
+	allow = { has_variable = flag_dummy_baghlah_advance }
+	requires = dummy_parent_advance
+}
+
+dummy_balkan_hajduks = {
+	age = age_1_traditions
+	icon = glorious_arms
+	unlock_unit = a_hajduk
+	allow = { has_variable = flag_dummy_balkan_hajduks }
+	requires = dummy_parent_advance
+}
+
+dummy_cro_pandurs_recruitment = {
+	age = age_1_traditions
+	icon = expansionism
+	unlock_unit = a_pandur
+	allow = { has_variable = flag_dummy_cro_pandurs_recruitment }
+	requires = dummy_parent_advance
+}
+
+dummy_refined_obsidian_weaponry = {
+	age = age_1_traditions
+	unlock_production_method = weapon_guild_obsidian_maintenance
+	allow = { has_variable = flag_dummy_refined_obsidian_weaponry }
+	requires = dummy_parent_advance
+}
+
+dummy_inquisition_advance = {
+	age = age_1_traditions
+	unlock_law = inquisition_law
+	allow = { has_variable = flag_dummy_inquisition_advance }
+	requires = dummy_parent_advance
+}
