@@ -1,9 +1,9 @@
 ﻿{
 	"name":	"Europa Survivors",
 	"id":	"",
-	"version":	"1.0",
-	"supported_game_version":	"1.2.*",
-	"short_description":	"Desc",
+	"version":	"1.1",
+	"supported_game_version":	"1.3.*",
+	"short_description":	"Rogue like survival in EU5",
 	"tags":	["Advancements", "Gameplay"],
 	"relationships":	[],
 	"game_custom_data":	{

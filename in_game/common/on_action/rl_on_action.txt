@@ -1,13 +1,6 @@
-﻿monthly_country_pulse = {
+monthly_country_pulse = {
     on_actions = {
         rl_monthly_action
-    }
-}
-
-on_game_start = {
-    on_actions = {
-        delay = { days = 1 }
-        rl_startup_action
     }
 }
 
@@ -18,20 +11,14 @@ rl_monthly_action = {
             limit = {
                 has_variable = num_advances
             }
-            # If num_advances is set, this country has had its initialization
-            # We check if they have more advances rn than they had last month
-            # If they do, we fire the event, then increment the variable
+            # Every advance the country researches grants rl_roll_mtd = 1, so
+            # modifier:rl_roll_mtd is the live count of researched advances.
+            # num_advances is the count we last synced to; if it has grown, the
+            # player just gained an advance, so we roll three distinct upgrade
+            # options and fire the selection event.
             if = {
                 limit = {
-                    num_of_advances_researched > var:num_advances
-                }
-                change_variable = {
-                    name = num_advances
-                    add = 1
-                }
-                set_variable = {
-                    name = rl_iterator
-                    value = 0
+                    modifier:rl_roll_mtd > var:num_advances
                 }
                 rl_rand_se = { v = 1 }
 
@@ -66,28 +53,33 @@ rl_monthly_action = {
                     rl_rand_se = { v = 3 }
                 }
 
-                trigger_event_silently = {
+                trigger_event_non_silently = {
                     id = rl_events.1
+                }
+
+                # Sync the baseline to the current count. The upgrade options
+                # research per-unlock dummy advances, but those carry no
+                # rl_roll_mtd, so they never register as new research here.
+                set_variable = {
+                    name = num_advances
+                    value = { add = modifier:rl_roll_mtd }
                 }
             }
         } else = {
-            # If num_advances is unset, this country has not been initialized
+            # First time we see this country: research the dummy parent (so the
+            # per-unlock dummy advances can be granted later) and snapshot the
+            # current advance count as the baseline.
+            research_advance = advance_type:dummy_parent_advance
             set_variable = {
                 name = num_advances
-                value = num_of_advances_researched
+                value = { add = modifier:rl_roll_mtd }
             }
-            research_advance = advance_type:dummy_parent_advance        # Add the intitialization tech so the dummy advances work properly
-            change_variable = {
-                name = num_advances
-                add = 1
-            }
+            # Initialize the selection variables so the event options can always
+            # safely read var:rl_event_1/2/3 (avoids "variable not set" errors,
+            # e.g. when the event is fired manually from the console).
+            set_variable = { name = rl_event_1 value = -1 }
+            set_variable = { name = rl_event_2 value = -1 }
+            set_variable = { name = rl_event_3 value = -1 }
         }
-    }
-}
-
-rl_startup_action = {
-    trigger = {}
-    effect = {
-        research_advance = advance_type:dummy_parent_advance
     }
 }

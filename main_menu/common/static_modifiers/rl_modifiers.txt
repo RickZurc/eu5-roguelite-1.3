@@ -1,5 +1,14 @@
+﻿modifier_sanitation_advance = {
+	global_life_expectancy = 4
+	global_disease_resistance = 0.07
+}
+
 modifier_manufactories_advance = {
 	global_max_rgo_size_modifier = 0.10
+}
+
+modifier_central_bank_advance = {
+	max_bonds = 5
 }
 
 modifier_lead_ore_dressing = {
@@ -10,20 +19,6 @@ modifier_powerful_statues = {
 	global_copper_output_modifier = 0.25
 	global_tin_output_modifier = 0.1
 	global_stone_output_modifier = 0.1
-}
-
-modifier_ostentatious_clothing = {
-	global_alum_output_modifier = 0.1
-	global_dyes_output_modifier = 0.1
-}
-
-modifier_artists_advance_absolutism = {
-	skill_of_new_artists = 0.1
-}
-
-modifier_absolutist_court = {
-	global_crown_estate_power = 0.05
-	estate_power_from_cabinet = -0.5
 }
 
 modifier_absolute_rulership = {
@@ -38,15 +33,6 @@ modifier_town_rights_abs_advance = {
 	capital_possible_town_rights = 1
 }
 
-modifier_cork_stoppers = {
-	global_wine_output_modifier = 0.2
-}
-
-modifier_sanitation_advance = {
-	global_life_expectancy = 3
-	global_disease_resistance = 0.05
-}
-
 modifier_construction_speed_absolutism = {
 	global_construction_speed = 0.1
 }
@@ -56,7 +42,7 @@ modifier_pop_promotion_speed_age_5 = {
 }
 
 modifier_rgo_size_advance_absolutism = {
-	global_max_rgo_size_modifier = 0.10
+	global_max_rgo_size_modifier = 0.20
 }
 
 modifier_lumber_improvements_absolutism = {
@@ -68,7 +54,7 @@ modifier_coal_improvements_absolutism = {
 }
 
 modifier_food_advance_absolutism = {
-	global_monthly_food_modifier = 0.10
+	global_monthly_food_modifier = 0.20
 }
 
 modifier_scientific_revolution_advance = {
@@ -93,7 +79,7 @@ modifier_hollander_beater = {
 }
 
 modifier_maritime_advance_age_5 = {
-	global_maritime_presence_modifier = 0.1
+	global_maritime_presence_modifier = 0.20
 }
 
 modifier_the_constitution = {
@@ -128,11 +114,11 @@ modifier_measuring_the_world = {
 }
 
 modifier_diplomatic_range_age_5 = {
-	diplomatic_range_modifier = 0.25
+	diplomatic_range_modifier = 0.33
 }
 
 modifier_spy_construction_absolutism = {
-	spy_network_construction = 0.1
+	spy_network_construction = 0.15
 }
 
 modifier_subject_loyalty_absolutism = {
@@ -159,14 +145,6 @@ modifier_artillery_vs_fort_age_5_absolutism = {
 	artillery_bonus_vs_fort = 1
 }
 
-modifier_army_movement_speed_absolutism = {
-	army_movement_speed = 0.1
-}
-
-modifier_regiment_reinforcement_speed_absolutism = {
-	regiment_reinforcement_speed = 0.1
-}
-
 modifier_war_score_absolutism_advance = {
 	global_war_score_efficiency = 0.2
 }
@@ -182,10 +160,11 @@ modifier_anti_piracy_warfare = {
 
 modifier_absolutism_agressive_advance = {
 	antagonism_received_modifier = -0.1
+	antagonism_development_impact = -0.20
 }
 
 modifier_supply_depot_advance_age_5_absolutism = {
-	supply_depot_capacity = 25
+	supply_depot_capacity = 500
 	trade_company_headquarters_level = 1
 }
 
@@ -194,15 +173,46 @@ modifier_line_infantry = {
 }
 
 modifier_naval_morale_advance_5 = {
-	naval_morale = 0.25
+	naval_morale = 0.35
 }
 
 modifier_gustavian_infantry = {
-	land_morale = 0.25
+	land_morale = 0.35
 }
 
 modifier_country_unification_advance = {
-	diplomatic_annexation_cost = -0.2
+	diplomatic_annexation_efficiency = 0.4
+}
+
+modifier_ostentatious_clothing = {
+	global_alum_output_modifier = 0.1
+	global_dyes_output_modifier = 0.1
+}
+
+modifier_artists_advance_absolutism = {
+	skill_of_new_artists = 0.1
+}
+
+modifier_absolutist_court = {
+	global_crown_estate_power = 0.05
+	estate_power_from_cabinet = -0.5
+}
+
+modifier_cork_stoppers = {
+	global_wine_output_modifier = 0.2
+}
+
+modifier_army_movement_speed_absolutism = {
+	army_movement_speed = 0.1
+}
+
+modifier_regiment_reinforcement_speed_absolutism = {
+	regiment_reinforcement_speed = 0.1
+}
+
+modifier_surgery_advance = {
+	global_life_expectancy = 3
+	global_disease_resistance = 0.05
 }
 
 modifier_new_world_advance = {
@@ -232,18 +242,15 @@ modifier_maritime_decay_advance_disc = {
 	global_maritime_presence_decay = -0.001
 }
 
-modifier_rgo_logistics_discovery = {
-	raw_material_in_province_impact = 0.025
-}
-
 modifier_colonial_charters = {
 	colonial_migration_size_modifier = 0.25
 	create_colonial_charter_cost_modifier = -0.2
-	colonial_maintenance_cost = -0.2
+	colonial_maintenance_efficiency = 0.40
 }
 
 modifier_maritime_advance_age_3 = {
 	global_maritime_presence_modifier = 0.1
+	num_naval_governors = 1
 }
 
 modifier_trade_range_advance_age_3 = {
@@ -263,15 +270,11 @@ modifier_port_cost_distance_from_capital_advance = {
 }
 
 modifier_exploration_maintenance_advance = {
-	exploration_maintenance_cost = -0.1
+	exploration_maintenance_efficiency = 0.20
 }
 
 modifier_beat_to_windward_advance = {
 	exploration_mission_speed = 0.1
-}
-
-modifier_green_vitriol = {
-	global_alum_output_modifier = 0.1
 }
 
 modifier_naval_ambitions = {
@@ -279,38 +282,7 @@ modifier_naval_ambitions = {
 }
 
 modifier_diplomatic_range_age_2 = {
-	diplomatic_range_modifier = 0.33
-}
-
-modifier_new_world_crops = {
-	global_monthly_food_modifier = 0.10
-}
-
-modifier_pop_promotion_speed_age_3 = {
-	global_pop_promotion_speed_modifier = 0.1
-}
-
-modifier_blast_furnace = {
-	global_iron_output_modifier = 0.75
-}
-
-modifier_saiger_process_discovery = {
-	global_silver_output_modifier = 0.2
-	global_lead_output_modifier = 0.2
-}
-
-modifier_new_currency_demands = {
-	global_copper_output_modifier = 0.25
-	global_tin_output_modifier = 0.1
-}
-
-modifier_rgo_size_advance_discovery = {
-	global_max_rgo_size_modifier = 0.10
-}
-
-modifier_surgery_advance = {
-	global_life_expectancy = 3
-	global_disease_resistance = 0.05
+	diplomatic_range_modifier = 0.25
 }
 
 modifier_construction_speed_discovery = {
@@ -349,12 +321,8 @@ modifier_improved_book_binding = {
 	global_books_output_modifier = 0.25
 }
 
-modifier_lumber_improvements_discovery = {
-	global_lumber_output_modifier = 0.50
-}
-
 modifier_regulate_court_procedures = {
-	court_spending_cost_modifier = -0.05
+	court_spending_efficiency = 0.1
 }
 
 modifier_crown_power_advance_discovery = {
@@ -370,7 +338,7 @@ modifier_town_rights_aod_advance = {
 }
 
 modifier_trade_through_owned_disc_advance = {
-	global_trade_through_owned_territory_cost_modifier = -0.1
+	global_trade_through_owned_territory_efficiency = 0.2
 }
 
 modifier_naval_morale_advance_2 = {
@@ -407,7 +375,7 @@ modifier_matchlock_gun = {
 }
 
 modifier_supply_depot_advance_age_3_discovery = {
-	supply_depot_capacity = 25
+	supply_depot_capacity = 500
 }
 
 modifier_regiment_reinforcement_speed_discovery = {
@@ -438,12 +406,51 @@ modifier_land_morale_movement_cost_advance_disc = {
 	land_morale_movement_cost = -0.0001
 }
 
-modifier_confessionalism_advance = {
-	global_pop_conversion_speed = 0.01
+modifier_new_world_crops = {
+	global_monthly_food_modifier = 0.10
 }
 
-modifier_power_projection_advance_3 = {
-	power_projection = 5
+modifier_rgo_size_advance_discovery = {
+	global_max_rgo_size_modifier = 0.10
+}
+
+modifier_rgo_logistics_discovery = {
+	raw_material_in_province_impact = 0.025
+}
+
+modifier_green_vitriol = {
+	global_alum_output_modifier = 0.1
+}
+
+modifier_pop_promotion_speed_age_3 = {
+	global_pop_promotion_speed_modifier = 0.1
+}
+
+modifier_blast_furnace = {
+	global_iron_output_modifier = 0.75
+}
+
+modifier_saiger_process_discovery = {
+	global_silver_output_modifier = 0.2
+	global_lead_output_modifier = 0.2
+}
+
+modifier_new_currency_demands = {
+	global_copper_output_modifier = 0.25
+	global_tin_output_modifier = 0.1
+}
+
+modifier_lumber_improvements_discovery = {
+	global_lumber_output_modifier = 0.50
+}
+
+modifier_pharmacology_advance = {
+	global_life_expectancy = 3
+	global_disease_resistance = 0.05
+}
+
+modifier_confessionalism_advance = {
+	global_pop_conversion_speed = 0.01
 }
 
 modifier_gov_reform_reformation_a = {
@@ -455,20 +462,12 @@ modifier_crown_power_advance_reformation = {
 }
 
 modifier_confessional_court = {
-	court_spending_cost_modifier = -0.05
+	court_spending_efficiency = 0.1
 	global_pop_conversion_speed_modifier = 0.1
 }
 
 modifier_artists_advance_reformations = {
 	skill_of_new_artists = 0.1
-}
-
-modifier_war_score_reformations_advance = {
-	global_war_score_efficiency = 0.1
-}
-
-modifier_reformation_subject_opinions_advance = {
-	subject_opinions = 10
 }
 
 modifier_early_modern_administation = {
@@ -479,32 +478,13 @@ modifier_town_rights_ref_advance = {
 	capital_possible_town_rights = 1
 }
 
-modifier_pharmacology_advance = {
-	global_life_expectancy = 3
-	global_disease_resistance = 0.05
-}
-
 modifier_pan_amalgamation_advance = {
 	mercury_patio_max_level = 1
 	global_mercury_output_modifier = 0.1
 }
 
-modifier_naval_morale_advance_3 = {
-	naval_morale = 0.25
-}
-
-modifier_road_advance_1 = {
-	global_road_building_time = -0.2
-	build_gravel_road_cost_modifier = -0.1
-	build_paved_road_cost_modifier = -0.1
-}
-
 modifier_construction_speed_reformation = {
 	global_construction_speed = 0.1
-}
-
-modifier_lumber_improvements_reformation = {
-	global_lumber_output_modifier = 0.50
 }
 
 modifier_generic_bureaucracy_4_advance = {
@@ -519,24 +499,12 @@ modifier_merchant_power_from_maritime_reformation_advance = {
 	merchant_power_from_maritime = 0.025
 }
 
-modifier_bole_smelting = {
-	global_lead_output_modifier = 1.0
-}
-
-modifier_slitting_mills = {
-	global_iron_output_modifier = 0.66
-}
-
 modifier_maritime_advance_age_4 = {
-	global_maritime_presence_modifier = 0.1
+	global_maritime_presence_modifier = 0.15
 }
 
 modifier_global_trade_routes_advance = {
 	sea_cost_on_distance_from_capital = -10
-}
-
-modifier_pop_promotion_speed_age_4 = {
-	global_pop_promotion_speed_modifier = 0.1
 }
 
 modifier_leader_recruit_cost_advance = {
@@ -564,7 +532,7 @@ modifier_imperial_ambitions = {
 }
 
 modifier_spy_construction_reformation = {
-	spy_network_construction = 0.1
+	spy_network_construction = 0.15
 }
 
 modifier_chartered_companies = {
@@ -576,44 +544,12 @@ modifier_development_of_maritime_law = {
 	merchant_maintenance_efficiency = 0.2
 }
 
-modifier_diplomatic_range_age_3 = {
-	diplomatic_range_modifier = 0.25
-}
-
 modifier_trade_envoys = {
 	trade_range_modifier = 0.25
 }
 
-modifier_shared_products_procedures = {
-	global_alum_output_modifier = 0.1
-}
-
-modifier_riches_of_foreign_coasts = {
-	global_pearls_output_modifier = 0.2
-}
-
-modifier_foreign_mining_techniques = {
-	global_gems_output_modifier = 0.2
-}
-
-modifier_subject_income_reformation_advance = {
-	subject_income_modifier = 0.05
-}
-
-modifier_rgo_size_advance_reformation = {
-	global_max_rgo_size_modifier = 0.10
-}
-
 modifier_food_advance_reformation = {
-	global_monthly_food_modifier = 0.10
-}
-
-modifier_scientific_experimentation = {
-	global_institution_growth_modifier = 0.20
-}
-
-modifier_military_administration = {
-	food_consumption_modifier = -0.1
+	global_monthly_food_modifier = 0.15
 }
 
 modifier_artillery_institution_advance = {
@@ -641,6 +577,84 @@ modifier_assault_ability_reformation = {
 	assault_ability = 0.1
 }
 
+modifier_supply_depot_advance_age_4_reformation = {
+	supply_depot_capacity = 500
+}
+
+modifier_mercenaries_reformation_advance = {
+	global_mercenaries_modifier = 0.20
+}
+
+modifier_maurician_infantry = {
+	land_morale = 0.30
+}
+
+modifier_road_advance_1 = {
+	global_road_building_time = -0.2
+	build_gravel_road_cost_modifier = -0.1
+	build_paved_road_cost_modifier = -0.1
+}
+
+modifier_bole_smelting = {
+	global_lead_output_modifier = 1.0
+}
+
+modifier_slitting_mills = {
+	global_iron_output_modifier = 0.66
+}
+
+modifier_pop_promotion_speed_age_4 = {
+	global_pop_promotion_speed_modifier = 0.1
+}
+
+modifier_shared_products_procedures = {
+	global_alum_output_modifier = 0.1
+}
+
+modifier_riches_of_foreign_coasts = {
+	global_pearls_output_modifier = 0.2
+}
+
+modifier_foreign_mining_techniques = {
+	global_gems_output_modifier = 0.2
+}
+
+modifier_subject_income_reformation_advance = {
+	subject_income_modifier = 0.05
+}
+
+modifier_rgo_size_advance_reformation = {
+	global_max_rgo_size_modifier = 0.15
+}
+
+modifier_scientific_experimentation = {
+	global_institution_growth_modifier = 0.20
+}
+
+modifier_military_administration = {
+	food_consumption_modifier = -0.1
+}
+
+modifier_lumber_improvements_reformation = {
+	global_lumber_output_modifier = 0.50
+}
+
+modifier_power_projection_advance_3 = {
+	power_projection = 5
+}
+
+modifier_war_score_reformations_advance = {
+	global_war_score_efficiency = 0.1
+}
+
+modifier_naval_morale_advance_3 = {
+	naval_morale = 0.30
+}
+
+modifier_diplomatic_range_age_3 = {
+	diplomatic_range_modifier = 0.33
+}
+
 modifier_regiment_reinforcement_speed_reformation = {
 	regiment_reinforcement_speed = 0.1
 }
@@ -649,16 +663,8 @@ modifier_recruitment_improvements_reformation = {
 	regiment_recruit_speed = 0.2
 }
 
-modifier_supply_depot_advance_age_4_reformation = {
-	supply_depot_capacity = 25
-}
-
-modifier_mercenaries_reformation_advance = {
-	global_mercenaries_modifier = 0.20
-}
-
-modifier_maurician_infantry = {
-	land_morale = 0.25
+modifier_reformation_subject_opinions_advance = {
+	subject_opinions = 10
 }
 
 modifier_renaissance_advance = {
@@ -668,6 +674,7 @@ modifier_renaissance_advance = {
 modifier_patron_of_art = {
 	has_cultural_maintenance = yes
 	num_possible_artists = 1
+	work_of_art_sell_value_modifier = 0.1
 }
 
 modifier_renaissance_sculptures = {
@@ -700,8 +707,8 @@ modifier_power_projection_advance_2 = {
 }
 
 modifier_anatomy_advance = {
-	global_life_expectancy = 3
-	global_disease_resistance = 0.05
+	global_life_expectancy = 2
+	global_disease_resistance = 0.03
 }
 
 modifier_vibrant_court_advance = {
@@ -711,6 +718,7 @@ modifier_vibrant_court_advance = {
 modifier_banking_advance = {
 	bank_interest = -0.02
 	total_loan_capacity_modifier = 0.5
+	can_sell_bonds = yes
 }
 
 modifier_merchants_and_trade = {
@@ -741,7 +749,7 @@ modifier_maritime_advance_age_2 = {
 }
 
 modifier_diplomatic_range_age_1 = {
-	diplomatic_range_modifier = 0.33
+	diplomatic_range_modifier = 0.25
 }
 
 modifier_spy_construction_renaissance = {
@@ -750,10 +758,6 @@ modifier_spy_construction_renaissance = {
 
 modifier_route_to_the_indies_advance = {
 	exploration_preparation_time_modifier = -0.1
-}
-
-modifier_pound_lock_canals_advance = {
-	starting_technology_level = 3
 }
 
 modifier_expanded_aqueduct_system = {
@@ -777,7 +781,7 @@ modifier_regiment_reinforcement_speed_renaissance = {
 }
 
 modifier_supply_depot_advance_age_2_renaissance = {
-	supply_depot_capacity = 25
+	supply_depot_capacity = 500
 }
 
 modifier_correct_box_advance_renaissance = {
@@ -876,7 +880,7 @@ modifier_law_making_renaissance = {
 }
 
 modifier_subject_integration = {
-	diplomatic_annexation_cost = -0.1
+	diplomatic_annexation_efficiency = 0.2
 }
 
 modifier_rgo_construction_ren = {
@@ -884,11 +888,16 @@ modifier_rgo_construction_ren = {
 }
 
 modifier_naval_repair_ren = {
-	navy_repair_cost = -0.05
+	navy_repair_efficiency = 0.10
 }
 
 modifier_construction_speed_renaissance = {
 	global_construction_speed = 0.1
+}
+
+modifier_vaccination_advance = {
+	global_life_expectancy = 4
+	global_disease_resistance = 0.07
 }
 
 modifier_enlightenment_advance = {
@@ -905,7 +914,7 @@ modifier_war_score_revolutions_advance = {
 }
 
 modifier_spy_construction_revolutions = {
-	spy_network_construction = 0.1
+	spy_network_construction = 0.20
 }
 
 modifier_separation_of_powers = {
@@ -916,46 +925,17 @@ modifier_power_projection_advance_6 = {
 	power_projection = 5
 }
 
-modifier_enlightened_court = {
-	global_max_literacy = 5
-	cultural_influence_modifier = 0.25
-}
-
-modifier_crown_power_advance_revolutions = {
-	global_crown_estate_power = 0.50
-}
-
 modifier_rights_of_man = {
 	country_cabinet_efficiency = 0.20
 }
 
-modifier_government_size_revolutions = {
-	government_size = 1
-}
-
-modifier_town_rights_rev_advance = {
-	capital_possible_town_rights = 1
-}
-
-modifier_rgo_size_advance_revolutions = {
-	global_max_rgo_size_modifier = 0.10
-}
-
-modifier_rotherham_plough = {
-	global_monthly_food_modifier = 0.10
-}
-
 modifier_diplomatic_range_age_6 = {
-	diplomatic_range_modifier = 0.25
+	diplomatic_range_modifier = 0.33
 }
 
 modifier_modern_bureaucracy = {
 	global_integration_speed_modifier = 0.20
-}
-
-modifier_vaccination_advance = {
-	global_life_expectancy = 3
-	global_disease_resistance = 0.05
+	global_max_bureaucracy_slots = 1
 }
 
 modifier_quinine = {
@@ -966,12 +946,9 @@ modifier_construction_speed_revolutions = {
 	global_construction_speed = 0.1
 }
 
-modifier_coal_improvements_revolutions = {
-	global_coal_output_modifier = 0.5
-}
-
 modifier_industrialization_advance = {
 	global_production_efficiency = large_production_efficiency_bonus
+	global_mills_build_buildings_efficiency = 0.5
 }
 
 modifier_hot_blast_furnace = {
@@ -988,16 +965,8 @@ modifier_merchant_power_from_maritime_revolutions_advance = {
 	trade_company_headquarters_level = 1
 }
 
-modifier_cupola_smelting = {
-	global_lead_output_modifier = 1.0
-}
-
-modifier_pop_promotion_speed_age_6 = {
-	global_pop_promotion_speed_modifier = 0.2
-}
-
 modifier_maritime_advance_age_6 = {
-	global_maritime_presence_modifier = 0.1
+	global_maritime_presence_modifier = 0.25
 }
 
 modifier_revolutions_subject_opinions_advance = {
@@ -1006,6 +975,7 @@ modifier_revolutions_subject_opinions_advance = {
 
 modifier_revolutions_agressive_advance = {
 	antagonism_received_modifier = -0.1
+	antagonism_development_impact = -0.40
 }
 
 modifier_subject_income_revolutions_advance = {
@@ -1020,10 +990,12 @@ modifier_joint_stock_companies = {
 	global_merchant_power = 0.2
 	trade_company_headquarters_level = 1
 	trade_range = 200
+	max_bonds_modifier = 0.25
 }
 
 modifier_insurance_companies = {
 	tax_income_efficiency = medium_tax_income_efficiency_bonus
+	max_bonds = 1
 }
 
 modifier_the_gold_standard = {
@@ -1093,7 +1065,7 @@ modifier_artillery_vs_fort_age_6_revolutions = {
 }
 
 modifier_supply_depot_advance_age_6_revolutions = {
-	supply_depot_capacity = 25
+	supply_depot_capacity = 500
 }
 
 modifier_correct_box_advance_revolutions = {
@@ -1106,15 +1078,56 @@ modifier_advanced_anti_piracy_warfare = {
 }
 
 modifier_public_punishments = {
-	naval_morale = 0.25
+	naval_morale = 0.40
 }
 
 modifier_impulse_warfare = {
-	land_morale = 0.25
+	land_morale = 0.40
+}
+
+modifier_enlightened_court = {
+	global_max_literacy = 5
+	cultural_influence_modifier = 0.25
+}
+
+modifier_crown_power_advance_revolutions = {
+	global_crown_estate_power = 0.50
+}
+
+modifier_government_size_revolutions = {
+	government_size = 1
+}
+
+modifier_town_rights_rev_advance = {
+	capital_possible_town_rights = 1
+}
+
+modifier_rotherham_plough = {
+	global_monthly_food_modifier = 0.25
+}
+
+modifier_cupola_smelting = {
+	global_lead_output_modifier = 1.0
+}
+
+modifier_pop_promotion_speed_age_6 = {
+	global_pop_promotion_speed_modifier = 0.2
+}
+
+modifier_rgo_size_advance_revolutions = {
+	global_max_rgo_size_modifier = 0.25
+}
+
+modifier_coal_improvements_revolutions = {
+	global_coal_output_modifier = 0.5
 }
 
 modifier_local_governor_advance = {
 	num_local_governors = 1
+}
+
+modifier_stock_exchange_advance = {
+	max_bonds = 1
 }
 
 modifier_fort_limit_2_advance = {
@@ -1138,7 +1151,7 @@ modifier_fort_limit_6_advance = {
 }
 
 modifier_bureaucracy_law_advance = {
-	global_bureaucracy_implementation_cost_modifier = -0.1
+	global_bureaucracy_implementation_efficiency = 0.2
 }
 
 modifier_global_supply_limit_modifier_advance_2 = {
@@ -1170,11 +1183,12 @@ modifier_empiricism = {
 }
 
 modifier_court_accounting = {
-	court_spending_cost_modifier = -0.05
+	court_spending_efficiency = 0.1
 }
 
 modifier_debt_and_loans = {
 	bank_interest = -0.01
+	max_bonds = 1
 }
 
 modifier_benefits_for_mercenaries = {
@@ -1211,7 +1225,7 @@ modifier_preaching_missions = {
 }
 
 modifier_organised_construction = {
-	global_build_buildings_cost = -0.1
+	global_build_buildings_efficiency = 0.2
 }
 
 modifier_organised_mercenary_payment = {
@@ -1237,7 +1251,7 @@ modifier_efficient_mining = {
 }
 
 modifier_efficient_construction_plans = {
-	global_urban_build_buildings_cost = -0.1
+	global_urban_build_buildings_efficiency = 0.2
 }
 
 modifier_expanded_infrastructure_network = {
@@ -1261,11 +1275,12 @@ modifier_religious_tradition = {
 
 modifier_advanced_bureaucracy = {
 	tax_income_efficiency = small_tax_income_efficiency_bonus
-	global_bureaucracy_maintenance_cost_modifier = -0.02
+	global_bureaucracy_maintenance_efficiency = 0.04
 }
 
 modifier_national_bank = {
 	minting_income_factor = 0.10
+	max_bonds = 1
 }
 
 modifier_competetive_merchants = {
@@ -1310,6 +1325,7 @@ modifier_additional_diplomats = {
 
 modifier_bookkeeping = {
 	bank_interest = -0.01
+	max_bonds = 1
 }
 
 modifier_civil_servants = {
@@ -1357,7 +1373,7 @@ modifier_benevolence = {
 }
 
 modifier_fort_logistics = {
-	fort_maintenance_cost = -0.10
+	fort_maintenance_efficiency = 0.20
 }
 
 modifier_regulation_bureau = {
@@ -1365,7 +1381,7 @@ modifier_regulation_bureau = {
 }
 
 modifier_integrated_elites = {
-	monthly_diplomats = 0.1
+	monthly_diplomats = 0.2
 }
 
 modifier_claim_fabrication = {
@@ -1390,10 +1406,12 @@ modifier_experienced_diplomats = {
 
 modifier_benign_diplomats = {
 	improve_relation_impact = 0.2
+	subject_opinions = 10
 }
 
 modifier_tribute_system = {
 	subject_income_modifier = 0.025
+	subject_loyalty = 5
 }
 
 modifier_influence = {
@@ -1434,7 +1452,7 @@ modifier_vetting = {
 }
 
 modifier_merchant_adventures = {
-	trade_sea_efficiency = 0.2
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 }
 
 modifier_ships_penny = {
@@ -1474,7 +1492,7 @@ modifier_land_of_opportunity = {
 }
 
 modifier_free_colonies = {
-	colonial_maintenance_cost = -0.20
+	colonial_maintenance_efficiency = 0.40
 }
 
 modifier_grand_navy = {
@@ -1515,7 +1533,7 @@ modifier_vice_roys = {
 }
 
 modifier_sheltered_ports = {
-	navy_repair_cost = -0.2
+	navy_repair_efficiency = 0.4
 }
 
 modifier_naval_fighting_instruction = {
@@ -1747,11 +1765,11 @@ modifier_mass_army = {
 }
 
 modifier_the_young_can_serve = {
-	army_reinforce_cost = -0.05
+	army_reinforce_efficiency = 0.10
 }
 
 modifier_press_gangs = {
-	navy_repair_cost = -0.1
+	navy_repair_efficiency = 0.2
 }
 
 modifier_superior_seamanship = {
@@ -1770,16 +1788,6 @@ modifier_port_cost_distance_from_capital_choice_mil = {
 	port_cost_distance_from_capital = -5
 }
 
-modifier_pis_the_university_of_pisa = {
-	global_max_literacy = 5
-	global_institution_growth_modifier = 0.1
-}
-
-modifier_sie_council_priori = {
-	burghers_estate_target_satisfaction = 0.05
-	monthly_republican_tradition = 0.05
-}
-
 modifier_heirs_of_rum = {
 	global_integration_speed_modifier = 0.05
 	monthly_prestige = 0.05
@@ -1790,7 +1798,7 @@ modifier_seljuk_roots = {
 }
 
 modifier_splendor_of_anatolia = {
-	global_build_buildings_cost = -0.1
+	global_build_buildings_efficiency = 0.2
 }
 
 modifier_persian_in_the_court = {
@@ -1811,7 +1819,7 @@ modifier_colonial_militia = {
 
 modifier_new_frontiers = {
 	colonial_migration_size_modifier = 0.25
-	colonial_maintenance_cost = -0.1
+	colonial_maintenance_efficiency = 0.20
 }
 
 modifier_continental_trade = {
@@ -1881,45 +1889,12 @@ modifier_ara_mossos_esquadra = {
 	global_estate_target_satisfaction = small_permanent_target_satisfaction
 }
 
-modifier_ayu_prestigious_cavalry = {
-	army_heavy_cavalry_power = 0.15
-}
-
-modifier_ayu_white_elephant = {
-	subject_income_modifier = 0.025
-	subject_loyalty = 5
-}
-
-modifier_ayu_ayutthaya_literature = {
-	cultural_tradition_modifier = 0.2
-}
-
-modifier_ayu_phrai_luang = {
-	global_monthly_development = 0.001
-}
-
-modifier_ayu_phrai_thaan = {
-	global_manpower_modifier = 0.125
-}
-
-modifier_ayu_floating_rice = {
-	global_rice_output_modifier = 0.1
-}
-
-modifier_ayu_sakdina = {
-	global_estate_max_tax = 0.1
-}
-
-modifier_ayu_cosmopolitan_trade = {
-	selling_efficiency = small_trade_efficiency_bonus
-}
-
 modifier_expansion_merchant_guilds = {
 	burghers_estate_max_tax = 0.05
 }
 
 modifier_centralized_city_governance = {
-	building_upkeep_costs = -0.05
+	building_upkeep_efficiency = 0.10
 }
 
 modifier_wealth_of_mesoamerica = {
@@ -1955,7 +1930,7 @@ modifier_bohemian_crystal = {
 }
 
 modifier_fortified_towns = {
-	global_fort_build_buildings_cost = -0.1
+	global_fort_build_buildings_efficiency = 0.2
 	global_defensive = 0.05
 }
 
@@ -1969,91 +1944,6 @@ modifier_kutnohorian_deal = {
 
 modifier_bohemian_thaler = {
 	minting_income_factor = 0.1
-}
-
-modifier_bos_katun_communities = {
-	global_max_rural_control = 0.05
-}
-
-modifier_bos_influence_of_the_stanak = {
-	nobles_estate_agenda_impact = 0.1
-	nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-}
-
-modifier_bos_defiant_terrain = {
-	global_hostile_attrition = 1
-}
-
-modifier_bos_kingly_ambitions = {
-	army_heavy_infantry_power = 0.05
-	monthly_devotion = 0.05
-	monthly_legitimacy = 0.05
-	monthly_republican_tradition = 0.05
-}
-
-modifier_bosnian_bosancica = {
-	counter_espionage = 0.2
-	cultural_influence_modifier = 0.1
-}
-
-modifier_bos_the_srebrenica_mint_office = {
-	global_silver_output_modifier = 0.20
-}
-
-modifier_bosnian_people_from_the_hills = {
-	trade_land_efficiency = 0.66
-}
-
-modifier_bos_bosnian_ljekaruse = {
-	global_life_expectancy = 3
-	global_disease_resistance = 0.05
-}
-
-modifier_bosnian_susjedsvto_of_bosnia = {
-	global_estate_satisfaction_recovery = 0.001
-	monthly_religious_rebel_growth = -0.01
-}
-
-modifier_bos_the_filigree_guilds = {
-	global_jewelry_output_modifier = 0.20
-}
-
-modifier_divide_estates = {
-	global_crown_estate_power = 0.1
-}
-
-modifier_soldiers_fortune = {
-	hire_mercenary_premium_cost_modifier = -0.1
-}
-
-modifier_iron_tooth = {
-	global_estate_target_satisfaction = small_permanent_target_satisfaction
-}
-
-modifier_kammergericht = {
-	tax_income_efficiency = large_tax_income_efficiency_bonus
-}
-
-modifier_margrave_council = {
-	nobles_estate_target_satisfaction = medium_permanent_target_satisfaction
-	burghers_estate_target_satisfaction = small_permanent_target_satisfaction
-}
-
-modifier_religious_toleration = {
-	tolerance_heretic = 1
-}
-
-modifier_army_professionalism = {
-	land_morale_modifier = 0.1
-}
-
-modifier_auftragstaktik = {
-	discipline = 0.05
-}
-
-modifier_goose_step = {
-	army_heavy_infantry_power = 0.2
-	army_light_infantry_power = 0.1
 }
 
 modifier_legacy_of_breton_independence = {
@@ -2115,7 +2005,7 @@ modifier_vid_the_order_of_the_danubian_dragon = {
 
 modifier_fortress_of_the_balkans = {
 	global_defensive = 0.1
-	fort_limit_modifier = 0.25
+	fort_limit_modifier = 0.10
 }
 
 modifier_bul_the_silk_and_rose_guilds = {
@@ -2200,7 +2090,7 @@ modifier_compagnie_d_ordonnance = {
 
 modifier_influence_of_the_burgundian_towns = {
 	burghers_estate_agenda_impact = 0.1
-	global_urban_build_buildings_cost = -0.1
+	global_urban_build_buildings_efficiency = 0.2
 }
 
 modifier_create_the_regimental_system = {
@@ -2209,55 +2099,6 @@ modifier_create_the_regimental_system = {
 
 modifier_bur_rich_soil_of_burgundy = {
 	global_raw_material_output = 0.2
-}
-
-modifier_men_of_letters_advance = {
-	research_speed_modifier = 0.05
-}
-
-modifier_byz_shield_of_the_west = {
-	allow_extensive_conscription_cabinet_action = yes
-}
-
-modifier_byz_court_of_languages = {
-	diplomatic_capacity = 1
-}
-
-modifier_byz_poikilia = {
-	monthly_prestige = 0.1
-}
-
-modifier_expand_varangian_guard_advance = {
-	num_of_varangian_units = 4
-}
-
-modifier_byz_crossroads_of_continents = {
-	trade_range_modifier = 0.2
-}
-
-modifier_byz_reaffirm_synod_powers = {
-	orthodox_synod_cost_modifier = -0.2
-	monthly_religious_influence = 0.1
-}
-
-modifier_byz_byzantine_inquisition = {
-	global_pop_conversion_speed_modifier = 0.1
-}
-
-modifier_byz_autokratoria_rhomaion = {
-	global_integration_speed_modifier = 0.2
-}
-
-modifier_byz_modernized_strategikon = {
-	army_tradition_decay = -0.001
-}
-
-modifier_byz_ancient_greek_studies = {
-	global_max_literacy = 10
-}
-
-modifier_byz_the_new_imperial_army = {
-	global_manpower_modifier = 0.1
 }
 
 modifier_cas_castilian_navy = {
@@ -2311,11 +2152,11 @@ modifier_chg_the_mountain_khanate = {
 
 modifier_chg_border_wars = {
 	land_morale_modifier = 0.05
-	army_reinforce_cost = -0.1
+	army_reinforce_efficiency = 0.2
 }
 
 modifier_chg_sons_of_chagatai = {
-	diplomatic_annexation_cost = -0.15
+	diplomatic_annexation_efficiency = 0.3
 }
 
 modifier_chg_tradition_of_conquest = {
@@ -2332,130 +2173,6 @@ modifier_chg_glory_of_conquest = {
 
 modifier_chg_unrelenting_horde = {
 	army_maintenance_efficiency = 0.1
-}
-
-modifier_extensive_canal_works = {
-	global_rural_build_buildings_cost = -0.025
-	global_monthly_prosperity = 0.001
-}
-
-modifier_tributary_system = {
-	subject_loyalty = 5
-}
-
-modifier_zhongshu_sheng = {
-	government_reform_slots = 1
-}
-
-modifier_lijia_system = {
-	global_distance_from_capital_speed_propagation = 0.1
-}
-
-modifier_yulin_tuce = {
-	tax_income_efficiency = medium_tax_income_efficiency_bonus
-	global_monthly_food_modifier = 0.05
-}
-
-modifier_weisuo_system = {
-	global_manpower_modifier = 0.1
-	army_maintenance_efficiency = 0.1
-}
-
-modifier_grand_coordinators = {
-	government_size = 1
-}
-
-modifier_the_censorate = {
-	global_crown_estate_power = 0.1
-}
-
-modifier_the_tea_trade = {
-	global_tea_output_modifier = 0.2
-}
-
-modifier_tu_bing = {
-	army_auxiliary_build_cost_modifier = -0.2
-}
-
-modifier_tusi_titles = {
-	pop_join_rebel_threshold = -0.03
-}
-
-modifier_salt_monopoly = {
-	global_salt_output_modifier = 0.2
-}
-
-modifier_reform_the_grand_secretariat = {
-	legislative_efficiency = 0.1
-}
-
-modifier_grand_military_parades = {
-	monthly_army_tradition = 0.05
-}
-
-modifier_silver_standard = {
-	global_silver_output_modifier = 0.15
-}
-
-modifier_nine_garrisons_of_the_great_wall = {
-	global_defensive = 0.20
-}
-
-modifier_woodblock_printing = {
-	monthly_prestige = 0.1
-}
-
-modifier_green_standard_army = {
-	global_garrison_size_modifier = 0.2
-	army_heavy_infantry_reinforce_cost_modifier = -0.1
-	army_light_infantry_reinforce_cost_modifier = -0.1
-}
-
-modifier_great_tax_reform = {
-	global_estate_max_tax = 0.1
-}
-
-modifier_junji_chu = {
-	country_cabinet_efficiency = 0.1
-}
-
-modifier_jingdezhen_porcelain = {
-	global_porcelain_output_modifier = 0.1
-	cultural_influence_modifier = 0.15
-}
-
-modifier_sanxitang = {
-	skill_of_new_artists = 0.05
-}
-
-modifier_monuments_to_greatness = {
-	diplomatic_reputation = 2
-}
-
-modifier_ten_great_campaigns = {
-	global_separatism = -0.05
-	global_war_score_efficiency = 0.1
-}
-
-modifier_cir_horsemen_of_the_steppe = {
-	army_light_cavalry_build_cost_modifier = -0.1
-	army_light_cavalry_power = 0.05
-}
-
-modifier_cir_city_and_fortress = {
-	global_defensive = 0.1
-	town_upgrade_cost_modifier = -0.05
-	city_upgrade_cost_modifier = -0.05
-	megalopolis_upgrade_cost_modifier = -0.05
-}
-
-modifier_cir_grand_prince_of_circassia = {
-	land_morale_modifier = 0.1
-}
-
-modifier_cir_multireligious_society = {
-	tolerance_heretic = 0.5
-	tolerance_heathen = 0.5
 }
 
 modifier_cri_slavers = {
@@ -2476,104 +2193,6 @@ modifier_cri_devshirme_of_the_steppes = {
 	global_manpower_modifier = 0.1
 }
 
-modifier_cro_influx_of_foreign_knowledge = {
-	embrace_institution_cost_modifier = -0.10
-	hire_artist_cost_modifier = -0.025
-}
-
-modifier_cro_legacy_of_the_trpimirovic = {
-	diplomatic_reputation = diplomatic_reputation_mild_bonus
-	diplomatic_capacity = 1
-}
-
-modifier_cro_the_banovac_silver_denar = {
-	minting_income_factor = 0.1
-}
-
-modifier_svn_the_slavonian_sabor = {
-	monthly_devotion = 0.05
-	monthly_legitimacy = 0.05
-	monthly_republican_tradition = 0.05
-	parliament_base_support = 0.05
-}
-
-modifier_cro_trade_posts = {
-	cultural_influence_modifier = 0.1
-	skill_of_new_artists = 0.1
-}
-
-modifier_cro_antemurale_christianitatis = {
-	damage_done_versus_heathens_modifier = 0.1
-	global_manpower_modifier = 0.1
-}
-
-modifier_cro_the_croatian_press = {
-	global_institution_growth_modifier = 0.20
-	global_max_literacy = 5
-}
-
-modifier_svn_the_alluvial_grant_lands = {
-	expand_rgo_farming_cost_modifier = -0.20
-}
-
-modifier_croatian_the_peasants_revolts = {
-	global_monthly_prosperity = 0.001
-	peasants_estate_target_satisfaction = small_permanent_target_satisfaction
-}
-
-modifier_cro_reliance_on_adriatic = {
-	army_light_infantry_power = 0.10
-	privateer_maintenance_cost_modifier = -0.1
-}
-
-modifier_cro_the_jesuit_academy = {
-	global_monthly_literacy = 0.01
-	research_speed_modifier = 0.1
-}
-
-modifier_svn_the_oak_staple_rights = {
-	global_lumber_output_modifier = 0.20
-}
-
-modifier_croatian_the_cravats = {
-	army_light_cavalry_power = 0.15
-	monthly_prestige = 0.1
-}
-
-modifier_cro_baroque_pietas = {
-	clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
-	monthly_religious_influence = 0.2
-}
-
-modifier_cro_the_national_garrison_system = {
-	global_garrison_growth = 0.01
-	global_garrison_size_modifier = 0.10
-}
-
-modifier_svn_swamp_drainage_projects = {
-	global_monthly_development = 0.002
-}
-
-modifier_croatian_the_illyrian_movement = {
-	global_pop_assimilation_speed_modifier = 0.1
-	global_separatism = -0.05
-}
-
-modifier_cro_the_royal_council_of_croatia = {
-	government_size = 1
-}
-
-modifier_cro_uniting_the_coast_and_the_inner_lands = {
-	global_road_building_time = -0.1
-	build_gravel_road_cost_modifier = -0.1
-	build_paved_road_cost_modifier = -0.1
-	build_modern_road_cost_modifier = -0.1
-}
-
-modifier_svn_the_slavonian_grenadier_regiments = {
-	discipline = 0.05
-}
-
 modifier_cth_mercenary_army = {
 	mercenary_maintenance_efficiency = 0.1
 }
@@ -2587,7 +2206,7 @@ modifier_cth_phoenician_sailors = {
 }
 
 modifier_cth_legacy_of_hannon = {
-	exploration_maintenance_cost = -0.1
+	exploration_maintenance_efficiency = 0.20
 	exploration_mission_speed_modifier = 0.3
 }
 
@@ -2609,7 +2228,7 @@ modifier_cth_sufet_rule = {
 }
 
 modifier_dah_migan_mehu = {
-	stability_cost = -0.1
+	stability_cost_efficiency = 0.2
 }
 
 modifier_dah_slave_hunts = {
@@ -2755,7 +2374,7 @@ modifier_navigation_acts = {
 
 modifier_inigo_architecture = {
 	cultural_tradition_modifier = 0.2
-	global_urban_build_buildings_cost = -0.025
+	global_urban_build_buildings_efficiency = 0.05
 }
 
 modifier_sailing_and_fighting_instructions = {
@@ -2795,7 +2414,7 @@ modifier_external_friends = {
 }
 
 modifier_eternal_crusade = {
-	army_reinforce_cost = -0.1
+	army_reinforce_efficiency = 0.2
 }
 
 modifier_prester_john = {
@@ -2817,51 +2436,6 @@ modifier_origin_of_coffee = {
 
 modifier_a_modern_nation = {
 	army_heavy_infantry_power = 0.1
-}
-
-modifier_a_land_of_banks = {
-	minting_income_factor = 0.10
-	monthly_loan_capacity_investment = 5.0
-}
-
-modifier_florentine_citizen_militia = {
-	monthly_army_tradition = 0.03
-}
-
-modifier_birthplace_of_renaissance = {
-	research_speed_modifier = 0.05
-}
-
-modifier_florentine_school = {
-	num_possible_artists = 1
-	skill_of_new_artists = 0.05
-}
-
-modifier_porto_franco = {
-	export_efficiency = small_trade_efficiency_bonus
-}
-
-modifier_accademia_cimento = {
-	global_burghers_max_literacy = 10
-}
-
-modifier_medici_porcelain = {
-	global_porcelain_output_modifier = 0.05
-	monthly_prestige = 0.1
-}
-
-modifier_tuscan_municipal_reforms = {
-	government_reform_slots = 1
-}
-
-modifier_tuscan_physiocratic_reforms = {
-	global_max_rgo_size_modifier = 0.10
-	global_life_expectancy = 2
-}
-
-modifier_tuscan_new_trade_system = {
-	global_crown_estate_power = 0.1
-	global_trade_center_power = 0.05
 }
 
 modifier_french_language_in_all_courts = {
@@ -2922,63 +2496,6 @@ modifier_fra_code_civil = {
 
 modifier_french_ambition = {
 	discipline = 0.05
-}
-
-modifier_genoese_crossbowmen = {
-	army_heavy_infantry_power = 0.1
-}
-
-modifier_bank_of_saint_george = {
-	minting_income_factor = 0.10
-	monthly_loan_capacity_investment = 5.0
-}
-
-modifier_the_age_of_the_genoese = {
-	bank_interest = -0.01
-	artist_salary_modifier = -0.2
-}
-
-modifier_genoese_flexibility = {
-	navy_maintenance_efficiency = 0.10
-	can_convert_galleys_to_light = yes
-}
-
-modifier_genoese_school = {
-	cultural_tradition_modifier = 0.1
-	cultural_influence_modifier = 0.1
-}
-
-modifier_geo_georgian_golden_age = {
-	cultural_influence_modifier = 0.1
-}
-
-modifier_geo_legacy_of_tamar = {
-	monthly_prestige = 0.1
-}
-
-modifier_geo_david_the_builder = {
-	global_build_buildings_cost = -0.1
-}
-
-modifier_geo_georgian_titles = {
-	court_spending_cost_modifier = -0.05
-}
-
-modifier_geo_georgian_numismatics = {
-	global_merchant_power = 0.2
-	minting_income_factor = 0.05
-}
-
-modifier_geo_beacon_of_christianity = {
-	global_pop_conversion_speed_modifier = 0.1
-}
-
-modifier_geo_georgian_principalities = {
-	global_distance_from_capital_speed_propagation = 0.1
-}
-
-modifier_geo_georgian_resilience = {
-	stability_investment = small_stability_investment
 }
 
 modifier_glh_legacy_of_the_golden_horde = {
@@ -3083,7 +2600,7 @@ modifier_geheimrat = {
 }
 
 modifier_hofkriegsrat = {
-	army_reinforce_cost = -0.1
+	army_reinforce_efficiency = 0.2
 	regiment_reinforcement_speed = 0.1
 }
 
@@ -3107,17 +2624,12 @@ modifier_wiener_klassik = {
 }
 
 modifier_multicultural_empire = {
-	cultures_capacity = 3
+	cultures_capacity = 2
 }
 
 modifier_imperial_artillery = {
 	army_artillery_power = 0.1
 	army_artillery_build_cost_modifier = -0.1
-}
-
-modifier_hes_form_the_militia_army = {
-	global_manpower_modifier = 0.1
-	land_morale_modifier = 0.05
 }
 
 modifier_hin_sepahi = {
@@ -3161,61 +2673,9 @@ modifier_hin_industrialization = {
 	global_production_efficiency = large_production_efficiency_bonus
 }
 
-modifier_hsa_hanseatic_ties = {
-	max_diplomats = 2
-}
-
-modifier_hsa_seal_of_the_hansa = {
-	global_merchant_capacity_modifier = 0.33
-}
-
-modifier_hsa_hanseatic_shipwrights = {
-	hanseatic_shipwright_guild_max_level = 1
-}
-
-modifier_hsa_draft_merchant_privileges = {
-	global_trades_per_burgher = 1
-}
-
-modifier_hsa_mastery_of_the_sea = {
-	merchant_power_from_maritime_modifier = 0.2
-	trade_sea_efficiency = 0.4
-}
-
-modifier_hsa_exchange_of_ideas = {
-	research_speed_modifier = 0.05
-}
-
-modifier_hsa_global_reach = {
-	trade_range_modifier = 0.2
-}
-
-modifier_hsa_hanseatic_treasury = {
-	bank_interest = -0.01
-}
-
-modifier_hsa_regularized_contributions = {
-	tax_income_efficiency = large_tax_income_efficiency_bonus
-}
-
-modifier_the_hansa_bank = {
-	bank_interest = -0.01
-	monthly_loan_capacity_investment = 10
-}
-
-modifier_hsa_reform_the_hanstag = {
-	monthly_republican_tradition = 0.05
-	parliament_base_support = 0.1
-}
-
-modifier_hsa_concept_of_mercantilism = {
-	counter_espionage = 0.33
-	export_efficiency = small_trade_efficiency_bonus
-}
-
 modifier_hun_multi_culturalism = {
+	accepted_culture_maintenance_cost_modifier = -0.1
 	cultures_capacity = 2
-	add_accepted_culture_cost_modifier = -0.1
 }
 
 modifier_hun_renaissance_knowledge = {
@@ -3225,10 +2685,6 @@ modifier_hun_renaissance_knowledge = {
 
 modifier_hun_reformed_coinage = {
 	monthly_inflation = -0.001
-}
-
-modifier_hun_bulwark_of_christianity = {
-	global_manpower_modifier = 0.1
 }
 
 modifier_hun_hungarian_reformation = {
@@ -3246,13 +2702,17 @@ modifier_hun_realm_of_many_religions = {
 	tolerance_heathen = 1
 }
 
-modifier_hun_curtailed_peasantry = {
-	peasants_estate_max_tax = 0.1
-	global_max_rgo_size_modifier = 0.2
+modifier_hun_bulwark_of_christianity = {
+	global_manpower_modifier = 0.1
 }
 
 modifier_hun_revolutionized_military_tactics = {
 	possible_frontage_modifier = 0.10
+}
+
+modifier_hun_curtailed_peasantry = {
+	peasants_estate_max_tax = 0.1
+	global_max_rgo_size_modifier = 0.2
 }
 
 modifier_hun_strengthened_towns = {
@@ -3261,7 +2721,7 @@ modifier_hun_strengthened_towns = {
 }
 
 modifier_hun_hungarian_unity = {
-	land_morale_modifier = 0.10
+	land_morale_modifier = 0.15
 }
 
 modifier_ilk_restore_yam = {
@@ -3269,13 +2729,12 @@ modifier_ilk_restore_yam = {
 }
 
 modifier_ilk_ilkhanate_resurgent = {
-	great_power_score_modifier = 0.1
-	monthly_prestige = 0.1
+	monthly_prestige = 0.15
 }
 
 modifier_ilk_persian_arts_and_architecture = {
 	research_speed_modifier = 0.1
-	global_urban_build_buildings_cost = -0.05
+	global_urban_build_buildings_efficiency = 0.1
 }
 
 modifier_ilk_descendants_of_genghis_khan = {
@@ -3310,7 +2769,7 @@ modifier_ira_restoration_of_cities = {
 }
 
 modifier_ira_improved_silk_road = {
-	trade_land_efficiency = 0.2
+	trade_land_efficiency = large_trade_land_efficiency_bonus
 }
 
 modifier_ira_promotion_of_irrigation = {
@@ -3358,18 +2817,14 @@ modifier_ira_afsharid_navy = {
 	naval_morale_recovery = 0.05
 }
 
-modifier_ita_birthplace_of_the_renaissance = {
-	cultural_influence_modifier = 0.1
-	cultural_tradition_modifier = 0.1
-}
-
-modifier_ita_connect_the_interior = {
-	global_road_building_time = -0.2
-}
-
 modifier_ita_increased_recruitment = {
 	global_manpower_modifier = 0.1
 	global_sailors_modifier = 0.1
+}
+
+modifier_ita_flourishing_urban_centers = {
+	global_urban_build_buildings_efficiency = 0.1
+	global_pop_promotion_speed_modifier = 0.1
 }
 
 modifier_ita_influence_over_the_clergy = {
@@ -3377,13 +2832,8 @@ modifier_ita_influence_over_the_clergy = {
 }
 
 modifier_ita_enduring_hardship = {
-	monthly_war_exhaustion = -0.02
 	global_defensive = 0.1
-}
-
-modifier_ita_flourishing_urban_centers = {
-	global_urban_build_buildings_cost = -0.05
-	global_pop_promotion_speed_modifier = 0.1
+	monthly_war_exhaustion = -0.02
 }
 
 modifier_ita_attractive_migration = {
@@ -3399,47 +2849,6 @@ modifier_kbo_fixed_military_camps = {
 modifier_kbo_permanent_sieges = {
 	siege_ability = 0.1
 	movement_speed_if_no_road = 0.05
-}
-
-modifier_khm_great_builders = {
-	global_urban_build_buildings_cost = -0.05
-}
-
-modifier_khm_recruitment_of_peasants = {
-	global_manpower_modifier = 0.1
-}
-
-modifier_khm_foreign_production_skills = {
-	global_production_efficiency = medium_production_efficiency_bonus
-}
-
-modifier_khm_utilize_the_rivers = {
-	global_distance_from_capital_speed_propagation = 0.1
-}
-
-modifier_khm_champa_mercenaries = {
-	army_tradition_decay = -0.001
-}
-
-modifier_khm_restore_angkor = {
-	monthly_prestige = 0.1
-	cultural_tradition_modifier = 0.1
-}
-
-modifier_khm_modern_navy = {
-	naval_damage_taken = -0.1
-}
-
-modifier_khm_invest_in_irrigation = {
-	global_monthly_food_modifier = 0.2
-}
-
-modifier_khm_protection_from_raids = {
-	global_garrison_growth = 0.01
-}
-
-modifier_khm_old_grudges = {
-	land_morale_modifier = 0.1
 }
 
 modifier_reconquista_of_the_sea = {
@@ -3469,7 +2878,7 @@ modifier_a_neverending_crusade = {
 
 modifier_inspired_builders = {
 	invite_artist_cost_modifier = -0.25
-	global_urban_build_buildings_cost = -0.05
+	global_urban_build_buildings_efficiency = 0.1
 }
 
 modifier_the_right_hand_pope = {
@@ -3509,16 +2918,6 @@ modifier_latinate_integration = {
 	cultures_capacity = 1
 }
 
-modifier_kol_peace_in_the_city = {
-	set_cabinet_member_cost_modifier = -0.1
-	country_cabinet_efficiency = 0.05
-}
-
-modifier_kol_school_of_painting = {
-	num_possible_artists = 1
-	global_glass_output_modifier = 0.2
-}
-
 modifier_kon_lineage_lukeni_lua_nimi = {
 	land_morale_modifier = 0.1
 }
@@ -3547,7 +2946,7 @@ modifier_kor_metal_movable_type = {
 }
 
 modifier_kor_court_poetry = {
-	global_nobles_max_literacy = 5
+	global_nobles_max_literacy = 3
 	cultural_tradition_modifier = 0.1
 }
 
@@ -3560,7 +2959,7 @@ modifier_kor_grand_code = {
 }
 
 modifier_kor_hangeul_alphabet = {
-	global_max_literacy = 5
+	global_max_literacy = 3
 }
 
 modifier_hyanyak_system = {
@@ -3617,90 +3016,16 @@ modifier_krs_kurdish_warrior_poets = {
 	country_child_education = 0.2
 }
 
-modifier_warlord_dukes = {
-	monthly_army_tradition = 0.03
-	nobles_estate_levy_size = 0.5
-}
-
-modifier_two_realms = {
-	cultures_capacity = 1
-}
-
-modifier_chacery_slavonic = {
-	legislative_efficiency = 0.1
-	monthly_prestige = 0.05
-}
-
-modifier_supremus_dux_lithuaniae = {
-	global_crown_estate_power = 0.1
-}
-
-modifier_ties_with_the_holy_see = {
-	papal_relations = 25
-	monthly_religious_influence = 0.2
-}
-
-modifier_patriarchate_of_lithuania = {
-	create_autocephalous_patriarchate_cost_modifier = -0.33
-	tolerance_own = 1
-}
-
-modifier_lithuanian_renaissance = {
-	research_speed_modifier = 0.05
-}
-
-modifier_columns_of_gediminids = {
-	land_morale_modifier = 0.15
-}
-
 modifier_lva_baltic_forestry = {
 	global_lumber_output_modifier = 0.1
 }
 
 modifier_lva_baltic_forts = {
-	fort_maintenance_cost = -0.10
-}
-
-modifier_lor_three_bishoprics = {
-	monthly_religious_influence = 0.1
-	tolerance_own = 0.5
-}
-
-modifier_lor_between_great_powers = {
-	diplomatic_capacity_modifier = 0.1
-}
-
-modifier_lor_fortified_cities = {
-	global_defensive = 0.2
-}
-
-modifier_mai_leader_rheinish_league = {
-	diplomatic_reputation = diplomatic_reputation_mild_bonus
-}
-
-modifier_mai_zealous_fight_against_heretics = {
-	land_morale_modifier = 0.1
-}
-
-modifier_mai_vicar_of_mainz = {
-	stability_cost = -0.1
-}
-
-modifier_mai_mainz_kingdom = {
-	cultural_influence_modifier = 0.33
-}
-
-modifier_mai_center_of_printing = {
-	global_books_output_modifier = 0.25
-}
-
-modifier_mai_garrison_of_the_rhine = {
-	global_defensive = 0.1
-	global_manpower_modifier = 0.1
+	fort_maintenance_efficiency = 0.20
 }
 
 modifier_foreign_architectural_influence = {
-	global_build_buildings_cost = -0.05
+	global_build_buildings_efficiency = 0.1
 	monthly_prestige = 0.1
 }
 
@@ -3756,40 +3081,6 @@ modifier_west_african_slave_trade = {
 	slave_raid_efficiency = 0.10
 }
 
-modifier_kashif = {
-	country_cabinet_efficiency = 0.1
-}
-
-modifier_royal_mamluks = {
-	discipline = 0.05
-}
-
-modifier_red_sea_trade = {
-	trade_range_modifier = 0.33
-}
-
-modifier_masters_of_the_nile = {
-	global_monthly_prosperity = 0.001
-	global_monthly_food_modifier = 0.2
-}
-
-modifier_indian_networks = {
-	import_efficiency = tiny_trade_efficiency_bonus
-	trade_sea_efficiency = 0.2
-}
-
-modifier_study_foreign_gunpowder_techniques = {
-	army_artillery_power = 0.05
-}
-
-modifier_port_customs = {
-	global_trade_protection_factor = 0.25
-}
-
-modifier_secure_mediterranean_ports = {
-	global_maritime_presence_modifier = 0.25
-}
-
 modifier_shadow_of_ambition = {
 	army_movement_speed = 0.05
 	siege_ability = 0.1
@@ -3805,47 +3096,6 @@ modifier_southern_campaigns = {
 
 modifier_foreign_learning = {
 	research_speed_modifier = 0.05
-}
-
-modifier_meissner_groschen = {
-	minting_income_factor = 0.10
-}
-
-modifier_a_resilient_soul = {
-	monthly_war_exhaustion = -0.05
-}
-
-modifier_saxon_court = {
-	country_cabinet_efficiency = 0.1
-}
-
-modifier_a_tolerant_society = {
-	tolerance_heretic = 1
-}
-
-modifier_furstenschule = {
-	global_monthly_literacy = 0.02
-}
-
-modifier_bonded_by_loyalty = {
-	land_morale_modifier = 0.1
-}
-
-modifier_meissner_porcelain = {
-	global_porcelain_output_modifier = 0.2
-	monthly_prestige = 0.1
-}
-
-modifier_saxon_baroque = {
-	cultural_tradition_modifier = 0.2
-}
-
-modifier_retablissement = {
-	global_build_buildings_cost = -0.1
-}
-
-modifier_saxon_industrialization = {
-	global_production_efficiency = large_production_efficiency_bonus
 }
 
 modifier_mge_pax_mongolica = {
@@ -3902,83 +3152,6 @@ modifier_control_the_malacca_strait = {
 	trade_income = 0.1
 }
 
-modifier_renaissance_prince = {
-	skill_of_new_artists = 0.1
-}
-
-modifier_patron_of_music = {
-	cultural_tradition_modifier = 0.1
-}
-
-modifier_lowered_power_of_barons = {
-	global_nobles_estate_power = -0.2
-}
-
-modifier_age_of_condottieri = {
-	mercenary_maintenance_efficiency = 0.15
-}
-
-modifier_encouragement_of_philosophers = {
-	global_max_literacy = 5
-}
-
-modifier_merchant_princes = {
-	global_merchant_power = 0.1
-}
-
-modifier_rulership_of_enlightened_principals = {
-	stability_cost = -0.1
-}
-
-modifier_milanese_ambition = {
-	global_war_score_efficiency = 0.1
-}
-
-modifier_mor_marabouts = {
-	invite_religious_figure_same_school_cost_modifier = -0.5
-	invite_religious_figure_different_school_cost_modifier = -0.5
-	dismiss_religious_figure_cost_modifier = -0.5
-}
-
-modifier_trans_saharan_trade = {
-	trade_land_efficiency = 0.4
-}
-
-modifier_first_fleet_of_the_med = {
-	monthly_navy_tradition = 0.1
-}
-
-modifier_slave_soldiers = {
-	global_manpower_modifier = 0.1
-}
-
-modifier_desert_power = {
-	tribes_estate_target_satisfaction = medium_permanent_target_satisfaction
-	peasants_estate_target_satisfaction = medium_permanent_target_satisfaction
-}
-
-modifier_atlantic_trade_routes = {
-	trade_sea_efficiency = 0.2
-}
-
-modifier_foreign_politics = {
-	diplomatic_capacity = 1
-}
-
-modifier_saharan_gold_trade = {
-	global_goods_gold_output_modifier = 0.1
-	minting_inflation_threshold = 0.01
-}
-
-modifier_shurfa_status = {
-	monthly_legitimacy = 0.1
-	monthly_prestige = 0.1
-}
-
-modifier_maghrebi_administration = {
-	global_distance_from_capital_speed_propagation = 0.1
-}
-
 modifier_seat_of_metropolitan_bishop = {
 	global_pop_conversion_speed_modifier = 0.1
 	tolerance_own = 1
@@ -3989,11 +3162,11 @@ modifier_pomestnoe_voisko = {
 }
 
 modifier_strength_of_the_boyars = {
-	stability_cost = -0.1
+	stability_cost_efficiency = 0.2
 }
 
 modifier_zasechnaya_cherta = {
-	fort_maintenance_cost = -0.2
+	fort_maintenance_efficiency = 0.4
 }
 
 modifier_hurricane_hardy = {
@@ -4015,12 +3188,12 @@ modifier_imperatorskiy_moskovskiy_universitet = {
 }
 
 modifier_malay_merchants_in_every_port = {
-	global_foreign_build_buildings_cost = -0.25
+	global_foreign_build_buildings_efficiency = 0.5
 	global_merchant_capacity_modifier = 0.1
 }
 
 modifier_expert_hagglers = {
-	trade_sea_efficiency = 0.4
+	trade_sea_efficiency = large_trade_sea_efficiency_bonus
 }
 
 modifier_agreements_sea_nomads = {
@@ -4036,7 +3209,7 @@ modifier_mug_zamindar_system = {
 }
 
 modifier_mug_mughal_architecture = {
-	global_build_buildings_cost = -0.1
+	global_build_buildings_efficiency = 0.2
 }
 
 modifier_mug_fatawa_e_alamgiri = {
@@ -4045,48 +3218,6 @@ modifier_mug_fatawa_e_alamgiri = {
 
 modifier_mug_an_indian_padshah = {
 	global_estate_target_satisfaction = medium_permanent_target_satisfaction
-}
-
-modifier_consolidate_the_royal_domain = {
-	global_crown_estate_power = 0.1
-}
-
-modifier_academia_pontaniana = {
-	global_max_literacy = 5
-}
-
-modifier_encouraged_city_living = {
-	non_rural_migration_attraction = 0.2
-	global_burghers_city_desired_pop = 0.5
-}
-
-modifier_crush_the_barons = {
-	global_nobles_estate_power = -0.2
-}
-
-modifier_expanded_arsenale = {
-	ship_build_speed = 0.1
-}
-
-modifier_city_of_artists = {
-	skill_of_new_artists = 0.1
-	invite_artist_cost_modifier = -0.25
-}
-
-modifier_institutional_reorganization = {
-	government_reform_slots = 1
-}
-
-modifier_a_central_power = {
-	max_diplomats = 2
-}
-
-modifier_neapolitan_industrialization = {
-	global_raw_material_output = 0.1
-}
-
-modifier_neapolitan_army_reforms = {
-	army_heavy_infantry_power = 0.10
 }
 
 modifier_nav_a_renaissance_realm = {
@@ -4176,7 +3307,7 @@ modifier_gel_healthy_economy = {
 }
 
 modifier_hai_frontier_march = {
-	fort_maintenance_cost = -0.2
+	fort_maintenance_efficiency = 0.4
 }
 
 modifier_hol_maritime_warfare = {
@@ -4188,7 +3319,7 @@ modifier_lie_devoted_land = {
 }
 
 modifier_lux_fortress_europe = {
-	global_fort_build_buildings_cost = -0.25
+	global_fort_build_buildings_efficiency = 0.5
 }
 
 modifier_utr_blessed_land = {
@@ -4285,7 +3416,7 @@ modifier_nor_shipbuilding = {
 }
 
 modifier_write_new_sagas = {
-	cultural_influence_modifier = 0.33
+	cultural_influence_modifier = 0.20
 	cultural_tradition_modifier = 0.2
 }
 
@@ -4351,7 +3482,7 @@ modifier_association_with_unbelievers = {
 }
 
 modifier_port_security_improvement = {
-	trade_sea_efficiency = 0.2
+	trade_sea_efficiency = large_trade_sea_efficiency_bonus
 }
 
 modifier_end_of_shipbuilding_guilds = {
@@ -4371,36 +3502,6 @@ modifier_omani_ambition = {
 	naval_morale_modifier = 0.1
 }
 
-modifier_ori_servitor_of_jagganath = {
-	global_estate_target_satisfaction = small_permanent_target_satisfaction
-}
-
-modifier_ori_parikshas = {
-	global_crown_estate_power = 0.1
-}
-
-modifier_ori_odia_militarization = {
-	discipline = 0.05
-}
-
-modifier_ori_patronize_temple_construction = {
-	clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
-}
-
-modifier_ori_refined_cloth_production = {
-	global_cloth_output_modifier = 0.2
-	global_fine_cloth_output_modifier = 0.2
-}
-
-modifier_ori_encourage_salt_trade = {
-	global_salt_output_modifier = 0.2
-	global_merchant_capacity_modifier = 0.1
-}
-
-modifier_ori_expansion_of_infrastructure = {
-	global_monthly_development = 0.001
-}
-
 modifier_moqarrariya = {
 	improve_relation_impact = 0.2
 	monthly_diplomats = 0.1
@@ -4415,84 +3516,11 @@ modifier_ormuzi_navy = {
 }
 
 modifier_mint_of_the_gulf = {
-	minting_income_factor = 0.25
-}
-
-modifier_pal_cultivate_vineyards = {
-	global_wine_output_modifier = 0.2
-	global_fruit_output_modifier = 0.2
-}
-
-modifier_pal_protection_of_exclaves = {
-	fort_limit_modifier = 0.2
-}
-
-modifier_pal_fractured_territory = {
-	global_monthly_control = 0.002
-}
-
-modifier_pal_a_just_ruler = {
-	global_estate_target_satisfaction = small_permanent_target_satisfaction
-}
-
-modifier_pal_heaven_of_tolerance = {
-	tolerance_heretic = 1
-	non_rural_migration_attraction = 0.2
-}
-
-modifier_pal_mildness_to_the_commoners = {
-	monthly_peasants_estate_rebel_growth = -0.002
-	pop_join_rebel_threshold = -0.03
-}
-
-modifier_pal_humanist_court = {
-	select_expensive_child_education_cost_modifier = -0.2
-}
-
-modifier_pal_heidelberg_catechism = {
-	tolerance_own = 1
-}
-
-modifier_pal_bilbiotheca_palatina = {
-	cultural_influence_modifier = 0.1
-	research_speed_modifier = 0.03
-}
-
-modifier_palatinate_romanticism = {
-	invite_artist_cost_modifier = -0.25
-	cultural_tradition_modifier = 0.1
-}
-
-modifier_ecclesiastical_primacy = {
-	tolerance_own = 2
-}
-
-modifier_papal_investiture_and_tithes = {
-	tax_income_efficiency = medium_tax_income_efficiency_bonus
-}
-
-modifier_glory_of_rome = {
-	prestige_decay = -0.001
-}
-
-modifier_donation_of_constantine = {
-	casus_belli_creation_speed_modifier = 0.25
-}
-
-modifier_centralize_the_states = {
-	global_crown_estate_power = 0.25
-}
-
-modifier_holy_father = {
-	antagonism_received_modifier = -0.1
-}
-
-modifier_pap_legacy_of_the_military_orders = {
-	discipline = 0.05
+	minting_income_factor = 0.20
 }
 
 modifier_corona_regni_poloniae = {
-	diplomatic_annexation_cost = -0.1
+	diplomatic_annexation_efficiency = 0.2
 	parliament_base_support = 0.05
 }
 
@@ -4501,7 +3529,7 @@ modifier_krakow_grosz = {
 }
 
 modifier_stone_and_brick = {
-	global_build_buildings_cost = -0.1
+	global_build_buildings_efficiency = 0.2
 }
 
 modifier_folwark_system = {
@@ -4557,7 +3585,7 @@ modifier_por_bombardeiros = {
 
 modifier_por_feitorias = {
 	global_merchant_power = 0.1
-	trade_sea_efficiency = 0.20
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 }
 
 modifier_por_ordenancas = {
@@ -4595,7 +3623,7 @@ modifier_statutes_of_aix = {
 }
 
 modifier_rade_of_toulon = {
-	global_port_build_buildings_cost = -0.1
+	global_port_build_buildings_efficiency = 0.2
 	global_naval_supplies_output_modifier = 0.1
 }
 
@@ -4639,28 +3667,7 @@ modifier_rom_triumphs = {
 }
 
 modifier_rom_roman_architecture = {
-	building_upkeep_costs = -0.15
-}
-
-modifier_sav_the_shroud_of_turin = {
-	tax_income_efficiency = large_tax_income_efficiency_bonus
-}
-
-modifier_sav_alpine_pass_control = {
-	global_road_building_time = -0.2
-	global_trade_protection_factor = 0.1
-}
-
-modifier_sav_fight_the_vaudois = {
-	global_pop_conversion_speed_modifier = 0.1
-}
-
-modifier_sav_embrace_the_vaudois = {
-	tolerance_own = 1
-}
-
-modifier_sav_repopulate_the_valleys = {
-	rural_migration_attraction = 0.2
+	building_upkeep_efficiency = 0.30
 }
 
 modifier_sca_legacy_kalmar_union = {
@@ -4703,7 +3710,7 @@ modifier_scottish_trade_connections = {
 }
 
 modifier_comets = {
-	stability_cost = -0.1
+	stability_cost_efficiency = 0.2
 }
 
 modifier_modernized_royal_scots_navy = {
@@ -4755,6 +3762,11 @@ modifier_rallying_the_troops = {
 	regiment_reinforcement_speed = 0.1
 }
 
+modifier_tro_the_defensive_network_of_klobuk = {
+	global_defensive = 0.1
+	fort_limit_modifier = 0.10
+}
+
 modifier_zta_the_italian_condottieri = {
 	diplomatic_capacity_modifier = 0.1
 	hire_mercenary_premium_cost_modifier = -0.10
@@ -4776,7 +3788,11 @@ modifier_ser_the_transcribers_of_resava = {
 }
 
 modifier_keepers_of_the_gate = {
-	fort_maintenance_cost = -0.2
+	fort_maintenance_efficiency = 0.4
+}
+
+modifier_tro_the_trebisnjica_bridges = {
+	trade_land_efficiency = large_trade_land_efficiency_bonus
 }
 
 modifier_zta_the_retreat_to_the_karst = {
@@ -4788,7 +3804,7 @@ modifier_serbian_the_icon_of_saint_sava = {
 }
 
 modifier_hum_the_humite_chancery_records = {
-	stability_cost = -0.1
+	stability_cost_efficiency = 0.2
 }
 
 modifier_the_rebirth_of_the_patriarchate = {
@@ -4798,6 +3814,10 @@ modifier_the_rebirth_of_the_patriarchate = {
 
 modifier_reform_the_ecclesiastical_authorities = {
 	tax_income_efficiency = medium_tax_income_efficiency_bonus
+}
+
+modifier_tro_the_aqueducts_of_popovo_polje = {
+	expand_rgo_farming_cost_modifier = -0.20
 }
 
 modifier_zta_the_vladika_sovereignty = {
@@ -4825,8 +3845,12 @@ modifier_foreign_relations_bureau = {
 	improve_relation_impact = 0.1
 }
 
+modifier_tro_the_zudiosca_network = {
+	spy_network_construction = 0.2
+}
+
 modifier_zta_guerillas_of_the_scrub = {
-	land_unit_attrition = -0.1
+	land_unit_attrition = -0.2
 }
 
 modifier_serbian_enlightenment = {
@@ -4846,55 +3870,12 @@ modifier_ser_the_sumadija_agrarian_revolution = {
 	global_monthly_food_modifier = 0.2
 }
 
+modifier_tro_the_constitution_of_trebinje = {
+	government_reform_slots = 1
+}
+
 modifier_zta_the_code_of_the_black_mountain = {
 	government_size = 1
-}
-
-modifier_sia_experienced_ambassadors = {
-	diplomatic_reputation = diplomatic_reputation_mild_bonus
-}
-
-modifier_sia_rise_to_equal_heights = {
-	global_monthly_development = 0.001
-}
-
-modifier_sia_consolidation_of_state = {
-	diplomatic_annexation_cost = -0.2
-}
-
-modifier_sia_education_reform = {
-	global_monthly_literacy = 0.02
-}
-
-modifier_sia_royal_absolutism = {
-	monthly_legitimacy = 0.1
-	global_crown_estate_power = 0.1
-}
-
-modifier_sia_thai_unity = {
-	land_morale_modifier = 0.1
-	discipline = 0.05
-}
-
-modifier_sic_studium_generale = {
-	research_speed_modifier = 0.05
-}
-
-modifier_sic_naval_vigilance = {
-	navy_galley_power = 0.1
-	fort_limit_modifier = 0.10
-}
-
-modifier_sic_sicilian_silk = {
-	global_silk_output_modifier = 0.1
-}
-
-modifier_sic_sicilian_enlightenment = {
-	cultural_influence_modifier = 0.1
-}
-
-modifier_sic_sicilian_reforms = {
-	legislative_efficiency = 0.2
 }
 
 modifier_sko_fulani_expansion = {
@@ -4912,7 +3893,7 @@ modifier_sko_education_for_all = {
 
 modifier_sko_religious_court = {
 	number_of_allowed_religious_figures = 1
-	court_spending_cost_modifier = -0.05
+	court_spending_efficiency = 0.1
 }
 
 modifier_sko_recruit_fulani_generals = {
@@ -4924,45 +3905,13 @@ modifier_sko_one_people_in_faith = {
 	cultures_capacity_modifier = 0.2
 }
 
-modifier_sme_atabegs_of_samtskhe = {
-	monthly_legitimacy = 0.1
-}
-
-modifier_sme_proactive_diplomacy = {
-	spy_network_construction = 0.2
-}
-
-modifier_sme_fortresses_of_samtskhe = {
-	global_defensive = 0.2
-}
-
-modifier_sme_independent_ambitions = {
-	land_morale_modifier = 0.1
-}
-
-modifier_sme_protect_trade_routes = {
-	trade_land_efficiency = small_trade_land_efficiency_bonus
-}
-
-modifier_sme_frontier_warriors = {
-	army_light_cavalry_build_cost_modifier = -0.1
-}
-
-modifier_sme_sacred_land = {
-	tolerance_own = 1
-}
-
-modifier_sme_bridge_between_worlds = {
-	tolerance_heathen = 1
-}
-
 modifier_smolenskian_resolve = {
 	monthly_religious_rebel_growth = -0.01
 	religious_icon_power_modifier = 0.2
 }
 
 modifier_link_the_steppes_trade = {
-	trade_land_efficiency = 0.50
+	trade_land_efficiency = large_trade_land_efficiency_bonus
 }
 
 modifier_hub_of_militarism = {
@@ -5000,7 +3949,7 @@ modifier_sharia = {
 }
 
 modifier_trans_sahara_trade = {
-	trade_land_efficiency = small_trade_land_efficiency_bonus
+	trade_land_efficiency = large_trade_land_efficiency_bonus
 }
 
 modifier_modernization_of_the_military = {
@@ -5032,32 +3981,8 @@ modifier_spa_spanish_enlightenment = {
 	global_monthly_development = 0.001
 }
 
-modifier_suk_birthplace_of_a_culture = {
-	monthly_prestige = 0.1
-}
-
-modifier_suk_ram_khamhaeng_stele = {
-	monthly_legitimacy = 0.1
-}
-
-modifier_suk_wat_si_sawai = {
-	global_pop_conversion_speed_modifier = 0.1
-}
-
-modifier_suk_sukhothai_ceramics = {
-	trade_land_efficiency = small_trade_land_efficiency_bonus
-}
-
-modifier_suk_military_history = {
-	global_manpower_modifier = 0.15
-}
-
-modifier_suk_unstoppable_army = {
-	army_maintenance_efficiency = 0.2
-}
-
 modifier_extend_kampung_kampung = {
-	global_rural_build_buildings_cost = -0.1
+	global_rural_build_buildings_efficiency = 0.2
 	global_max_rgo_size_modifier_in_rural = 0.1
 }
 
@@ -5212,7 +4137,7 @@ modifier_tlahtocayotl = {
 
 modifier_calpixcayotl = {
 	subject_income_modifier = 0.025
-	subject_loyalty = 2
+	subject_loyalty = 5
 }
 
 modifier_reformed_telpochcalli = {
@@ -5228,7 +4153,7 @@ modifier_the_return_of_quetzalcoatl = {
 }
 
 modifier_brave_as_hummingbird = {
-	land_morale_modifier = 0.2
+	land_morale_modifier = 0.15
 }
 
 modifier_new_trade_opportunities = {
@@ -5237,6 +4162,1230 @@ modifier_new_trade_opportunities = {
 
 modifier_aztec_chargers = {
 	army_heavy_infantry_power = 0.20
+}
+
+modifier_saharan_trade = {
+	export_efficiency = medium_trade_efficiency_bonus
+}
+
+modifier_al_caid = {
+	global_trades_per_burgher = 0.2
+	burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+}
+
+modifier_connections_with_the_christian_world = {
+	diplomatic_capacity = 1
+}
+
+modifier_attract_foreign_pirates = {
+	global_sailors_modifier = 0.2
+}
+
+modifier_rais_of_the_navy = {
+	monthly_navy_tradition = 0.15
+}
+
+modifier_export_monopolies = {
+	global_trade_protection_factor = 0.2
+}
+
+modifier_millets = {
+	tolerance_heathen = 1
+	cultures_capacity = 1
+}
+
+modifier_bashi_bazouks = {
+	fort_maintenance_efficiency = 0.2
+	global_garrison_growth = 0.01
+}
+
+modifier_ottoman_bureaucracy = {
+	legislative_efficiency = 0.1
+	maintain_bureaucracy_price_cost_modifier = -0.05
+}
+
+modifier_autonomous_pashas = {
+	global_distance_from_capital_speed_propagation = 0.1
+}
+
+modifier_dragomans = {
+	improve_relation_impact = 0.2
+}
+
+modifier_ahdnames = {
+	diplomatic_capacity = 1
+}
+
+modifier_kafes = {
+	stability_cost_efficiency = 0.2
+}
+
+modifier_ottoman_waystations = {
+	land_unit_attrition = -0.2
+}
+
+modifier_late_ottoman_bureaucracy = {
+	global_burghers_max_literacy = 10
+}
+
+modifier_ottoman_tax_farming = {
+	global_nobles_estate_power = -0.2
+}
+
+modifier_tulip_period = {
+	selling_efficiency = small_trade_efficiency_bonus
+}
+
+modifier_imperial_school_of_naval_engineering = {
+	ship_build_speed = 0.1
+}
+
+modifier_khedivates = {
+	subject_loyalty = 5
+}
+
+modifier_ayans = {
+	global_monthly_control = 0.003
+}
+
+modifier_tus_il_catasto = {
+	stability_cost_efficiency = 0.1
+	improve_relation_impact = 0.1
+}
+
+modifier_porto_franco = {
+	global_trade_center_power = 0.05
+	non_rural_migration_attraction = 0.1
+}
+
+modifier_tuscan_uffizi = {
+	global_porcelain_output_modifier = 0.05
+	monthly_prestige = 0.1
+}
+
+modifier_accademia_cimento = {
+	global_burghers_max_literacy = 10
+	government_reform_slots = 1
+}
+
+modifier_tuscan_physiocratic_reforms = {
+	global_life_expectancy = 2
+	global_max_rgo_size_modifier = 0.10
+}
+
+modifier_tws_ensure_loyal_families = {
+	monthly_devotion = 0.1
+	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+	nobles_estate_satisfaction_recovery = 0.001
+}
+
+modifier_tws_revitalize_the_lands = {
+	global_migration_speed_modifier = 0.1
+	global_monthly_prosperity = 0.001
+}
+
+modifier_tws_oversea_ambitions = {
+	anti_piracy_warfare_modifier = 0.1
+	global_maritime_presence_modifier = 0.25
+}
+
+modifier_tws_capable_vicars = {
+	estate_power_from_cabinet = -0.1
+	set_cabinet_member_cost_modifier = -0.2
+}
+
+modifier_tws_protect_the_coastline = {
+	navy_tradition_decay = -0.001
+	naval_morale_modifier = 0.10
+}
+
+modifier_usa_mayflower_compact = {
+	global_estate_target_satisfaction = small_permanent_target_satisfaction
+}
+
+modifier_usa_empowered_assemblies = {
+	parliament_base_support = 0.1
+}
+
+modifier_usa_great_awakening = {
+	tolerance_heretic = 1
+	tolerance_own = 1
+}
+
+modifier_usa_declaration_of_independence = {
+	monthly_war_exhaustion = -0.03
+	land_morale_modifier = 0.15
+}
+
+modifier_usa_bill_of_rights = {
+	monthly_republican_tradition = 0.1
+	monthly_legitimacy = 0.1
+	monthly_devotion = 0.1
+}
+
+modifier_usa_recognized_sovereignty = {
+	diplomatic_capacity = 1
+}
+
+modifier_usa_era_good_feelings = {
+	stability_cost_efficiency = 0.2
+	global_crown_estate_power = 0.2
+}
+
+modifier_vij_arab_horses = {
+	army_light_cavalry_power = 0.10
+}
+
+modifier_vij_first_indian_artillery = {
+	army_artillery_build_cost_modifier = -0.1
+	army_artillery_power = 0.1
+}
+
+modifier_vij_the_bunds = {
+	global_monthly_food_modifier = 0.1
+}
+
+modifier_vij_adroit_diplomacy = {
+	diplomatic_capacity = 1
+}
+
+modifier_vij_promotion_of_trade = {
+	global_trade_center_power = 0.05
+}
+
+modifier_vij_carnatic_music = {
+	cultural_tradition_modifier = 0.33
+}
+
+modifier_vij_cultural_integration = {
+	accepted_culture_maintenance_cost_modifier = -0.2
+	cultures_capacity = 1
+}
+
+modifier_vij_rule_in_accord_with_dharma = {
+	tolerance_own = 1
+	activate_avatar_cost_modifier = -0.5
+	deactivate_avatar_cost_modifier = -0.5
+}
+
+modifier_vij_harsh_penal_code = {
+	stability_decay = -0.00025
+}
+
+modifier_vij_decentralized_rule = {
+	global_estate_target_satisfaction = small_permanent_target_satisfaction
+}
+
+modifier_vij_indian_throne = {
+	monthly_prestige = 0.1
+}
+
+modifier_control_of_the_red_sea = {
+	global_maritime_presence_decay = -0.001
+}
+
+modifier_yem_unite_the_tribes = {
+	global_max_rural_control = 0.05
+}
+
+modifier_port_of_aden = {
+	export_efficiency = medium_trade_efficiency_bonus
+}
+
+modifier_zanj_taxation = {
+	dhimmi_estate_max_tax = 0.1
+}
+
+modifier_zan_food_imports = {
+	food_purchase_efficiency = 0.1
+}
+
+modifier_zan_kilwan_latitude_staves = {
+	monthly_navy_tradition = 0.05
+	global_maritime_presence_modifier = 0.1
+}
+
+modifier_shirazi_legacy = {
+	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+	monthly_devotion = 0.1
+}
+
+modifier_zan_gold_trade_of_africa = {
+	global_goods_gold_output_modifier = 0.1
+}
+
+modifier_zan_diplomacy_through_trade = {
+	selling_efficiency = tiny_trade_efficiency_bonus
+	diplomatic_capacity = 1
+}
+
+modifier_ayu_prestigious_cavalry = {
+	army_heavy_cavalry_power = 0.15
+}
+
+modifier_ayu_white_elephant = {
+	subject_income_modifier = 0.025
+	subject_loyalty = 5
+}
+
+modifier_ayu_ayutthaya_literature = {
+	cultural_tradition_modifier = 0.2
+}
+
+modifier_ayu_phrai_luang = {
+	global_monthly_development = 0.001
+}
+
+modifier_ayu_phrai_thaan = {
+	global_manpower_modifier = 0.125
+}
+
+modifier_ayu_floating_rice = {
+	global_rice_output_modifier = 0.1
+}
+
+modifier_ayu_sakdina = {
+	global_estate_max_tax = 0.1
+}
+
+modifier_ayu_cosmopolitan_trade = {
+	selling_efficiency = small_trade_efficiency_bonus
+}
+
+modifier_bos_katun_communities = {
+	global_max_rural_control = 0.05
+}
+
+modifier_bos_influence_of_the_stanak = {
+	nobles_estate_agenda_impact = 0.1
+	nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
+}
+
+modifier_bos_defiant_terrain = {
+	global_hostile_attrition = 1
+}
+
+modifier_bos_kingly_ambitions = {
+	army_heavy_infantry_power = 0.05
+	monthly_devotion = 0.05
+	monthly_legitimacy = 0.05
+	monthly_republican_tradition = 0.05
+}
+
+modifier_bosnian_bosancica = {
+	counter_espionage = 0.2
+	cultural_influence_modifier = 0.1
+}
+
+modifier_bos_the_srebrenica_mint_office = {
+	global_silver_output_modifier = 0.20
+}
+
+modifier_bosnian_people_from_the_hills = {
+	trade_land_efficiency = large_trade_land_efficiency_bonus
+}
+
+modifier_bos_bosnian_ljekaruse = {
+	global_life_expectancy = 3
+	global_disease_resistance = 0.05
+}
+
+modifier_bosnian_susjedsvto_of_bosnia = {
+	global_estate_satisfaction_recovery = 0.001
+	monthly_religious_rebel_growth = -0.01
+}
+
+modifier_bos_the_filigree_guilds = {
+	global_jewelry_output_modifier = 0.20
+}
+
+modifier_divide_estates = {
+	global_crown_estate_power = 0.1
+}
+
+modifier_soldiers_fortune = {
+	hire_mercenary_premium_cost_modifier = -0.1
+}
+
+modifier_iron_tooth = {
+	global_estate_target_satisfaction = small_permanent_target_satisfaction
+}
+
+modifier_kammergericht = {
+	tax_income_efficiency = large_tax_income_efficiency_bonus
+}
+
+modifier_dispositio_achillea = {
+	nobles_estate_target_satisfaction = small_permanent_target_satisfaction
+	stability_cost_efficiency = 0.2
+}
+
+modifier_margrave_council = {
+	nobles_estate_target_satisfaction = medium_permanent_target_satisfaction
+	burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+}
+
+modifier_religious_toleration = {
+	tolerance_heretic = 1
+}
+
+modifier_hohenzollern_privy_council = {
+	court_spending_efficiency = 0.1
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+}
+
+modifier_edict_of_potsdam = {
+	global_migration_speed_modifier = 0.1
+	global_burghers_city_desired_pop = 0.1
+}
+
+modifier_hohenzollern_court_culture = {
+	num_possible_artists = 1
+	skill_of_new_artists = 0.05
+}
+
+modifier_berliner_aufklarung = {
+	research_speed_modifier = 0.05
+	stability_cost_efficiency = 0.2
+}
+
+modifier_men_of_letters_advance = {
+	research_speed_modifier = 0.05
+}
+
+modifier_byz_shield_of_the_west = {
+	allow_extensive_conscription_cabinet_action = yes
+}
+
+modifier_byz_court_of_languages = {
+	diplomatic_capacity = 1
+}
+
+modifier_byz_poikilia = {
+	monthly_prestige = 0.1
+}
+
+modifier_expand_varangian_guard_advance = {
+	num_of_varangian_units = 4
+}
+
+modifier_byz_crossroads_of_continents = {
+	trade_range_modifier = 0.2
+}
+
+modifier_byz_reaffirm_synod_powers = {
+	orthodox_synod_cost_modifier = -0.2
+	monthly_religious_influence = 0.1
+}
+
+modifier_byz_byzantine_inquisition = {
+	global_pop_conversion_speed_modifier = 0.1
+}
+
+modifier_byz_autokratoria_rhomaion = {
+	global_integration_speed_modifier = 0.2
+}
+
+modifier_byz_modernized_strategikon = {
+	army_tradition_decay = -0.001
+}
+
+modifier_byz_ancient_greek_studies = {
+	global_max_literacy = 10
+}
+
+modifier_byz_the_new_imperial_army = {
+	global_manpower_modifier = 0.1
+}
+
+modifier_extensive_canal_works = {
+	global_rural_build_buildings_efficiency = 0.05
+	global_monthly_prosperity = 0.001
+}
+
+modifier_tributary_system = {
+	subject_loyalty = 5
+}
+
+modifier_zhongshu_sheng = {
+	government_reform_slots = 1
+}
+
+modifier_lijia_system = {
+	global_distance_from_capital_speed_propagation = 0.1
+}
+
+modifier_yulin_tuce = {
+	tax_income_efficiency = medium_tax_income_efficiency_bonus
+	global_monthly_food_modifier = 0.05
+}
+
+modifier_weisuo_system = {
+	global_manpower_modifier = 0.1
+	army_maintenance_efficiency = 0.1
+}
+
+modifier_grand_coordinators = {
+	government_size = 1
+}
+
+modifier_the_censorate = {
+	global_crown_estate_power = 0.1
+}
+
+modifier_the_tea_trade = {
+	global_tea_output_modifier = 0.2
+}
+
+modifier_tu_bing = {
+	army_auxiliary_build_cost_modifier = -0.2
+}
+
+modifier_tusi_titles = {
+	pop_join_rebel_threshold = -0.03
+}
+
+modifier_salt_monopoly = {
+	global_salt_output_modifier = 0.2
+}
+
+modifier_reform_the_grand_secretariat = {
+	legislative_efficiency = 0.1
+}
+
+modifier_grand_military_parades = {
+	monthly_army_tradition = 0.05
+}
+
+modifier_silver_standard = {
+	global_silver_output_modifier = 0.15
+}
+
+modifier_nine_garrisons_of_the_great_wall = {
+	global_defensive = 0.20
+}
+
+modifier_woodblock_printing = {
+	monthly_prestige = 0.1
+}
+
+modifier_green_standard_army = {
+	global_garrison_size_modifier = 0.2
+	army_heavy_infantry_reinforce_cost_modifier = -0.1
+	army_light_infantry_reinforce_cost_modifier = -0.1
+}
+
+modifier_great_tax_reform = {
+	global_estate_max_tax = 0.1
+}
+
+modifier_junji_chu = {
+	country_cabinet_efficiency = 0.1
+}
+
+modifier_jingdezhen_porcelain = {
+	global_porcelain_output_modifier = 0.1
+	cultural_influence_modifier = 0.15
+}
+
+modifier_sanxitang = {
+	skill_of_new_artists = 0.05
+}
+
+modifier_monuments_to_greatness = {
+	diplomatic_reputation = 2
+}
+
+modifier_ten_great_campaigns = {
+	global_separatism = -0.05
+	global_war_score_efficiency = 0.1
+}
+
+modifier_cir_horsemen_of_the_steppe = {
+	army_light_cavalry_build_cost_modifier = -0.1
+	army_light_cavalry_power = 0.05
+}
+
+modifier_cir_city_and_fortress = {
+	global_defensive = 0.1
+	town_upgrade_cost_modifier = -0.05
+	city_upgrade_cost_modifier = -0.05
+	megalopolis_upgrade_cost_modifier = -0.05
+}
+
+modifier_cir_grand_prince_of_circassia = {
+	land_morale_modifier = 0.1
+}
+
+modifier_cir_multireligious_society = {
+	tolerance_heretic = 0.5
+	tolerance_heathen = 0.5
+}
+
+modifier_cro_influx_of_foreign_knowledge = {
+	embrace_institution_cost_modifier = -0.10
+	hire_artist_cost_modifier = -0.025
+}
+
+modifier_cro_legacy_of_the_trpimirovic = {
+	diplomatic_reputation = diplomatic_reputation_mild_bonus
+	diplomatic_capacity = 1
+}
+
+modifier_cro_the_banovac_silver_denar = {
+	minting_income_factor = 0.1
+}
+
+modifier_svn_the_slavonian_sabor = {
+	monthly_devotion = 0.05
+	monthly_legitimacy = 0.05
+	monthly_republican_tradition = 0.05
+	parliament_base_support = 0.05
+}
+
+modifier_cro_trade_posts = {
+	cultural_influence_modifier = 0.1
+	skill_of_new_artists = 0.1
+}
+
+modifier_cro_antemurale_christianitatis = {
+	damage_done_versus_heathens_modifier = 0.1
+	global_manpower_modifier = 0.1
+}
+
+modifier_cro_the_croatian_press = {
+	global_institution_growth_modifier = 0.20
+	global_max_literacy = 5
+}
+
+modifier_svn_the_alluvial_grant_lands = {
+	expand_rgo_farming_cost_modifier = -0.20
+}
+
+modifier_croatian_the_peasants_revolts = {
+	global_monthly_prosperity = 0.001
+	peasants_estate_target_satisfaction = small_permanent_target_satisfaction
+}
+
+modifier_cro_reliance_on_adriatic = {
+	army_light_infantry_power = 0.10
+	privateer_maintenance_cost_modifier = -0.1
+}
+
+modifier_cro_the_jesuit_academy = {
+	global_monthly_literacy = 0.01
+	research_speed_modifier = 0.1
+}
+
+modifier_svn_the_oak_staple_rights = {
+	global_lumber_output_modifier = 0.20
+}
+
+modifier_croatian_the_cravats = {
+	army_light_cavalry_power = 0.15
+	monthly_prestige = 0.1
+}
+
+modifier_cro_baroque_pietas = {
+	clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
+	monthly_religious_influence = 0.2
+}
+
+modifier_cro_the_national_garrison_system = {
+	global_garrison_growth = 0.01
+	global_garrison_size_modifier = 0.10
+}
+
+modifier_svn_swamp_drainage_projects = {
+	global_monthly_development = 0.002
+}
+
+modifier_croatian_the_illyrian_movement = {
+	global_pop_assimilation_speed_modifier = 0.1
+	global_separatism = -0.05
+}
+
+modifier_cro_the_royal_council_of_croatia = {
+	government_size = 1
+}
+
+modifier_cro_uniting_the_coast_and_the_inner_lands = {
+	global_road_building_time = -0.1
+	build_gravel_road_cost_modifier = -0.1
+	build_paved_road_cost_modifier = -0.1
+	build_modern_road_cost_modifier = -0.1
+}
+
+modifier_svn_the_slavonian_grenadier_regiments = {
+	discipline = 0.05
+}
+
+modifier_geo_georgian_golden_age = {
+	cultural_influence_modifier = 0.1
+}
+
+modifier_geo_legacy_of_tamar = {
+	monthly_prestige = 0.1
+}
+
+modifier_geo_david_the_builder = {
+	global_build_buildings_efficiency = 0.2
+}
+
+modifier_geo_georgian_titles = {
+	court_spending_efficiency = 0.1
+}
+
+modifier_geo_georgian_numismatics = {
+	global_merchant_power = 0.2
+	minting_income_factor = 0.05
+}
+
+modifier_geo_beacon_of_christianity = {
+	global_pop_conversion_speed_modifier = 0.1
+}
+
+modifier_geo_georgian_principalities = {
+	global_distance_from_capital_speed_propagation = 0.1
+}
+
+modifier_geo_georgian_resilience = {
+	stability_investment = small_stability_investment
+}
+
+modifier_hes_form_the_militia_army = {
+	global_manpower_modifier = 0.1
+	land_morale_modifier = 0.05
+}
+
+modifier_hsa_hanseatic_ties = {
+	max_diplomats = 2
+}
+
+modifier_hsa_seal_of_the_hansa = {
+	global_merchant_capacity_modifier = 0.33
+}
+
+modifier_hsa_hanseatic_shipwrights = {
+	hanseatic_shipwright_guild_max_level = 1
+}
+
+modifier_hsa_draft_merchant_privileges = {
+	global_trades_per_burgher = 0.4
+}
+
+modifier_hsa_mastery_of_the_sea = {
+	merchant_power_from_maritime_modifier = 0.2
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
+}
+
+modifier_hsa_exchange_of_ideas = {
+	research_speed_modifier = 0.05
+}
+
+modifier_hsa_global_reach = {
+	trade_range_modifier = 0.2
+}
+
+modifier_hsa_hanseatic_treasury = {
+	bank_interest = -0.01
+}
+
+modifier_hsa_regularized_contributions = {
+	tax_income_efficiency = large_tax_income_efficiency_bonus
+}
+
+modifier_the_hansa_bank = {
+	bank_interest = -0.01
+	monthly_loan_capacity_investment = 10
+}
+
+modifier_hsa_reform_the_hanstag = {
+	monthly_republican_tradition = 0.05
+	parliament_base_support = 0.1
+}
+
+modifier_hsa_concept_of_mercantilism = {
+	counter_espionage = 0.33
+	export_efficiency = small_trade_efficiency_bonus
+}
+
+modifier_khm_great_builders = {
+	global_urban_build_buildings_efficiency = 0.1
+}
+
+modifier_khm_recruitment_of_peasants = {
+	global_manpower_modifier = 0.1
+}
+
+modifier_khm_foreign_production_skills = {
+	global_production_efficiency = medium_production_efficiency_bonus
+}
+
+modifier_khm_utilize_the_rivers = {
+	global_distance_from_capital_speed_propagation = 0.1
+}
+
+modifier_khm_champa_mercenaries = {
+	army_tradition_decay = -0.001
+}
+
+modifier_khm_restore_angkor = {
+	monthly_prestige = 0.1
+	cultural_tradition_modifier = 0.1
+}
+
+modifier_khm_modern_navy = {
+	naval_damage_taken = -0.1
+}
+
+modifier_khm_invest_in_irrigation = {
+	global_monthly_food_modifier = 0.2
+}
+
+modifier_khm_protection_from_raids = {
+	global_garrison_growth = 0.01
+}
+
+modifier_khm_old_grudges = {
+	land_morale_modifier = 0.1
+}
+
+modifier_kol_peace_in_the_city = {
+	set_cabinet_member_cost_modifier = -0.1
+	country_cabinet_efficiency = 0.05
+}
+
+modifier_kol_school_of_painting = {
+	num_possible_artists = 1
+	global_glass_output_modifier = 0.2
+}
+
+modifier_warlord_dukes = {
+	monthly_army_tradition = 0.03
+	nobles_estate_levy_size = 0.5
+}
+
+modifier_two_realms = {
+	cultures_capacity = 1
+}
+
+modifier_chacery_slavonic = {
+	legislative_efficiency = 0.1
+	monthly_prestige = 0.05
+}
+
+modifier_supremus_dux_lithuaniae = {
+	global_crown_estate_power = 0.1
+}
+
+modifier_ties_with_the_holy_see = {
+	papal_relations = 25
+	monthly_religious_influence = 0.2
+}
+
+modifier_patriarchate_of_lithuania = {
+	create_autocephalous_patriarchate_cost_modifier = -0.33
+	tolerance_own = 1
+}
+
+modifier_lithuanian_renaissance = {
+	research_speed_modifier = 0.05
+}
+
+modifier_columns_of_gediminids = {
+	land_morale_modifier = 0.15
+}
+
+modifier_lor_three_bishoprics = {
+	monthly_religious_influence = 0.1
+	tolerance_own = 0.5
+}
+
+modifier_lor_between_great_powers = {
+	diplomatic_capacity_modifier = 0.1
+}
+
+modifier_lor_fortified_cities = {
+	global_defensive = 0.2
+}
+
+modifier_mai_leader_rheinish_league = {
+	diplomatic_reputation = diplomatic_reputation_mild_bonus
+}
+
+modifier_mai_zealous_fight_against_heretics = {
+	land_morale_modifier = 0.1
+}
+
+modifier_mai_vicar_of_mainz = {
+	stability_cost_efficiency = 0.2
+}
+
+modifier_mai_mainz_kingdom = {
+	cultural_influence_modifier = 0.20
+}
+
+modifier_mai_center_of_printing = {
+	global_books_output_modifier = 0.25
+}
+
+modifier_mai_garrison_of_the_rhine = {
+	global_defensive = 0.1
+	global_manpower_modifier = 0.1
+}
+
+modifier_kashif = {
+	country_cabinet_efficiency = 0.1
+}
+
+modifier_royal_mamluks = {
+	discipline = 0.05
+}
+
+modifier_red_sea_trade = {
+	trade_range_modifier = 0.33
+}
+
+modifier_masters_of_the_nile = {
+	global_monthly_prosperity = 0.001
+	global_monthly_food_modifier = 0.2
+}
+
+modifier_indian_networks = {
+	import_efficiency = tiny_trade_efficiency_bonus
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
+}
+
+modifier_study_foreign_gunpowder_techniques = {
+	army_artillery_power = 0.05
+}
+
+modifier_port_customs = {
+	global_trade_protection_factor = 0.25
+}
+
+modifier_secure_mediterranean_ports = {
+	global_maritime_presence_modifier = 0.25
+}
+
+modifier_meissner_groschen = {
+	minting_income_factor = 0.10
+}
+
+modifier_a_resilient_soul = {
+	monthly_war_exhaustion = -0.05
+}
+
+modifier_saxon_court = {
+	country_cabinet_efficiency = 0.1
+}
+
+modifier_a_tolerant_society = {
+	tolerance_heretic = 1
+}
+
+modifier_furstenschule = {
+	global_monthly_literacy = 0.02
+}
+
+modifier_bonded_by_loyalty = {
+	land_morale_modifier = 0.1
+}
+
+modifier_meissner_porcelain = {
+	global_porcelain_output_modifier = 0.2
+	monthly_prestige = 0.1
+}
+
+modifier_saxon_baroque = {
+	cultural_tradition_modifier = 0.2
+}
+
+modifier_retablissement = {
+	global_build_buildings_efficiency = 0.2
+}
+
+modifier_saxon_industrialization = {
+	global_production_efficiency = large_production_efficiency_bonus
+}
+
+modifier_mor_marabouts = {
+	invite_religious_figure_same_school_cost_modifier = -0.5
+	invite_religious_figure_different_school_cost_modifier = -0.5
+	dismiss_religious_figure_cost_modifier = -0.5
+}
+
+modifier_trans_saharan_trade = {
+	trade_land_efficiency = large_trade_land_efficiency_bonus
+}
+
+modifier_first_fleet_of_the_med = {
+	monthly_navy_tradition = 0.1
+}
+
+modifier_slave_soldiers = {
+	global_manpower_modifier = 0.1
+}
+
+modifier_desert_power = {
+	tribes_estate_target_satisfaction = medium_permanent_target_satisfaction
+	peasants_estate_target_satisfaction = medium_permanent_target_satisfaction
+}
+
+modifier_atlantic_trade_routes = {
+	trade_sea_efficiency = large_trade_sea_efficiency_bonus
+}
+
+modifier_foreign_politics = {
+	diplomatic_capacity = 1
+}
+
+modifier_saharan_gold_trade = {
+	global_goods_gold_output_modifier = 0.1
+	minting_inflation_threshold = 0.01
+}
+
+modifier_shurfa_status = {
+	monthly_legitimacy = 0.1
+	monthly_prestige = 0.1
+}
+
+modifier_maghrebi_administration = {
+	global_distance_from_capital_speed_propagation = 0.1
+}
+
+modifier_ori_servitor_of_jagganath = {
+	global_estate_target_satisfaction = small_permanent_target_satisfaction
+}
+
+modifier_ori_parikshas = {
+	global_crown_estate_power = 0.1
+}
+
+modifier_ori_odia_militarization = {
+	discipline = 0.05
+}
+
+modifier_ori_patronize_temple_construction = {
+	clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
+}
+
+modifier_ori_refined_cloth_production = {
+	global_cloth_output_modifier = 0.2
+	global_fine_cloth_output_modifier = 0.2
+}
+
+modifier_ori_encourage_salt_trade = {
+	global_salt_output_modifier = 0.2
+	global_merchant_capacity_modifier = 0.1
+}
+
+modifier_ori_expansion_of_infrastructure = {
+	global_monthly_development = 0.001
+}
+
+modifier_pal_cultivate_vineyards = {
+	global_wine_output_modifier = 0.2
+	global_fruit_output_modifier = 0.2
+}
+
+modifier_pal_protection_of_exclaves = {
+	fort_limit_modifier = 0.2
+}
+
+modifier_pal_fractured_territory = {
+	global_monthly_control = 0.002
+}
+
+modifier_pal_a_just_ruler = {
+	global_estate_target_satisfaction = small_permanent_target_satisfaction
+}
+
+modifier_pal_heaven_of_tolerance = {
+	tolerance_heretic = 1
+	non_rural_migration_attraction = 0.2
+}
+
+modifier_pal_mildness_to_the_commoners = {
+	monthly_peasants_estate_rebel_growth = -0.002
+	pop_join_rebel_threshold = -0.03
+}
+
+modifier_pal_humanist_court = {
+	select_expensive_child_education_cost_modifier = -0.2
+}
+
+modifier_pal_heidelberg_catechism = {
+	tolerance_own = 1
+}
+
+modifier_pal_bilbiotheca_palatina = {
+	cultural_influence_modifier = 0.1
+	research_speed_modifier = 0.03
+}
+
+modifier_palatinate_romanticism = {
+	invite_artist_cost_modifier = -0.25
+	cultural_tradition_modifier = 0.1
+}
+
+modifier_teutonic_legacy = {
+	monthly_army_tradition = 0.05
+	nobles_estate_levy_size = 0.3
+}
+
+modifier_double_electorate = {
+	global_distance_from_capital_speed_propagation = 0.05
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+}
+
+modifier_junker_officer_corps = {
+	army_maintenance_efficiency = 0.1
+	land_unit_attrition = -0.1
+}
+
+modifier_generalkriegskommissariat = {
+	hire_mercenary_premium_cost_modifier = -0.05
+	burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+}
+
+modifier_preussische_tugenden = {
+	court_spending_efficiency = 0.1
+	global_supply_limit_modifier = 0.1
+}
+
+modifier_army_professionalism = {
+	land_morale_modifier = 0.1
+}
+
+modifier_standing_army = {
+	global_supply_limit_modifier = 0.1
+	monthly_army_tradition = 0.05
+}
+
+modifier_cantonment_system = {
+	global_manpower_modifier = 0.15
+	regiment_recruit_speed = 0.2
+}
+
+modifier_goose_step = {
+	army_heavy_infantry_power = 0.2
+	army_light_infantry_power = 0.1
+}
+
+modifier_auftragstaktik = {
+	discipline = 0.05
+}
+
+modifier_scharnhorst_reforms = {
+	land_morale_modifier = 0.05
+	monthly_army_tradition = 0.1
+}
+
+modifier_sav_the_shroud_of_turin = {
+	tax_income_efficiency = large_tax_income_efficiency_bonus
+}
+
+modifier_sav_alpine_pass_control = {
+	global_road_building_time = -0.2
+	global_trade_protection_factor = 0.1
+}
+
+modifier_sav_fight_the_vaudois = {
+	global_pop_conversion_speed_modifier = 0.1
+}
+
+modifier_sav_embrace_the_vaudois = {
+	tolerance_own = 1
+}
+
+modifier_sav_repopulate_the_valleys = {
+	rural_migration_attraction = 0.2
+}
+
+modifier_sia_experienced_ambassadors = {
+	diplomatic_reputation = diplomatic_reputation_mild_bonus
+}
+
+modifier_sia_rise_to_equal_heights = {
+	global_monthly_development = 0.001
+}
+
+modifier_sia_consolidation_of_state = {
+	diplomatic_annexation_efficiency = 0.4
+}
+
+modifier_sia_education_reform = {
+	global_monthly_literacy = 0.02
+}
+
+modifier_sia_royal_absolutism = {
+	monthly_legitimacy = 0.1
+	global_crown_estate_power = 0.1
+}
+
+modifier_sia_thai_unity = {
+	land_morale_modifier = 0.1
+	discipline = 0.05
+}
+
+modifier_sme_atabegs_of_samtskhe = {
+	monthly_legitimacy = 0.1
+}
+
+modifier_sme_proactive_diplomacy = {
+	spy_network_construction = 0.2
+}
+
+modifier_sme_fortresses_of_samtskhe = {
+	global_defensive = 0.2
+}
+
+modifier_sme_independent_ambitions = {
+	land_morale_modifier = 0.1
+}
+
+modifier_sme_protect_trade_routes = {
+	trade_land_efficiency = large_trade_land_efficiency_bonus
+}
+
+modifier_sme_frontier_warriors = {
+	army_light_cavalry_build_cost_modifier = -0.1
+}
+
+modifier_sme_sacred_land = {
+	tolerance_own = 1
+}
+
+modifier_sme_bridge_between_worlds = {
+	tolerance_heathen = 1
+}
+
+modifier_suk_birthplace_of_a_culture = {
+	monthly_prestige = 0.1
+}
+
+modifier_suk_ram_khamhaeng_stele = {
+	monthly_legitimacy = 0.1
+}
+
+modifier_suk_wat_si_sawai = {
+	global_pop_conversion_speed_modifier = 0.1
+}
+
+modifier_suk_sukhothai_ceramics = {
+	trade_land_efficiency = large_trade_land_efficiency_bonus
+}
+
+modifier_suk_military_history = {
+	global_manpower_modifier = 0.15
+}
+
+modifier_suk_unstoppable_army = {
+	army_maintenance_efficiency = 0.2
 }
 
 modifier_tnk_pearls_of_india = {
@@ -5256,7 +5405,7 @@ modifier_tnk_imperial_legacy = {
 
 modifier_tre_princes_of_the_lazes = {
 	cultural_tradition_modifier = 0.05
-	add_accepted_culture_cost_modifier = -0.33
+	accepted_culture_maintenance_cost_modifier = -0.33
 }
 
 modifier_tre_strategic_marriages = {
@@ -5308,116 +5457,6 @@ modifier_tri_balance_the_landstande = {
 	parliament_base_support = 0.1
 }
 
-modifier_saharan_trade = {
-	export_efficiency = medium_trade_efficiency_bonus
-}
-
-modifier_al_caid = {
-	global_trades_per_burgher = 0.2
-	burghers_estate_target_satisfaction = small_permanent_target_satisfaction
-}
-
-modifier_connections_with_the_christian_world = {
-	diplomatic_capacity = 1
-}
-
-modifier_attract_foreign_pirates = {
-	global_sailors_modifier = 0.2
-}
-
-modifier_rais_of_the_navy = {
-	monthly_navy_tradition = 0.15
-}
-
-modifier_export_monopolies = {
-	global_trade_protection_factor = 0.2
-}
-
-modifier_millets = {
-	tolerance_heathen = 1
-	cultures_capacity = 1
-}
-
-modifier_bashi_bazouks = {
-	fort_maintenance_cost = -0.1
-	global_garrison_growth = 0.01
-}
-
-modifier_ottoman_bureaucracy = {
-	legislative_efficiency = 0.1
-	maintain_bureaucracy_price_cost_modifier = -0.05
-}
-
-modifier_autonomous_pashas = {
-	global_distance_from_capital_speed_propagation = 0.1
-}
-
-modifier_dragomans = {
-	improve_relation_impact = 0.2
-}
-
-modifier_ahdnames = {
-	diplomatic_capacity = 1
-}
-
-modifier_kafes = {
-	stability_cost = -0.1
-}
-
-modifier_ottoman_waystations = {
-	land_unit_attrition = -0.2
-}
-
-modifier_late_ottoman_bureaucracy = {
-	global_burghers_max_literacy = 10
-}
-
-modifier_ottoman_tax_farming = {
-	global_nobles_estate_power = -0.2
-}
-
-modifier_tulip_period = {
-	selling_efficiency = small_trade_efficiency_bonus
-}
-
-modifier_imperial_school_of_naval_engineering = {
-	ship_build_speed = 0.1
-}
-
-modifier_khedivates = {
-	subject_loyalty = 5
-}
-
-modifier_ayans = {
-	global_monthly_control = 0.003
-}
-
-modifier_tws_unified_legal_code = {
-	legislative_efficiency = 0.1
-}
-
-modifier_tws_ensure_loyal_families = {
-	nobles_estate_satisfaction_recovery = 0.001
-}
-
-modifier_tws_revitalize_the_lands = {
-	global_migration_speed_modifier = 0.1
-}
-
-modifier_tws_capable_vicars = {
-	set_cabinet_member_cost_modifier = -0.2
-	estate_power_from_cabinet = -0.1
-}
-
-modifier_tws_oversea_ambitions = {
-	global_maritime_presence_modifier = 0.25
-}
-
-modifier_tws_protect_the_coastline = {
-	anti_piracy_warfare_modifier = 0.1
-	navy_galley_power = 0.1
-}
-
 modifier_exploit_the_alpine_trade = {
 	global_merchant_capacity_modifier = 0.1
 	global_merchant_power = 0.05
@@ -5455,191 +5494,6 @@ modifier_bavarian_purity_law = {
 	cultural_influence_modifier = 0.25
 }
 
-modifier_usa_mayflower_compact = {
-	global_estate_target_satisfaction = small_permanent_target_satisfaction
-}
-
-modifier_usa_empowered_assemblies = {
-	parliament_base_support = 0.1
-}
-
-modifier_usa_great_awakening = {
-	tolerance_heretic = 1
-	tolerance_own = 1
-}
-
-modifier_usa_declaration_of_independence = {
-	monthly_war_exhaustion = -0.03
-	land_morale_modifier = 0.15
-}
-
-modifier_usa_bill_of_rights = {
-	monthly_republican_tradition = 0.1
-	monthly_legitimacy = 0.1
-	monthly_devotion = 0.1
-}
-
-modifier_usa_recognized_sovereignty = {
-	diplomatic_capacity = 1
-}
-
-modifier_usa_era_good_feelings = {
-	stability_cost = -0.1
-	global_crown_estate_power = 0.2
-}
-
-modifier_ven_stato_da_mar = {
-	export_efficiency = small_trade_efficiency_bonus
-}
-
-modifier_ven_gothic_architecture = {
-	global_urban_build_buildings_cost = -0.1
-}
-
-modifier_ven_ship_mounted_gunpowder_weapons = {
-	navy_galley_power = 0.15
-}
-
-modifier_ven_printing_industry = {
-	global_books_output_modifier = 0.1
-	global_paper_output_modifier = 0.1
-}
-
-modifier_ven_state_inquisition = {
-	counter_espionage = 0.33
-}
-
-modifier_ven_magistrato_alla_sanita = {
-	global_disease_resistance = 0.1
-}
-
-modifier_ven_venetian_painting = {
-	cultural_tradition_modifier = 0.2
-}
-
-modifier_ven_naval_conscription = {
-	navy_maintenance_efficiency = 0.25
-}
-
-modifier_ven_venetian_school_of_music = {
-	cultural_influence_modifier = 0.25
-}
-
-modifier_ven_mixed_naval_tactics = {
-	navy_galley_power = 0.1
-	navy_heavy_ship_power = 0.1
-}
-
-modifier_ven_provveditori_ai_beni_inculti = {
-	global_monthly_food_modifier = 0.1
-}
-
-modifier_court_of_great_refugees = {
-	skill_of_new_artists = 0.1
-}
-
-modifier_consolidate_italian_holdings = {
-	mercenary_maintenance_efficiency = 0.1
-	diplomatic_capacity_modifier = 0.1
-}
-
-modifier_the_adige = {
-	global_monthly_prosperity = 0.001
-}
-
-modifier_marmorina = {
-	land_cost_on_distance_from_capital_speed_propagation = 0.1
-	global_urban_build_buildings_cost = -0.05
-}
-
-modifier_vij_arab_horses = {
-	army_light_cavalry_power = 0.10
-}
-
-modifier_vij_first_indian_artillery = {
-	army_artillery_build_cost_modifier = -0.1
-	army_artillery_power = 0.1
-}
-
-modifier_vij_the_bunds = {
-	global_monthly_food_modifier = 0.1
-}
-
-modifier_vij_adroit_diplomacy = {
-	diplomatic_capacity = 1
-}
-
-modifier_vij_promotion_of_trade = {
-	global_trade_center_power = 0.05
-}
-
-modifier_vij_carnatic_music = {
-	cultural_tradition_modifier = 0.33
-}
-
-modifier_vij_cultural_integration = {
-	add_accepted_culture_cost_modifier = -0.2
-	cultures_capacity = 1
-}
-
-modifier_vij_rule_in_accord_with_dharma = {
-	tolerance_own = 1
-	activate_avatar_cost_modifier = -0.5
-	deactivate_avatar_cost_modifier = -0.5
-}
-
-modifier_vij_harsh_penal_code = {
-	stability_decay = -0.00025
-}
-
-modifier_vij_decentralized_rule = {
-	global_estate_target_satisfaction = small_permanent_target_satisfaction
-}
-
-modifier_vij_indian_throne = {
-	monthly_prestige = 0.1
-}
-
-modifier_control_of_the_red_sea = {
-	global_maritime_presence_decay = -0.001
-}
-
-modifier_yem_unite_the_tribes = {
-	global_max_rural_control = 0.05
-}
-
-modifier_port_of_aden = {
-	export_efficiency = medium_trade_efficiency_bonus
-}
-
-modifier_zanj_taxation = {
-	dhimmi_estate_max_tax = 0.1
-}
-
-modifier_zan_food_imports = {
-	food_purchase_cost = -0.05
-}
-
-modifier_zan_kilwan_latitude_staves = {
-	monthly_navy_tradition = 0.05
-	global_maritime_presence_modifier = 0.1
-}
-
-modifier_shirazi_legacy = {
-	monthly_legitimacy = 0.1
-	monthly_republican_tradition = 0.1
-	monthly_devotion = 0.1
-}
-
-modifier_zan_gold_trade_of_africa = {
-	global_goods_gold_output_modifier = 0.1
-}
-
-modifier_zan_diplomacy_through_trade = {
-	selling_efficiency = tiny_trade_efficiency_bonus
-	diplomatic_capacity = 1
-}
-
 modifier_zmw_encourage_new_settlements = {
 	global_migration_speed_modifier = 0.1
 }
@@ -5654,7 +5508,7 @@ modifier_zmw_strict_gold_regulations = {
 }
 
 modifier_zmw_spokesman_before_the_dead = {
-	stability_cost = -0.05
+	stability_cost_efficiency = 0.1
 	monthly_legitimacy = 0.1
 }
 
@@ -5667,7 +5521,7 @@ modifier_zmw_discipline_and_traning = {
 }
 
 modifier_zmw_merchant_taxes = {
-	trade_land_efficiency = small_trade_land_efficiency_bonus
+	trade_land_efficiency = large_trade_land_efficiency_bonus
 }
 
 modifier_zmw_controlling_the_mutapan_riches = {
@@ -5711,7 +5565,7 @@ modifier_minting_trade_range_disc_building = {
 }
 
 modifier_export_building_country_advance = {
-	foreign_export_from_market_cost_modifier = 0.1
+	foreign_export_from_market_efficiency = -0.1
 }
 
 modifier_counter_espionage_building_country_advance = {
@@ -5752,7 +5606,7 @@ modifier_mzk_the_despots_of_berat = {
 
 modifier_thp_the_lion_of_thopia = {
 	diplomatic_reputation = diplomatic_reputation_weak_bonus
-	great_power_score_modifier = 0.1
+	monthly_prestige = 0.05
 }
 
 modifier_albanian_the_sacred_oath = {
@@ -5816,7 +5670,7 @@ modifier_mzk_silk_road_waystations = {
 }
 
 modifier_thp_mecenas_of_the_arts = {
-	global_build_buildings_cost = -0.1
+	global_build_buildings_efficiency = 0.2
 	global_monthly_art_start_chance = 0.1
 }
 
@@ -5826,7 +5680,7 @@ modifier_albanian_the_fortified_kulla_houses = {
 
 modifier_alb_the_albanian_merchant_class = {
 	global_trades_per_burgher = 0.2
-	trade_sea_efficiency = 0.10
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 }
 
 modifier_alb_the_expansion_of_the_regnum = {
@@ -5847,8 +5701,8 @@ modifier_mzk_literary_patronage = {
 }
 
 modifier_thp_princeps_albaniae = {
-	add_accepted_culture_cost_modifier = -0.10
-	add_tolerated_culture_cost_modifier = -0.10
+	accepted_culture_maintenance_cost_modifier = -0.10
+	tolerated_culture_maintenance_cost_modifier = -0.10
 }
 
 modifier_albanian_the_albanian_alphabet_commission = {
@@ -5987,6 +5841,56 @@ modifier_cha_cham_cultural_influence = {
 	cultural_influence_modifier = 0.25
 }
 
+modifier_corsican_the_vindetta = {
+	global_hostile_attrition = 1
+}
+
+modifier_cor_the_milizia_di_u_riamu = {
+	global_manpower_modifier = 0.15
+}
+
+modifier_corsican_the_castagniccia = {
+	global_pop_food_consumption = -0.1
+	global_monthly_food_modifier = 0.10
+}
+
+modifier_cor_capituli_di_corsica = {
+	monthly_devotion = 0.1
+	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+	global_monthly_prosperity = 0.001
+}
+
+modifier_corsican_the_corsican_baroque = {
+	tolerance_own = 1
+	cultural_tradition_modifier = 0.15
+}
+
+modifier_cor_guardia_corsa = {
+	army_light_infantry_maintenance_cost_modifier = -0.1
+	army_light_infantry_power = 0.10
+}
+
+modifier_corsican_lamentu_and_voceru = {
+	land_morale_modifier = 0.10
+	land_morale_recovery = 0.02
+}
+
+modifier_cor_u_ginnasiu_corsu = {
+	global_institution_growth_modifier = 0.2
+	global_max_literacy = 10
+}
+
+modifier_corsican_chjame_rispondi = {
+	counter_espionage = 0.2
+	cultural_influence_modifier = 0.1
+}
+
+modifier_cor_the_corsican_constitution = {
+	global_estate_target_satisfaction = small_permanent_target_satisfaction
+	legislative_efficiency = 0.20
+}
+
 modifier_dalmatian_the_cult_of_the_local_patron_saint = {
 	tolerance_own = 1
 }
@@ -6000,7 +5904,7 @@ modifier_rag_the_lazzaretto_system = {
 }
 
 modifier_dalmatian_the_guild_of_the_stone_master = {
-	global_build_buildings_cost = -0.1
+	global_build_buildings_efficiency = 0.2
 	global_stone_output_modifier = 0.10
 }
 
@@ -6039,13 +5943,13 @@ modifier_dal_morlach_frontier_levies = {
 }
 
 modifier_rag_the_ragusan_porto_franco = {
-	navy_repair_cost = -0.1
+	navy_repair_efficiency = 0.2
 	tax_income_efficiency = small_tax_income_efficiency_bonus
 }
 
 modifier_dalmatian_mediterranean_cosmopolitanism = {
 	global_trade_center_power = 0.05
-	trade_sea_efficiency = 0.10
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 }
 
 modifier_dal_dalmatian_olive_pacts = {
@@ -6057,6 +5961,183 @@ modifier_rag_the_ragusan_maritime_insurance_code = {
 	total_loan_capacity_modifier = 0.5
 }
 
+modifier_emilian_the_via_emilia = {
+	global_merchant_capacity_modifier = 0.1
+	trade_range = 200
+}
+
+modifier_blg_la_grasa = {
+	export_efficiency = small_trade_efficiency_bonus
+	global_monthly_food_modifier = 0.10
+}
+
+modifier_fer_studio_di_ferrara = {
+	global_institution_growth_modifier = 0.15
+	global_max_literacy = 10
+}
+
+modifier_man_gonzaga_patronage = {
+	artist_salary_modifier = -0.15
+	num_possible_artists = 1
+}
+
+modifier_mod_este_textiles = {
+	burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+	global_cloth_output_modifier = 0.15
+}
+
+modifier_par_the_bishop_of_parma = {
+	monthly_devotion = 0.1
+	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+	tolerance_own = 1
+}
+
+modifier_pcz_collegium_placentinum = {
+	global_max_literacy = 5
+	legislative_efficiency = 0.1
+}
+
+modifier_emilian_dispenza_emigliana = {
+	diplomatic_reputation = diplomatic_reputation_mild_bonus
+	monthly_prestige = 0.1
+}
+
+modifier_blg_la_rassa = {
+	global_urban_build_buildings_efficiency = 0.2
+	prestige_decay = -0.001
+}
+
+modifier_fer_ladizion_erculea = {
+	city_upgrade_cost_modifier = -0.05
+	global_build_buildings_efficiency = 0.2
+	town_upgrade_cost_modifier = -0.05
+}
+
+modifier_man_studium_mantovano = {
+	global_institution_growth_modifier = 0.15
+	global_max_literacy = 10
+}
+
+modifier_mod_estense_library = {
+	global_institution_growth_modifier = 0.15
+	global_max_literacy = 10
+}
+
+modifier_par_the_new_duchy = {
+	fort_maintenance_efficiency = 0.15
+	diplomatic_reputation = 1
+}
+
+modifier_pcz_piacentine_soldiery = {
+	discipline = 0.05
+	monthly_army_tradition = 0.05
+}
+
+modifier_emilian_the_tera_cruda = {
+	global_defensive = 0.1
+	global_fort_build_buildings_efficiency = 0.2
+}
+
+modifier_blg_lacademia_di_incamine = {
+	global_monthly_art_start_chance = 0.1
+	skill_of_new_artists = 0.1
+}
+
+modifier_fer_court_of_letters = {
+	num_possible_artists = 1
+	skill_of_new_artists = 0.1
+}
+
+modifier_man_palazzo_te = {
+	cultural_tradition_modifier = 0.1
+	work_of_art_sell_value_modifier = 0.1
+}
+
+modifier_mod_palazzo_ducale = {
+	court_spending_efficiency = 0.1
+	work_of_art_sell_value_modifier = 0.1
+}
+
+modifier_par_the_opera_obsession = {
+	court_spending_efficiency = 0.10
+	monthly_prestige = 0.15
+}
+
+modifier_pcz_the_citadel = {
+	antagonism_received_modifier = -0.1
+	global_garrison_growth = 0.20
+}
+
+modifier_emilian_la_mzura_dal_sol = {
+	tax_income_efficiency = large_tax_income_efficiency_bonus
+}
+
+modifier_blg_the_bolognese_school_of_music = {
+	artist_salary_modifier = -0.2
+	num_possible_artists = 1
+}
+
+modifier_fer_ferrarese_silk = {
+	burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+	global_fine_cloth_output_modifier = 0.20
+}
+
+modifier_man_monteverdi_orfeo = {
+	global_monthly_art_start_chance = 0.1
+	skill_of_new_artists = 0.1
+}
+
+modifier_mod_diplomazia_balsamica = {
+	diplomatic_capacity = 1
+	improve_relation_impact = 0.15
+}
+
+modifier_par_prosciutto_e_parmigiano = {
+	export_efficiency = medium_trade_efficiency_bonus
+	global_monthly_food_modifier = 0.20
+}
+
+modifier_pcz_administrative_reform = {
+	burghers_estate_target_satisfaction = 0.05
+	country_cabinet_efficiency = 0.1
+}
+
+modifier_emilian_al_melodram = {
+	cultural_influence_modifier = 0.15
+	land_morale_modifier = 0.15
+}
+
+modifier_blg_galvanism = {
+	research_speed_modifier = 0.10
+	embrace_institution_cost_modifier = -0.10
+}
+
+modifier_fer_po_delta_reclamation = {
+	global_max_rgo_size_modifier = 0.15
+	global_monthly_food_modifier = 0.15
+}
+
+modifier_man_po_agriculture = {
+	expand_rgo_farming_cost_modifier = -0.20
+	global_monthly_food_modifier = 0.15
+}
+
+modifier_mod_accademia_militare = {
+	discipline = 0.05
+	monthly_army_tradition = 0.05
+}
+
+modifier_par_enlightened_duchy = {
+	legislative_efficiency = 0.20
+	global_max_literacy = 10
+}
+
+modifier_pcz_new_industry = {
+	global_production_efficiency = 0.10
+	non_rural_migration_attraction = 0.15
+}
+
 modifier_geo_georgian_isolation = {
 	improve_relation_impact = 0.2
 }
@@ -6066,11 +6147,11 @@ modifier_geo_legacy_of_saint_nino = {
 }
 
 modifier_geo_restoration_of_fortresses_and_churches = {
-	global_build_buildings_cost = -0.1
+	global_build_buildings_efficiency = 0.2
 }
 
 modifier_geo_sadrosho_districts = {
-	army_reinforce_cost = -0.05
+	army_reinforce_efficiency = 0.10
 }
 
 modifier_geo_dasturlamali = {
@@ -6100,6 +6181,10 @@ modifier_arabia_red_sea_trade = {
 
 modifier_chi_legitimate_claimant = {
 	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+	monthly_devotion = 0.1
+	monthly_horde_unity = 0.1
+	monthly_tribal_cohesion = 0.1
 }
 
 modifier_chi_great_rivers_of_china = {
@@ -6132,7 +6217,7 @@ modifier_german_imperial_roads = {
 
 modifier_swabian_frugal_people = {
 	bank_interest = -0.01
-	court_spending_cost_modifier = -0.05
+	court_spending_efficiency = 0.1
 }
 
 modifier_franconian_wine_bottles = {
@@ -6146,7 +6231,7 @@ modifier_german_fair_towns = {
 }
 
 modifier_german_biedermeier = {
-	stability_cost = -0.2
+	stability_cost_efficiency = 0.2
 	num_possible_artists = 1
 }
 
@@ -6189,7 +6274,7 @@ modifier_epi_arvanite_communities_advance = {
 
 modifier_feo_black_sea_fur_trade_advance = {
 	global_trades_per_burgher = 0.2
-	trade_sea_efficiency = 0.10
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 }
 
 modifier_gre_greek_viticulture_advance = {
@@ -6244,7 +6329,7 @@ modifier_greek_group_aegean_coastal_defence_advance = {
 }
 
 modifier_epi_fortresses_of_ioannina_advance = {
-	fort_maintenance_cost = -0.10
+	fort_maintenance_efficiency = 0.20
 }
 
 modifier_feo_the_gothic_red_guard_advance = {
@@ -6291,11 +6376,60 @@ modifier_ths_thessalian_grain_exchange_advance = {
 	global_wheat_output_modifier = 0.2
 }
 
+modifier_rhaetian_the_tobia = {
+	global_food_decay = -0.02
+	global_monthly_food_modifier = 0.05
+}
+
+modifier_aqu_amber_road = {
+	diplomatic_capacity = 1
+	trade_land_efficiency = medium_trade_land_efficiency_bonus
+}
+
+modifier_rhaetian_the_mountain_warriors = {
+	army_heavy_infantry_power = 0.10
+	embrace_institution_cost_modifier = -0.10
+}
+
+modifier_aqu_alpine_defense = {
+	antagonism_received_modifier = -0.1
+	global_hostile_attrition = 1
+}
+
+modifier_rhaetian_the_chanzun = {
+	cultural_tradition_modifier = 0.20
+}
+
+modifier_aqu_friulian_soldiery = {
+	discipline = 0.05
+	monthly_army_tradition = 0.05
+}
+
+modifier_rhaetian_the_alpine_diplomacy = {
+	diplomatic_reputation = diplomatic_reputation_mild_bonus
+	improve_relation_impact = 0.1
+}
+
+modifier_aqu_patriarchal_legacy = {
+	country_cabinet_efficiency = 0.1
+	legislative_efficiency = 0.1
+}
+
+modifier_rhaetian_the_national_revival = {
+	cultural_influence_modifier = 0.15
+	global_max_literacy = 10
+}
+
+modifier_aqu_enlightened_patriarchate = {
+	stability_cost_efficiency = 0.15
+	tolerance_own = 1
+}
+
 modifier_romanian_the_foundation_of_the_voivodeship_tradition = {
 	monthly_devotion = 0.1
 	monthly_legitimacy = 0.1
 	monthly_republican_tradition = 0.1
-	stability_cost = -0.05
+	stability_cost_efficiency = 0.1
 }
 
 modifier_mol_the_banner_of_the_golden_bull = {
@@ -6378,7 +6512,7 @@ modifier_rmn_the_bible_of_bucharest = {
 }
 
 modifier_tra_the_vauban_transylvanian_bastion_synthesis = {
-	fort_maintenance_cost = -0.1
+	fort_maintenance_efficiency = 0.2
 	global_defensive = 0.1
 }
 
@@ -6436,7 +6570,7 @@ modifier_kainerekowa = {
 }
 
 modifier_mourning_wars = {
-	army_reinforce_cost = -0.10
+	army_reinforce_efficiency = 0.20
 }
 
 modifier_haudenosaunee_present_giving = {
@@ -6452,16 +6586,16 @@ modifier_captives_in_war = {
 }
 
 modifier_haudenosaunee_ambition = {
-	improve_relation_impact = 0.5
+	improve_relation_impact = 0.2
 }
 
 modifier_swiss_mercenaries = {
 	global_mercenaries_modifier = 0.25
-	mercenary_maintenance_efficiency = 0.3
+	mercenary_maintenance_efficiency = 0.2
 }
 
 modifier_the_swiss_confederation = {
-	stability_cost = -0.1
+	stability_cost_efficiency = 0.2
 }
 
 modifier_swiss_recovery_and_prosperity = {
@@ -6534,7 +6668,7 @@ modifier_cel_celtic_diaspora = {
 }
 
 modifier_cel_pan_celtic_nationalism = {
-	global_pop_assimilation_speed_modifier = 0.25
+	global_pop_assimilation_speed_modifier = 0.20
 }
 
 modifier_jap_shinobi = {
@@ -6652,7 +6786,7 @@ modifier_bah_meltpot_of_languages = {
 }
 
 modifier_bah_karimis = {
-	trade_land_efficiency = small_trade_land_efficiency_bonus
+	trade_land_efficiency = large_trade_land_efficiency_bonus
 }
 
 modifier_bah_takht_e_firoza = {
@@ -6666,6 +6800,106 @@ modifier_bah_bahmani_primogeniture = {
 modifier_bah_madrasa_of_mahmud_gawan = {
 	global_max_literacy = 10
 	global_monthly_literacy = 0.02
+}
+
+modifier_ligurian_merchant_diaspora = {
+	global_merchant_power = 0.1
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
+}
+
+modifier_bank_of_saint_george = {
+	minting_income_factor = 0.10
+	monthly_loan_capacity_investment = 5.0
+}
+
+modifier_ligurian_spirit_of_navigation = {
+	diplomatic_reputation = diplomatic_reputation_mild_bonus
+	non_rural_migration_attraction = 0.1
+}
+
+modifier_genoese_flexibility = {
+	navy_maintenance_efficiency = 0.10
+	can_convert_galleys_to_light = yes
+}
+
+modifier_ligurian_artisan_craft = {
+	num_possible_artists = 1
+	work_of_art_sell_value_modifier = 0.1
+}
+
+modifier_the_age_of_the_genoese = {
+	merchant_maintenance_efficiency = 0.10
+	trade_income = 0.10
+}
+
+modifier_ligurian_communal_councils = {
+	country_cabinet_efficiency = 0.1
+	global_burghers_max_literacy = 10
+}
+
+modifier_genoese_school = {
+	cultural_influence_modifier = 0.1
+	cultural_tradition_modifier = 0.1
+}
+
+modifier_ligurian_enlightenment = {
+	legislative_efficiency = 0.1
+	stability_cost_efficiency = 0.1
+}
+
+modifier_gen_free_port = {
+	global_trade_through_owned_territory_efficiency = 0.20
+	global_trade_center_power = 0.10
+}
+
+modifier_patron_of_music = {
+	global_merchant_power = 0.10
+	trade_range = 200
+}
+
+modifier_renaissance_prince = {
+	city_upgrade_cost_modifier = -0.05
+	global_build_buildings_efficiency = 0.2
+}
+
+modifier_age_of_condottieri = {
+	global_monthly_development = 0.001
+	global_trade_through_owned_territory_efficiency = 0.15
+}
+
+modifier_lowered_power_of_barons = {
+	army_heavy_infantry_power = 0.10
+	global_war_score_efficiency = 0.05
+}
+
+modifier_merchant_princes = {
+	cultural_tradition_modifier = 0.10
+	skill_of_new_artists = 0.10
+}
+
+modifier_encouragement_of_philosophers = {
+	global_max_literacy = 5
+	global_monthly_urban_control = 0.002
+}
+
+modifier_lombard_silk_masters = {
+	export_efficiency = small_trade_efficiency_bonus
+	global_silk_output_modifier = 0.20
+}
+
+modifier_rulership_of_enlightened_principals = {
+	country_cabinet_efficiency = 0.10
+	stability_cost_efficiency = 0.10
+}
+
+modifier_lombard_the_manifattura = {
+	global_cloth_output_modifier = 0.15
+	global_monthly_prosperity = 0.001
+}
+
+modifier_milanese_ambition = {
+	artist_salary_modifier = -0.2
+	num_possible_artists = 1
 }
 
 modifier_nair_military_advance = {
@@ -6692,8 +6926,228 @@ modifier_mhr_encourage_brahmin_ties = {
 	global_estate_max_tax = 0.1
 }
 
+modifier_median_studio_generale = {
+	cultural_tradition_modifier = 0.1
+	skill_of_new_artists = 0.1
+}
+
+modifier_pap_the_word_of_the_lord = {
+	casus_belli_creation_speed_modifier = 0.25
+	diplomatic_reputation = diplomatic_reputation_severe_bonus
+}
+
+modifier_pea_scuola_del_perugino = {
+	artist_salary_modifier = -0.15
+	global_monthly_art_start_chance = 0.1
+}
+
+modifier_spl_lippi_frescoes = {
+	monthly_prestige = 0.1
+	research_speed_modifier = 0.05
+}
+
+modifier_median_bastioni_e_rocche = {
+	fort_maintenance_efficiency = 0.2
+	global_defensive = 0.1
+}
+
+modifier_glory_of_rome = {
+	prestige_decay = -0.001
+}
+
+modifier_pea_the_griffin_companies = {
+	discipline = 0.05
+	monthly_army_tradition = 0.03
+}
+
+modifier_spl_ponte_delle_torri = {
+	diplomatic_capacity = 1
+	trade_land_efficiency = medium_trade_land_efficiency_bonus
+}
+
+modifier_median_baroque_sacred_patronage = {
+	num_possible_artists = 1
+	work_of_art_sell_value_modifier = 0.1
+}
+
+modifier_centralize_the_states = {
+	global_crown_estate_power = 0.25
+}
+
+modifier_pea_guerra_del_sale = {
+	antagonism_received_modifier = -0.1
+	global_hostile_attrition = 1
+}
+
+modifier_spl_cardinals_bulwark = {
+	global_burghers_max_literacy = 10
+	tolerance_own = 1
+}
+
+modifier_median_jubilee_economy = {
+	global_trade_center_power = 0.05
+	non_rural_migration_attraction = 0.1
+}
+
+modifier_ecclesiastical_primacy = {
+	tax_income_efficiency = medium_tax_income_efficiency_bonus
+	tolerance_own = 2
+}
+
+modifier_pea_umbrian_academies = {
+	country_cabinet_efficiency = 0.1
+	global_monthly_literacy = 0.01
+}
+
+modifier_spl_the_spoletine_silk = {
+	burghers_estate_target_satisfaction = 0.05
+	global_silk_output_modifier = 0.2
+}
+
+modifier_median_enlightenment_civic_reform = {
+	global_urban_build_buildings_efficiency = 0.1
+	global_monthly_urban_control = 0.002
+}
+
+modifier_pap_the_concordat = {
+	diplomatic_capacity = 1
+	stability_cost_efficiency = 0.1
+}
+
+modifier_pea_the_old_university = {
+	global_institution_growth_modifier = 0.1
+	global_max_literacy = 5
+}
+
+modifier_spl_vale_of_spoleto = {
+	expand_rgo_farming_cost_modifier = -0.15
+	global_monthly_food_modifier = 0.1
+}
+
+modifier_consolidate_the_royal_domain = {
+	global_crown_estate_power = 0.1
+	monthly_devotion = 0.1
+	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+}
+
+modifier_academia_pontaniana = {
+	global_max_literacy = 5
+	replace_cabinet_member_cost_modifier = -0.1
+}
+
+modifier_crush_the_barons = {
+	global_nobles_estate_power = -0.2
+}
+
+modifier_encouraged_city_living = {
+	global_burghers_city_desired_pop = 0.5
+	non_rural_migration_attraction = 0.2
+}
+
+modifier_city_of_artists = {
+	invite_artist_cost_modifier = -0.25
+	skill_of_new_artists = 0.1
+}
+
+modifier_expanded_arsenale = {
+	navy_repair_efficiency = 0.2
+	ship_build_speed = 0.1
+}
+
+modifier_a_central_power = {
+	max_diplomats = 1
+	monthly_diplomats = 0.05
+}
+
+modifier_institutional_reorganization = {
+	government_reform_slots = 1
+}
+
+modifier_neapolitan_army_reforms = {
+	army_heavy_infantry_power = 0.10
+	army_light_infantry_power = 0.10
+}
+
+modifier_neapolitan_industrialization = {
+	global_raw_material_output = 0.20
+}
+
 modifier_npl_the_divya_upadesh = {
 	diplomatic_reputation = diplomatic_reputation_mild_bonus
+}
+
+modifier_piedmontese_le_fere_del_piemont = {
+	global_merchant_power = 0.05
+	global_trades_per_burgher = 0.2
+}
+
+modifier_mfa_casale_monferrato = {
+	global_monthly_urban_control = 0.005
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+}
+
+modifier_pie_cavalleria_piemontese = {
+	land_morale_modifier = 0.1
+	military_tactics = 0.1
+}
+
+modifier_piedmontese_the_piassafort = {
+	fort_maintenance_efficiency = 0.20
+	global_defensive = 0.1
+}
+
+modifier_mfa_the_court_culture = {
+	cultural_tradition_modifier = 0.1
+	skill_of_new_artists = 0.1
+}
+
+modifier_pie_via_delle_gallie = {
+	diplomatic_capacity = 1
+	trade_land_efficiency = medium_trade_land_efficiency_bonus
+}
+
+modifier_piedmontese_the_nebbiolo_vigne = {
+	export_efficiency = small_trade_efficiency_bonus
+	global_wine_output_modifier = 0.2
+}
+
+modifier_mfa_the_casale_citadel = {
+	antagonism_received_modifier = -0.1
+	fort_limit_modifier = 0.10
+}
+
+modifier_pie_citadel_system = {
+	fort_limit_modifier = 0.10
+	global_fort_build_buildings_efficiency = 0.2
+}
+
+modifier_piedmontese_the_canal = {
+	global_monthly_food_modifier = 0.2
+}
+
+modifier_mfa_the_marquisate_resilience = {
+	improve_relation_impact = 0.1
+	monthly_prestige = 0.1
+}
+
+modifier_pie_enlightened_court = {
+	global_max_literacy = 10
+	research_speed_modifier = 0.10
+}
+
+modifier_piedmontese_the_setajoj = {
+	global_silk_output_modifier = 0.2
+}
+
+modifier_mfa_the_monferrato_agricoltura = {
+	expand_rgo_farming_cost_modifier = -0.15
+	non_rural_migration_attraction = 0.1
+}
+
+modifier_pie_industrial_base = {
+	non_rural_migration_attraction = 0.20
+	tax_income_efficiency = medium_tax_income_efficiency_bonus
 }
 
 modifier_pun_breadbasket_of_india = {
@@ -6731,7 +7185,7 @@ modifier_raj_clan_loyalties = {
 }
 
 modifier_raj_monumental_architecture = {
-	global_build_buildings_cost = -0.1
+	global_build_buildings_efficiency = 0.2
 }
 
 modifier_raj_marwari_horses = {
@@ -6748,7 +7202,7 @@ modifier_raj_martial_smiths = {
 
 modifier_raj_fortress_architecture = {
 	global_defensive = 0.1
-	fort_maintenance_cost = -0.2
+	fort_maintenance_efficiency = 0.4
 }
 
 modifier_raj_expanded_artillery_arm = {
@@ -6775,6 +7229,83 @@ modifier_raj_martial_ethos = {
 	army_tradition_decay = -0.001
 }
 
+modifier_romagnol_mura_malatestiani = {
+	fort_limit_modifier = 0.10
+	global_defensive = 0.1
+}
+
+modifier_rav_mosaics_of_ravenna = {
+	cultural_tradition_modifier = 0.15
+	monthly_prestige = 0.15
+}
+
+modifier_urb_the_hill_fortresses = {
+	fort_maintenance_efficiency = 0.15
+	military_tactics = 0.1
+}
+
+modifier_romagnol_the_sangiovese_viticulture = {
+	global_monthly_prosperity = 0.001
+	land_unit_attrition = -0.1
+}
+
+modifier_rav_battle_of_ravenna = {
+	discipline = 0.05
+	fort_maintenance_efficiency = 0.1
+}
+
+modifier_urb_the_ideal_court = {
+	cultural_tradition_modifier = 0.1
+	num_possible_artists = 1
+}
+
+modifier_romagnol_the_stampa_dpopul = {
+	global_institution_growth_modifier = 0.20
+	global_monthly_literacy = 0.01
+}
+
+modifier_rav_byzantine_legacy = {
+	cultural_influence_modifier = 0.1
+	work_of_art_sell_value_modifier = 0.1
+}
+
+modifier_urb_the_mathematical_school = {
+	global_max_literacy = 5
+	research_speed_modifier = 0.05
+}
+
+modifier_romagnol_the_agricultural_academies = {
+	expand_rgo_farming_cost_modifier = -0.20
+}
+
+modifier_rav_bonifiche_ravennati = {
+	global_max_rgo_size_modifier = 0.15
+	global_monthly_food_modifier = 0.15
+}
+
+modifier_urb_the_ceramics_guilds = {
+	cultural_influence_modifier = 0.1
+	export_efficiency = small_trade_efficiency_bonus
+}
+
+modifier_romagnol_la_streda_rumegna = {
+	build_gravel_road_cost_modifier = -0.1
+	build_modern_road_cost_modifier = -0.1
+	build_paved_road_cost_modifier = -0.1
+	build_railroad_cost_modifier = -0.1
+	global_trade_through_owned_territory_efficiency = 0.10
+}
+
+modifier_rav_the_new_ravenna = {
+	non_rural_migration_attraction = 0.1
+	stability_cost_efficiency = 0.1
+}
+
+modifier_urb_the_enlightened_university = {
+	research_speed_modifier = 0.10
+	global_max_literacy = 10
+}
+
 modifier_land_of_the_rus = {
 	antagonism_received_modifier = -0.1
 }
@@ -6797,7 +7328,7 @@ modifier_russian_legitimization = {
 }
 
 modifier_mother_of_russian_cities = {
-	global_urban_build_buildings_cost = -0.05
+	global_urban_build_buildings_efficiency = 0.1
 	global_devastation_recovery = 0.005
 }
 
@@ -6821,17 +7352,186 @@ modifier_east_and_west = {
 }
 
 modifier_ruthenian_state_advance = {
-	stability_cost = -0.1
+	stability_cost_efficiency = 0.2
 }
 
 modifier_ruthenian_rural_buildings = {
-	global_rural_build_buildings_cost = -0.1
+	global_rural_build_buildings_efficiency = 0.2
 }
 
 modifier_ruthenia_commoner_education = {
 	global_peasants_max_literacy = 10
 	global_soldiers_max_literacy = 10
 	global_laborers_max_literacy = 10
+}
+
+modifier_sardinian_the_artizanu = {
+	global_burghers_max_literacy = 10
+	global_production_efficiency = small_production_efficiency_bonus
+}
+
+modifier_sar_the_stamenti = {
+	burghers_estate_target_satisfaction = 0.05
+	monthly_devotion = 0.1
+	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+}
+
+modifier_sardinian_the_ademprivio = {
+	global_monthly_prosperity = 0.001
+	global_peasant_enfranchisment = 0.10
+}
+
+modifier_sar_university_of_cagliari = {
+	global_institution_growth_modifier = 0.1
+	global_max_literacy = 5
+}
+
+modifier_sardinian_the_turres_costeras = {
+	anti_piracy_warfare_modifier = 0.25
+	fort_maintenance_efficiency = 0.20
+}
+
+modifier_sar_sardinian_tercios = {
+	land_morale_modifier = 0.1
+	monthly_army_tradition = 0.03
+}
+
+modifier_sardinian_the_hymnu_sardu = {
+	cultural_influence_modifier = 0.10
+	legislative_efficiency = 0.10
+}
+
+modifier_sar_the_cavalcadores = {
+	army_light_cavalry_build_cost_modifier = -0.1
+	army_light_cavalry_power = 0.15
+}
+
+modifier_sardinian_the_industrial_transition = {
+	expand_rgo_mining_cost_modifier = -0.20
+}
+
+modifier_sar_enlightened_reforms = {
+	global_max_literacy = 10
+	tax_income_efficiency = medium_tax_income_efficiency_bonus
+}
+
+modifier_maltese_the_korsa = {
+	own_coast_naval_combat_bonus = 0.1
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
+}
+
+modifier_sic_naval_vigilance = {
+	fort_limit_modifier = 0.10
+	navy_galley_power = 0.1
+}
+
+modifier_sic_studium_generale = {
+	global_max_literacy = 5
+	research_speed_modifier = 0.05
+}
+
+modifier_maltese_the_bajada = {
+	spy_network_construction = 0.2
+}
+
+modifier_sic_sicilian_silk = {
+	global_silk_output_modifier = 0.2
+}
+
+modifier_sic_the_court_of_the_royal_patrimony = {
+	tax_income_efficiency = medium_tax_income_efficiency_bonus
+}
+
+modifier_maltese_the_modernized_dejma = {
+	global_garrison_size_modifier = 0.10
+	global_levy_recruitment_speed_modifier = 0.10
+}
+
+modifier_sicilian_the_cult_of_the_santuzze = {
+	tolerance_own = 1
+	monthly_devotion = 0.1
+	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+}
+
+modifier_sic_licentia_populandi = {
+	global_monthly_food_modifier = 0.2
+}
+
+modifier_maltese_the_festa_ritualism = {
+	global_estate_target_satisfaction = small_permanent_target_satisfaction
+	cultural_tradition_modifier = 0.15
+}
+
+modifier_sic_sicilian_enlightenment = {
+	cultural_influence_modifier = 0.15
+	global_max_literacy = 10
+}
+
+modifier_sic_sicilian_baroque = {
+	global_build_buildings_efficiency = 0.2
+	monthly_religious_influence = 0.2
+}
+
+modifier_maltese_center_of_the_mediterranean = {
+	navy_repair_efficiency = 0.2
+	sea_cost_on_distance_from_capital_when_maritime = -0.5
+}
+
+modifier_sic_sicilian_reforms = {
+	country_cabinet_efficiency = 0.10
+	legislative_efficiency = 0.10
+}
+
+modifier_sic_the_marsala_wine_industry = {
+	export_efficiency = medium_trade_efficiency_bonus
+	global_wine_output_modifier = 0.20
+}
+
+modifier_slovak_the_slovensky_vernacular = {
+	cultural_tradition_modifier = 0.2
+}
+
+modifier_slo_the_slovak_castle_system = {
+	fort_maintenance_efficiency = 0.20
+	global_defensive = 0.1
+}
+
+modifier_slovak_the_slovak_rome = {
+	tolerance_own = 1
+}
+
+modifier_slo_the_universitas_istropolitana = {
+	global_monthly_literacy = 0.01
+	research_speed_modifier = 0.1
+}
+
+modifier_slovak_the_slovak_sappers = {
+	siege_ability = 0.15
+}
+
+modifier_slo_the_mining_captancy = {
+	global_goods_gold_output_modifier = 0.10
+	global_silver_output_modifier = 0.10
+}
+
+modifier_slovak_the_highland_architecture = {
+	cultural_influence_modifier = 0.10
+	global_build_buildings_efficiency = 0.2
+}
+
+modifier_slo_the_social_banditry = {
+	global_hostile_attrition = 1
+}
+
+modifier_slovak_the_slovak_romanticism = {
+	land_morale_modifier = 0.10
+	land_morale_recovery = 0.02
+}
+
+modifier_slo_the_hron_valley_industries = {
+	global_pop_promotion_speed_modifier = 0.2
 }
 
 modifier_slovene_the_dukes_chair_tradition = {
@@ -6915,7 +7615,237 @@ modifier_personal_executions = {
 }
 
 modifier_close_subjects = {
-	diplomatic_annexation_cost = -0.15
+	diplomatic_annexation_efficiency = 0.3
+}
+
+modifier_a_land_of_banks = {
+	minting_income_factor = 0.10
+	monthly_loan_capacity_investment = 5.0
+}
+
+modifier_florentine_school = {
+	num_possible_artists = 1
+	work_of_art_sell_value_modifier = 0.15
+}
+
+modifier_luc_the_towers_of_lucca = {
+	antagonism_received_modifier = -0.1
+	monthly_prestige = 0.1
+}
+
+modifier_pis_the_university_of_pisa = {
+	global_institution_growth_modifier = 0.1
+	global_max_literacy = 5
+}
+
+modifier_sie_council_priori = {
+	burghers_estate_target_satisfaction = 0.05
+	monthly_devotion = 0.1
+	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+}
+
+modifier_tuscan_merchant_houses = {
+	diplomatic_capacity_modifier = 0.1
+	global_merchant_power = 0.1
+}
+
+modifier_florentine_citizen_militia = {
+	monthly_army_tradition = 0.03
+}
+
+modifier_luc_the_city_walls = {
+	fort_maintenance_efficiency = 0.15
+	global_defensive = 0.1
+}
+
+modifier_pis_marble_tradition = {
+	cultural_tradition_modifier = 0.20
+	tax_income_efficiency = medium_tax_income_efficiency_bonus
+}
+
+modifier_sie_monte_dei_paschi = {
+	global_institution_growth_modifier = 0.15
+	tax_income_efficiency = medium_tax_income_efficiency_bonus
+}
+
+modifier_tuscan_the_mezzadria = {
+	global_monthly_food_modifier = 0.1
+	trade_land_efficiency = medium_trade_land_efficiency_bonus
+}
+
+modifier_flo_florentine_bastions = {
+	fort_maintenance_efficiency = 0.15
+	global_defensive = 0.15
+}
+
+modifier_luc_counter_reform_diplomacy = {
+	monthly_devotion = 0.1
+	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+	tolerance_own = 1
+}
+
+modifier_pis_natural_philosophy = {
+	discipline = 0.05
+	military_tactics = 0.10
+}
+
+modifier_sie_santa_caterina = {
+	monthly_devotion = 0.1
+	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
+	tolerance_own = 1
+}
+
+modifier_tuscan_literary_academies = {
+	country_cabinet_efficiency = 0.15
+	legislative_efficiency = 0.15
+}
+
+modifier_flo_camerata_fiorentina = {
+	cultural_influence_modifier = 0.25
+	artist_salary_modifier = -0.2
+}
+
+modifier_luc_the_musical_tradition = {
+	artist_salary_modifier = -0.2
+	num_possible_artists = 1
+}
+
+modifier_pis_medical_tradition = {
+	global_disease_resistance = 0.15
+	global_max_literacy = 10
+}
+
+modifier_sie_the_palio = {
+	cultural_influence_modifier = 0.15
+	diplomatic_reputation = diplomatic_reputation_mild_bonus
+}
+
+modifier_tuscan_enlightenment = {
+	diplomatic_capacity = 1
+	global_urban_build_buildings_efficiency = 0.20
+}
+
+modifier_flo_florentine_merchant_houses = {
+	export_efficiency = medium_trade_efficiency_bonus
+	global_merchant_capacity_modifier = 0.20
+}
+
+modifier_luc_the_lucchese_constitution = {
+	global_max_literacy = 10
+	stability_cost_efficiency = 0.15
+}
+
+modifier_pis_academic_prestige = {
+	work_of_art_sell_value_modifier = 0.20
+	global_max_literacy = 10
+}
+
+modifier_sie_civic_pride = {
+	antagonism_received_modifier = -0.15
+	global_monthly_prosperity = 0.001
+}
+
+modifier_ven_state_inquisition = {
+	global_max_literacy = 5
+	global_institution_growth_modifier = 0.20
+}
+
+modifier_ven_gothic_architecture = {
+	global_merchant_power = 0.1
+	global_urban_build_buildings_efficiency = 0.2
+}
+
+modifier_court_of_great_refugees = {
+	global_urban_build_buildings_efficiency = 0.1
+	skill_of_new_artists = 0.1
+}
+
+modifier_pad_the_bo = {
+	global_burghers_max_literacy = 10
+	research_speed_modifier = 0.05
+}
+
+modifier_ven_venetian_painting = {
+	num_possible_artists = 1
+	work_of_art_sell_value_modifier = 0.15
+}
+
+modifier_ven_printing_industry = {
+	global_books_output_modifier = 0.15
+	global_paper_output_modifier = 0.15
+}
+
+modifier_the_adige = {
+	diplomatic_capacity_modifier = 0.15
+	global_merchant_power = 0.15
+}
+
+modifier_pad_medical_school = {
+	global_disease_resistance = 0.10
+	global_max_literacy = 5
+}
+
+modifier_ven_mixed_naval_tactics = {
+	burghers_estate_target_satisfaction = small_permanent_target_satisfaction
+	global_build_buildings_efficiency = 0.10
+}
+
+modifier_ven_venetian_school_of_music = {
+	artist_salary_modifier = -0.15
+	cultural_influence_modifier = 0.15
+}
+
+modifier_scaligers_military_ambitions = {
+	cultural_influence_modifier = 0.15
+	monthly_prestige = 0.1
+}
+
+modifier_pad_paduan_philosophy = {
+	antagonism_received_modifier = -0.1
+	monthly_prestige = 0.10
+}
+
+modifier_ven_ship_mounted_gunpowder_weapons = {
+	nobles_estate_target_satisfaction = small_permanent_target_satisfaction
+	expand_rgo_farming_cost_modifier = -0.15
+}
+
+modifier_ven_ridotto = {
+	antagonism_received_modifier = -0.1
+	tax_income_efficiency = medium_tax_income_efficiency_bonus
+}
+
+modifier_consolidate_italian_holdings = {
+	fort_maintenance_efficiency = 0.15
+	global_defensive = 0.20
+}
+
+modifier_pad_the_accademia = {
+	court_spending_efficiency = 0.1
+	diplomatic_capacity = 1
+}
+
+modifier_ven_venetian_thalassocracy = {
+	global_monthly_art_start_chance = 0.15
+	global_trade_center_power = 0.15
+}
+
+modifier_ven_la_fenice = {
+	diplomatic_reputation = diplomatic_reputation_mild_bonus
+	monthly_prestige = 0.20
+}
+
+modifier_marmorina = {
+	diplomatic_reputation = diplomatic_reputation_mild_bonus
+	tax_income_efficiency = medium_tax_income_efficiency_bonus
+}
+
+modifier_pad_paduan_commune = {
+	tax_income_efficiency = medium_tax_income_efficiency_bonus
+	global_max_literacy = 10
 }
 
 modifier_dai_nha_nhac = {
@@ -6951,8 +7881,58 @@ modifier_dai_thuan_thien = {
 	global_crown_estate_power = 0.1
 }
 
+modifier_vivaro_alpine_infantry = {
+	army_light_infantry_power = 0.1
+	military_tactics = 0.1
+}
+
+modifier_sal_the_mountain_routes = {
+	land_unit_attrition = -0.1
+	tax_income_efficiency = small_tax_income_efficiency_bonus
+}
+
+modifier_vivaro_alpine_passes = {
+	diplomatic_capacity_modifier = 0.1
+	trade_land_efficiency = medium_trade_land_efficiency_bonus
+}
+
+modifier_sal_the_saluzzo_chronicles = {
+	cultural_tradition_modifier = 0.1
+	global_monthly_literacy = 0.01
+}
+
+modifier_vivaro_alpine_herbes_des_alpes = {
+	global_disease_resistance = 0.1
+	global_life_expectancy = 2
+}
+
+modifier_sal_the_alpine_strongholds = {
+	fort_limit_modifier = 0.1
+	global_hostile_attrition = 1
+}
+
+modifier_vivaro_alpine_valley_councils = {
+	country_cabinet_efficiency = 0.1
+	legislative_efficiency = 0.1
+}
+
+modifier_sal_the_alpine_regiments = {
+	land_morale_modifier = 0.1
+	monthly_army_tradition = 0.03
+}
+
+modifier_vivaro_alpine_nature = {
+	cultural_influence_modifier = 0.1
+	non_rural_migration_attraction = 0.1
+}
+
+modifier_sal_the_alpine_crafts = {
+	global_monthly_prosperity = 0.001
+	monthly_prestige = 0.1
+}
+
 modifier_sudano_sahelian_architecture_advance = {
-	global_build_buildings_cost = -0.1
+	global_build_buildings_efficiency = 0.2
 }
 
 modifier_cossacks_recruitment = {
@@ -6960,7 +7940,7 @@ modifier_cossacks_recruitment = {
 }
 
 modifier_cossacks_escaped_serfs = {
-	army_reinforce_cost = -0.05
+	army_reinforce_efficiency = 0.10
 }
 
 modifier_cossacks_hetmanate = {
@@ -7050,7 +8030,7 @@ modifier_sao_the_parnassus_mines_advance = {
 }
 
 modifier_the_the_fair_of_saint_demetrios = {
-	global_trade_through_owned_territory_cost_modifier = -0.1
+	global_trade_through_owned_territory_efficiency = 0.2
 }
 
 modifier_frankokratia_union_of_the_soul_advance = {
@@ -7063,7 +8043,7 @@ modifier_ach_knights_of_the_peloponnese_advance = {
 
 modifier_arg_the_gibraltar_of_the_levant_advance = {
 	global_defensive = 0.1
-	global_fort_build_buildings_cost = -0.1
+	global_fort_build_buildings_efficiency = 0.2
 }
 
 modifier_ath_the_parthenon_dukes_advance = {
@@ -7077,7 +8057,7 @@ modifier_bod_the_alpine_skirmishers_advance = {
 
 modifier_cep_the_currant_trade_advance = {
 	global_trades_per_burgher = 0.2
-	trade_sea_efficiency = 0.10
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 }
 
 modifier_crt_the_malvasia_wine_export_advance = {
@@ -7121,7 +8101,7 @@ modifier_frankokratia_levantine_trades_advance = {
 }
 
 modifier_ach_a_system_of_forts_advance = {
-	fort_maintenance_cost = -0.10
+	fort_maintenance_efficiency = 0.20
 }
 
 modifier_arg_the_artillery_school_of_argos_advance = {
@@ -7134,11 +8114,11 @@ modifier_ath_the_piraeus_arsenal_advance = {
 }
 
 modifier_bod_the_maritime_consulates_advance = {
-	spy_network_construction = 0.1
+	spy_network_construction = 0.15
 }
 
 modifier_cep_the_chancery_of_the_three_tongues_advance = {
-	stability_cost = -0.1
+	stability_cost_efficiency = 0.2
 }
 
 modifier_crt_the_cretan_labyrinth_of_fortifications_advance = {
@@ -7184,7 +8164,7 @@ modifier_ach_achaean_enlightenment_advance = {
 }
 
 modifier_arg_argive_maritime_insurance_advance = {
-	navy_repair_cost = -0.1
+	navy_repair_efficiency = 0.2
 	tax_income_efficiency = small_tax_income_efficiency_bonus
 }
 
@@ -7197,7 +8177,7 @@ modifier_bod_the_spercheios_civil_chancellery_advance = {
 }
 
 modifier_cep_the_arsenal_of_argostoli_advance = {
-	navy_repair_cost = -0.1
+	navy_repair_efficiency = 0.2
 	ship_repair_at_sea = 0.01
 }
 
@@ -7344,7 +8324,7 @@ modifier_free_subjects = {
 }
 
 modifier_emancipation = {
-	army_reinforce_cost = -0.05
+	army_reinforce_efficiency = 0.10
 }
 
 modifier_mandate_of_the_khan = {
@@ -7373,11 +8353,11 @@ modifier_trampling_horde = {
 }
 
 modifier_watchers_of_the_silk_road = {
-	trade_land_efficiency = 0.66
+	trade_land_efficiency = medium_trade_land_efficiency_bonus
 }
 
 modifier_logistics_of_khan = {
-	army_reinforce_cost = -0.05
+	army_reinforce_efficiency = 0.10
 }
 
 modifier_populating_the_steppes = {
@@ -7730,7 +8710,7 @@ modifier_expanded_slave_trade = {
 }
 
 modifier_gifts_and_hostages = {
-	diplomatic_annexation_cost = -0.1
+	diplomatic_annexation_efficiency = 0.2
 }
 
 modifier_people_of_ornaments = {
@@ -7738,7 +8718,7 @@ modifier_people_of_ornaments = {
 }
 
 modifier_courtly_competition = {
-	court_spending_cost_modifier = -0.05
+	court_spending_efficiency = 0.1
 }
 
 modifier_overnight_army = {
@@ -7827,7 +8807,7 @@ modifier_sepak_takraw = {
 
 modifier_three_teachings = {
 	monthly_righteousness = 0.05
-	monthly_harmony = 0.03
+	harmony_stability = yes
 	monthly_karma_decay = 0.02
 }
 
@@ -7852,21 +8832,12 @@ modifier_indonesia_naval_supremacy = {
 
 modifier_indonesia_trading_hub_of_the_east = {
 	trade_range_modifier = 0.2
-	trade_sea_efficiency = 0.2
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 }
 
 modifier_indonesia_archipelago_of_many_faiths = {
 	tolerance_heathen = 0.5
 	cultures_capacity_modifier = 0.2
-}
-
-modifier_italy_great_families = {
-	monthly_prestige = 0.1
-	diplomatic_capacity_modifier = 0.1
-}
-
-modifier_italian_innovativeness = {
-	embrace_institution_cost_modifier = -0.2
 }
 
 modifier_italian_condottieri = {
@@ -8067,7 +9038,7 @@ modifier_preaching_friars = {
 }
 
 modifier_devotio_moderna = {
-	court_spending_cost_modifier = -0.05
+	court_spending_efficiency = 0.1
 }
 
 modifier_denounce_heretics = {
@@ -8151,7 +9122,7 @@ modifier_entrenched_church = {
 }
 
 modifier_catholic_enlightenment = {
-	embrace_institution_cost_modifier = -0.2
+	embrace_institution_cost_modifier = -0.1
 }
 
 modifier_divine_church_music = {
@@ -8363,7 +9334,7 @@ modifier_muslim_lineage = {
 }
 
 modifier_muslim_caravans = {
-	trade_land_efficiency = 0.2
+	trade_land_efficiency = medium_trade_land_efficiency_bonus
 }
 
 modifier_islamic_golden_age = {
@@ -8375,7 +9346,7 @@ modifier_ramadan = {
 }
 
 modifier_sunnah = {
-	court_spending_cost_modifier = -0.05
+	court_spending_efficiency = 0.1
 }
 
 modifier_imamate = {
@@ -8383,7 +9354,7 @@ modifier_imamate = {
 }
 
 modifier_indian_sea_trade = {
-	trade_sea_efficiency = 0.2
+	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 }
 
 modifier_muslim_trade_communities = {
@@ -8499,7 +9470,7 @@ modifier_theotokos = {
 }
 
 modifier_heavenly_architecture = {
-	global_build_buildings_cost = -0.05
+	global_build_buildings_efficiency = 0.1
 }
 
 modifier_iconostasis = {
@@ -8527,7 +9498,7 @@ modifier_national_rites = {
 }
 
 modifier_heirs_of_rome = {
-	court_spending_cost_modifier = -0.05
+	court_spending_efficiency = 0.1
 }
 
 modifier_legacy_of_saint_andrew = {
@@ -8595,7 +9566,7 @@ modifier_expulsion_of_heretics = {
 }
 
 modifier_repurposed_monasteries = {
-	global_build_buildings_cost = -0.1
+	global_build_buildings_efficiency = 0.2
 }
 
 modifier_involved_laity = {
@@ -8651,7 +9622,9 @@ modifier_gozan_jissetsu = {
 }
 
 modifier_bodaiji = {
+	monthly_devotion = 0.1
 	monthly_legitimacy = 0.1
+	monthly_republican_tradition = 0.1
 }
 
 modifier_kagura = {

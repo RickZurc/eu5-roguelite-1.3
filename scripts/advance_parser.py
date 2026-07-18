@@ -61,6 +61,10 @@ SCALAR_KEYS: frozenset[str] = frozenset({
     "allow_children",
     "depth",
     "content_priority",
+    "starting_technology_level",  # structural: starting tech level, not a modifier
+    "research_cost",       # structural: cost to research the advance (1.3)
+    "in_tree_of",          # structural: tree-tree placement reference (1.3)
+    "pure_tooltip_entry",  # cosmetic tooltip-only line (1.3)
     "unlock_road_type",
     "unlock_employment_system",
     "unlock_unit",
@@ -81,6 +85,7 @@ SCALAR_KEYS: frozenset[str] = frozenset({
     "unlock_production_method",
     "unlock_diplomacy",
     "unlock_town_rights",
+    "unlock_chivalric_order",  # unlock: chivalric order (1.3)
 })
 
 BLOCK_KEYS: frozenset[str] = frozenset({
@@ -300,12 +305,13 @@ def _structure_advance(name: str, raw_fields: dict, source_text: str) -> dict:
 
 INJECTED_MODIFIER = "\trl_roll_mtd = 1"
 
+# NOTE: dummy_parent_advance deliberately has NO rl_roll_mtd. The research
+# detection counts modifier:rl_roll_mtd (each real advance grants 1), so the
+# parent and per-unlock dummies must not carry it or they would skew the count.
 DUMMY_PARENT_ADVANCE = """dummy_parent_advance = {
 \tage = age_1_traditions
 \tdepth = 0
 \tstarting_technology_level = 4
-
-\trl_roll_mtd = 1
 }"""
 
 
@@ -573,7 +579,7 @@ def main():
     out_dir = Path("../in_game/common/advances")
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / "rl_advances.txt"
-    out_path.write_text("\n\n".join(sections), encoding='utf-8')
+    out_path.write_text("\n\n".join(sections), encoding='utf-8-sig')
     print(f"Output written to: {out_path}")
 
     # Random list output
@@ -592,7 +598,7 @@ def main():
     rl_dir = Path("../in_game/common/scripted_effects")
     rl_dir.mkdir(parents=True, exist_ok=True)
     rl_path = rl_dir / "rl_scripted_effects.txt"
-    rl_path.write_text(rl_output, encoding='utf-8')
+    rl_path.write_text(rl_output, encoding='utf-8-sig')
     print(f"Random list written to: {rl_path} ({len(rl_lines)} entries)")
 
     # Static modifiers output — one block per advance that had modifiers removed
@@ -612,7 +618,7 @@ def main():
     static_dir = Path("../main_menu/common/static_modifiers")
     static_dir.mkdir(parents=True, exist_ok=True)
     static_path = static_dir / "rl_modifiers.txt"
-    static_path.write_text("\n\n".join(static_sections), encoding='utf-8')
+    static_path.write_text("\n\n".join(static_sections), encoding='utf-8-sig')
     print(f"Static modifiers written to: {static_path} ({len(static_sections)} entries)")
 
     # Options output
@@ -648,7 +654,9 @@ def main():
             lines.append("\thidden_effect = {")
             lines.append(f"\t\tset_variable = flag_dummy_{name}")
             lines.append(f"\t\tresearch_advance = advance_type:dummy_{name}")
-            lines.append(f"\t\tchange_variable = {{ name = num_advances add = 1 }}")
+            # No baseline adjustment needed: dummy_{name} carries no rl_roll_mtd,
+            # so granting it does not change modifier:rl_roll_mtd (the detection
+            # counter), and it won't be mistaken for a new player research.
             lines.append(f"\t\tset_variable = var_{name}")
             lines.append("\t}")
             lines.append("\tshow_as_tooltip = {")
@@ -687,7 +695,7 @@ def main():
     events_dir = Path("../in_game/events")
     events_dir.mkdir(parents=True, exist_ok=True)
     events_path = events_dir / "rl_events.txt"
-    events_path.write_text(events_output, encoding='utf-8')
+    events_path.write_text(events_output, encoding='utf-8-sig')
     print(f"Options written to: {events_path} ({len(option_sections)} entries)")
 
     # Localization output
@@ -730,6 +738,20 @@ def main():
                 loc_lines.append(f' rl_tt_{name}: "{tooltip_text}"')
                 loc_lines.append(f' dummy_{name}: "{tooltip_text}"')
                 loc_lines.append(f' dummy_{name}_desc: "{tooltip_text}"')
+
+    # Deduplicate loc keys (first occurrence wins, matching game behavior) so the
+    # engine doesn't warn about duplicate keys for advances with multiple unlocks.
+    _loc_key_re = re.compile(r'^\s*([A-Za-z0-9_.]+):')
+    seen_keys: set[str] = set()
+    deduped_loc: list[str] = []
+    for line in loc_lines:
+        m = _loc_key_re.match(line)
+        if m:
+            if m.group(1) in seen_keys:
+                continue
+            seen_keys.add(m.group(1))
+        deduped_loc.append(line)
+    loc_lines = deduped_loc
 
     loc_dir_out = Path("../main_menu/localization/english")
     loc_dir_out.mkdir(parents=True, exist_ok=True)
