@@ -1,0 +1,21 @@
+# Hand-written curse modifiers (NOT regenerated). Applied alongside a cursed
+# upgrade as the risk half of high risk / high reward legendary & rare rolls.
+modifier_rl_curse_1 = {
+	discipline = -0.05
+}
+
+modifier_rl_curse_2 = {
+	tax_income_efficiency = -0.15
+}
+
+modifier_rl_curse_3 = {
+	global_manpower_modifier = -0.15
+}
+
+modifier_rl_curse_4 = {
+	diplomatic_reputation = -2
+}
+
+modifier_rl_curse_5 = {
+	global_production_efficiency = -0.1
+}

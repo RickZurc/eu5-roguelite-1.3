@@ -4,6 +4,35 @@ monthly_country_pulse = {
     }
 }
 
+# Extra roll sources so power is earned through active play, not just waiting on
+# research. Winning a great battle rewards aggression; a new age is a milestone
+# roll for every country. Each source can be toggled in the Community Mod Menu.
+on_great_battle_won = {
+    on_actions = {
+        rl_battle_won_action
+    }
+}
+
+on_new_age = {
+    on_actions = {
+        rl_new_age_action
+    }
+}
+
+# Register our settings with the Community Mod Framework menu.
+cmf_on_mod_registration = {
+    on_actions = {
+        rl_cmf_register_action
+    }
+}
+
+rl_cmf_register_action = {
+    trigger = {}
+    effect = {
+        rl_cmf_register = yes
+    }
+}
+
 rl_monthly_action = {
     trigger = {}
     effect = {
@@ -13,53 +42,20 @@ rl_monthly_action = {
             }
             # Every advance the country researches grants rl_roll_mtd = 1, so
             # modifier:rl_roll_mtd is the live count of researched advances.
-            # num_advances is the count we last synced to; if it has grown, the
-            # player just gained an advance, so we roll three distinct upgrade
-            # options and fire the selection event.
+            # When it grows past the last synced count, the player just gained
+            # an advance, so we open a selection roll (if enabled in settings).
             if = {
                 limit = {
                     modifier:rl_roll_mtd > var:num_advances
                 }
-                rl_rand_se = { v = 1 }
-
-                set_variable = {
-                    name = rl_event_2
-                    value = -1
-                }
-
-                set_variable = {
-                    name = rl_event_3
-                    value = -1
-                }
-
-                while = {
+                if = {
                     limit = {
-                        OR = {
-                            var:rl_event_2 = var:rl_event_1
-                            var:rl_event_2 = -1
-                        }
+                        "global_variable_map(cmm|flag:europa_survivors__roll_on_research)" >= 1
                     }
-                    rl_rand_se = { v = 2 }
+                    rl_do_roll = yes
                 }
-
-                while = {
-                    limit = {
-                        OR = {
-                            var:rl_event_3 = var:rl_event_1
-                            var:rl_event_3 = var:rl_event_2
-                            var:rl_event_3 = -1
-                        }
-                    }
-                    rl_rand_se = { v = 3 }
-                }
-
-                trigger_event_non_silently = {
-                    id = rl_events.1
-                }
-
-                # Sync the baseline to the current count. The upgrade options
-                # research per-unlock dummy advances, but those carry no
-                # rl_roll_mtd, so they never register as new research here.
+                # Always sync the baseline to the current count, even if rolls
+                # from research are disabled, so we never build up a backlog.
                 set_variable = {
                     name = num_advances
                     value = { add = modifier:rl_roll_mtd }
@@ -75,11 +71,46 @@ rl_monthly_action = {
                 value = { add = modifier:rl_roll_mtd }
             }
             # Initialize the selection variables so the event options can always
-            # safely read var:rl_event_1/2/3 (avoids "variable not set" errors,
-            # e.g. when the event is fired manually from the console).
+            # safely read var:rl_event_1/2/3, plus rarity/reroll state.
             set_variable = { name = rl_event_1 value = -1 }
             set_variable = { name = rl_event_2 value = -1 }
             set_variable = { name = rl_event_3 value = -1 }
+            set_variable = { name = rl_rarity value = 1 }
+            set_variable = { name = rl_cursed value = 0 }
+            set_variable = { name = rl_curse value = 1 }
+            # Starting banked rerolls; more are earned by winning great battles.
+            set_variable = { name = rl_reroll_tokens value = 2 }
+        }
+    }
+}
+
+# Winning a great battle grants a banked reroll token to the victor's country
+# (scope:actor is the winning army, its owner is the country). Rewards military
+# play without flooding the player with upgrades.
+rl_battle_won_action = {
+    trigger = {}
+    effect = {
+        if = {
+            limit = {
+                exists = scope:actor.owner
+                "global_variable_map(cmm|flag:europa_survivors__roll_on_battle)" >= 1
+            }
+            scope:actor.owner = {
+                rl_grant_reroll_token = yes
+            }
+        }
+    }
+}
+
+# A new age is a milestone: grant a roll (root is the country).
+rl_new_age_action = {
+    trigger = {}
+    effect = {
+        if = {
+            limit = {
+                "global_variable_map(cmm|flag:europa_survivors__roll_on_new_age)" >= 1
+            }
+            rl_do_roll_legendary = yes
         }
     }
 }

@@ -108,6 +108,63 @@ TRADITIONS_AGE = "age_1_traditions"
 
 
 # ---------------------------------------------------------------------------
+# Synergy-set tagging
+# ---------------------------------------------------------------------------
+# Each advance is classified into one theme. Collecting several picks of the
+# same theme awards a set bonus (see rl_take_<tag> in rl_manual_effects.txt).
+
+TAG_ORDER = ("military", "naval", "economic", "admin")
+
+TAG_LABEL = {
+    "military": "#R Military#!",
+    "naval":    "#B Naval#!",
+    "economic": "#Y Economic#!",
+    "admin":    "#P Administrative#!",
+}
+
+_TAG_KEYWORDS: dict[str, tuple[str, ...]] = {
+    "military": (
+        "army_", "land_morale", "discipline", "siege", "regiment", "levy",
+        "manpower", "fort", "garrison", "mercenar", "drill", "conscription",
+        "cavalry", "infantry", "artillery", "combat", "assault", "war_",
+        "military", "soldier", "recruit", "hussar", "grenadier", "musketeer",
+    ),
+    "naval": (
+        "navy_", "naval_", "ship_", "sailor", "blockade", "galley", "frigate",
+        "privateer", "maritime", "marine", "dock", "harbor", "galleon",
+        "caravel", "carrack", "hulk", "seazone", "coast",
+    ),
+    "economic": (
+        "output_modifier", "trade_", "tax_", "production", "mint", "bank",
+        "bond", "income", "market", "merchant", "goods", "rgo", "tariff",
+        "inflation", "loan", "_gold", "build_buildings", "food", "money",
+        "workshop", "manufactory", "mill", "export", "import",
+    ),
+    "admin": (
+        "bureaucracy", "control", "integration", "government", "law", "estate",
+        "stability", "cabinet", "culture", "literacy", "development", "reform",
+        "administrat", "diplomat", "legitimacy", "prestige", "tolerance",
+        "religious", "devotion", "colon", "policy",
+    ),
+}
+
+
+def _classify_tag(advance: dict) -> str:
+    """Return the synergy tag ('military'|'naval'|'economic'|'admin') that best
+    matches an advance's modifiers and unlocks. Defaults to 'admin'."""
+    tokens: list[str] = list(advance.get("modifiers", {}).keys())
+    for uk in _UNLOCK_KEYS:
+        if uk in advance:
+            v = advance[uk]
+            tokens.extend(v if isinstance(v, list) else [v])
+    blob = " ".join(str(t) for t in tokens).lower()
+    scores = {tag: sum(blob.count(kw) for kw in kws)
+              for tag, kws in _TAG_KEYWORDS.items()}
+    best = max(TAG_ORDER, key=lambda t: scores[t])
+    return best if scores[best] > 0 else "admin"
+
+
+# ---------------------------------------------------------------------------
 # Scripted variable resolution
 # ---------------------------------------------------------------------------
 
@@ -648,7 +705,8 @@ def main():
         ]
 
         if has_modifiers:
-            lines.append(f"\tadd_country_modifier = {{ modifier = modifier_{name} years = -1 }}")
+            # rl_grant_mod scales the modifier by the rolled rarity (size).
+            lines.append(f"\trl_grant_mod = {{ m = modifier_{name} }}")
 
         if has_unlocks:
             lines.append("\thidden_effect = {")
@@ -668,6 +726,12 @@ def main():
             lines.append(f"\t\tset_variable = var_{name}")
             lines.append("\t}")
 
+        # Cursed rolls apply their drawback no matter which option is taken.
+        lines.append("\trl_apply_curse = yes")
+        # Synergy set: count this pick toward its theme and check set bonuses,
+        # and raise escalating threat (both handled inside rl_take_<tag>).
+        lines.append(f"\trl_take_{_classify_tag(a)} = yes")
+
         lines.append("}")
         option_sections.append("\n".join(lines))
 
@@ -678,17 +742,50 @@ def main():
         for line in options_joined.splitlines()
     )
 
+    # Rarity-tiered description (var:rl_rarity is set by the roll effect).
+    tiered_desc = (
+        "\tdesc = {\n"
+        "\t\tfirst_valid = {\n"
+        "\t\t\ttriggered_desc = { trigger = { var:rl_cursed = 1 } desc = rl_events.1.desc.cursed }\n"
+        "\t\t\ttriggered_desc = { trigger = { var:rl_rarity = 3 } desc = rl_events.1.desc.legendary }\n"
+        "\t\t\ttriggered_desc = { trigger = { var:rl_rarity = 2 } desc = rl_events.1.desc.rare }\n"
+        "\t\t\ttriggered_desc = { desc = rl_events.1.desc.common }\n"
+        "\t\t}\n"
+        "\t}\n"
+    )
+
+    # Reroll option: replace the three offers once per roll, if enabled and
+    # a reroll is still available. rl_do_reroll re-opens the event.
+    # The reroll effect runs rl_rand_se (a 2566-entry random_list); if the engine
+    # tries to auto-generate its outcome tooltip it enumerates every entry and
+    # lags on hover. Wrap it in hidden_effect and supply a custom_tooltip.
+    reroll_option = (
+        "\toption = {\n"
+        "\t\tname = rl_events.1.reroll\n"
+        "\t\ttrigger = {\n"
+        "\t\t\tvar:rl_reroll_tokens > 0\n"
+        "\t\t\t\"global_variable_map(cmm|flag:europa_survivors__enable_reroll)\" >= 1\n"
+        "\t\t}\n"
+        "\t\tcustom_tooltip = rl_events.1.reroll.tt\n"
+        "\t\thidden_effect = {\n"
+        "\t\t\trl_do_reroll = yes\n"
+        "\t\t}\n"
+        "\t}\n"
+    )
+
     events_output = (
         "namespace = rl_events\n"
         "\n"
         "rl_events.1 = {\n"
         "\ttype = country_event\n"
         "\ttitle = rl_events.1.title\n"
-        "\tdesc = rl_events.1.desc\n"
+        f"{tiered_desc}"
         "\n"
         "\toutcome = positive\n"
         "\n"
         f"{indented_options}\n"
+        "\n"
+        f"{reroll_option}"
         "}"
     )
 

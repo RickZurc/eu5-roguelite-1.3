@@ -1,9 +1,35 @@
 ﻿l_english:
  rl_events.1.title: "Select an Upgrade"
- rl_events.1.desc: "With your country's latest advance, you can select an upgrade from the list below"
+ rl_events.1.desc.common: "Your country's latest advance grants an upgrade. Choose one from the list below."
+ rl_events.1.desc.rare: "#Y A rare opportunity!#! Your country's latest advance grants a #Y greatly strengthened#! upgrade (2x). Choose one below."
+ rl_events.1.desc.legendary: "#P A legendary breakthrough!#! Your country's latest advance grants a #P monumental#! upgrade (5x). Choose one below."
+ rl_events.1.desc.cursed: "#R A cursed power!#! This upgrade is unusually strong, but claiming it inflicts a lasting curse on your realm. Take the risk, or reroll."
+ rl_events.1.reroll: "Reroll the options ([GetPlayer.MakeScope.GetVariable('rl_reroll_tokens').GetValue] tokens)"
+ rl_events.1.reroll.tt: "Spend one banked reroll token to discard these three offers and draw three new ones. Earn tokens by winning great battles."
+
+ STATIC_MODIFIER_NAME_modifier_rl_curse_1: "Cursed: Fractured Discipline"
+ STATIC_MODIFIER_NAME_modifier_rl_curse_2: "Cursed: Corrupt Coffers"
+ STATIC_MODIFIER_NAME_modifier_rl_curse_3: "Cursed: Hollow Ranks"
+ STATIC_MODIFIER_NAME_modifier_rl_curse_4: "Cursed: Broken Trust"
+ STATIC_MODIFIER_NAME_modifier_rl_curse_5: "Cursed: Stagnant Workshops"
 
  MODIFIER_TYPE_NAME_rl_roll_mtd: "Technology Rolls"
  MODIFIER_TYPE_DESC_rl_roll_mtd: "Technology Rolls"
 
  dummy_parent_advance: "Roguelite Unlock System (Ignore)"
  dummy_parent_advance_desc: "Do not research this technology. It will be unlocked automatically after 1 month (it will not actually give you an extra technology roll)."
+
+ # Community Mod Menu settings
+ europa_survivors__general_name: "Europa Survivors"
+ europa_survivors__general__sources_name: "Roll Sources"
+ europa_survivors__roll_on_research_name: "Rolls from Research"
+ europa_survivors__roll_on_research_desc: "Gain an upgrade selection each time you research an advance."
+ europa_survivors__roll_on_battle_name: "Reroll Tokens from Battles"
+ europa_survivors__roll_on_battle_desc: "Winning a great battle grants a banked reroll token you can spend on future upgrade selections."
+ europa_survivors__roll_on_new_age_name: "Rolls from New Ages"
+ europa_survivors__roll_on_new_age_desc: "Gain an upgrade selection when a new age begins (guaranteed legendary)."
+ europa_survivors__general__gameplay_name: "Gameplay"
+ europa_survivors__enable_reroll_name: "Allow Rerolls"
+ europa_survivors__enable_reroll_desc: "Adds a Reroll option to each selection, letting you replace the three offers once per roll."
+ europa_survivors__enable_cursed_name: "Cursed Rolls"
+ europa_survivors__enable_cursed_desc: "Rare and legendary rolls can become cursed: the upgrade is stronger, but taking any option also inflicts a lasting drawback."
