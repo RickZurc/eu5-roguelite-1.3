@@ -735,6 +735,33 @@ def main():
         lines.append("}")
         option_sections.append("\n".join(lines))
 
+        # Banish companion option: costs a reroll token, removes this advance
+        # from the pool forever, then redraws. Shown only when banish is enabled
+        # and the player has a token. rl_do_banish runs rl_rand_se (a huge
+        # random_list), so it lives in hidden_effect with a custom_tooltip to
+        # avoid the outcome-enumeration lag on hover.
+        banish_lines = [
+            "option = {",
+            f"\tname = rl_events.1.{i}b",
+            (
+                f"\ttrigger = {{\n"
+                f"\t\tOR = {{\n"
+                f"\t\t\tvar:rl_event_1 = {i}\n"
+                f"\t\t\tvar:rl_event_2 = {i}\n"
+                f"\t\t\tvar:rl_event_3 = {i}\n"
+                f"\t\t}}\n"
+                f"\t\tvar:rl_reroll_tokens > 0\n"
+                f"\t\t\"global_variable_map(cmm|flag:europa_survivors__enable_banish)\" >= 1\n"
+                f"\t}}"
+            ),
+            "\tcustom_tooltip = rl_events.1.banish.tt",
+            "\thidden_effect = {",
+            f"\t\trl_do_banish = {{ n = {name} }}",
+            "\t}",
+            "}",
+        ]
+        option_sections.append("\n".join(banish_lines))
+
     options_joined = "\n\n".join(option_sections)
     # Indent every line of the options block one extra tab so it nests correctly
     indented_options = "\n".join(
@@ -817,7 +844,10 @@ def main():
         if not has_modifiers and not has_unlocks:
             continue
         loc_name = loc.get(name, "")
-        loc_lines.append(f' rl_events.1.{i}: "{loc_name}"')
+        tag_label = TAG_LABEL[_classify_tag(a)]
+        # No square brackets: in EU5 loc, [...] is parsed as a data function.
+        loc_lines.append(f' rl_events.1.{i}: "{loc_name}   {tag_label}"')
+        loc_lines.append(f' rl_events.1.{i}b: "#R Banish#!  {loc_name}"')
 
     # Tooltip loc keys — one per unlock key per advance
     for a in result.advances:

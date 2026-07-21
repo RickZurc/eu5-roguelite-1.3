@@ -80,6 +80,12 @@ rl_monthly_action = {
             set_variable = { name = rl_curse value = 1 }
             # Starting banked rerolls; more are earned by winning great battles.
             set_variable = { name = rl_reroll_tokens value = 2 }
+            # Synergy-set counters and escalating-threat meter.
+            set_variable = { name = rl_tag_military value = 0 }
+            set_variable = { name = rl_tag_naval value = 0 }
+            set_variable = { name = rl_tag_economic value = 0 }
+            set_variable = { name = rl_tag_admin value = 0 }
+            set_variable = { name = rl_threat value = 0 }
         }
     }
 }

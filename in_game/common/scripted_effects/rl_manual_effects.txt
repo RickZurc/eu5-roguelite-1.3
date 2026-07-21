@@ -41,6 +41,27 @@ rl_cmf_register = {
         group_id = gameplay
         default_value = 1
     }
+    cmm_register_global_bool_setting = {
+        mod_id = europa_survivors
+        setting_id = enable_sets
+        tab_id = general
+        group_id = gameplay
+        default_value = 1
+    }
+    cmm_register_global_bool_setting = {
+        mod_id = europa_survivors
+        setting_id = enable_threat
+        tab_id = general
+        group_id = gameplay
+        default_value = 1
+    }
+    cmm_register_global_bool_setting = {
+        mod_id = europa_survivors
+        setting_id = enable_banish
+        tab_id = general
+        group_id = gameplay
+        default_value = 1
+    }
 }
 
 # rl_pick_three: fill rl_event_1/2/3 with three DISTINCT not-yet-owned advance
@@ -156,6 +177,16 @@ rl_do_reroll = {
     trigger_event_non_silently = { id = rl_events.1 }
 }
 
+# rl_do_banish: permanently remove one advance from the pool (setting var_$n$
+# excludes it from rl_rand_se forever), spend a token, and redraw. $n$ is the
+# advance name.
+rl_do_banish = {
+    change_variable = { name = rl_reroll_tokens add = -1 }
+    set_variable = var_$n$
+    rl_pick_three = yes
+    trigger_event_non_silently = { id = rl_events.1 }
+}
+
 # rl_grant_reroll_token: award one banked reroll token (capped), the reward for
 # winning a great battle. Rerolls are spent on future selection events.
 rl_grant_reroll_token = {
@@ -168,6 +199,85 @@ rl_grant_reroll_token = {
     }
     else = {
         set_variable = { name = rl_reroll_tokens value = 1 }
+    }
+}
+
+# rl_apply_threat: getting stronger makes the world wary. Each upgrade taken
+# raises rl_threat; the notoriety modifier is refreshed at a size that grows in
+# tiers (every few upgrades). Gated by the enable_threat setting.
+rl_apply_threat = {
+    change_variable = { name = rl_threat add = 1 }
+    if = {
+        limit = {
+            "global_variable_map(cmm|flag:europa_survivors__enable_threat)" >= 1
+        }
+        if = {
+            limit = { var:rl_threat >= 55 }
+            add_country_modifier = { modifier = modifier_rl_notoriety years = -1 size = 6 mode = replace }
+        }
+        else_if = {
+            limit = { var:rl_threat >= 35 }
+            add_country_modifier = { modifier = modifier_rl_notoriety years = -1 size = 4 mode = replace }
+        }
+        else_if = {
+            limit = { var:rl_threat >= 20 }
+            add_country_modifier = { modifier = modifier_rl_notoriety years = -1 size = 3 mode = replace }
+        }
+        else_if = {
+            limit = { var:rl_threat >= 10 }
+            add_country_modifier = { modifier = modifier_rl_notoriety years = -1 size = 2 mode = replace }
+        }
+        else_if = {
+            limit = { var:rl_threat >= 5 }
+            add_country_modifier = { modifier = modifier_rl_notoriety years = -1 size = 1 mode = replace }
+        }
+    }
+}
+
+# rl_take_<tag>: called when an upgrade of that theme is taken. Counts the pick
+# toward its synergy set (granting escalating set bonuses at 4 / 8 / 12) and
+# applies escalating threat. Set bonuses are gated by the enable_sets setting.
+rl_take_military = {
+    change_variable = { name = rl_tag_military add = 1 }
+    rl_apply_threat = yes
+    if = {
+        limit = { "global_variable_map(cmm|flag:europa_survivors__enable_sets)" >= 1 }
+        if = { limit = { var:rl_tag_military >= 4  NOT = { has_variable = rl_set_military_1 } }  set_variable = rl_set_military_1  add_country_modifier = { modifier = modifier_rl_set_military_1 years = -1 } }
+        if = { limit = { var:rl_tag_military >= 8  NOT = { has_variable = rl_set_military_2 } }  set_variable = rl_set_military_2  add_country_modifier = { modifier = modifier_rl_set_military_2 years = -1 } }
+        if = { limit = { var:rl_tag_military >= 12 NOT = { has_variable = rl_set_military_3 } }  set_variable = rl_set_military_3  add_country_modifier = { modifier = modifier_rl_set_military_3 years = -1 } }
+    }
+}
+
+rl_take_naval = {
+    change_variable = { name = rl_tag_naval add = 1 }
+    rl_apply_threat = yes
+    if = {
+        limit = { "global_variable_map(cmm|flag:europa_survivors__enable_sets)" >= 1 }
+        if = { limit = { var:rl_tag_naval >= 4  NOT = { has_variable = rl_set_naval_1 } }  set_variable = rl_set_naval_1  add_country_modifier = { modifier = modifier_rl_set_naval_1 years = -1 } }
+        if = { limit = { var:rl_tag_naval >= 8  NOT = { has_variable = rl_set_naval_2 } }  set_variable = rl_set_naval_2  add_country_modifier = { modifier = modifier_rl_set_naval_2 years = -1 } }
+        if = { limit = { var:rl_tag_naval >= 12 NOT = { has_variable = rl_set_naval_3 } }  set_variable = rl_set_naval_3  add_country_modifier = { modifier = modifier_rl_set_naval_3 years = -1 } }
+    }
+}
+
+rl_take_economic = {
+    change_variable = { name = rl_tag_economic add = 1 }
+    rl_apply_threat = yes
+    if = {
+        limit = { "global_variable_map(cmm|flag:europa_survivors__enable_sets)" >= 1 }
+        if = { limit = { var:rl_tag_economic >= 4  NOT = { has_variable = rl_set_economic_1 } }  set_variable = rl_set_economic_1  add_country_modifier = { modifier = modifier_rl_set_economic_1 years = -1 } }
+        if = { limit = { var:rl_tag_economic >= 8  NOT = { has_variable = rl_set_economic_2 } }  set_variable = rl_set_economic_2  add_country_modifier = { modifier = modifier_rl_set_economic_2 years = -1 } }
+        if = { limit = { var:rl_tag_economic >= 12 NOT = { has_variable = rl_set_economic_3 } }  set_variable = rl_set_economic_3  add_country_modifier = { modifier = modifier_rl_set_economic_3 years = -1 } }
+    }
+}
+
+rl_take_admin = {
+    change_variable = { name = rl_tag_admin add = 1 }
+    rl_apply_threat = yes
+    if = {
+        limit = { "global_variable_map(cmm|flag:europa_survivors__enable_sets)" >= 1 }
+        if = { limit = { var:rl_tag_admin >= 4  NOT = { has_variable = rl_set_admin_1 } }  set_variable = rl_set_admin_1  add_country_modifier = { modifier = modifier_rl_set_admin_1 years = -1 } }
+        if = { limit = { var:rl_tag_admin >= 8  NOT = { has_variable = rl_set_admin_2 } }  set_variable = rl_set_admin_2  add_country_modifier = { modifier = modifier_rl_set_admin_2 years = -1 } }
+        if = { limit = { var:rl_tag_admin >= 12 NOT = { has_variable = rl_set_admin_3 } }  set_variable = rl_set_admin_3  add_country_modifier = { modifier = modifier_rl_set_admin_3 years = -1 } }
     }
 }
 
