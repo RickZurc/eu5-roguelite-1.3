@@ -19,7 +19,7 @@ on_new_age = {
     }
 }
 
-# Register our settings with the Community Mod Framework menu.
+# Register our settings and action-bar button with the Community Mod Framework.
 cmf_on_mod_registration = {
     on_actions = {
         rl_cmf_register_action
@@ -30,6 +30,23 @@ rl_cmf_register_action = {
     trigger = {}
     effect = {
         rl_cmf_register = yes
+    }
+}
+
+# Handle clicks on our action-bar button: open the status window.
+cmf_on_callback = {
+    on_actions = {
+        rl_on_callback_action
+    }
+}
+
+rl_on_callback_action = {
+    trigger = {}
+    effect = {
+        if = {
+            limit = { var:cmf_callback = flag:rl_status_button }
+            trigger_event_non_silently = { id = rl_status.1 }
+        }
     }
 }
 

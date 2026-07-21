@@ -62,6 +62,10 @@ rl_cmf_register = {
         group_id = gameplay
         default_value = 1
     }
+    # Action-bar button that opens the roguelite status window.
+    cmf_add_action_bar_element = {
+        element = rl_status_button
+    }
 }
 
 # rl_pick_three: fill rl_event_1/2/3 with three DISTINCT not-yet-owned advance

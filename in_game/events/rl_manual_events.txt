@@ -1,0 +1,16 @@
+# Hand-written events (NOT regenerated). Separate namespace from the generated
+# rl_events so the generator never overwrites them.
+namespace = rl_status
+
+# Roguelite status window, opened from the action-bar button.
+rl_status.1 = {
+	type = country_event
+	title = rl_status.1.title
+	desc = rl_status.1.desc
+
+	outcome = neutral
+
+	option = {
+		name = rl_status.1.close
+	}
+}

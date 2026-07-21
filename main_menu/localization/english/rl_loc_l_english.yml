@@ -31,11 +31,23 @@
  MODIFIER_TYPE_NAME_rl_roll_mtd: "Technology Rolls"
  MODIFIER_TYPE_DESC_rl_roll_mtd: "Technology Rolls"
 
+ # Action-bar button that opens the status window
+ rl_status_button: "rl_status_button"
+ rl_status_button_color: "gold"
+ rl_status_button_icon: "@advance!"
+ rl_status_button_name: "Roguelike Universalis"
+ rl_status_button_tooltip: "Open your roguelite status: reroll tokens, notoriety and synergy progress."
+
+ # Status window
+ rl_status.1.title: "Roguelike Universalis — Status"
+ rl_status.1.close: "Close"
+ rl_status.1.desc: "#T Resources#!\n Reroll tokens: #Y [GetPlayer.MakeScope.GetVariable('rl_reroll_tokens').GetValue]#!  (spent on Reroll and Banish; earned by winning great battles)\n Upgrades taken: [GetPlayer.MakeScope.GetVariable('rl_threat').GetValue]\n Notoriety tier rises at 5 / 10 / 20 / 35 / 55 upgrades.\n\n#T Synergy Progress#!  (set bonuses at 4 / 8 / 12 of a theme)\n #R Military#!: [GetPlayer.MakeScope.GetVariable('rl_tag_military').GetValue]\n #B Naval#!: [GetPlayer.MakeScope.GetVariable('rl_tag_naval').GetValue]\n #Y Economic#!: [GetPlayer.MakeScope.GetVariable('rl_tag_economic').GetValue]\n #P Administrative#!: [GetPlayer.MakeScope.GetVariable('rl_tag_admin').GetValue]"
+
  dummy_parent_advance: "Roguelite Unlock System (Ignore)"
  dummy_parent_advance_desc: "Do not research this technology. It will be unlocked automatically after 1 month (it will not actually give you an extra technology roll)."
 
  # Community Mod Menu settings
- europa_survivors__general_name: "Europa Survivors"
+ europa_survivors__general_name: "Roguelike Universalis"
  europa_survivors__general__sources_name: "Roll Sources"
  europa_survivors__roll_on_research_name: "Rolls from Research"
  europa_survivors__roll_on_research_desc: "Gain an upgrade selection each time you research an advance."
