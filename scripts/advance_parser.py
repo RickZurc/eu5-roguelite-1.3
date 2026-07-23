@@ -728,12 +728,18 @@ def main():
             lines.append("\t}")
             lines.append("\tshow_as_tooltip = {")
             lines.append(f"\t\tcustom_tooltip = rl_tt_{name}")
+            # Show the curse (only evaluates when rl_cursed = 1, so no lag on
+            # normal rolls) without re-previewing the threat/synergy bookkeeping.
+            lines.append("\t\trl_apply_curse = yes")
             lines.append("\t}")
         else:
             lines.append("\thidden_effect = {")
             lines.append(f"\t\tset_variable = var_{name}")
             lines.append("\t\trl_apply_curse = yes")
             lines.append(f"\t\trl_take_{tag} = yes")
+            lines.append("\t}")
+            lines.append("\tshow_as_tooltip = {")
+            lines.append("\t\trl_apply_curse = yes")
             lines.append("\t}")
 
         lines.append("}")
