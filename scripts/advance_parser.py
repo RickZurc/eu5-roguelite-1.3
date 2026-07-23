@@ -704,10 +704,17 @@ def main():
             trigger_block,
         ]
 
+        tag = _classify_tag(a)
+
         if has_modifiers:
-            # rl_grant_mod scales the modifier by the rolled rarity (size).
+            # rl_grant_mod scales the modifier by the rolled rarity (size). This
+            # is the one effect we WANT previewed in the hover tooltip.
             lines.append(f"\trl_grant_mod = {{ m = modifier_{name} }}")
 
+        # All bookkeeping (flags, curse, synergy count, threat) lives in
+        # hidden_effect so it is NOT re-previewed on every hover. Previewing
+        # these nested conditional effects (curse/threat/set branches + CMF
+        # variable-map reads) was causing tooltip lag.
         if has_unlocks:
             lines.append("\thidden_effect = {")
             lines.append(f"\t\tset_variable = flag_dummy_{name}")
@@ -716,21 +723,18 @@ def main():
             # so granting it does not change modifier:rl_roll_mtd (the detection
             # counter), and it won't be mistaken for a new player research.
             lines.append(f"\t\tset_variable = var_{name}")
+            lines.append("\t\trl_apply_curse = yes")
+            lines.append(f"\t\trl_take_{tag} = yes")
             lines.append("\t}")
             lines.append("\tshow_as_tooltip = {")
             lines.append(f"\t\tcustom_tooltip = rl_tt_{name}")
             lines.append("\t}")
         else:
-            # modifier-only: hidden_effect with just set_variable
             lines.append("\thidden_effect = {")
             lines.append(f"\t\tset_variable = var_{name}")
+            lines.append("\t\trl_apply_curse = yes")
+            lines.append(f"\t\trl_take_{tag} = yes")
             lines.append("\t}")
-
-        # Cursed rolls apply their drawback no matter which option is taken.
-        lines.append("\trl_apply_curse = yes")
-        # Synergy set: count this pick toward its theme and check set bonuses,
-        # and raise escalating threat (both handled inside rl_take_<tag>).
-        lines.append(f"\trl_take_{_classify_tag(a)} = yes")
 
         lines.append("}")
         option_sections.append("\n".join(lines))
