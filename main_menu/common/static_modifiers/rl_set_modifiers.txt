@@ -1,4 +1,4 @@
-# Hand-written synergy-set bonuses and escalating-threat modifier (NOT
+﻿# Hand-written synergy-set bonuses and escalating-threat modifier (NOT
 # regenerated). Set bonuses are granted at 4 / 8 / 12 picks of a theme; each
 # tier is a separate permanent modifier so they stack into a build.
 

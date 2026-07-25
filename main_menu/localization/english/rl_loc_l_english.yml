@@ -39,6 +39,7 @@
  rl_status_button_tooltip: "Open your roguelite status: reroll tokens, notoriety and synergy progress."
 
  # Status window
+ rl_status.hidden: ""
  rl_status.1.title: "Roguelike Universalis — Status"
  rl_status.1.close: "Close"
  rl_status.1.desc: "#T Resources#!\n Reroll tokens: #Y [GetPlayer.MakeScope.GetVariable('rl_reroll_tokens').GetValue]#!  (spent on Reroll and Banish; earned by winning great battles)\n Upgrades taken: [GetPlayer.MakeScope.GetVariable('rl_threat').GetValue]\n Notoriety tier rises at 5 / 10 / 20 / 35 / 55 upgrades.\n\n#T Synergy Progress#!  (set bonuses at 4 / 8 / 12 of a theme)\n #R Military#!: [GetPlayer.MakeScope.GetVariable('rl_tag_military').GetValue]\n #B Naval#!: [GetPlayer.MakeScope.GetVariable('rl_tag_naval').GetValue]\n #Y Economic#!: [GetPlayer.MakeScope.GetVariable('rl_tag_economic').GetValue]\n #P Administrative#!: [GetPlayer.MakeScope.GetVariable('rl_tag_admin').GetValue]"

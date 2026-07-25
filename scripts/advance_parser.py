@@ -761,12 +761,18 @@ def main():
                 f"\t\t\tvar:rl_event_3 = {i}\n"
                 f"\t\t}}\n"
                 f"\t\tvar:rl_reroll_tokens > 0\n"
-                f"\t\t\"global_variable_map(cmm|flag:europa_survivors__enable_banish)\" >= 1\n"
+                f"\t\trl_enabled = {{ s = enable_banish }}\n"
                 f"\t}}"
             ),
             "\tcustom_tooltip = rl_events.1.banish.tt",
             "\thidden_effect = {",
-            f"\t\trl_do_banish = {{ n = {name} }}",
+            # Setting var_<name> excludes this advance from rl_rand_se forever.
+            f"\t\tset_variable = var_{name}",
+            "\t\tchange_variable = { name = rl_reroll_tokens add = -1 }",
+            # Redraw via the hidden helper event: firing by id is a cheap
+            # reference, so the huge random_list is NOT expanded into every one
+            # of these ~2566 options (that expansion caused the hover lag).
+            "\t\ttrigger_event_silently = { id = rl_status.2 }",
             "\t}",
             "}",
         ]
@@ -801,7 +807,7 @@ def main():
         "\t\tname = rl_events.1.reroll\n"
         "\t\ttrigger = {\n"
         "\t\t\tvar:rl_reroll_tokens > 0\n"
-        "\t\t\t\"global_variable_map(cmm|flag:europa_survivors__enable_reroll)\" >= 1\n"
+        "\t\t\trl_enabled = { s = enable_reroll }\n"
         "\t\t}\n"
         "\t\tcustom_tooltip = rl_events.1.reroll.tt\n"
         "\t\thidden_effect = {\n"

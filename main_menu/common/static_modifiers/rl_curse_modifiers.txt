@@ -1,4 +1,4 @@
-# Hand-written curse modifiers (NOT regenerated). Applied alongside a cursed
+﻿# Hand-written curse modifiers (NOT regenerated). Applied alongside a cursed
 # upgrade as the risk half of high risk / high reward legendary & rare rolls.
 modifier_rl_curse_1 = {
 	discipline = -0.05

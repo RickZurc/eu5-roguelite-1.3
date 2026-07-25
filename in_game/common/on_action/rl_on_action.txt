@@ -1,4 +1,4 @@
-monthly_country_pulse = {
+﻿monthly_country_pulse = {
     on_actions = {
         rl_monthly_action
     }
@@ -67,12 +67,27 @@ rl_monthly_action = {
                 }
                 if = {
                     limit = {
-                        "global_variable_map(cmm|flag:europa_survivors__roll_on_research)" >= 1
+                        rl_enabled = { s = roll_on_research }
                     }
                     rl_do_roll = yes
                 }
                 # Always sync the baseline to the current count, even if rolls
                 # from research are disabled, so we never build up a backlog.
+                set_variable = {
+                    name = num_advances
+                    value = { add = modifier:rl_roll_mtd }
+                }
+            }
+            else_if = {
+                # The live count can also DROP: many advances are religion- (or
+                # government-/culture-) gated via potential, so changing religion
+                # invalidates them and their rl_roll_mtd stops applying. Without
+                # this branch the baseline would stay too high and the player
+                # would have to re-research that many advances before any further
+                # selection fired. Re-sync downward so the next research rolls.
+                limit = {
+                    modifier:rl_roll_mtd < var:num_advances
+                }
                 set_variable = {
                     name = num_advances
                     value = { add = modifier:rl_roll_mtd }
@@ -116,7 +131,7 @@ rl_battle_won_action = {
         if = {
             limit = {
                 exists = scope:actor.owner
-                "global_variable_map(cmm|flag:europa_survivors__roll_on_battle)" >= 1
+                rl_enabled = { s = roll_on_battle }
             }
             scope:actor.owner = {
                 rl_grant_reroll_token = yes
@@ -131,7 +146,7 @@ rl_new_age_action = {
     effect = {
         if = {
             limit = {
-                "global_variable_map(cmm|flag:europa_survivors__roll_on_new_age)" >= 1
+                rl_enabled = { s = roll_on_new_age }
             }
             rl_do_roll_legendary = yes
         }

@@ -1,4 +1,4 @@
-# Hand-written events (NOT regenerated). Separate namespace from the generated
+﻿# Hand-written events (NOT regenerated). Separate namespace from the generated
 # rl_events so the generator never overwrites them.
 namespace = rl_status
 
@@ -12,5 +12,38 @@ rl_status.1 = {
 
 	option = {
 		name = rl_status.1.close
+	}
+}
+
+# Hidden redraw helper. Draws three new offers and re-opens the selection event.
+#
+# This exists so the 2566-entry random_list (rl_rand_se, inlined by rl_pick_three)
+# appears ONCE in the script instead of being expanded into all ~2566 banish
+# options. Firing an event by id is a cheap reference, whereas calling a
+# parameterised scripted effect expands its whole body at every call site --
+# which made hovering a Banish option lag the game.
+rl_status.2 = {
+	type = country_event
+	hidden = yes
+	# Hidden events never display these, but the engine still warns without them.
+	title = rl_status.hidden
+	desc = rl_status.hidden
+
+	immediate = {
+		rl_pick_three = yes
+		trigger_event_non_silently = { id = rl_events.1 }
+	}
+}
+
+# Debug helper: grant 10 reroll tokens. Fire from the console with
+# "event rl_status.3" (EU5 has no console command to set a script variable).
+rl_status.3 = {
+	type = country_event
+	hidden = yes
+	title = rl_status.hidden
+	desc = rl_status.hidden
+
+	immediate = {
+		change_variable = { name = rl_reroll_tokens add = 10 }
 	}
 }
