@@ -82,8 +82,14 @@
  rl_status.5.legendary.tt: "Your #P next upgrade selection is guaranteed Legendary#! (5x power, or a legendary artifact). Costs 5 tokens."
  rl_status.5.extra: "Seize an opportunity #Y (4 tokens)#!"
  rl_status.5.extra.tt: "Draw an #Y extra upgrade selection right now#!. Costs 4 tokens."
+ rl_status.5.pact: "#R Make a dark pact#! #Y (free)#!"
+ rl_status.5.pact.tt: "Accept a #R random permanent curse#! upon your realm. In exchange, immediately draw a #P guaranteed Legendary#! upgrade selection. May be repeated — but every pact leaves another curse behind."
  rl_status.5.close: "Close"
- rl_status.1.desc: "#T Resources#!\n Reroll tokens: #Y [GetPlayer.MakeScope.GetVariable('rl_reroll_tokens').GetValue]#!  (spent on Reroll and Banish; earned by winning great battles)\n Upgrades taken: [GetPlayer.MakeScope.GetVariable('rl_threat').GetValue]\n Notoriety tier rises at 5 / 10 / 20 / 35 / 55 upgrades.\n\n#T Synergy Progress#!  (set bonuses at 4 / 8 / 12 of a theme)\n #R Military#!: [GetPlayer.MakeScope.GetVariable('rl_tag_military').GetValue]\n #B Naval#!: [GetPlayer.MakeScope.GetVariable('rl_tag_naval').GetValue]\n #Y Economic#!: [GetPlayer.MakeScope.GetVariable('rl_tag_economic').GetValue]\n #P Administrative#!: [GetPlayer.MakeScope.GetVariable('rl_tag_admin').GetValue]"
+
+ STATIC_MODIFIER_NAME_modifier_rl_artifact_set_1: "Curator of Wonders (3 Artifacts)"
+ STATIC_MODIFIER_NAME_modifier_rl_artifact_set_2: "Keeper of Legends (6 Artifacts)"
+ STATIC_MODIFIER_NAME_modifier_rl_artifact_set_3: "Architect of an Era (9 Artifacts)"
+ rl_status.1.desc: "#T Resources#!\n Reroll tokens: #Y [GetPlayer.MakeScope.GetVariable('rl_reroll_tokens').GetValue]#!  (spent on Reroll and Banish; earned by winning great battles)\n Upgrades taken: [GetPlayer.MakeScope.GetVariable('rl_threat').GetValue]\n Notoriety tier rises at 5 / 10 / 20 / 35 / 55 upgrades.\n\n#T Synergy Progress#!  (set bonuses at 4 / 8 / 12 of a theme)\n #R Military#!: [GetPlayer.MakeScope.GetVariable('rl_tag_military').GetValue]\n #B Naval#!: [GetPlayer.MakeScope.GetVariable('rl_tag_naval').GetValue]\n #Y Economic#!: [GetPlayer.MakeScope.GetVariable('rl_tag_economic').GetValue]\n #P Administrative#!: [GetPlayer.MakeScope.GetVariable('rl_tag_admin').GetValue]\n\n#T Artifacts#!  (capstones at 3 / 6 / 9)\n Collected: #P [GetPlayer.MakeScope.GetVariable('rl_uniq_taken').GetValue]#! of 12\n Dark pacts made: #R [GetPlayer.MakeScope.GetVariable('rl_pacts_made').GetValue]#!"
 
  dummy_parent_advance: "Roguelite Unlock System (Ignore)"
  dummy_parent_advance_desc: "Do not research this technology. It will be unlocked automatically after 1 month (it will not actually give you an extra technology roll)."

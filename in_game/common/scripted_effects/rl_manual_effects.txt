@@ -81,6 +81,42 @@ rl_cmf_register = {
     set_global_variable = rl_settings_ready
 }
 
+# rl_ensure_vars: give this country any of our variables it is missing.
+#
+# Runs every month, but the body is guarded by a version sentinel so it only
+# does work once per country per mod version. Bump the sentinel name (rl_vars_vN)
+# whenever new variables are added, so existing saves pick them up -- otherwise
+# comparisons and change_variable against an unset variable silently no-op.
+rl_ensure_vars = {
+    if = {
+        limit = { NOT = { has_variable = rl_vars_v3 } }
+
+        if = { limit = { NOT = { has_variable = rl_event_1 } } set_variable = { name = rl_event_1 value = -1 } }
+        if = { limit = { NOT = { has_variable = rl_event_2 } } set_variable = { name = rl_event_2 value = -1 } }
+        if = { limit = { NOT = { has_variable = rl_event_3 } } set_variable = { name = rl_event_3 value = -1 } }
+        if = { limit = { NOT = { has_variable = rl_rarity } } set_variable = { name = rl_rarity value = 1 } }
+        if = { limit = { NOT = { has_variable = rl_cursed } } set_variable = { name = rl_cursed value = 0 } }
+        if = { limit = { NOT = { has_variable = rl_curse } } set_variable = { name = rl_curse value = 1 } }
+        if = { limit = { NOT = { has_variable = rl_reroll_tokens } } set_variable = { name = rl_reroll_tokens value = 2 } }
+
+        if = { limit = { NOT = { has_variable = rl_tag_military } } set_variable = { name = rl_tag_military value = 0 } }
+        if = { limit = { NOT = { has_variable = rl_tag_naval } } set_variable = { name = rl_tag_naval value = 0 } }
+        if = { limit = { NOT = { has_variable = rl_tag_economic } } set_variable = { name = rl_tag_economic value = 0 } }
+        if = { limit = { NOT = { has_variable = rl_tag_admin } } set_variable = { name = rl_tag_admin value = 0 } }
+        if = { limit = { NOT = { has_variable = rl_threat } } set_variable = { name = rl_threat value = 0 } }
+
+        if = { limit = { NOT = { has_variable = rl_uniq_1 } } set_variable = { name = rl_uniq_1 value = -1 } }
+        if = { limit = { NOT = { has_variable = rl_uniq_2 } } set_variable = { name = rl_uniq_2 value = -1 } }
+        if = { limit = { NOT = { has_variable = rl_uniq_3 } } set_variable = { name = rl_uniq_3 value = -1 } }
+        if = { limit = { NOT = { has_variable = rl_uniq_taken } } set_variable = { name = rl_uniq_taken value = 0 } }
+        if = { limit = { NOT = { has_variable = rl_artifact_roll } } set_variable = { name = rl_artifact_roll value = 0 } }
+        if = { limit = { NOT = { has_variable = rl_force_legendary } } set_variable = { name = rl_force_legendary value = 0 } }
+        if = { limit = { NOT = { has_variable = rl_pacts_made } } set_variable = { name = rl_pacts_made value = 0 } }
+
+        set_variable = rl_vars_v3
+    }
+}
+
 # rl_pick_three: fill rl_event_1/2/3 with three DISTINCT not-yet-owned advance
 # indices. rl_rand_se (generated) picks a random index into rl_event_$v$.
 rl_pick_three = {
@@ -232,12 +268,49 @@ rl_pick_three_uniques = {
 }
 
 # rl_take_unique: claim artifact $n$ -- grant its modifier, mark it owned, count
-# it, and apply escalating threat like any other upgrade.
+# it, apply escalating threat like any other upgrade, and check the collection
+# capstones.
 rl_take_unique = {
     add_country_modifier = { modifier = modifier_rl_uniq_$n$ years = -1 }
     set_variable = var_uniq_$n$
     change_variable = { name = rl_uniq_taken add = 1 }
     rl_apply_threat = yes
+    rl_check_artifact_capstones = yes
+}
+
+# rl_check_artifact_capstones: escalating rewards for collecting artifacts.
+# Granted once each, at 3 / 6 / 9 artifacts.
+rl_check_artifact_capstones = {
+    if = {
+        limit = { var:rl_uniq_taken >= 3  NOT = { has_variable = rl_artifact_set_1 } }
+        set_variable = rl_artifact_set_1
+        add_country_modifier = { modifier = modifier_rl_artifact_set_1 years = -1 }
+    }
+    if = {
+        limit = { var:rl_uniq_taken >= 6  NOT = { has_variable = rl_artifact_set_2 } }
+        set_variable = rl_artifact_set_2
+        add_country_modifier = { modifier = modifier_rl_artifact_set_2 years = -1 }
+    }
+    if = {
+        limit = { var:rl_uniq_taken >= 9  NOT = { has_variable = rl_artifact_set_3 } }
+        set_variable = rl_artifact_set_3
+        add_country_modifier = { modifier = modifier_rl_artifact_set_3 years = -1 }
+    }
+}
+
+# rl_dark_pact: the devil's bargain. Accept a random permanent curse right now,
+# and in exchange immediately draw a guaranteed Legendary selection (which may
+# also be an artifact roll). Repeatable -- but each pact stacks another curse,
+# so it is self-limiting.
+rl_dark_pact = {
+    rl_set_curse = yes      # choose a curse (sets rl_cursed = 1, picks rl_curse)
+    rl_apply_curse = yes    # inflict it now
+    # Clear the flag so this curse is not applied a second time by the options
+    # of the roll we are about to open.
+    set_variable = { name = rl_cursed value = 0 }
+    change_variable = { name = rl_pacts_made add = 1 }
+    set_variable = { name = rl_force_legendary value = 1 }
+    rl_do_roll = yes
 }
 
 # rl_try_artifact_roll: a legendary roll has a 50% chance to become an artifact

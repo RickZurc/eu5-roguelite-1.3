@@ -10,9 +10,9 @@ rl_status.1 = {
 
 	outcome = neutral
 
+	# No token requirement: the shop also offers the (free) dark pact.
 	option = {
 		name = rl_status.1.shop
-		trigger = { var:rl_reroll_tokens > 0 }
 		hidden_effect = {
 			trigger_event_non_silently = { id = rl_status.5 }
 		}
@@ -296,6 +296,16 @@ rl_status.5 = {
 		custom_tooltip = rl_status.5.extra.tt
 		hidden_effect = {
 			rl_buy_extra_roll = yes
+		}
+	}
+
+	# The devil's bargain: free, but inflicts a permanent curse.
+	option = {
+		name = rl_status.5.pact
+		trigger = { rl_enabled_enable_cursed = yes }
+		custom_tooltip = rl_status.5.pact.tt
+		hidden_effect = {
+			rl_dark_pact = yes
 		}
 	}
 

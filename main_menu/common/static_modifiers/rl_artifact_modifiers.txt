@@ -62,3 +62,23 @@ modifier_rl_uniq_12 = {         # Star of the Sea
 	naval_range_modifier = 0.3
 	colonial_range = 50
 }
+
+# --- Artifact collection capstones ------------------------------------------
+# Granted by rl_take_unique once 3 / 6 / 9 artifacts have been collected, so
+# hunting artifacts is a long-term goal rather than a set of isolated perks.
+
+modifier_rl_artifact_set_1 = {  # Curator of Wonders (3 artifacts)
+	monthly_prestige = 0.5
+	research_speed_modifier = 0.1
+}
+
+modifier_rl_artifact_set_2 = {  # Keeper of Legends (6 artifacts)
+	discipline = 0.05
+	global_production_efficiency = 0.1
+}
+
+modifier_rl_artifact_set_3 = {  # Architect of an Era (9 artifacts)
+	legislative_efficiency = 0.15
+	global_institution_growth_modifier = 0.2
+	land_morale_modifier = 0.1
+}

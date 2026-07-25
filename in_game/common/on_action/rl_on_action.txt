@@ -53,6 +53,13 @@ rl_on_callback_action = {
 rl_monthly_action = {
     trigger = {}
     effect = {
+        # Backfill any variables this country is missing. The init branch below
+        # only ever runs once per country, so saves started on an older version
+        # of the mod would otherwise never get variables added later -- and
+        # change_variable / comparisons against an unset variable silently do
+        # nothing (that is what broke rl_pacts_made and blocked artifact rolls).
+        rl_ensure_vars = yes
+
         if = {
             limit = {
                 has_variable = num_advances
@@ -102,29 +109,8 @@ rl_monthly_action = {
                 name = num_advances
                 value = { add = modifier:rl_roll_mtd }
             }
-            # Initialize the selection variables so the event options can always
-            # safely read var:rl_event_1/2/3, plus rarity/reroll state.
-            set_variable = { name = rl_event_1 value = -1 }
-            set_variable = { name = rl_event_2 value = -1 }
-            set_variable = { name = rl_event_3 value = -1 }
-            set_variable = { name = rl_rarity value = 1 }
-            set_variable = { name = rl_cursed value = 0 }
-            set_variable = { name = rl_curse value = 1 }
-            # Starting banked rerolls; more are earned by winning great battles.
-            set_variable = { name = rl_reroll_tokens value = 2 }
-            # Synergy-set counters and escalating-threat meter.
-            set_variable = { name = rl_tag_military value = 0 }
-            set_variable = { name = rl_tag_naval value = 0 }
-            set_variable = { name = rl_tag_economic value = 0 }
-            set_variable = { name = rl_tag_admin value = 0 }
-            set_variable = { name = rl_threat value = 0 }
-            # Artifact + token-shop state.
-            set_variable = { name = rl_uniq_1 value = -1 }
-            set_variable = { name = rl_uniq_2 value = -1 }
-            set_variable = { name = rl_uniq_3 value = -1 }
-            set_variable = { name = rl_uniq_taken value = 0 }
-            set_variable = { name = rl_artifact_roll value = 0 }
-            set_variable = { name = rl_force_legendary value = 0 }
+            # All other state is initialized by rl_ensure_vars, which already ran
+            # at the top of this effect.
         }
     }
 }
