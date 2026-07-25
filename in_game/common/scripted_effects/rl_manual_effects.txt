@@ -120,7 +120,7 @@ rl_roll_curse = {
     set_variable = { name = rl_cursed value = 0 }
     if = {
         limit = {
-            rl_enabled = { s = enable_cursed }
+            rl_enabled_enable_cursed = yes
         }
         if = {
             limit = { var:rl_rarity = 3 }
@@ -215,7 +215,7 @@ rl_apply_threat = {
     change_variable = { name = rl_threat add = 1 }
     if = {
         limit = {
-            rl_enabled = { s = enable_threat }
+            rl_enabled_enable_threat = yes
         }
         if = {
             limit = { var:rl_threat >= 55 }
@@ -247,7 +247,7 @@ rl_take_military = {
     change_variable = { name = rl_tag_military add = 1 }
     rl_apply_threat = yes
     if = {
-        limit = { rl_enabled = { s = enable_sets } }
+        limit = { rl_enabled_enable_sets = yes }
         if = { limit = { var:rl_tag_military >= 4  NOT = { has_variable = rl_set_military_1 } }  set_variable = rl_set_military_1  add_country_modifier = { modifier = modifier_rl_set_military_1 years = -1 } }
         if = { limit = { var:rl_tag_military >= 8  NOT = { has_variable = rl_set_military_2 } }  set_variable = rl_set_military_2  add_country_modifier = { modifier = modifier_rl_set_military_2 years = -1 } }
         if = { limit = { var:rl_tag_military >= 12 NOT = { has_variable = rl_set_military_3 } }  set_variable = rl_set_military_3  add_country_modifier = { modifier = modifier_rl_set_military_3 years = -1 } }
@@ -258,7 +258,7 @@ rl_take_naval = {
     change_variable = { name = rl_tag_naval add = 1 }
     rl_apply_threat = yes
     if = {
-        limit = { rl_enabled = { s = enable_sets } }
+        limit = { rl_enabled_enable_sets = yes }
         if = { limit = { var:rl_tag_naval >= 4  NOT = { has_variable = rl_set_naval_1 } }  set_variable = rl_set_naval_1  add_country_modifier = { modifier = modifier_rl_set_naval_1 years = -1 } }
         if = { limit = { var:rl_tag_naval >= 8  NOT = { has_variable = rl_set_naval_2 } }  set_variable = rl_set_naval_2  add_country_modifier = { modifier = modifier_rl_set_naval_2 years = -1 } }
         if = { limit = { var:rl_tag_naval >= 12 NOT = { has_variable = rl_set_naval_3 } }  set_variable = rl_set_naval_3  add_country_modifier = { modifier = modifier_rl_set_naval_3 years = -1 } }
@@ -269,7 +269,7 @@ rl_take_economic = {
     change_variable = { name = rl_tag_economic add = 1 }
     rl_apply_threat = yes
     if = {
-        limit = { rl_enabled = { s = enable_sets } }
+        limit = { rl_enabled_enable_sets = yes }
         if = { limit = { var:rl_tag_economic >= 4  NOT = { has_variable = rl_set_economic_1 } }  set_variable = rl_set_economic_1  add_country_modifier = { modifier = modifier_rl_set_economic_1 years = -1 } }
         if = { limit = { var:rl_tag_economic >= 8  NOT = { has_variable = rl_set_economic_2 } }  set_variable = rl_set_economic_2  add_country_modifier = { modifier = modifier_rl_set_economic_2 years = -1 } }
         if = { limit = { var:rl_tag_economic >= 12 NOT = { has_variable = rl_set_economic_3 } }  set_variable = rl_set_economic_3  add_country_modifier = { modifier = modifier_rl_set_economic_3 years = -1 } }
@@ -280,7 +280,7 @@ rl_take_admin = {
     change_variable = { name = rl_tag_admin add = 1 }
     rl_apply_threat = yes
     if = {
-        limit = { rl_enabled = { s = enable_sets } }
+        limit = { rl_enabled_enable_sets = yes }
         if = { limit = { var:rl_tag_admin >= 4  NOT = { has_variable = rl_set_admin_1 } }  set_variable = rl_set_admin_1  add_country_modifier = { modifier = modifier_rl_set_admin_1 years = -1 } }
         if = { limit = { var:rl_tag_admin >= 8  NOT = { has_variable = rl_set_admin_2 } }  set_variable = rl_set_admin_2  add_country_modifier = { modifier = modifier_rl_set_admin_2 years = -1 } }
         if = { limit = { var:rl_tag_admin >= 12 NOT = { has_variable = rl_set_admin_3 } }  set_variable = rl_set_admin_3  add_country_modifier = { modifier = modifier_rl_set_admin_3 years = -1 } }

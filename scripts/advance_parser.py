@@ -761,7 +761,7 @@ def main():
                 f"\t\t\tvar:rl_event_3 = {i}\n"
                 f"\t\t}}\n"
                 f"\t\tvar:rl_reroll_tokens > 0\n"
-                f"\t\trl_enabled = {{ s = enable_banish }}\n"
+                f"\t\trl_enabled_enable_banish = yes\n"
                 f"\t}}"
             ),
             "\tcustom_tooltip = rl_events.1.banish.tt",
@@ -807,7 +807,7 @@ def main():
         "\t\tname = rl_events.1.reroll\n"
         "\t\ttrigger = {\n"
         "\t\t\tvar:rl_reroll_tokens > 0\n"
-        "\t\t\trl_enabled = { s = enable_reroll }\n"
+        "\t\t\trl_enabled_enable_reroll = yes\n"
         "\t\t}\n"
         "\t\tcustom_tooltip = rl_events.1.reroll.tt\n"
         "\t\thidden_effect = {\n"

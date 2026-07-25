@@ -67,7 +67,7 @@ rl_monthly_action = {
                 }
                 if = {
                     limit = {
-                        rl_enabled = { s = roll_on_research }
+                        rl_enabled_roll_on_research = yes
                     }
                     rl_do_roll = yes
                 }
@@ -131,7 +131,7 @@ rl_battle_won_action = {
         if = {
             limit = {
                 exists = scope:actor.owner
-                rl_enabled = { s = roll_on_battle }
+                rl_enabled_roll_on_battle = yes
             }
             scope:actor.owner = {
                 rl_grant_reroll_token = yes
@@ -146,7 +146,7 @@ rl_new_age_action = {
     effect = {
         if = {
             limit = {
-                rl_enabled = { s = roll_on_new_age }
+                rl_enabled_roll_on_new_age = yes
             }
             rl_do_roll_legendary = yes
         }
