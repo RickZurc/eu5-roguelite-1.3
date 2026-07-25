@@ -62,6 +62,13 @@ rl_cmf_register = {
         group_id = gameplay
         default_value = 1
     }
+    cmm_register_global_bool_setting = {
+        mod_id = europa_survivors
+        setting_id = enable_artifacts
+        tab_id = general
+        group_id = gameplay
+        default_value = 1
+    }
     # Action-bar button that opens the roguelite status window.
     cmf_add_action_bar_element = {
         element = rl_status_button
@@ -105,11 +112,19 @@ rl_pick_three = {
 }
 
 # rl_roll_rarity: set rl_rarity to 1 (common), 2 (rare) or 3 (legendary).
+# A token-shop purchase can force the next roll to be legendary.
 rl_roll_rarity = {
-    random_list = {
-        65 = { set_variable = { name = rl_rarity value = 1 } }
-        27 = { set_variable = { name = rl_rarity value = 2 } }
-        8  = { set_variable = { name = rl_rarity value = 3 } }
+    if = {
+        limit = { var:rl_force_legendary = 1 }
+        set_variable = { name = rl_rarity value = 3 }
+        set_variable = { name = rl_force_legendary value = 0 }
+    }
+    else = {
+        random_list = {
+            65 = { set_variable = { name = rl_rarity value = 1 } }
+            27 = { set_variable = { name = rl_rarity value = 2 } }
+            8  = { set_variable = { name = rl_rarity value = 3 } }
+        }
     }
 }
 
@@ -163,20 +178,145 @@ rl_apply_curse = {
     }
 }
 
+# --- Unique artifacts -------------------------------------------------------
+# There are 12 artifacts (modifier_rl_uniq_1..12). Each can be taken once per
+# run; var_uniq_<n> marks one as owned and excludes it from future draws.
+
+# rl_uniq_rand: pick a random not-yet-owned artifact index into rl_uniq_$v$.
+rl_uniq_rand = {
+    random_list = {
+        1 = { trigger = { NOT = { has_variable = var_uniq_1 } }  set_variable = { name = rl_uniq_$v$ value = 1 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_2 } }  set_variable = { name = rl_uniq_$v$ value = 2 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_3 } }  set_variable = { name = rl_uniq_$v$ value = 3 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_4 } }  set_variable = { name = rl_uniq_$v$ value = 4 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_5 } }  set_variable = { name = rl_uniq_$v$ value = 5 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_6 } }  set_variable = { name = rl_uniq_$v$ value = 6 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_7 } }  set_variable = { name = rl_uniq_$v$ value = 7 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_8 } }  set_variable = { name = rl_uniq_$v$ value = 8 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_9 } }  set_variable = { name = rl_uniq_$v$ value = 9 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_10 } } set_variable = { name = rl_uniq_$v$ value = 10 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_11 } } set_variable = { name = rl_uniq_$v$ value = 11 } }
+        1 = { trigger = { NOT = { has_variable = var_uniq_12 } } set_variable = { name = rl_uniq_$v$ value = 12 } }
+    }
+}
+
+# rl_pick_three_uniques: three DISTINCT unowned artifacts into rl_uniq_1/2/3.
+# Only ever called when at least three remain unowned (see rl_try_artifact_roll),
+# otherwise the distinctness loops below could not terminate.
+rl_pick_three_uniques = {
+    rl_uniq_rand = { v = 1 }
+
+    set_variable = { name = rl_uniq_2 value = -1 }
+    set_variable = { name = rl_uniq_3 value = -1 }
+
+    while = {
+        limit = {
+            OR = {
+                var:rl_uniq_2 = var:rl_uniq_1
+                var:rl_uniq_2 = -1
+            }
+        }
+        rl_uniq_rand = { v = 2 }
+    }
+
+    while = {
+        limit = {
+            OR = {
+                var:rl_uniq_3 = var:rl_uniq_1
+                var:rl_uniq_3 = var:rl_uniq_2
+                var:rl_uniq_3 = -1
+            }
+        }
+        rl_uniq_rand = { v = 3 }
+    }
+}
+
+# rl_take_unique: claim artifact $n$ -- grant its modifier, mark it owned, count
+# it, and apply escalating threat like any other upgrade.
+rl_take_unique = {
+    add_country_modifier = { modifier = modifier_rl_uniq_$n$ years = -1 }
+    set_variable = var_uniq_$n$
+    change_variable = { name = rl_uniq_taken add = 1 }
+    rl_apply_threat = yes
+}
+
+# rl_try_artifact_roll: a legendary roll has a 50% chance to become an artifact
+# roll instead of a scaled advance roll -- but only while at least 3 artifacts
+# remain unowned (rl_uniq_taken <= 9) and artifacts are enabled.
+rl_try_artifact_roll = {
+    set_variable = { name = rl_artifact_roll value = 0 }
+    if = {
+        limit = {
+            rl_enabled_enable_artifacts = yes
+            var:rl_uniq_taken <= 9
+        }
+        random_list = {
+            50 = { set_variable = { name = rl_artifact_roll value = 1 } }
+            50 = { }
+        }
+    }
+}
+
 # rl_do_roll: standard roll (random rarity). Used by research.
 rl_do_roll = {
     rl_roll_rarity = yes
-    rl_roll_curse = yes
-    rl_pick_three = yes
-    trigger_event_non_silently = { id = rl_events.1 }
+    if = {
+        limit = { var:rl_rarity = 3 }
+        rl_try_artifact_roll = yes
+    }
+    else = {
+        set_variable = { name = rl_artifact_roll value = 0 }
+    }
+    if = {
+        limit = { var:rl_artifact_roll = 1 }
+        rl_pick_three_uniques = yes
+        trigger_event_non_silently = { id = rl_status.4 }
+    }
+    else = {
+        rl_roll_curse = yes
+        rl_pick_three = yes
+        trigger_event_non_silently = { id = rl_events.1 }
+    }
 }
 
 # rl_do_roll_legendary: guaranteed legendary roll. Used by new-age milestones.
 rl_do_roll_legendary = {
     set_variable = { name = rl_rarity value = 3 }
-    rl_roll_curse = yes
-    rl_pick_three = yes
-    trigger_event_non_silently = { id = rl_events.1 }
+    rl_try_artifact_roll = yes
+    if = {
+        limit = { var:rl_artifact_roll = 1 }
+        rl_pick_three_uniques = yes
+        trigger_event_non_silently = { id = rl_status.4 }
+    }
+    else = {
+        rl_roll_curse = yes
+        rl_pick_three = yes
+        trigger_event_non_silently = { id = rl_events.1 }
+    }
+}
+
+# --- Token shop -------------------------------------------------------------
+
+# rl_cleanse_curses: remove every curse modifier currently on the country.
+rl_cleanse_curses = {
+    change_variable = { name = rl_reroll_tokens add = -3 }
+    remove_country_modifier = modifier_rl_curse_1
+    remove_country_modifier = modifier_rl_curse_2
+    remove_country_modifier = modifier_rl_curse_3
+    remove_country_modifier = modifier_rl_curse_4
+    remove_country_modifier = modifier_rl_curse_5
+}
+
+# rl_buy_legendary: the next roll is guaranteed legendary.
+rl_buy_legendary = {
+    change_variable = { name = rl_reroll_tokens add = -5 }
+    set_variable = { name = rl_force_legendary value = 1 }
+}
+
+# rl_buy_extra_roll: draw an upgrade selection right now.
+rl_buy_extra_roll = {
+    change_variable = { name = rl_reroll_tokens add = -4 }
+    rl_do_roll = yes
 }
 
 # rl_do_reroll: replace the three offered options (keeps the current rarity) and

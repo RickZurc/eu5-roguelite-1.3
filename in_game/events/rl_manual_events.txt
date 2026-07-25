@@ -11,6 +11,14 @@ rl_status.1 = {
 	outcome = neutral
 
 	option = {
+		name = rl_status.1.shop
+		trigger = { var:rl_reroll_tokens > 0 }
+		hidden_effect = {
+			trigger_event_non_silently = { id = rl_status.5 }
+		}
+	}
+
+	option = {
 		name = rl_status.1.close
 	}
 }
@@ -45,5 +53,253 @@ rl_status.3 = {
 
 	immediate = {
 		change_variable = { name = rl_reroll_tokens add = 10 }
+	}
+}
+
+# Legendary artifact choice. Offers three distinct unique perks (rl_uniq_1/2/3),
+# each claimable once per run.
+rl_status.4 = {
+	type = country_event
+	title = rl_status.4.title
+	desc = rl_status.4.desc
+
+	outcome = positive
+
+	option = {
+		name = rl_status.4.a
+		trigger = { var:rl_uniq_1 = 1 }
+		rl_take_unique = { n = 1 }
+	}
+	option = {
+		name = rl_status.4.b
+		trigger = { var:rl_uniq_1 = 2 }
+		rl_take_unique = { n = 2 }
+	}
+	option = {
+		name = rl_status.4.c
+		trigger = { var:rl_uniq_1 = 3 }
+		rl_take_unique = { n = 3 }
+	}
+	option = {
+		name = rl_status.4.d
+		trigger = { var:rl_uniq_1 = 4 }
+		rl_take_unique = { n = 4 }
+	}
+	option = {
+		name = rl_status.4.e
+		trigger = { var:rl_uniq_1 = 5 }
+		rl_take_unique = { n = 5 }
+	}
+	option = {
+		name = rl_status.4.f
+		trigger = { var:rl_uniq_1 = 6 }
+		rl_take_unique = { n = 6 }
+	}
+	option = {
+		name = rl_status.4.g
+		trigger = { var:rl_uniq_1 = 7 }
+		rl_take_unique = { n = 7 }
+	}
+	option = {
+		name = rl_status.4.h
+		trigger = { var:rl_uniq_1 = 8 }
+		rl_take_unique = { n = 8 }
+	}
+	option = {
+		name = rl_status.4.i
+		trigger = { var:rl_uniq_1 = 9 }
+		rl_take_unique = { n = 9 }
+	}
+	option = {
+		name = rl_status.4.j
+		trigger = { var:rl_uniq_1 = 10 }
+		rl_take_unique = { n = 10 }
+	}
+	option = {
+		name = rl_status.4.k
+		trigger = { var:rl_uniq_1 = 11 }
+		rl_take_unique = { n = 11 }
+	}
+	option = {
+		name = rl_status.4.l
+		trigger = { var:rl_uniq_1 = 12 }
+		rl_take_unique = { n = 12 }
+	}
+
+	option = {
+		name = rl_status.4.a
+		trigger = { var:rl_uniq_2 = 1 }
+		rl_take_unique = { n = 1 }
+	}
+	option = {
+		name = rl_status.4.b
+		trigger = { var:rl_uniq_2 = 2 }
+		rl_take_unique = { n = 2 }
+	}
+	option = {
+		name = rl_status.4.c
+		trigger = { var:rl_uniq_2 = 3 }
+		rl_take_unique = { n = 3 }
+	}
+	option = {
+		name = rl_status.4.d
+		trigger = { var:rl_uniq_2 = 4 }
+		rl_take_unique = { n = 4 }
+	}
+	option = {
+		name = rl_status.4.e
+		trigger = { var:rl_uniq_2 = 5 }
+		rl_take_unique = { n = 5 }
+	}
+	option = {
+		name = rl_status.4.f
+		trigger = { var:rl_uniq_2 = 6 }
+		rl_take_unique = { n = 6 }
+	}
+	option = {
+		name = rl_status.4.g
+		trigger = { var:rl_uniq_2 = 7 }
+		rl_take_unique = { n = 7 }
+	}
+	option = {
+		name = rl_status.4.h
+		trigger = { var:rl_uniq_2 = 8 }
+		rl_take_unique = { n = 8 }
+	}
+	option = {
+		name = rl_status.4.i
+		trigger = { var:rl_uniq_2 = 9 }
+		rl_take_unique = { n = 9 }
+	}
+	option = {
+		name = rl_status.4.j
+		trigger = { var:rl_uniq_2 = 10 }
+		rl_take_unique = { n = 10 }
+	}
+	option = {
+		name = rl_status.4.k
+		trigger = { var:rl_uniq_2 = 11 }
+		rl_take_unique = { n = 11 }
+	}
+	option = {
+		name = rl_status.4.l
+		trigger = { var:rl_uniq_2 = 12 }
+		rl_take_unique = { n = 12 }
+	}
+
+	option = {
+		name = rl_status.4.a
+		trigger = { var:rl_uniq_3 = 1 }
+		rl_take_unique = { n = 1 }
+	}
+	option = {
+		name = rl_status.4.b
+		trigger = { var:rl_uniq_3 = 2 }
+		rl_take_unique = { n = 2 }
+	}
+	option = {
+		name = rl_status.4.c
+		trigger = { var:rl_uniq_3 = 3 }
+		rl_take_unique = { n = 3 }
+	}
+	option = {
+		name = rl_status.4.d
+		trigger = { var:rl_uniq_3 = 4 }
+		rl_take_unique = { n = 4 }
+	}
+	option = {
+		name = rl_status.4.e
+		trigger = { var:rl_uniq_3 = 5 }
+		rl_take_unique = { n = 5 }
+	}
+	option = {
+		name = rl_status.4.f
+		trigger = { var:rl_uniq_3 = 6 }
+		rl_take_unique = { n = 6 }
+	}
+	option = {
+		name = rl_status.4.g
+		trigger = { var:rl_uniq_3 = 7 }
+		rl_take_unique = { n = 7 }
+	}
+	option = {
+		name = rl_status.4.h
+		trigger = { var:rl_uniq_3 = 8 }
+		rl_take_unique = { n = 8 }
+	}
+	option = {
+		name = rl_status.4.i
+		trigger = { var:rl_uniq_3 = 9 }
+		rl_take_unique = { n = 9 }
+	}
+	option = {
+		name = rl_status.4.j
+		trigger = { var:rl_uniq_3 = 10 }
+		rl_take_unique = { n = 10 }
+	}
+	option = {
+		name = rl_status.4.k
+		trigger = { var:rl_uniq_3 = 11 }
+		rl_take_unique = { n = 11 }
+	}
+	option = {
+		name = rl_status.4.l
+		trigger = { var:rl_uniq_3 = 12 }
+		rl_take_unique = { n = 12 }
+	}
+}
+
+# Token shop. Spend banked reroll tokens on lasting benefits.
+rl_status.5 = {
+	type = country_event
+	title = rl_status.5.title
+	desc = rl_status.5.desc
+
+	outcome = neutral
+
+	# Cleanse curses (3 tokens) -- only when actually cursed.
+	option = {
+		name = rl_status.5.cleanse
+		trigger = {
+			var:rl_reroll_tokens >= 3
+			OR = {
+				has_country_modifier = modifier_rl_curse_1
+				has_country_modifier = modifier_rl_curse_2
+				has_country_modifier = modifier_rl_curse_3
+				has_country_modifier = modifier_rl_curse_4
+				has_country_modifier = modifier_rl_curse_5
+			}
+		}
+		custom_tooltip = rl_status.5.cleanse.tt
+		hidden_effect = {
+			rl_cleanse_curses = yes
+		}
+	}
+
+	# Guarantee the next roll is legendary (5 tokens).
+	option = {
+		name = rl_status.5.legendary
+		trigger = {
+			var:rl_reroll_tokens >= 5
+			NOT = { var:rl_force_legendary = 1 }
+		}
+		custom_tooltip = rl_status.5.legendary.tt
+		hidden_effect = {
+			rl_buy_legendary = yes
+		}
+	}
+
+	# Draw an extra selection right now (4 tokens).
+	option = {
+		name = rl_status.5.extra
+		trigger = { var:rl_reroll_tokens >= 4 }
+		custom_tooltip = rl_status.5.extra.tt
+		hidden_effect = {
+			rl_buy_extra_roll = yes
+		}
+	}
+
+	option = {
+		name = rl_status.5.close
 	}
 }

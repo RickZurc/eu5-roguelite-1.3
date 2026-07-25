@@ -1,0 +1,64 @@
+﻿# Hand-written unique "artifact" perks (NOT regenerated). These are bespoke,
+# deliberately powerful rewards offered only on Legendary artifact rolls, and
+# each can be taken at most once per run. Keep this list in sync with
+# rl_uniq_rand / rl_grant_unique in rl_manual_effects.txt (12 entries).
+
+modifier_rl_uniq_1 = {          # The Grand Arsenal
+	discipline = 0.1
+	land_morale_modifier = 0.1
+}
+
+modifier_rl_uniq_2 = {          # Leviathan Shipyards
+	navy_heavy_ship_power = 0.2
+	naval_morale_modifier = 0.15
+}
+
+modifier_rl_uniq_3 = {          # The Golden Ledger
+	tax_income_efficiency = 0.25
+	trade_income = 0.2
+}
+
+modifier_rl_uniq_4 = {          # Academy of Ages
+	research_speed_modifier = 0.25
+	global_max_literacy = 10
+}
+
+modifier_rl_uniq_5 = {          # Iron Legions
+	global_manpower_modifier = 0.3
+	army_maintenance_efficiency = 0.15
+}
+
+modifier_rl_uniq_6 = {          # The Eternal Bureaucracy
+	legislative_efficiency = 0.2
+	stability_cost_efficiency = 0.25
+}
+
+modifier_rl_uniq_7 = {          # Merchant Empire
+	global_production_efficiency = 0.2
+	global_trade_center_power = 0.25
+}
+
+modifier_rl_uniq_8 = {          # Bastion Doctrine
+	global_defensive = 0.25
+	siege_ability = 0.15
+}
+
+modifier_rl_uniq_9 = {          # Silver Tongues
+	diplomatic_reputation = 3
+	diplomatic_capacity = 3
+}
+
+modifier_rl_uniq_10 = {         # Enlightened Court
+	global_institution_growth_modifier = 0.25
+	monthly_prestige = 0.5
+}
+
+modifier_rl_uniq_11 = {         # Zealot's Fervor
+	global_pop_conversion_speed_modifier = 0.3
+	monthly_devotion = 0.5
+}
+
+modifier_rl_uniq_12 = {         # Star of the Sea
+	naval_range_modifier = 0.3
+	colonial_range = 50
+}

@@ -118,6 +118,13 @@ rl_monthly_action = {
             set_variable = { name = rl_tag_economic value = 0 }
             set_variable = { name = rl_tag_admin value = 0 }
             set_variable = { name = rl_threat value = 0 }
+            # Artifact + token-shop state.
+            set_variable = { name = rl_uniq_1 value = -1 }
+            set_variable = { name = rl_uniq_2 value = -1 }
+            set_variable = { name = rl_uniq_3 value = -1 }
+            set_variable = { name = rl_uniq_taken value = 0 }
+            set_variable = { name = rl_artifact_roll value = 0 }
+            set_variable = { name = rl_force_legendary value = 0 }
         }
     }
 }

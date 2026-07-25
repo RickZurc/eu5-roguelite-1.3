@@ -71,3 +71,10 @@ rl_enabled_enable_threat = {
         "global_variable_map(cmm|flag:europa_survivors__enable_threat)" >= 1
     }
 }
+
+rl_enabled_enable_artifacts = {
+    OR = {
+        NOT = { has_global_variable = rl_settings_ready }
+        "global_variable_map(cmm|flag:europa_survivors__enable_artifacts)" >= 1
+    }
+}
