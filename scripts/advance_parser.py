@@ -327,6 +327,23 @@ def _parse_fields(body: str) -> dict:
 # Advance-specific post-processing
 # ---------------------------------------------------------------------------
 
+def _extract_bare_unlock_tokens(source_text: str, key: str) -> list[str]:
+    """
+    Pull the bare tokens out of a block-valued unlock key, e.g.
+    "unlock_diplomacy = { supportrebels }" -> ["supportrebels"].
+
+    Returns [] when the key is absent or the block holds "a = b" pairs (which
+    _parse_fields already handles).
+    """
+    m = re.search(re.escape(key) + r"\s*=\s*\{([^{}]*)\}", source_text)
+    if not m:
+        return []
+    body = re.sub(r"#.*", "", m.group(1))
+    if "=" in body:
+        return []
+    return [t for t in body.split() if re.fullmatch(r"[A-Za-z_][A-Za-z_0-9]*", t)]
+
+
 def _structure_advance(name: str, raw_fields: dict, source_text: str) -> dict:
     """
     Split a raw _parse_fields dict into the well-typed Advance schema.
@@ -341,6 +358,15 @@ def _structure_advance(name: str, raw_fields: dict, source_text: str) -> dict:
 
     for key, value in raw_fields.items():
         if key in SCALAR_KEYS or key in BLOCK_KEYS:
+            if key in _UNLOCK_KEYS and not isinstance(value, str):
+                # Some unlock keys take a block of bare tokens rather than a
+                # scalar, e.g. "unlock_diplomacy = { supportrebels }".
+                # _parse_fields only collects "key = value" pairs, so such a
+                # block parses to {} and the advance ended up with a dummy
+                # advance and a custom_tooltip but no localization for either
+                # (engine: "PostValidate of effect 'custom_tooltip' returned
+                # false"). Recover the bare tokens from the source text.
+                value = _extract_bare_unlock_tokens(source_text, key) or value
             advance[key] = value
         else:
             if key in modifiers:
@@ -593,8 +619,104 @@ def _unlock_value_to_label(value: str) -> str:
     # Known phrase substitutions
     label = re.sub(r'\bLevy A\b', 'Levy', label)
     label = re.sub(r'\bCb\b', 'Casus Belli', label)
+    # unlock_diplomacy values are unseparated, so Title Casing alone leaves
+    # them glued together ("supportrebels" -> "Supportrebels").
+    label = re.sub(r'\bSupportrebels\b', 'Support Rebels', label)
 
     return label
+
+
+# ---------------------------------------------------------------------------
+# Localization key hash collisions
+# ---------------------------------------------------------------------------
+#
+# The engine indexes localization by a 32-bit MurmurHash3 (x86_32, seed 0) of
+# the key string, so two different keys that hash alike silently overwrite each
+# other. With ~5k generated keys against ~234k vanilla ones a collision is not
+# unlikely -- and one really happened: 'rl_events.2.703' collided with the
+# vanilla country tag 'UMO' (both hash to 2976467004), which blanked Umoho's
+# name in game. Generated keys are therefore checked against the vanilla keys
+# and nudged until they are unique.
+
+
+def murmur3_32(data: bytes, seed: int = 0) -> int:
+    """MurmurHash3 x86_32 -- the hash the engine uses to index loc keys."""
+    m = 0xFFFFFFFF
+    length = len(data)
+    h = seed
+    rounded = length & ~3
+    for i in range(0, rounded, 4):
+        k = int.from_bytes(data[i:i + 4], 'little')
+        k = (k * 0xCC9E2D51) & m
+        k = ((k << 15) | (k >> 17)) & m
+        k = (k * 0x1B873593) & m
+        h ^= k
+        h = ((h << 13) | (h >> 19)) & m
+        h = (h * 5 + 0xE6546B64) & m
+    k = 0
+    tail = data[rounded:]
+    if len(tail) >= 3:
+        k ^= tail[2] << 16
+    if len(tail) >= 2:
+        k ^= tail[1] << 8
+    if len(tail) >= 1:
+        k ^= tail[0]
+        k = (k * 0xCC9E2D51) & m
+        k = ((k << 15) | (k >> 17)) & m
+        k = (k * 0x1B873593) & m
+        h ^= k
+    h ^= length
+    h ^= h >> 16
+    h = (h * 0x85EBCA6B) & m
+    h ^= h >> 13
+    h = (h * 0xC2B2AE35) & m
+    h ^= h >> 16
+    return h
+
+
+class LocKeyGuard:
+    """
+    Hands out localization keys that do not hash-collide with keys already
+    taken (vanilla loc, plus anything reserved earlier).
+
+    safe()    : for keys we are free to rename (we emit both the definition and
+                every reference). Returns the key, suffixed with '_' as many
+                times as it takes to become collision-free. Memoized, so the
+                same input always maps to the same output.
+    reserve() : for keys whose spelling is fixed by something else (a dummy
+                advance id, a static modifier name). Cannot be renamed, so it
+                only reports the colliding partner for the caller to warn about.
+    """
+
+    def __init__(self, taken_keys) -> None:
+        self._by_hash: dict[int, str] = {}
+        for key in taken_keys:
+            self._by_hash.setdefault(murmur3_32(key.encode('utf-8')), key)
+        self._assigned: dict[str, str] = {}
+
+    def _collision(self, key: str) -> str | None:
+        other = self._by_hash.get(murmur3_32(key.encode('utf-8')))
+        return None if other is None or other == key else other
+
+    def safe(self, key: str) -> str:
+        if key in self._assigned:
+            return self._assigned[key]
+        candidate = key
+        while self._collision(candidate) is not None:
+            candidate += '_'
+        self._by_hash[murmur3_32(candidate.encode('utf-8'))] = candidate
+        self._assigned[key] = candidate
+        return candidate
+
+    def reserve(self, key: str) -> str | None:
+        other = self._collision(key)
+        if other is None:
+            self._by_hash[murmur3_32(key.encode('utf-8'))] = key
+        return other
+
+    @property
+    def renamed(self) -> dict[str, str]:
+        return {k: v for k, v in self._assigned.items() if k != v}
 
 
 # ---------------------------------------------------------------------------
@@ -678,6 +800,37 @@ def main():
     static_path.write_text("\n\n".join(static_sections), encoding='utf-8-sig')
     print(f"Static modifiers written to: {static_path} ({len(static_sections)} entries)")
 
+    # Localization is loaded up front: generated loc keys are checked against
+    # the vanilla ones for hash collisions, and an option's name key must match
+    # the key we later define, so the guard has to exist before the events are
+    # written.
+    loc = parse_loc_dir(args.loc_dir) if args.loc_dir else {}
+
+    taken = set(loc)
+    manual_loc_path = Path("../main_menu/localization/english/rl_loc_l_english.yml")
+    if manual_loc_path.is_file():
+        manual_loc: dict[str, str] = {}
+        _parse_single_loc_file(manual_loc_path, manual_loc)
+        taken |= set(manual_loc)
+    guard = LocKeyGuard(taken)
+
+    # Keys we cannot rename come first, so they win any tie: a dummy advance's
+    # loc key IS its advance id, and a static modifier's is its modifier name.
+    fixed_collisions: list[tuple[str, str]] = []
+    for a in result.advances:
+        name = a["_name"]
+        if a["modifiers"]:
+            for key in (f"STATIC_MODIFIER_NAME_modifier_{name}",
+                        f"STATIC_MODIFIER_DESC_modifier_{name}"):
+                other = guard.reserve(key)
+                if other:
+                    fixed_collisions.append((key, other))
+        if set(a.keys()) & _UNLOCK_KEYS:
+            for key in (f"dummy_{name}", f"dummy_{name}_desc"):
+                other = guard.reserve(key)
+                if other:
+                    fixed_collisions.append((key, other))
+
     # Options output
     option_sections = []
     banish_sections = []
@@ -701,7 +854,7 @@ def main():
 
         lines = [
             "option = {",
-            f"\tname = rl_events.1.{i}",
+            f"\tname = {guard.safe(f'rl_events.1.{i}')}",
             trigger_block,
         ]
 
@@ -728,7 +881,7 @@ def main():
             lines.append(f"\t\trl_take_{tag} = yes")
             lines.append("\t}")
             lines.append("\tshow_as_tooltip = {")
-            lines.append(f"\t\tcustom_tooltip = rl_tt_{name}")
+            lines.append(f"\t\tcustom_tooltip = {guard.safe(f'rl_tt_{name}')}")
             # Show the curse (only evaluates when rl_cursed = 1, so no lag on
             # normal rolls) without re-previewing the threat/synergy bookkeeping.
             lines.append("\t\trl_apply_curse = yes")
@@ -753,7 +906,7 @@ def main():
         # this way each event carries roughly half as many.
         banish_lines = [
             "option = {",
-            f"\tname = rl_events.2.{i}",
+            f"\tname = {guard.safe(f'rl_events.2.{i}')}",
             (
                 f"\ttrigger = {{\n"
                 f"\t\tOR = {{\n"
@@ -881,7 +1034,6 @@ def main():
     print(f"Options written to: {events_path} ({len(option_sections)} entries)")
 
     # Localization output
-    loc = parse_loc_dir(args.loc_dir) if args.loc_dir else {}
     loc_lines = ["l_english:"]
 
     # Modifier loc keys
@@ -904,15 +1056,21 @@ def main():
         loc_name = loc.get(name, "")
         tag_label = TAG_LABEL[_classify_tag(a)]
         # No square brackets: in EU5 loc, [...] is parsed as a data function.
-        loc_lines.append(f' rl_events.1.{i}: "{loc_name}   {tag_label}"')
-        loc_lines.append(f' rl_events.2.{i}: "#R Banish#!  {loc_name}"')
+        loc_lines.append(f' {guard.safe(f"rl_events.1.{i}")}: "{loc_name}   {tag_label}"')
+        loc_lines.append(f' {guard.safe(f"rl_events.2.{i}")}: "#R Banish#!  {loc_name}"')
 
     # Tooltip loc keys — one per unlock key per advance
     for a in result.advances:
         name = a["_name"]
-        for key in _UNLOCK_KEYS:
-            if key not in a:
-                continue
+        # Source order, NOT _UNLOCK_KEYS order: _UNLOCK_KEYS is a frozenset, so
+        # iterating it visits keys in an order that changes between runs. An
+        # advance with several unlocks (e.g. unlock_men_at_arms_advance has both
+        # unlock_unit and unlock_levy) emits one tooltip line per unlock and the
+        # dedup below keeps the first, so the tooltip text used to flip between
+        # regenerations ("Men At Arms" vs "Levy Men At Arms"). Advance keys are
+        # stored in the order they appear in the file, which is both stable and
+        # the more natural pick.
+        for key in [k for k in a if k in _UNLOCK_KEYS]:
             value = a[key]
             values = value if isinstance(value, list) else [value]
             for v in values:
@@ -920,7 +1078,7 @@ def main():
                     continue
                 label = _unlock_value_to_label(v)
                 tooltip_text = f"Unlocks {label}"
-                loc_lines.append(f' rl_tt_{name}: "{tooltip_text}"')
+                loc_lines.append(f' {guard.safe(f"rl_tt_{name}")}: "{tooltip_text}"')
                 loc_lines.append(f' dummy_{name}: "{tooltip_text}"')
                 loc_lines.append(f' dummy_{name}_desc: "{tooltip_text}"')
 
@@ -943,6 +1101,20 @@ def main():
     loc_path = loc_dir_out / "rl_generated_loc_l_english.yml"
     loc_path.write_text("\n".join(loc_lines) + "\n", encoding='utf-8-sig')
     print(f"Localization written to: {loc_path}")
+
+    if guard.renamed:
+        print(f"Loc hash collisions avoided by renaming ({len(guard.renamed)}):")
+        for wanted, used in sorted(guard.renamed.items()):
+            print(f"  {wanted} -> {used}")
+    if fixed_collisions:
+        print(f"[WARN] {len(fixed_collisions)} generated loc key(s) hash-collide "
+              f"with an existing key and CANNOT be renamed (the key is fixed by "
+              f"an advance/modifier id). The colliding vanilla key will be "
+              f"shadowed in game:")
+        for key, other in fixed_collisions:
+            print(f"  {key}  <->  {other}")
+    if not guard.renamed and not fixed_collisions:
+        print("No localization hash collisions.")
     print("(Full data including modifiers/unlocks retained in memory only.)")
 
 

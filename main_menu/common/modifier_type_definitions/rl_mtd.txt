@@ -2,5 +2,10 @@
 	decimals=0
 	game_data={
 		category=country
+		# Internal counter, not player-facing: every real advance grants
+		# rl_roll_mtd = 1, so modifier:rl_roll_mtd is the live count of
+		# researched advances (see rl_monthly_action). Keep it out of the
+		# government modifiers tab -- it is bookkeeping, not a bonus.
+		should_show_in_modifiers_tab=no
 	}
 }

@@ -64851,7 +64851,7 @@ rl_events.2 = {
 	}
 
 	option = {
-		name = rl_events.2.703
+		name = rl_events.2.703_
 		trigger = {
 			OR = {
 				var:rl_event_1 = 703
