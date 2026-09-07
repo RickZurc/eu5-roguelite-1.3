@@ -7,6 +7,11 @@
  rl_events.1.reroll: "Reroll the options ([GetPlayer.MakeScope.GetVariable('rl_reroll_tokens').GetValue] tokens)"
  rl_events.1.reroll.tt: "Spend one banked reroll token to discard these three offers and draw three new ones. Earn tokens by winning great battles."
  rl_events.1.banish.tt: "Spend one token to remove this upgrade from your pool #R permanently#! (you will never be offered it again), then redraw three new options."
+ rl_events.1.banishmenu: "#R Banish an offer...#!"
+ rl_events.1.banishmenu.tt: "Choose one of these three upgrades to remove from your pool #R permanently#!. Costs one token."
+ rl_events.2.title: "Banish an Upgrade"
+ rl_events.2.desc: "Removing an upgrade takes it out of your pool for the rest of the campaign, so it can never be offered again. You will then draw three new options.\n\nYou have #Y [GetPlayer.MakeScope.GetVariable('rl_reroll_tokens').GetValue]#! tokens."
+ rl_events.2.back: "Go back"
 
  STATIC_MODIFIER_NAME_modifier_rl_curse_1: "Cursed: Fractured Discipline"
  STATIC_MODIFIER_NAME_modifier_rl_curse_2: "Cursed: Corrupt Coffers"

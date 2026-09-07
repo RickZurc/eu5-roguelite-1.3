@@ -680,6 +680,7 @@ def main():
 
     # Options output
     option_sections = []
+    banish_sections = []
     for i, a in enumerate(result.advances):
         name = a["_name"]
         has_modifiers = bool(a["modifiers"])
@@ -745,14 +746,14 @@ def main():
         lines.append("}")
         option_sections.append("\n".join(lines))
 
-        # Banish companion option: costs a reroll token, removes this advance
-        # from the pool forever, then redraws. Shown only when banish is enabled
-        # and the player has a token. rl_do_banish runs rl_rand_se (a huge
-        # random_list), so it lives in hidden_effect with a custom_tooltip to
-        # avoid the outcome-enumeration lag on hover.
+        # Banish option for this advance. These live in a SEPARATE event
+        # (rl_events.2) rather than alongside the take options: a single event
+        # holding both lists came to ~5132 options, far beyond anything vanilla
+        # does, and every one of them is evaluated when the window opens. Split
+        # this way each event carries roughly half as many.
         banish_lines = [
             "option = {",
-            f"\tname = rl_events.1.{i}b",
+            f"\tname = rl_events.2.{i}",
             (
                 f"\ttrigger = {{\n"
                 f"\t\tOR = {{\n"
@@ -761,7 +762,6 @@ def main():
                 f"\t\t\tvar:rl_event_3 = {i}\n"
                 f"\t\t}}\n"
                 f"\t\tvar:rl_reroll_tokens > 0\n"
-                f"\t\trl_enabled_enable_banish = yes\n"
                 f"\t}}"
             ),
             "\tcustom_tooltip = rl_events.1.banish.tt",
@@ -776,14 +776,15 @@ def main():
             "\t}",
             "}",
         ]
-        option_sections.append("\n".join(banish_lines))
+        banish_sections.append("\n".join(banish_lines))
 
-    options_joined = "\n\n".join(option_sections)
-    # Indent every line of the options block one extra tab so it nests correctly
-    indented_options = "\n".join(
-        f"\t{line}" if line else line
-        for line in options_joined.splitlines()
-    )
+    def _indent(sections: list[str]) -> str:
+        """Join option blocks and indent one tab so they nest inside the event."""
+        joined = "\n\n".join(sections)
+        return "\n".join(f"\t{line}" if line else line for line in joined.splitlines())
+
+    indented_options = _indent(option_sections)
+    indented_banish = _indent(banish_sections)
 
     # Rarity-tiered description (var:rl_rarity is set by the roll effect).
     tiered_desc = (
@@ -816,6 +817,31 @@ def main():
         "\t}\n"
     )
 
+    # Entry point into the banish menu (rl_events.2).
+    banish_menu_option = (
+        "\toption = {\n"
+        "\t\tname = rl_events.1.banishmenu\n"
+        "\t\ttrigger = {\n"
+        "\t\t\tvar:rl_reroll_tokens > 0\n"
+        "\t\t\trl_enabled_enable_banish = yes\n"
+        "\t\t}\n"
+        "\t\tcustom_tooltip = rl_events.1.banishmenu.tt\n"
+        "\t\thidden_effect = {\n"
+        "\t\t\ttrigger_event_non_silently = { id = rl_events.2 }\n"
+        "\t\t}\n"
+        "\t}\n"
+    )
+
+    # Return from the banish menu to the selection window, offers unchanged.
+    banish_back_option = (
+        "\toption = {\n"
+        "\t\tname = rl_events.2.back\n"
+        "\t\thidden_effect = {\n"
+        "\t\t\ttrigger_event_non_silently = { id = rl_events.1 }\n"
+        "\t\t}\n"
+        "\t}\n"
+    )
+
     events_output = (
         "namespace = rl_events\n"
         "\n"
@@ -829,6 +855,22 @@ def main():
         f"{indented_options}\n"
         "\n"
         f"{reroll_option}"
+        "\n"
+        f"{banish_menu_option}"
+        "}\n"
+        "\n"
+        "# Banish menu. Kept as its own event so the selection window above does\n"
+        "# not have to carry (and evaluate) both option lists at once.\n"
+        "rl_events.2 = {\n"
+        "\ttype = country_event\n"
+        "\ttitle = rl_events.2.title\n"
+        "\tdesc = rl_events.2.desc\n"
+        "\n"
+        "\toutcome = neutral\n"
+        "\n"
+        f"{indented_banish}\n"
+        "\n"
+        f"{banish_back_option}"
         "}"
     )
 
@@ -863,7 +905,7 @@ def main():
         tag_label = TAG_LABEL[_classify_tag(a)]
         # No square brackets: in EU5 loc, [...] is parsed as a data function.
         loc_lines.append(f' rl_events.1.{i}: "{loc_name}   {tag_label}"')
-        loc_lines.append(f' rl_events.1.{i}b: "#R Banish#!  {loc_name}"')
+        loc_lines.append(f' rl_events.2.{i}: "#R Banish#!  {loc_name}"')
 
     # Tooltip loc keys — one per unlock key per advance
     for a in result.advances:
