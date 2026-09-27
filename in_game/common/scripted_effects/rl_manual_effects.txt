@@ -89,7 +89,7 @@ rl_cmf_register = {
 # comparisons and change_variable against an unset variable silently no-op.
 rl_ensure_vars = {
     if = {
-        limit = { NOT = { has_variable = rl_vars_v3 } }
+        limit = { NOT = { has_variable = rl_vars_v4 } }
 
         if = { limit = { NOT = { has_variable = rl_event_1 } } set_variable = { name = rl_event_1 value = -1 } }
         if = { limit = { NOT = { has_variable = rl_event_2 } } set_variable = { name = rl_event_2 value = -1 } }
@@ -113,7 +113,28 @@ rl_ensure_vars = {
         if = { limit = { NOT = { has_variable = rl_force_legendary } } set_variable = { name = rl_force_legendary value = 0 } }
         if = { limit = { NOT = { has_variable = rl_pacts_made } } set_variable = { name = rl_pacts_made value = 0 } }
 
-        set_variable = rl_vars_v3
+        # Curse stack counters (see rl_apply_curse). A save from before curses
+        # stacked may already carry a curse at size 1, so start that one at 2.
+        rl_init_curse_stacks = { n = 1 }
+        rl_init_curse_stacks = { n = 2 }
+        rl_init_curse_stacks = { n = 3 }
+        rl_init_curse_stacks = { n = 4 }
+        rl_init_curse_stacks = { n = 5 }
+
+        set_variable = rl_vars_v4
+    }
+}
+
+rl_init_curse_stacks = {
+    if = {
+        limit = { NOT = { has_variable = rl_curse_$n$_next } }
+        if = {
+            limit = { has_country_modifier = modifier_rl_curse_$n$ }
+            set_variable = { name = rl_curse_$n$_next value = 2 }
+        }
+        else = {
+            set_variable = { name = rl_curse_$n$_next value = 1 }
+        }
     }
 }
 
@@ -203,14 +224,39 @@ rl_set_curse = {
 
 # rl_apply_curse: if the current roll is cursed, apply its drawback. Called by
 # every option's effect so any choice carries the curse.
+#
+# Curses STACK: taking the same curse again deepens it. A plain
+# add_country_modifier on a modifier the country already has only refreshes it,
+# so a second copy of a curse used to do nothing -- which let players spam the
+# dark pact for free once they held all five curses. Instead each curse keeps
+# rl_curse_<n>_next (its size after the next application) and is re-applied at
+# that size with mode = replace, the same pattern rl_apply_threat uses.
 rl_apply_curse = {
     if = {
         limit = { var:rl_cursed = 1 }
-        if = { limit = { var:rl_curse = 1 } add_country_modifier = { modifier = modifier_rl_curse_1 years = -1 } }
-        else_if = { limit = { var:rl_curse = 2 } add_country_modifier = { modifier = modifier_rl_curse_2 years = -1 } }
-        else_if = { limit = { var:rl_curse = 3 } add_country_modifier = { modifier = modifier_rl_curse_3 years = -1 } }
-        else_if = { limit = { var:rl_curse = 4 } add_country_modifier = { modifier = modifier_rl_curse_4 years = -1 } }
-        else = { add_country_modifier = { modifier = modifier_rl_curse_5 years = -1 } }
+        if = { limit = { var:rl_curse = 1 } rl_stack_curse = { n = 1 } }
+        else_if = { limit = { var:rl_curse = 2 } rl_stack_curse = { n = 2 } }
+        else_if = { limit = { var:rl_curse = 3 } rl_stack_curse = { n = 3 } }
+        else_if = { limit = { var:rl_curse = 4 } rl_stack_curse = { n = 4 } }
+        else = { rl_stack_curse = { n = 5 } }
+    }
+}
+
+# The size is read BEFORE the counter moves: options also run rl_apply_curse
+# inside show_as_tooltip, where effects are only previewed, so the preview shows
+# the size the curse will actually have after it is taken.
+rl_stack_curse = {
+    # rl_ensure_vars only runs on the monthly pulse, so after loading an older
+    # save the counter may not exist yet; an unset size would read 0.
+    hidden_effect = { rl_init_curse_stacks = { n = $n$ } }
+    add_country_modifier = {
+        modifier = modifier_rl_curse_$n$
+        years = -1
+        size = var:rl_curse_$n$_next
+        mode = replace
+    }
+    hidden_effect = {
+        change_variable = { name = rl_curse_$n$_next add = 1 }
     }
 }
 
@@ -378,6 +424,12 @@ rl_cleanse_curses = {
     remove_country_modifier = modifier_rl_curse_3
     remove_country_modifier = modifier_rl_curse_4
     remove_country_modifier = modifier_rl_curse_5
+    # Reset the stacks so the next curse starts over at size 1.
+    set_variable = { name = rl_curse_1_next value = 1 }
+    set_variable = { name = rl_curse_2_next value = 1 }
+    set_variable = { name = rl_curse_3_next value = 1 }
+    set_variable = { name = rl_curse_4_next value = 1 }
+    set_variable = { name = rl_curse_5_next value = 1 }
 }
 
 # rl_buy_legendary: the next roll is guaranteed legendary.
