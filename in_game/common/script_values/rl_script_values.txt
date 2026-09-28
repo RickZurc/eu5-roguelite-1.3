@@ -31,3 +31,25 @@ rl_tribal_tribesmen_share = {
 		min = 1
 	}
 }
+
+# Peasants belonging to the Peasants estate, in pop_size units (thousands).
+# Dhimmi and Gaelic-clan peasants belong to other estates and are left out.
+rl_estate_peasants = {
+	value = 0
+	every_pop = {
+		limit = {
+			pop_type = pop_type:peasants
+			estate_type = estate_type:peasants_estate
+		}
+		add = pop_size
+	}
+}
+
+# Share (0-1) of the country's people who are Peasants-estate peasants.
+rl_estate_peasants_share = {
+	value = rl_estate_peasants
+	divide = {
+		value = rl_country_pop
+		min = 1
+	}
+}

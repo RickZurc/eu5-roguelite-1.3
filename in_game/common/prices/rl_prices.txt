@@ -7,3 +7,8 @@
 rl_bribe_tribesmen = {
 	gold = 1
 }
+
+# Same scheme as rl_bribe_tribesmen: 1 gold, scaled by price_modifier.
+rl_bribe_peasants = {
+	gold = 1
+}

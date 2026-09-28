@@ -96,3 +96,88 @@ rl_bribe_tribesmen = {
 		}
 	}
 }
+
+# Bribe peasants to take up work as laborers. Shown in the Peasants estate's
+# action menu. Priced by the same rule as rl_bribe_tribesmen -- 4 years of the
+# income the converted people represent -- but each use converts only 10% of
+# the peasants, since they are usually most of the population (25% would move
+# a fifth of the realm in one click). 0.10 of the peasants x 48 months works
+# out to
+#     4.8 months of income  x  peasant share of the population
+# Laborers stay in the Peasants estate, so unlike the tribal bribe there is no
+# satisfaction penalty: the estate loses no members.
+rl_bribe_peasants = {
+	type = owncountry
+	sound = BRIBE_ESTATE
+
+	ai_tick = never
+	automation_tick = never
+	show_message = no
+
+	potential = {
+		scope:actor = {
+			country_has_estate = estate_type:peasants_estate
+		}
+		scope:target ?= {
+			estate_type = estate_type:peasants_estate
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			text = rl_bribe_peasants_has_peasants_tt
+			scope:actor.rl_estate_peasants >= 1
+		}
+	}
+
+	cooldown = {
+		type = rl_bribe_peasants_cooldown
+		years = 2
+	}
+
+	price = price:rl_bribe_peasants
+	price_modifier = {
+		add = {
+			desc = "rl_bribe_peasants_price_income"
+			value = scope:actor.monthly_income_trade_and_tax
+			# Never free, even for a country running at a loss.
+			min = 1
+			multiply = 4.8
+		}
+		multiply = {
+			desc = "rl_bribe_peasants_price_share"
+			value = scope:actor.rl_estate_peasants_share
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = estate
+		source = actor
+		target_flag = target
+		name = "mission_select_estate"
+		column = {
+			data = name
+		}
+		enabled = {
+			estate_type = estate_type:peasants_estate
+		}
+	}
+
+	effect = {
+		scope:actor = {
+			custom_tooltip = rl_bribe_peasants_effect_tt
+			hidden_effect = {
+				every_pop = {
+					limit = {
+						pop_type = pop_type:peasants
+						estate_type = estate_type:peasants_estate
+					}
+					split_pop = {
+						fraction = 0.1
+						type = pop_type:laborers
+					}
+				}
+			}
+		}
+	}
+}

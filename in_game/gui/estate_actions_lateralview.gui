@@ -1,6 +1,6 @@
 ﻿# Roguelike Universalis: copy of the vanilla 1.3.11 estate_actions_lateralview.gui
-# with one extra button (rl_bribe_tribesmen, marked below). GUI files replace
-# vanilla by path, so re-copy this from the game and re-add the button whenever
+# with extra buttons (rl_bribe_tribesmen, rl_bribe_peasants; marked below). GUI files replace
+# vanilla by path, so re-copy this from the game and re-add the buttons whenever
 # a patch changes the vanilla file.
 template estate_action_tooltip {
 	ContextualTooltipType = {
@@ -240,6 +240,21 @@ lateralview = {
 						estate_action_button = {
 							title = "rl_bribe_tribesmen"
 							left_click_and_hold_action = { action_name = "rl_bribe_tribesmen" }
+							blockoverride "action_icon" {
+								texture = "gfx/interface/icons/resources/bribe.dds"
+							}
+							tooltipwidget = {
+								using = estate_action_tooltip
+								blockoverride "tooltip_icon_texture" {
+									texture = "gfx/interface/icons/resources/bribe.dds"
+								}
+							}
+						}
+
+						# Roguelike Universalis: bribe peasants to work as laborers.
+						estate_action_button = {
+							title = "rl_bribe_peasants"
+							left_click_and_hold_action = { action_name = "rl_bribe_peasants" }
 							blockoverride "action_icon" {
 								texture = "gfx/interface/icons/resources/bribe.dds"
 							}

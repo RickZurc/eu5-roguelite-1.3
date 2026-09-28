@@ -129,3 +129,11 @@
  rl_bribe_tribesmen_has_tribesmen_tt: "Has at least 1,000 tribesmen in the Tribes estate"
  rl_bribe_tribesmen_price_income: "A year of income"
  rl_bribe_tribesmen_price_share: "Share of the population that is tribesmen"
+ # Estate action: bribe peasants to work as laborers
+ rl_bribe_peasants: "Bribe Peasants into Labor"
+ rl_bribe_peasants_desc: "Pay peasant families to leave the fields and take up work as laborers in mines, workshops and estates. The price is a share of your peasants: four years of the income those people represent, so the larger your peasantry, the dearer the bribe."
+ rl_bribe_peasants_cooldown: "Bribe Peasants into Labor"
+ rl_bribe_peasants_effect_tt: "#G 10%#! of every peasant [pop|e] of the Peasants estate becomes #Y Laborers#!."
+ rl_bribe_peasants_has_peasants_tt: "Has at least 1,000 peasants in the Peasants estate"
+ rl_bribe_peasants_price_income: "Months of income"
+ rl_bribe_peasants_price_share: "Share of the population that is peasants"
