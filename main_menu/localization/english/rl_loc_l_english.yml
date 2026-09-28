@@ -121,3 +121,11 @@
  europa_survivors__enable_banish_desc: "Adds a Banish action to each offered upgrade: spend a reroll token to remove it from your pool permanently, then redraw."
  europa_survivors__enable_artifacts_name: "Legendary Artifacts"
  europa_survivors__enable_artifacts_desc: "Legendary rolls have a 50% chance to instead offer a unique artifact: a bespoke, very powerful perk claimable only once per campaign (12 in total)."
+ # Estate action: bribe tribesmen to settle as peasants
+ rl_bribe_tribesmen: "Bribe Tribesmen to Settle"
+ rl_bribe_tribesmen_desc: "Pay the tribesmen to leave the chiefs' authority and settle the land as peasants. The price is a share of your tribesmen: four years of the income those people represent, so the more tribal the realm, the dearer the bribe."
+ rl_bribe_tribesmen_cooldown: "Bribe Tribesmen to Settle"
+ rl_bribe_tribesmen_effect_tt: "#G 25%#! of every tribesmen [pop|e] of the Tribes estate settles as #Y Peasants#!."
+ rl_bribe_tribesmen_has_tribesmen_tt: "Has at least 1,000 tribesmen in the Tribes estate"
+ rl_bribe_tribesmen_price_income: "A year of income"
+ rl_bribe_tribesmen_price_share: "Share of the population that is tribesmen"

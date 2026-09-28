@@ -1,0 +1,9 @@
+﻿# Hand-written prices (NOT regenerated).
+
+# Priced at 1 gold and scaled by the action's price_modifier, which works out
+# the real amount (see rl_bribe_tribesmen in rl_generic_actions.txt). Going
+# through the price system rather than add_gold lets the game show the cost on
+# the button and grey it out when it cannot be afforded.
+rl_bribe_tribesmen = {
+	gold = 1
+}
