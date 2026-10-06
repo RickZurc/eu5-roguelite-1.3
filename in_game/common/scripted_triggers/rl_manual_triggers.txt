@@ -78,3 +78,15 @@ rl_enabled_enable_artifacts = {
         "global_variable_map(cmm|flag:europa_survivors__enable_artifacts)" >= 1
     }
 }
+
+# Chaos Draft is a game rule (Game Rules > Flavor), not a CMF setting: it has
+# to be chosen before the game starts, when the CMF menu cannot be opened.
+# Lists the "on" settings rather than NOT off, so it fails closed.
+rl_enabled_chaos_draft = {
+    OR = {
+        has_game_rule = rl_chaos_draft_50
+        has_game_rule = rl_chaos_draft_100
+        has_game_rule = rl_chaos_draft_250
+        has_game_rule = rl_chaos_draft_500
+    }
+}

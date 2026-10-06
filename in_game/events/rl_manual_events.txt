@@ -313,3 +313,47 @@ rl_status.5 = {
 		name = rl_status.5.close
 	}
 }
+
+# Chaos Draft offer, fired once at the start of a new game (see
+# rl_game_start_action and the end of rl_monthly_action). Either answer consumes the offer, so it
+# cannot be taken again even if the event is fired from the console. The draft
+# runs inside hidden_effect: previewing rl_fun_mass_roll would expand the
+# 2566-entry rl_rand_grant into the tooltip.
+rl_status.6 = {
+	type = country_event
+	title = rl_status.6.title
+	desc = rl_status.6.desc
+
+	outcome = positive
+
+	option = {
+		name = rl_status.6.go
+		trigger = { has_variable = rl_chaos_draft_offered }
+		custom_tooltip = rl_status.6.go.tt
+		hidden_effect = {
+			remove_variable = rl_chaos_draft_offered
+			rl_fun_mass_roll = yes
+			trigger_event_non_silently = { id = rl_status.7 }
+		}
+	}
+
+	option = {
+		name = rl_status.6.cancel
+		hidden_effect = {
+			remove_variable = rl_chaos_draft_offered
+		}
+	}
+}
+
+# Chaos Draft results.
+rl_status.7 = {
+	type = country_event
+	title = rl_status.7.title
+	desc = rl_status.7.desc
+
+	outcome = positive
+
+	option = {
+		name = rl_status.7.ok
+	}
+}

@@ -561,7 +561,10 @@ def parse_advances_from_directory(directory: str) -> ParseResult:
 # Localization file parser
 # ---------------------------------------------------------------------------
 
-_LOC_LINE_RE = re.compile(r'^\ ([A-Za-z0-9_]+):\s*"(.*)"\s*(?:#.*)?$')
+# Keys may contain dots (event keys like "flavor_eng.123.b") and may carry a
+# version number ("key:0 \"...\""). Both used to be skipped, which silently
+# left ~94k of the ~234k vanilla keys out of the collision check below.
+_LOC_LINE_RE = re.compile(r'^\s*([A-Za-z0-9_.\-]+):\d*\s*"(.*)"\s*(?:#.*)?$')
 
 
 def _parse_single_loc_file(path: Path, loc: dict[str, str]) -> None:
@@ -774,11 +777,48 @@ def main():
         "\t}\n"
         "}"
     )
+
+    # rl_rand_grant: the Chaos Draft (fun option). Same pool and exclusion as
+    # rl_rand_se, but each entry APPLIES its upgrade instead of offering it --
+    # exactly what the advance's "take" option does, minus the curse (a mass
+    # draft never curses). It sets rl_fun_hit = 1 so the caller's loop can stop
+    # once the pool is empty (random_list does nothing when every entry's
+    # trigger fails). Called from one place only (rl_fun_mass_roll's loop), so
+    # this large body is not duplicated.
+    grant_lines = []
+    for i, a in enumerate(result.advances):
+        name = a["_name"]
+        has_modifiers = bool(a["modifiers"])
+        has_unlocks = bool(set(a.keys()) & _UNLOCK_KEYS)
+        if not has_modifiers and not has_unlocks:
+            continue
+        effects = []
+        if has_modifiers:
+            effects.append(f"rl_grant_mod = {{ m = modifier_{name} }}")
+        if has_unlocks:
+            effects.append(f"set_variable = flag_dummy_{name}")
+            effects.append(f"research_advance = advance_type:dummy_{name}")
+        effects.append(f"set_variable = var_{name}")
+        effects.append(f"rl_take_{_classify_tag(a)} = yes")
+        effects.append("set_variable = { name = rl_fun_hit value = 1 }")
+        grant_lines.append(
+            f"\t\t1 = {{ trigger = {{ NOT = {{ has_variable = var_{name} }} }} "
+            + " ".join(effects) + " }"
+        )
+    rl_output += (
+        "\n\n"
+        "rl_rand_grant = {\n"
+        "\trandom_list = {\n"
+        + "\n".join(grant_lines) + "\n"
+        "\t}\n"
+        "}"
+    )
     rl_dir = Path("../in_game/common/scripted_effects")
     rl_dir.mkdir(parents=True, exist_ok=True)
     rl_path = rl_dir / "rl_scripted_effects.txt"
     rl_path.write_text(rl_output, encoding='utf-8-sig')
-    print(f"Random list written to: {rl_path} ({len(rl_lines)} entries)")
+    print(f"Random list written to: {rl_path} ({len(rl_lines)} entries, "
+          f"{len(grant_lines)} in rl_rand_grant)")
 
     # Static modifiers output — one block per advance that had modifiers removed
     static_sections = []

@@ -567,3 +567,67 @@ rl_grant_mod = {
         add_country_modifier = { modifier = $m$ years = -1 size = 1 }
     }
 }
+
+# rl_init_country: one-time setup for a country the mod has not seen yet.
+# Researches the dummy parent (so the per-unlock dummy advances can be granted)
+# and snapshots the current advance count as the research-roll baseline.
+# Callers check NOT has_variable num_advances first.
+rl_init_country = {
+    research_advance = advance_type:dummy_parent_advance
+    set_variable = {
+        name = num_advances
+        value = { add = modifier:rl_roll_mtd }
+    }
+}
+
+# --- Chaos Draft (fun option) -----------------------------------------------
+
+# rl_fun_mass_roll: claim up to N random upgrades at once (N from the
+# rl_chaos_draft game rule). Offered only once, at the start of a new game
+# (see rl_game_start_action and the end of rl_monthly_action). Each pick
+# rolls its own rarity -- the normal 65 / 27 / 8 odds for x1 / x2 / x5 -- and
+# is applied straight away by the generated rl_rand_grant: no offers, no
+# curses, no artifacts. Synergy sets and threat count every pick as usual.
+#
+# rl_rarity is saved and restored, because an upgrade selection may still be
+# waiting on screen and its options read var:rl_rarity when taken. The rarity
+# roll is done here rather than with rl_roll_rarity, which would also spend a
+# Guaranteed Legendary bought in the token shop on the first pick.
+rl_fun_mass_roll = {
+    set_variable = { name = rl_fun_saved_rarity value = var:rl_rarity }
+    if = { limit = { has_game_rule = rl_chaos_draft_500 } set_variable = { name = rl_fun_left value = 500 } }
+    else_if = { limit = { has_game_rule = rl_chaos_draft_250 } set_variable = { name = rl_fun_left value = 250 } }
+    else_if = { limit = { has_game_rule = rl_chaos_draft_50 } set_variable = { name = rl_fun_left value = 50 } }
+    else = { set_variable = { name = rl_fun_left value = 100 } }
+    set_variable = { name = rl_fun_n1 value = 0 }
+    set_variable = { name = rl_fun_n2 value = 0 }
+    set_variable = { name = rl_fun_n3 value = 0 }
+    set_variable = { name = rl_fun_total value = 0 }
+    # rl_rand_grant sets this to 1 whenever it applies something; it stays 0
+    # once every upgrade has been taken, which ends the loop early.
+    set_variable = { name = rl_fun_hit value = 1 }
+
+    while = {
+        limit = {
+            var:rl_fun_left > 0
+            var:rl_fun_hit = 1
+        }
+        set_variable = { name = rl_fun_hit value = 0 }
+        random_list = {
+            65 = { set_variable = { name = rl_rarity value = 1 } }
+            27 = { set_variable = { name = rl_rarity value = 2 } }
+            8  = { set_variable = { name = rl_rarity value = 3 } }
+        }
+        rl_rand_grant = yes
+        if = {
+            limit = { var:rl_fun_hit = 1 }
+            change_variable = { name = rl_fun_total add = 1 }
+            if = { limit = { var:rl_rarity = 3 } change_variable = { name = rl_fun_n3 add = 1 } }
+            else_if = { limit = { var:rl_rarity = 2 } change_variable = { name = rl_fun_n2 add = 1 } }
+            else = { change_variable = { name = rl_fun_n1 add = 1 } }
+        }
+        change_variable = { name = rl_fun_left add = -1 }
+    }
+
+    set_variable = { name = rl_rarity value = var:rl_fun_saved_rarity }
+}

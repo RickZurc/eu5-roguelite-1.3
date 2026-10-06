@@ -1,0 +1,26 @@
+﻿# Hand-written game rules (NOT regenerated).
+
+# Chaos Draft (fun option). Chosen in the lobby's Game Rules, Flavor tab --
+# the Community Mod Menu cannot be opened before a game starts, and the draft
+# is only ever offered at the start of a new game (see
+# rl_game_start_action in rl_on_action.txt). The setting picks how
+# many upgrades the draft claims; read with has_game_rule.
+rl_chaos_draft = {
+	default = rl_chaos_draft_off
+
+	rl_chaos_draft_off = {
+		flag = flavour_rule
+	}
+	rl_chaos_draft_50 = {
+		flag = flavour_rule
+	}
+	rl_chaos_draft_100 = {
+		flag = flavour_rule
+	}
+	rl_chaos_draft_250 = {
+		flag = flavour_rule
+	}
+	rl_chaos_draft_500 = {
+		flag = flavour_rule
+	}
+}

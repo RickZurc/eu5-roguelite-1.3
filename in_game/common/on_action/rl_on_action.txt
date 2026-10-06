@@ -4,6 +4,33 @@
     }
 }
 
+# Chaos Draft (fun option) is offered ONCE, at the start of a NEW game only.
+# on_game_start is a vanilla engine hook that fires for new games and never on
+# a loaded save, and game rules are already set when it runs (vanilla reads
+# has_game_rule there). It only leaves a marker; the offer itself is made from
+# rl_monthly_action, which already shows the upgrade popups reliably. (An
+# earlier version used CMF's on_game_start_after_lobby_human_country, which CMF
+# fires from a GUI widget's on_start -- the popup never appeared.) The marker
+# expires after a year so a player who switches country later is not offered
+# it again; each country is also flagged once it has been offered.
+on_game_start = {
+    on_actions = {
+        rl_game_start_action
+    }
+}
+
+rl_game_start_action = {
+    effect = {
+        if = {
+            limit = { rl_enabled_chaos_draft = yes }
+            set_global_variable = {
+                name = rl_chaos_draft_pending
+                years = 1
+            }
+        }
+    }
+}
+
 # Extra roll sources so power is earned through active play, not just waiting on
 # research. Winning a great battle rewards aggression; a new age is a milestone
 # roll for every country. Each source can be toggled in the Community Mod Menu.
@@ -101,16 +128,23 @@ rl_monthly_action = {
                 }
             }
         } else = {
-            # First time we see this country: research the dummy parent (so the
-            # per-unlock dummy advances can be granted later) and snapshot the
-            # current advance count as the baseline.
-            research_advance = advance_type:dummy_parent_advance
-            set_variable = {
-                name = num_advances
-                value = { add = modifier:rl_roll_mtd }
+            # First time we see this country. All other state is initialized
+            # by rl_ensure_vars, which already ran at the top of this effect.
+            rl_init_country = yes
+        }
+
+        # Chaos Draft: offer once, at a new game's first monthly pulse. Placed
+        # last so rl_ensure_vars and rl_init_country have already run.
+        if = {
+            limit = {
+                is_ai = no
+                has_global_variable = rl_chaos_draft_pending
+                NOT = { has_variable = rl_chaos_draft_done }
+                rl_enabled_chaos_draft = yes
             }
-            # All other state is initialized by rl_ensure_vars, which already ran
-            # at the top of this effect.
+            set_variable = rl_chaos_draft_done
+            set_variable = rl_chaos_draft_offered
+            trigger_event_non_silently = { id = rl_status.6 }
         }
     }
 }
