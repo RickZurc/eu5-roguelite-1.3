@@ -28,3 +28,23 @@ modifier_rl_boon_6 = {  # Fortune's Favourite
 modifier_rl_boon_7 = {  # Quiet Rise
 	diplomatic_reputation = 1
 }
+
+modifier_rl_boon_8 = {  # Conqueror
+	prestige_from_land_battle = 0.25
+}
+
+modifier_rl_boon_9 = {  # Pact-Sworn
+	global_manpower_modifier = 0.05
+}
+
+modifier_rl_boon_10 = {  # Artifact Hunter
+	research_speed_modifier = 0.05
+}
+
+modifier_rl_boon_11 = {  # Gambler
+	global_production_efficiency = 0.05
+}
+
+modifier_rl_boon_12 = {  # Ascetic
+	global_estate_target_satisfaction = 0.05
+}

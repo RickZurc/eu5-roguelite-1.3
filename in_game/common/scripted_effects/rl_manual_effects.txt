@@ -186,6 +186,24 @@ rl_roll_rarity = {
                 18 = { set_variable = { name = rl_rarity value = 3 } }
             }
         }
+        else_if = {
+            # Boon: Gambler -- wild odds.
+            limit = { var:rl_boon ?= 11 }
+            random_list = {
+                40 = { set_variable = { name = rl_rarity value = 1 } }
+                30 = { set_variable = { name = rl_rarity value = 2 } }
+                30 = { set_variable = { name = rl_rarity value = 3 } }
+            }
+        }
+        else_if = {
+            # Boon: Ascetic -- weaker odds.
+            limit = { var:rl_boon ?= 12 }
+            random_list = {
+                75 = { set_variable = { name = rl_rarity value = 1 } }
+                20 = { set_variable = { name = rl_rarity value = 2 } }
+                5  = { set_variable = { name = rl_rarity value = 3 } }
+            }
+        }
         else = {
             random_list = {
                 65 = { set_variable = { name = rl_rarity value = 1 } }
@@ -214,10 +232,18 @@ rl_roll_curse = {
     if = {
         limit = {
             rl_enabled_enable_cursed = yes
+            # Boon: Ascetic -- never cursed.
+            NOT = { var:rl_boon ?= 12 }
         }
         if = {
-            # Boon: Cursed Bloodline -- every roll is cursed.
-            limit = { var:rl_boon ?= 5 }
+            # Boon: Cursed Bloodline -- every roll is cursed. Gambler -- every
+            # Common roll is (Rare/Legendary keep their normal chances below).
+            limit = {
+                OR = {
+                    var:rl_boon ?= 5
+                    AND = { var:rl_boon ?= 11  var:rl_rarity = 1 }
+                }
+            }
             rl_set_curse = yes
         }
         else_if = {
@@ -394,6 +420,12 @@ rl_dark_pact = {
     # of the roll we are about to open.
     set_variable = { name = rl_cursed value = 0 }
     change_variable = { name = rl_pacts_made add = 1 }
+    # Boon: Pact-Sworn -- each pact also pays 2 tokens (cap still applies).
+    if = {
+        limit = { var:rl_boon ?= 9 }
+        rl_grant_reroll_token = yes
+        rl_grant_reroll_token = yes
+    }
     set_variable = { name = rl_force_legendary value = 1 }
     rl_do_roll = yes
 }
@@ -408,9 +440,16 @@ rl_try_artifact_roll = {
             rl_enabled_enable_artifacts = yes
             var:rl_uniq_taken <= 11
         }
-        random_list = {
-            50 = { set_variable = { name = rl_artifact_roll value = 1 } }
-            50 = { }
+        if = {
+            # Boon: Artifact Hunter -- every Legendary becomes an artifact roll.
+            limit = { var:rl_boon ?= 10 }
+            set_variable = { name = rl_artifact_roll value = 1 }
+        }
+        else = {
+            random_list = {
+                50 = { set_variable = { name = rl_artifact_roll value = 1 } }
+                50 = { }
+            }
         }
     }
 }
@@ -771,7 +810,7 @@ rl_notoriety_backlash = {
 
 # --- Starting boons ---------------------------------------------------------
 
-# rl_boon_rand: a random boon id (1-7) into rl_boon_offer_$v$.
+# rl_boon_rand: a random boon id (1-12) into rl_boon_offer_$v$.
 rl_boon_rand = {
     random_list = {
         1 = { set_variable = { name = rl_boon_offer_$v$ value = 1 } }
@@ -781,11 +820,16 @@ rl_boon_rand = {
         1 = { set_variable = { name = rl_boon_offer_$v$ value = 5 } }
         1 = { set_variable = { name = rl_boon_offer_$v$ value = 6 } }
         1 = { set_variable = { name = rl_boon_offer_$v$ value = 7 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 8 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 9 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 10 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 11 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 12 } }
     }
 }
 
 # rl_pick_three_boons: three DISTINCT boons into rl_boon_offer_1/2/3. There
-# are 7, so the distinctness loops always terminate.
+# are 12, so the distinctness loops always terminate.
 rl_pick_three_boons = {
     rl_boon_rand = { v = 1 }
     rl_boon_rand = { v = 2 }
@@ -806,8 +850,9 @@ rl_pick_three_boons = {
 }
 
 # rl_take_boon: adopt boon $n$ for the rest of the run. var:rl_boon is what the
-# hooks in rl_roll_rarity, rl_roll_curse, rl_apply_threat,
-# rl_grant_reroll_token and rl_take_<tag> check.
+# hooks in rl_roll_rarity, rl_roll_curse, rl_apply_threat, rl_grant_reroll_token,
+# rl_take_<tag>, rl_dark_pact, rl_try_artifact_roll, the token shop
+# (rl_status.5) and rl_battle_won_action check.
 rl_take_boon = {
     set_variable = { name = rl_boon value = $n$ }
     add_country_modifier = { modifier = modifier_rl_boon_$n$ years = -1 }

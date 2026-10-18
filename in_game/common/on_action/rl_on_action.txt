@@ -180,7 +180,19 @@ rl_battle_won_action = {
                 rl_enabled_roll_on_battle = yes
             }
             scope:actor.owner = {
-                rl_grant_reroll_token = yes
+                if = {
+                    # Boon: Conqueror -- a selection instead of a token, at
+                    # most once a year (battles come in bursts in a war).
+                    limit = { var:rl_boon ?= 8 }
+                    if = {
+                        limit = { NOT = { has_variable = rl_conqueror_cooldown } }
+                        set_variable = { name = rl_conqueror_cooldown years = 1 }
+                        rl_do_roll = yes
+                    }
+                }
+                else = {
+                    rl_grant_reroll_token = yes
+                }
             }
         }
     }
