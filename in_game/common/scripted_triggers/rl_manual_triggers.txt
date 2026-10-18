@@ -98,3 +98,8 @@ rl_backlash_eligible = {
     NOT = { is_subject_of = root }
     NOT = { root = { is_subject_of = prev } }
 }
+
+# Starting boons are on unless the rl_boons game rule turns them off.
+rl_enabled_boons = {
+    NOT = { has_game_rule = rl_boons_off }
+}

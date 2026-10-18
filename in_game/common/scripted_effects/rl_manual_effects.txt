@@ -177,11 +177,32 @@ rl_roll_rarity = {
         set_variable = { name = rl_force_legendary value = 0 }
     }
     else = {
-        random_list = {
-            65 = { set_variable = { name = rl_rarity value = 1 } }
-            27 = { set_variable = { name = rl_rarity value = 2 } }
-            8  = { set_variable = { name = rl_rarity value = 3 } }
+        if = {
+            # Boon: Fortune's Favourite -- better odds.
+            limit = { var:rl_boon ?= 6 }
+            random_list = {
+                50 = { set_variable = { name = rl_rarity value = 1 } }
+                32 = { set_variable = { name = rl_rarity value = 2 } }
+                18 = { set_variable = { name = rl_rarity value = 3 } }
+            }
         }
+        else = {
+            random_list = {
+                65 = { set_variable = { name = rl_rarity value = 1 } }
+                27 = { set_variable = { name = rl_rarity value = 2 } }
+                8  = { set_variable = { name = rl_rarity value = 3 } }
+            }
+        }
+    }
+    # Boon: Cursed Bloodline -- never Common.
+    if = {
+        limit = { var:rl_boon ?= 5  var:rl_rarity = 1 }
+        set_variable = { name = rl_rarity value = 2 }
+    }
+    # Boon: Quiet Rise -- never Legendary, even when guaranteed.
+    if = {
+        limit = { var:rl_boon ?= 7  var:rl_rarity = 3 }
+        set_variable = { name = rl_rarity value = 2 }
     }
 }
 
@@ -195,6 +216,11 @@ rl_roll_curse = {
             rl_enabled_enable_cursed = yes
         }
         if = {
+            # Boon: Cursed Bloodline -- every roll is cursed.
+            limit = { var:rl_boon ?= 5 }
+            rl_set_curse = yes
+        }
+        else_if = {
             limit = { var:rl_rarity = 3 }
             random_list = {
                 50 = { rl_set_curse = yes }
@@ -481,15 +507,19 @@ rl_do_reroll = {
 # rl_grant_reroll_token: award one banked reroll token (capped), the reward for
 # winning a great battle. Rerolls are spent on future selection events.
 rl_grant_reroll_token = {
+    # Boon: Fortune's Favourite -- no tokens, ever.
     if = {
-        limit = { has_variable = rl_reroll_tokens }
+        limit = { NOT = { var:rl_boon ?= 6 } }
         if = {
-            limit = { var:rl_reroll_tokens < 10 }
-            change_variable = { name = rl_reroll_tokens add = 1 }
+            limit = { has_variable = rl_reroll_tokens }
+            if = {
+                limit = { var:rl_reroll_tokens < 10 }
+                change_variable = { name = rl_reroll_tokens add = 1 }
+            }
         }
-    }
-    else = {
-        set_variable = { name = rl_reroll_tokens value = 1 }
+        else = {
+            set_variable = { name = rl_reroll_tokens value = 1 }
+        }
     }
 }
 
@@ -501,6 +531,8 @@ rl_apply_threat = {
     if = {
         limit = {
             rl_enabled_enable_threat = yes
+            # Boon: Quiet Rise -- upgrades are still counted, never feared.
+            NOT = { var:rl_boon ?= 7 }
         }
         if = {
             limit = { var:rl_threat >= 55 }
@@ -530,6 +562,7 @@ rl_apply_threat = {
 # applies escalating threat. Set bonuses are gated by the enable_sets setting.
 rl_take_military = {
     change_variable = { name = rl_tag_military add = 1 }
+    if = { limit = { var:rl_boon ?= 1 } change_variable = { name = rl_tag_military add = 1 } }
     rl_apply_threat = yes
     if = {
         limit = { rl_enabled_enable_sets = yes }
@@ -542,6 +575,7 @@ rl_take_military = {
 
 rl_take_naval = {
     change_variable = { name = rl_tag_naval add = 1 }
+    if = { limit = { var:rl_boon ?= 2 } change_variable = { name = rl_tag_naval add = 1 } }
     rl_apply_threat = yes
     if = {
         limit = { rl_enabled_enable_sets = yes }
@@ -554,6 +588,7 @@ rl_take_naval = {
 
 rl_take_economic = {
     change_variable = { name = rl_tag_economic add = 1 }
+    if = { limit = { var:rl_boon ?= 3 } change_variable = { name = rl_tag_economic add = 1 } }
     rl_apply_threat = yes
     if = {
         limit = { rl_enabled_enable_sets = yes }
@@ -566,6 +601,7 @@ rl_take_economic = {
 
 rl_take_admin = {
     change_variable = { name = rl_tag_admin add = 1 }
+    if = { limit = { var:rl_boon ?= 4 } change_variable = { name = rl_tag_admin add = 1 } }
     rl_apply_threat = yes
     if = {
         limit = { rl_enabled_enable_sets = yes }
@@ -730,5 +766,53 @@ rl_notoriety_backlash = {
                 years = 10
             }
         }
+    }
+}
+
+# --- Starting boons ---------------------------------------------------------
+
+# rl_boon_rand: a random boon id (1-7) into rl_boon_offer_$v$.
+rl_boon_rand = {
+    random_list = {
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 1 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 2 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 3 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 4 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 5 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 6 } }
+        1 = { set_variable = { name = rl_boon_offer_$v$ value = 7 } }
+    }
+}
+
+# rl_pick_three_boons: three DISTINCT boons into rl_boon_offer_1/2/3. There
+# are 7, so the distinctness loops always terminate.
+rl_pick_three_boons = {
+    rl_boon_rand = { v = 1 }
+    rl_boon_rand = { v = 2 }
+    while = {
+        limit = { var:rl_boon_offer_2 = var:rl_boon_offer_1 }
+        rl_boon_rand = { v = 2 }
+    }
+    rl_boon_rand = { v = 3 }
+    while = {
+        limit = {
+            OR = {
+                var:rl_boon_offer_3 = var:rl_boon_offer_1
+                var:rl_boon_offer_3 = var:rl_boon_offer_2
+            }
+        }
+        rl_boon_rand = { v = 3 }
+    }
+}
+
+# rl_take_boon: adopt boon $n$ for the rest of the run. var:rl_boon is what the
+# hooks in rl_roll_rarity, rl_roll_curse, rl_apply_threat,
+# rl_grant_reroll_token and rl_take_<tag> check.
+rl_take_boon = {
+    set_variable = { name = rl_boon value = $n$ }
+    add_country_modifier = { modifier = modifier_rl_boon_$n$ years = -1 }
+    if = {
+        limit = { var:rl_boon = 6 }
+        set_variable = { name = rl_reroll_tokens value = 0 }
     }
 }

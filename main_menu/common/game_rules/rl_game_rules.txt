@@ -24,3 +24,16 @@ rl_chaos_draft = {
 		flag = flavour_rule
 	}
 }
+
+# Starting boons: at the start of a new game, choose 1 of 3 random run-defining
+# boons (see rl_status.10). On by default; read with has_game_rule.
+rl_boons = {
+	default = rl_boons_on
+
+	rl_boons_on = {
+		flag = flavour_rule
+	}
+	rl_boons_off = {
+		flag = flavour_rule
+	}
+}

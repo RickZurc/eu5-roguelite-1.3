@@ -1,0 +1,30 @@
+﻿# Hand-written starting-boon modifiers (NOT regenerated). Each boon is a small
+# flat bonus plus a rule change implemented in rl_manual_effects.txt.
+
+modifier_rl_boon_1 = {  # Warlord
+	land_morale_modifier = 0.05
+}
+
+modifier_rl_boon_2 = {  # Sea Wolf
+	naval_morale_modifier = 0.1
+}
+
+modifier_rl_boon_3 = {  # Merchant Prince
+	tax_income_efficiency = 0.05
+}
+
+modifier_rl_boon_4 = {  # Grand Vizier
+	stability_cost_efficiency = 0.1
+}
+
+modifier_rl_boon_5 = {  # Cursed Bloodline
+	monthly_prestige = 0.5
+}
+
+modifier_rl_boon_6 = {  # Fortune's Favourite
+	monthly_prestige = 0.25
+}
+
+modifier_rl_boon_7 = {  # Quiet Rise
+	diplomatic_reputation = 1
+}

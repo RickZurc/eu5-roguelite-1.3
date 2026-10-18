@@ -21,6 +21,11 @@ on_game_start = {
 
 rl_game_start_action = {
     effect = {
+        # Starting boons use the same deferred-offer pattern as the Chaos Draft.
+        set_global_variable = {
+            name = rl_new_game_pending
+            years = 1
+        }
         if = {
             limit = { rl_enabled_chaos_draft = yes }
             set_global_variable = {
@@ -133,6 +138,20 @@ rl_monthly_action = {
             rl_init_country = yes
         }
 
+        # Starting boon: offer once, at a new game's first monthly pulse,
+        # before the Chaos Draft so the boon is in place when the draft runs.
+        if = {
+            limit = {
+                is_ai = no
+                has_global_variable = rl_new_game_pending
+                NOT = { has_variable = rl_boon_done }
+                rl_enabled_boons = yes
+            }
+            set_variable = rl_boon_done
+            rl_pick_three_boons = yes
+            trigger_event_non_silently = { id = rl_status.10 }
+        }
+
         # Chaos Draft: offer once, at a new game's first monthly pulse. Placed
         # last so rl_ensure_vars and rl_init_country have already run.
         if = {
@@ -195,6 +214,8 @@ rl_notoriety_yearly_action = {
         has_variable = rl_threat
         var:rl_threat >= 20
         rl_enabled_enable_threat = yes
+        # Boon: Quiet Rise -- the world never turns on you.
+        NOT = { var:rl_boon ?= 7 }
     }
     effect = {
         set_variable = { name = rl_backlash_roll value = 0 }
