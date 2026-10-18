@@ -53,3 +53,46 @@ rl_estate_peasants_share = {
 		min = 1
 	}
 }
+
+# Total curse stacks on the country. Each curse keeps rl_curse_<n>_next, its
+# size after the next application (see rl_stack_curse), so its current size
+# is that minus 1.
+rl_curse_stacks = {
+	value = 0
+	if = {
+		limit = { has_variable = rl_curse_1_next }
+		add = var:rl_curse_1_next
+		subtract = 1
+	}
+	if = {
+		limit = { has_variable = rl_curse_2_next }
+		add = var:rl_curse_2_next
+		subtract = 1
+	}
+	if = {
+		limit = { has_variable = rl_curse_3_next }
+		add = var:rl_curse_3_next
+		subtract = 1
+	}
+	if = {
+		limit = { has_variable = rl_curse_4_next }
+		add = var:rl_curse_4_next
+		subtract = 1
+	}
+	if = {
+		limit = { has_variable = rl_curse_5_next }
+		add = var:rl_curse_5_next
+		subtract = 1
+	}
+	min = 0
+}
+
+# Token price of Cleanse in the token shop: 2 plus 1 per curse stack, so one
+# curse costs 3 and every extra stack adds a token. Capped at 10, the most
+# tokens a player can hold, so a cleanse is always reachable -- a heavily
+# cursed realm just has to empty its whole bank for it.
+rl_cleanse_cost = {
+	value = 2
+	add = rl_curse_stacks
+	max = 10
+}

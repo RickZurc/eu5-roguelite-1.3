@@ -1,0 +1,17 @@
+﻿# Hand-written biases (NOT regenerated). Antagonism other countries feel
+# toward a notorious upgrade-hoarder (see rl_notoriety_backlash). Decays, so a
+# country that stops growing calms the world down again.
+rl_antagonism_notoriety_1 = {
+	value = 10
+	yearly_decay = 2
+}
+
+rl_antagonism_notoriety_2 = {
+	value = 20
+	yearly_decay = 2
+}
+
+rl_antagonism_notoriety_3 = {
+	value = 30
+	yearly_decay = 2
+}

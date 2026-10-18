@@ -282,34 +282,42 @@ rl_uniq_rand = {
     }
 }
 
-# rl_pick_three_uniques: three DISTINCT unowned artifacts into rl_uniq_1/2/3.
-# Only ever called when at least three remain unowned (see rl_try_artifact_roll),
-# otherwise the distinctness loops below could not terminate.
+# rl_pick_three_uniques: up to three DISTINCT unowned artifacts into
+# rl_uniq_1/2/3. When fewer than three remain, the spare slots stay -1, which
+# matches no option in rl_status.4, so only the remaining artifacts are offered.
+# Each distinctness loop only runs when enough artifacts remain for it to
+# terminate. Needs at least one unowned (see rl_try_artifact_roll).
 rl_pick_three_uniques = {
     rl_uniq_rand = { v = 1 }
 
     set_variable = { name = rl_uniq_2 value = -1 }
     set_variable = { name = rl_uniq_3 value = -1 }
 
-    while = {
-        limit = {
-            OR = {
-                var:rl_uniq_2 = var:rl_uniq_1
-                var:rl_uniq_2 = -1
+    if = {
+        limit = { var:rl_uniq_taken <= 10 }
+        while = {
+            limit = {
+                OR = {
+                    var:rl_uniq_2 = var:rl_uniq_1
+                    var:rl_uniq_2 = -1
+                }
             }
+            rl_uniq_rand = { v = 2 }
         }
-        rl_uniq_rand = { v = 2 }
     }
 
-    while = {
-        limit = {
-            OR = {
-                var:rl_uniq_3 = var:rl_uniq_1
-                var:rl_uniq_3 = var:rl_uniq_2
-                var:rl_uniq_3 = -1
+    if = {
+        limit = { var:rl_uniq_taken <= 9 }
+        while = {
+            limit = {
+                OR = {
+                    var:rl_uniq_3 = var:rl_uniq_1
+                    var:rl_uniq_3 = var:rl_uniq_2
+                    var:rl_uniq_3 = -1
+                }
             }
+            rl_uniq_rand = { v = 3 }
         }
-        rl_uniq_rand = { v = 3 }
     }
 }
 
@@ -325,7 +333,7 @@ rl_take_unique = {
 }
 
 # rl_check_artifact_capstones: escalating rewards for collecting artifacts.
-# Granted once each, at 3 / 6 / 9 artifacts.
+# Granted once each, at 3 / 6 / 9 / 12 (all) artifacts.
 rl_check_artifact_capstones = {
     if = {
         limit = { var:rl_uniq_taken >= 3  NOT = { has_variable = rl_artifact_set_1 } }
@@ -341,6 +349,11 @@ rl_check_artifact_capstones = {
         limit = { var:rl_uniq_taken >= 9  NOT = { has_variable = rl_artifact_set_3 } }
         set_variable = rl_artifact_set_3
         add_country_modifier = { modifier = modifier_rl_artifact_set_3 years = -1 }
+    }
+    if = {
+        limit = { var:rl_uniq_taken >= 12  NOT = { has_variable = rl_artifact_set_4 } }
+        set_variable = rl_artifact_set_4
+        add_country_modifier = { modifier = modifier_rl_artifact_set_4 years = -1 }
     }
 }
 
@@ -361,13 +374,13 @@ rl_dark_pact = {
 
 # rl_try_artifact_roll: a legendary roll has a 50% chance to become an artifact
 # roll instead of a scaled advance roll -- but only while at least 3 artifacts
-# remain unowned (rl_uniq_taken <= 9) and artifacts are enabled.
+# remains unowned (rl_uniq_taken <= 11) and artifacts are enabled.
 rl_try_artifact_roll = {
     set_variable = { name = rl_artifact_roll value = 0 }
     if = {
         limit = {
             rl_enabled_enable_artifacts = yes
-            var:rl_uniq_taken <= 9
+            var:rl_uniq_taken <= 11
         }
         random_list = {
             50 = { set_variable = { name = rl_artifact_roll value = 1 } }
@@ -417,8 +430,15 @@ rl_do_roll_legendary = {
 # --- Token shop -------------------------------------------------------------
 
 # rl_cleanse_curses: remove every curse modifier currently on the country.
+# Costs var:rl_cleanse_cost tokens, set when the token shop opens (rl_status.5).
 rl_cleanse_curses = {
-    change_variable = { name = rl_reroll_tokens add = -3 }
+    set_variable = {
+        name = rl_reroll_tokens
+        value = {
+            value = var:rl_reroll_tokens
+            subtract = var:rl_cleanse_cost
+        }
+    }
     remove_country_modifier = modifier_rl_curse_1
     remove_country_modifier = modifier_rl_curse_2
     remove_country_modifier = modifier_rl_curse_3
@@ -506,7 +526,7 @@ rl_apply_threat = {
 }
 
 # rl_take_<tag>: called when an upgrade of that theme is taken. Counts the pick
-# toward its synergy set (granting escalating set bonuses at 4 / 8 / 12) and
+# toward its synergy set (granting escalating set bonuses at 4 / 8 / 12 / 16) and
 # applies escalating threat. Set bonuses are gated by the enable_sets setting.
 rl_take_military = {
     change_variable = { name = rl_tag_military add = 1 }
@@ -516,6 +536,7 @@ rl_take_military = {
         if = { limit = { var:rl_tag_military >= 4  NOT = { has_variable = rl_set_military_1 } }  set_variable = rl_set_military_1  add_country_modifier = { modifier = modifier_rl_set_military_1 years = -1 } }
         if = { limit = { var:rl_tag_military >= 8  NOT = { has_variable = rl_set_military_2 } }  set_variable = rl_set_military_2  add_country_modifier = { modifier = modifier_rl_set_military_2 years = -1 } }
         if = { limit = { var:rl_tag_military >= 12 NOT = { has_variable = rl_set_military_3 } }  set_variable = rl_set_military_3  add_country_modifier = { modifier = modifier_rl_set_military_3 years = -1 } }
+        if = { limit = { var:rl_tag_military >= 16 NOT = { has_variable = rl_set_military_4 } }  set_variable = rl_set_military_4  add_country_modifier = { modifier = modifier_rl_set_military_4 years = -1 } }
     }
 }
 
@@ -527,6 +548,7 @@ rl_take_naval = {
         if = { limit = { var:rl_tag_naval >= 4  NOT = { has_variable = rl_set_naval_1 } }  set_variable = rl_set_naval_1  add_country_modifier = { modifier = modifier_rl_set_naval_1 years = -1 } }
         if = { limit = { var:rl_tag_naval >= 8  NOT = { has_variable = rl_set_naval_2 } }  set_variable = rl_set_naval_2  add_country_modifier = { modifier = modifier_rl_set_naval_2 years = -1 } }
         if = { limit = { var:rl_tag_naval >= 12 NOT = { has_variable = rl_set_naval_3 } }  set_variable = rl_set_naval_3  add_country_modifier = { modifier = modifier_rl_set_naval_3 years = -1 } }
+        if = { limit = { var:rl_tag_naval >= 16 NOT = { has_variable = rl_set_naval_4 } }  set_variable = rl_set_naval_4  add_country_modifier = { modifier = modifier_rl_set_naval_4 years = -1 } }
     }
 }
 
@@ -538,6 +560,7 @@ rl_take_economic = {
         if = { limit = { var:rl_tag_economic >= 4  NOT = { has_variable = rl_set_economic_1 } }  set_variable = rl_set_economic_1  add_country_modifier = { modifier = modifier_rl_set_economic_1 years = -1 } }
         if = { limit = { var:rl_tag_economic >= 8  NOT = { has_variable = rl_set_economic_2 } }  set_variable = rl_set_economic_2  add_country_modifier = { modifier = modifier_rl_set_economic_2 years = -1 } }
         if = { limit = { var:rl_tag_economic >= 12 NOT = { has_variable = rl_set_economic_3 } }  set_variable = rl_set_economic_3  add_country_modifier = { modifier = modifier_rl_set_economic_3 years = -1 } }
+        if = { limit = { var:rl_tag_economic >= 16 NOT = { has_variable = rl_set_economic_4 } }  set_variable = rl_set_economic_4  add_country_modifier = { modifier = modifier_rl_set_economic_4 years = -1 } }
     }
 }
 
@@ -549,6 +572,7 @@ rl_take_admin = {
         if = { limit = { var:rl_tag_admin >= 4  NOT = { has_variable = rl_set_admin_1 } }  set_variable = rl_set_admin_1  add_country_modifier = { modifier = modifier_rl_set_admin_1 years = -1 } }
         if = { limit = { var:rl_tag_admin >= 8  NOT = { has_variable = rl_set_admin_2 } }  set_variable = rl_set_admin_2  add_country_modifier = { modifier = modifier_rl_set_admin_2 years = -1 } }
         if = { limit = { var:rl_tag_admin >= 12 NOT = { has_variable = rl_set_admin_3 } }  set_variable = rl_set_admin_3  add_country_modifier = { modifier = modifier_rl_set_admin_3 years = -1 } }
+        if = { limit = { var:rl_tag_admin >= 16 NOT = { has_variable = rl_set_admin_4 } }  set_variable = rl_set_admin_4  add_country_modifier = { modifier = modifier_rl_set_admin_4 years = -1 } }
     }
 }
 
@@ -630,4 +654,81 @@ rl_fun_mass_roll = {
     }
 
     set_variable = { name = rl_rarity value = var:rl_fun_saved_rarity }
+}
+
+# --- Upgrade history --------------------------------------------------------
+
+# rl_record_take: remember that upgrade $n$ was TAKEN, and at what multiplier,
+# for the Upgrade History pages (rl_history.1-4). Called by every take option
+# and by the Chaos Draft. Banishing also sets var_<name>, so var_<name> alone
+# cannot tell owned upgrades apart from banished ones.
+rl_record_take = {
+    if = { limit = { var:rl_rarity = 3 } set_variable = { name = rl_got_$n$ value = 5 } }
+    else_if = { limit = { var:rl_rarity = 2 } set_variable = { name = rl_got_$n$ value = 2 } }
+    else = { set_variable = { name = rl_got_$n$ value = 1 } }
+}
+
+# --- Notoriety consequences -------------------------------------------------
+
+# rl_notoriety_backlash: run by rl_status.9's immediate, for a country whose
+# notoriety reached tier 3+ (20+ upgrades). Every neighbour and every great
+# power grows antagonistic toward it; at tier 5 (55+ upgrades) one great power
+# -- or failing that a neighbour -- also gets a Cut Down to Size casus belli
+# against it for 10 years, saved as scope:rl_backlash_cb for the event text.
+# Allies, subjects and the overlord are spared.
+rl_notoriety_backlash = {
+    every_country = {
+        limit = {
+            NOT = { this = root }
+            OR = {
+                is_neighbor_of = root
+                is_great_power = yes
+            }
+            rl_backlash_eligible = yes
+        }
+        if = {
+            limit = { root = { var:rl_threat >= 55 } }
+            add_antagonism = { target = root modifier = rl_antagonism_notoriety_3 }
+        }
+        else_if = {
+            limit = { root = { var:rl_threat >= 35 } }
+            add_antagonism = { target = root modifier = rl_antagonism_notoriety_2 }
+        }
+        else = {
+            add_antagonism = { target = root modifier = rl_antagonism_notoriety_1 }
+        }
+    }
+    if = {
+        limit = { var:rl_threat >= 55 }
+        if = {
+            limit = {
+                any_country = {
+                    is_great_power = yes
+                    NOT = { this = root }
+                    rl_backlash_eligible = yes
+                }
+            }
+            random_country = {
+                limit = {
+                    is_great_power = yes
+                    NOT = { this = root }
+                    rl_backlash_eligible = yes
+                }
+                save_scope_as = rl_backlash_cb
+            }
+        }
+        else = {
+            random_neighbor_country = {
+                limit = { rl_backlash_eligible = yes }
+                save_scope_as = rl_backlash_cb
+            }
+        }
+        scope:rl_backlash_cb ?= {
+            add_casus_belli = {
+                target = root
+                type = casus_belli:cb_cut_down_in_size
+                years = 10
+            }
+        }
+    }
 }

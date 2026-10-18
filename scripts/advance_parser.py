@@ -800,6 +800,7 @@ def main():
             effects.append(f"research_advance = advance_type:dummy_{name}")
         effects.append(f"set_variable = var_{name}")
         effects.append(f"rl_take_{_classify_tag(a)} = yes")
+        effects.append(f"rl_record_take = {{ n = {name} }}")
         effects.append("set_variable = { name = rl_fun_hit value = 1 }")
         grant_lines.append(
             f"\t\t1 = {{ trigger = {{ NOT = {{ has_variable = var_{name} }} }} "
@@ -919,6 +920,7 @@ def main():
             lines.append(f"\t\tset_variable = var_{name}")
             lines.append("\t\trl_apply_curse = yes")
             lines.append(f"\t\trl_take_{tag} = yes")
+            lines.append(f"\t\trl_record_take = {{ n = {name} }}")
             lines.append("\t}")
             lines.append("\tshow_as_tooltip = {")
             lines.append(f"\t\tcustom_tooltip = {guard.safe(f'rl_tt_{name}')}")
@@ -931,6 +933,7 @@ def main():
             lines.append(f"\t\tset_variable = var_{name}")
             lines.append("\t\trl_apply_curse = yes")
             lines.append(f"\t\trl_take_{tag} = yes")
+            lines.append(f"\t\trl_record_take = {{ n = {name} }}")
             lines.append("\t}")
             lines.append("\tshow_as_tooltip = {")
             lines.append("\t\trl_apply_curse = yes")
@@ -1073,6 +1076,69 @@ def main():
     events_path.write_text(events_output, encoding='utf-8-sig')
     print(f"Options written to: {events_path} ({len(option_sections)} entries)")
 
+    # Upgrade history: one event per theme (rl_history.1-4), opened from the
+    # status window. rl_record_take sets rl_got_<name> to the multiplier the
+    # upgrade was taken at (1 / 2 / 5) whenever an upgrade is TAKEN -- not when
+    # it is banished, which also sets var_<name> -- so the history lists only
+    # what the player actually owns. Each page's desc concatenates one
+    # triggered_desc per upgrade of that theme.
+    tag_order = ["military", "naval", "economic", "admin"]
+    hist_entries: dict[str, list[str]] = {t: [] for t in tag_order}
+    hist_loc_lines: list[str] = []
+    for i, a in enumerate(result.advances):
+        name = a["_name"]
+        has_modifiers = bool(a["modifiers"])
+        has_unlocks = bool(set(a.keys()) & _UNLOCK_KEYS)
+        if not has_modifiers and not has_unlocks:
+            continue
+        key = guard.safe(f"rl_hist.{i}")
+        loc_name = loc.get(name, "") or name
+        if has_modifiers:
+            mult = f"[GetPlayer.MakeScope.GetVariable('rl_got_{name}').GetValue]"
+            hist_loc_lines.append(f' {key}: "\\n  {loc_name}  #Y x{mult}#!"')
+        else:
+            hist_loc_lines.append(f' {key}: "\\n  {loc_name}  #G (unlock)#!"')
+        hist_entries[_classify_tag(a)].append(
+            f"\t\ttriggered_desc = {{ trigger = {{ has_variable = rl_got_{name} }} desc = {key} }}"
+        )
+
+    hist_events = ["namespace = rl_history", ""]
+    for page, t in enumerate(tag_order, start=1):
+        nav = []
+        for other_page, other in enumerate(tag_order, start=1):
+            if other_page == page:
+                continue
+            nav.append(
+                "\toption = {\n"
+                f"\t\tname = rl_history.go_{other}\n"
+                f"\t\thidden_effect = {{ trigger_event_non_silently = {{ id = rl_history.{other_page} }} }}\n"
+                "\t}"
+            )
+        hist_events.append(
+            f"rl_history.{page} = {{\n"
+            "\ttype = country_event\n"
+            f"\ttitle = rl_history.{t}.title\n"
+            "\tdesc = {\n"
+            "\t\tdesc = rl_history.header\n"
+            + "\n".join(hist_entries[t]) + "\n"
+            "\t}\n"
+            "\toutcome = neutral\n\n"
+            + "\n".join(nav) + "\n"
+            "\toption = {\n"
+            "\t\tname = rl_history.go_artifacts\n"
+            "\t\thidden_effect = { trigger_event_non_silently = { id = rl_status.8 } }\n"
+            "\t}\n"
+            "\toption = {\n"
+            "\t\tname = rl_history.back\n"
+            "\t\thidden_effect = { trigger_event_non_silently = { id = rl_status.1 } }\n"
+            "\t}\n"
+            "}\n"
+        )
+    hist_path = events_dir / "rl_history_events.txt"
+    hist_path.write_text("\n".join(hist_events), encoding='utf-8-sig')
+    print(f"History pages written to: {hist_path} "
+          f"({', '.join(f'{t} {len(hist_entries[t])}' for t in tag_order)})")
+
     # Localization output
     loc_lines = ["l_english:"]
 
@@ -1098,6 +1164,9 @@ def main():
         # No square brackets: in EU5 loc, [...] is parsed as a data function.
         loc_lines.append(f' {guard.safe(f"rl_events.1.{i}")}: "{loc_name}   {tag_label}"')
         loc_lines.append(f' {guard.safe(f"rl_events.2.{i}")}: "#R Banish#!  {loc_name}"')
+
+    # Upgrade history entries (see rl_history_events.txt above)
+    loc_lines.extend(hist_loc_lines)
 
     # Tooltip loc keys — one per unlock key per advance
     for a in result.advances:

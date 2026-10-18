@@ -19,6 +19,13 @@ rl_status.1 = {
 	}
 
 	option = {
+		name = rl_status.1.history
+		hidden_effect = {
+			trigger_event_non_silently = { id = rl_history.1 }
+		}
+	}
+
+	option = {
 		name = rl_status.1.close
 	}
 }
@@ -257,11 +264,17 @@ rl_status.5 = {
 
 	outcome = neutral
 
-	# Cleanse curses (3 tokens) -- only when actually cursed.
+	# The cleanse price grows with the curses held, so it is worked out when
+	# the shop opens and stored for the option text, trigger and effect.
+	immediate = {
+		set_variable = { name = rl_cleanse_cost value = rl_cleanse_cost }
+	}
+
+	# Cleanse curses (2 tokens + 1 per curse stack, max 10) -- only when cursed.
 	option = {
 		name = rl_status.5.cleanse
 		trigger = {
-			var:rl_reroll_tokens >= 3
+			var:rl_reroll_tokens >= var:rl_cleanse_cost
 			OR = {
 				has_country_modifier = modifier_rl_curse_1
 				has_country_modifier = modifier_rl_curse_2
@@ -355,5 +368,67 @@ rl_status.7 = {
 
 	option = {
 		name = rl_status.7.ok
+	}
+}
+
+# Upgrade History, artifacts page. The four theme pages (rl_history.1-4) are
+# generated into rl_history_events.txt; this one is hand-written because the
+# artifacts are.
+rl_status.8 = {
+	type = country_event
+	title = rl_status.8.title
+	desc = {
+		desc = rl_status.8.header
+		triggered_desc = { trigger = { has_variable = var_uniq_1 } desc = rl_status.8.a }
+		triggered_desc = { trigger = { has_variable = var_uniq_2 } desc = rl_status.8.b }
+		triggered_desc = { trigger = { has_variable = var_uniq_3 } desc = rl_status.8.c }
+		triggered_desc = { trigger = { has_variable = var_uniq_4 } desc = rl_status.8.d }
+		triggered_desc = { trigger = { has_variable = var_uniq_5 } desc = rl_status.8.e }
+		triggered_desc = { trigger = { has_variable = var_uniq_6 } desc = rl_status.8.f }
+		triggered_desc = { trigger = { has_variable = var_uniq_7 } desc = rl_status.8.g }
+		triggered_desc = { trigger = { has_variable = var_uniq_8 } desc = rl_status.8.h }
+		triggered_desc = { trigger = { has_variable = var_uniq_9 } desc = rl_status.8.i }
+		triggered_desc = { trigger = { has_variable = var_uniq_10 } desc = rl_status.8.j }
+		triggered_desc = { trigger = { has_variable = var_uniq_11 } desc = rl_status.8.k }
+		triggered_desc = { trigger = { has_variable = var_uniq_12 } desc = rl_status.8.l }
+		desc = rl_status.8.capheader
+		triggered_desc = { trigger = { has_variable = rl_artifact_set_1 } desc = rl_status.8.cap1 }
+		triggered_desc = { trigger = { has_variable = rl_artifact_set_2 } desc = rl_status.8.cap2 }
+		triggered_desc = { trigger = { has_variable = rl_artifact_set_3 } desc = rl_status.8.cap3 }
+		triggered_desc = { trigger = { has_variable = rl_artifact_set_4 } desc = rl_status.8.cap4 }
+	}
+	outcome = neutral
+
+	option = {
+		name = rl_history.go_military
+		hidden_effect = { trigger_event_non_silently = { id = rl_history.1 } }
+	}
+	option = {
+		name = rl_history.back
+		hidden_effect = { trigger_event_non_silently = { id = rl_status.1 } }
+	}
+}
+
+# Notoriety backlash (see rl_notoriety_yearly_action). The backlash itself runs
+# in immediate, before the text is shown, so the desc can name the country
+# that received the casus belli.
+rl_status.9 = {
+	type = country_event
+	title = rl_status.9.title
+	desc = {
+		desc = rl_status.9.desc
+		triggered_desc = {
+			trigger = { exists = scope:rl_backlash_cb }
+			desc = rl_status.9.desc.cb
+		}
+	}
+	outcome = negative
+
+	immediate = {
+		rl_notoriety_backlash = yes
+	}
+
+	option = {
+		name = rl_status.9.ok
 	}
 }

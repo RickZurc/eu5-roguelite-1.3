@@ -90,3 +90,11 @@ rl_enabled_chaos_draft = {
         has_game_rule = rl_chaos_draft_500
     }
 }
+
+# A country that can turn against root over its notoriety (scope: that
+# country). Allies, root's subjects and root's overlord stay loyal.
+rl_backlash_eligible = {
+    NOT = { is_allied_with = { target = root } }
+    NOT = { is_subject_of = root }
+    NOT = { root = { is_subject_of = prev } }
+}

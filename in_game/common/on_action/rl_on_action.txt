@@ -179,3 +179,54 @@ rl_new_age_action = {
         }
     }
 }
+
+# Notoriety consequences: once a country's notoriety reaches tier 3 (20+
+# upgrades), each year there is a growing chance that the world reacts. The
+# work happens in rl_status.9's immediate, so the event text can name who got
+# the casus belli; the AI gets the same backlash without the popup.
+yearly_country_pulse = {
+    on_actions = {
+        rl_notoriety_yearly_action
+    }
+}
+
+rl_notoriety_yearly_action = {
+    trigger = {
+        has_variable = rl_threat
+        var:rl_threat >= 20
+        rl_enabled_enable_threat = yes
+    }
+    effect = {
+        set_variable = { name = rl_backlash_roll value = 0 }
+        if = {
+            limit = { var:rl_threat >= 55 }
+            random_list = {
+                60 = { set_variable = { name = rl_backlash_roll value = 1 } }
+                40 = { }
+            }
+        }
+        else_if = {
+            limit = { var:rl_threat >= 35 }
+            random_list = {
+                40 = { set_variable = { name = rl_backlash_roll value = 1 } }
+                60 = { }
+            }
+        }
+        else = {
+            random_list = {
+                25 = { set_variable = { name = rl_backlash_roll value = 1 } }
+                75 = { }
+            }
+        }
+        if = {
+            limit = { var:rl_backlash_roll = 1 }
+            if = {
+                limit = { is_ai = no }
+                trigger_event_non_silently = { id = rl_status.9 }
+            }
+            else = {
+                trigger_event_silently = { id = rl_status.9 }
+            }
+        }
+    }
+}

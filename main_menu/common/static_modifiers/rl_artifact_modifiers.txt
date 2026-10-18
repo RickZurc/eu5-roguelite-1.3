@@ -64,7 +64,7 @@ modifier_rl_uniq_12 = {         # Star of the Sea
 }
 
 # --- Artifact collection capstones ------------------------------------------
-# Granted by rl_take_unique once 3 / 6 / 9 artifacts have been collected, so
+# Granted by rl_take_unique once 3 / 6 / 9 / 12 artifacts have been collected, so
 # hunting artifacts is a long-term goal rather than a set of isolated perks.
 
 modifier_rl_artifact_set_1 = {  # Curator of Wonders (3 artifacts)
@@ -81,4 +81,12 @@ modifier_rl_artifact_set_3 = {  # Architect of an Era (9 artifacts)
 	legislative_efficiency = 0.15
 	global_institution_growth_modifier = 0.2
 	land_morale_modifier = 0.1
+}
+
+modifier_rl_artifact_set_4 = {  # Legend Incarnate (all 12 artifacts)
+	discipline = 0.05
+	tax_income_efficiency = 0.15
+	research_speed_modifier = 0.15
+	diplomatic_reputation = 2
+	monthly_prestige = 1
 }
