@@ -1,6 +1,6 @@
 # Roguelike Universalis
 
-A roguelite layer for Europa Universalis V (1.3.x). Every advance you research strips its normal effect and instead opens an **upgrade selection**: pick one of three random buffs/unlocks.
+A roguelite layer for Europa Universalis V (1.4.x). Every advance you research strips its normal effect and instead opens an **upgrade selection**: pick one of three random buffs/unlocks.
 
 ## Features
 - **Rolls** from researching advances and from entering a new age (guaranteed legendary).

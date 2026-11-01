@@ -765,10 +765,15 @@ def main():
     print(f"Output written to: {out_path}")
 
     # Random list output
+    # Only advances that give something can be drawn: the selection event has
+    # no option for one with neither modifiers nor unlocks, so drawing it
+    # would leave an empty slot. (1.4 added two: suez_canal_advance and
+    # panama_canal_advance, whose effect is hardcoded in the engine.)
     rl_lines = [
         f"\t\t1 = {{ trigger = {{ NOT = {{ has_variable = var_{a['_name']} }} }}"
         f" set_variable = {{ name = rl_event_$v$ value = {i} }} }}"
         for i, a in enumerate(result.advances)
+        if a["modifiers"] or set(a.keys()) & _UNLOCK_KEYS
     ]
     rl_output = (
         "rl_rand_se = {\n"

@@ -13,6 +13,9 @@
 # remain. The chiefs resent losing their people, so the Tribes estate's
 # satisfaction drops as well.
 rl_bribe_tribesmen = {
+	# 1.4: actions supply their own icon (gfx/interface/icons/generic_actions/<icon>.dds);
+	# reuse vanilla's bribe icon.
+	icon = bribe_estate
 	type = owncountry
 	sound = BRIBE_ESTATE
 
@@ -107,6 +110,9 @@ rl_bribe_tribesmen = {
 # Laborers stay in the Peasants estate, so unlike the tribal bribe there is no
 # satisfaction penalty: the estate loses no members.
 rl_bribe_peasants = {
+	# 1.4: actions supply their own icon (gfx/interface/icons/generic_actions/<icon>.dds);
+	# reuse vanilla's bribe icon.
+	icon = bribe_estate
 	type = owncountry
 	sound = BRIBE_ESTATE
 
