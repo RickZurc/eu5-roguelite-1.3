@@ -1438,6 +1438,7 @@ rl_history.3 = {
 		triggered_desc = { trigger = { has_variable = rl_got_protestant_administration_tax } desc = rl_hist.2855 }
 		triggered_desc = { trigger = { has_variable = rl_got_repurposed_monasteries } desc = rl_hist.2860 }
 		triggered_desc = { trigger = { has_variable = rl_got_protestant_work_ethic } desc = rl_hist.2865 }
+		triggered_desc = { trigger = { has_variable = rl_got_mor_central_makhzen } desc = rl_hist.2884 }
 	}
 	outcome = neutral
 
@@ -2977,6 +2978,17 @@ rl_history.4 = {
 		triggered_desc = { trigger = { has_variable = rl_got_kokugaku } desc = rl_hist.2881 }
 		triggered_desc = { trigger = { has_variable = rl_got_home_shrines } desc = rl_hist.2882 }
 		triggered_desc = { trigger = { has_variable = rl_got_fukko_shinto } desc = rl_hist.2883 }
+		triggered_desc = { trigger = { has_variable = rl_got_gra_mailed_jinetes } desc = rl_hist.2885 }
+		triggered_desc = { trigger = { has_variable = rl_got_gra_veteran_thagri } desc = rl_hist.2886 }
+		triggered_desc = { trigger = { has_variable = rl_got_gra_veteran_tornadizos } desc = rl_hist.2887 }
+		triggered_desc = { trigger = { has_variable = rl_got_alabarderos } desc = rl_hist.2888 }
+		triggered_desc = { trigger = { has_variable = rl_got_guardias_de_ornato } desc = rl_hist.2889 }
+		triggered_desc = { trigger = { has_variable = rl_got_coronelias } desc = rl_hist.2890 }
+		triggered_desc = { trigger = { has_variable = rl_got_infanteria_de_marina } desc = rl_hist.2891 }
+		triggered_desc = { trigger = { has_variable = rl_got_saqaliba_barracks_advance } desc = rl_hist.2892 }
+		triggered_desc = { trigger = { has_variable = rl_got_a_saqaliba_mutaqaddimun_advance } desc = rl_hist.2893 }
+		triggered_desc = { trigger = { has_variable = rl_got_a_saqaliba_mutaakhkhirun_advance } desc = rl_hist.2894 }
+		triggered_desc = { trigger = { has_variable = rl_got_a_saqaliba_nizam_jadid_advance } desc = rl_hist.2895 }
 	}
 	outcome = neutral
 

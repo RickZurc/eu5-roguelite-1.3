@@ -11310,3 +11310,8 @@ modifier_home_shrines = {
 modifier_fukko_shinto = {
 	monthly_honor = 0.5
 }
+
+modifier_mor_central_makhzen = {
+	tax_income_efficiency = 0.05
+	makhzan_bureaucracy_impact_modifier = 0.25
+}

@@ -1,7 +1,7 @@
 ﻿{
 	"name":	"Roguelike Universalis",
 	"id":	"zurc.roguelike_universalis",
-	"version":	"2.1.0",
+	"version":	"2.2.0",
 	"supported_game_version":	"1.4.*",
 	"short_description":	"Turn every advance into a roguelite upgrade draft: pick from random buffs with rarity tiers, cursed rolls, reroll/banish tokens, synergy sets, and escalating threat. Configurable via the Community Mod Menu.",
 	"tags":	["Advancements", "Gameplay"],

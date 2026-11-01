@@ -61433,6 +61433,280 @@ rl_events.1 = {
 	}
 
 	option = {
+		name = rl_events.1.2884
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2884
+				var:rl_event_2 = 2884
+				var:rl_event_3 = 2884
+			}
+		}
+		rl_grant_mod = { m = modifier_mor_central_makhzen }
+		hidden_effect = {
+			set_variable = var_mor_central_makhzen
+			rl_apply_curse = yes
+			rl_take_economic = yes
+			rl_record_take = { n = mor_central_makhzen }
+		}
+		show_as_tooltip = {
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2885
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2885
+				var:rl_event_2 = 2885
+				var:rl_event_3 = 2885
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_gra_mailed_jinetes
+			research_advance = advance_type:dummy_gra_mailed_jinetes
+			set_variable = var_gra_mailed_jinetes
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = gra_mailed_jinetes }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_gra_mailed_jinetes
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2886
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2886
+				var:rl_event_2 = 2886
+				var:rl_event_3 = 2886
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_gra_veteran_thagri
+			research_advance = advance_type:dummy_gra_veteran_thagri
+			set_variable = var_gra_veteran_thagri
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = gra_veteran_thagri }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_gra_veteran_thagri
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2887
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2887
+				var:rl_event_2 = 2887
+				var:rl_event_3 = 2887
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_gra_veteran_tornadizos
+			research_advance = advance_type:dummy_gra_veteran_tornadizos
+			set_variable = var_gra_veteran_tornadizos
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = gra_veteran_tornadizos }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_gra_veteran_tornadizos
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2888
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2888
+				var:rl_event_2 = 2888
+				var:rl_event_3 = 2888
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_alabarderos
+			research_advance = advance_type:dummy_alabarderos
+			set_variable = var_alabarderos
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = alabarderos }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_alabarderos
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2889
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2889
+				var:rl_event_2 = 2889
+				var:rl_event_3 = 2889
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_guardias_de_ornato
+			research_advance = advance_type:dummy_guardias_de_ornato
+			set_variable = var_guardias_de_ornato
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = guardias_de_ornato }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_guardias_de_ornato
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2890
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2890
+				var:rl_event_2 = 2890
+				var:rl_event_3 = 2890
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_coronelias
+			research_advance = advance_type:dummy_coronelias
+			set_variable = var_coronelias
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = coronelias }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_coronelias
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2891
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2891
+				var:rl_event_2 = 2891
+				var:rl_event_3 = 2891
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_infanteria_de_marina
+			research_advance = advance_type:dummy_infanteria_de_marina
+			set_variable = var_infanteria_de_marina
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = infanteria_de_marina }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_infanteria_de_marina
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2892
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2892
+				var:rl_event_2 = 2892
+				var:rl_event_3 = 2892
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_saqaliba_barracks_advance
+			research_advance = advance_type:dummy_saqaliba_barracks_advance
+			set_variable = var_saqaliba_barracks_advance
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = saqaliba_barracks_advance }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_saqaliba_barracks_advance
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2893
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2893
+				var:rl_event_2 = 2893
+				var:rl_event_3 = 2893
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_a_saqaliba_mutaqaddimun_advance
+			research_advance = advance_type:dummy_a_saqaliba_mutaqaddimun_advance
+			set_variable = var_a_saqaliba_mutaqaddimun_advance
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = a_saqaliba_mutaqaddimun_advance }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_a_saqaliba_mutaqaddimun_advance
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2894
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2894
+				var:rl_event_2 = 2894
+				var:rl_event_3 = 2894
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_a_saqaliba_mutaakhkhirun_advance
+			research_advance = advance_type:dummy_a_saqaliba_mutaakhkhirun_advance
+			set_variable = var_a_saqaliba_mutaakhkhirun_advance
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = a_saqaliba_mutaakhkhirun_advance }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_a_saqaliba_mutaakhkhirun_advance
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
+		name = rl_events.1.2895
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2895
+				var:rl_event_2 = 2895
+				var:rl_event_3 = 2895
+			}
+		}
+		hidden_effect = {
+			set_variable = flag_dummy_a_saqaliba_nizam_jadid_advance
+			research_advance = advance_type:dummy_a_saqaliba_nizam_jadid_advance
+			set_variable = var_a_saqaliba_nizam_jadid_advance
+			rl_apply_curse = yes
+			rl_take_admin = yes
+			rl_record_take = { n = a_saqaliba_nizam_jadid_advance }
+		}
+		show_as_tooltip = {
+			custom_tooltip = rl_tt_a_saqaliba_nizam_jadid_advance
+			rl_apply_curse = yes
+		}
+	}
+
+	option = {
 		name = rl_events.1.reroll
 		trigger = {
 			var:rl_reroll_tokens > 0
@@ -113337,6 +113611,222 @@ rl_events.2 = {
 		custom_tooltip = rl_events.1.banish.tt
 		hidden_effect = {
 			set_variable = var_fukko_shinto
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2884
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2884
+				var:rl_event_2 = 2884
+				var:rl_event_3 = 2884
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_mor_central_makhzen
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2885
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2885
+				var:rl_event_2 = 2885
+				var:rl_event_3 = 2885
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_gra_mailed_jinetes
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2886
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2886
+				var:rl_event_2 = 2886
+				var:rl_event_3 = 2886
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_gra_veteran_thagri
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2887
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2887
+				var:rl_event_2 = 2887
+				var:rl_event_3 = 2887
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_gra_veteran_tornadizos
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2888
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2888
+				var:rl_event_2 = 2888
+				var:rl_event_3 = 2888
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_alabarderos
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2889
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2889
+				var:rl_event_2 = 2889
+				var:rl_event_3 = 2889
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_guardias_de_ornato
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2890
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2890
+				var:rl_event_2 = 2890
+				var:rl_event_3 = 2890
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_coronelias
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2891
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2891
+				var:rl_event_2 = 2891
+				var:rl_event_3 = 2891
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_infanteria_de_marina
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2892
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2892
+				var:rl_event_2 = 2892
+				var:rl_event_3 = 2892
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_saqaliba_barracks_advance
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2893
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2893
+				var:rl_event_2 = 2893
+				var:rl_event_3 = 2893
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_a_saqaliba_mutaqaddimun_advance
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2894
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2894
+				var:rl_event_2 = 2894
+				var:rl_event_3 = 2894
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_a_saqaliba_mutaakhkhirun_advance
+			change_variable = { name = rl_reroll_tokens add = -1 }
+			trigger_event_silently = { id = rl_status.2 }
+		}
+	}
+
+	option = {
+		name = rl_events.2.2895
+		trigger = {
+			OR = {
+				var:rl_event_1 = 2895
+				var:rl_event_2 = 2895
+				var:rl_event_3 = 2895
+			}
+			var:rl_reroll_tokens > 0
+		}
+		custom_tooltip = rl_events.1.banish.tt
+		hidden_effect = {
+			set_variable = var_a_saqaliba_nizam_jadid_advance
 			change_variable = { name = rl_reroll_tokens add = -1 }
 			trigger_event_silently = { id = rl_status.2 }
 		}

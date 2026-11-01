@@ -531,13 +531,20 @@ def parse_advances_from_text(text: str, result: ParseResult) -> None:
             result.advances.append(_structure_advance(name, fields, raw_text))
 
 
-def parse_advances_from_directory(directory: str) -> ParseResult:
-    """Recursively scan *directory* and return a ParseResult."""
+def parse_advances_from_directory(directory: str, result: "ParseResult | None" = None,
+                                  dlc: str | None = None) -> ParseResult:
+    """
+    Recursively scan *directory* and return a ParseResult. Pass an existing
+    *result* to append to it. Advances read with *dlc* set are tagged
+    "_dlc" = that DLC's id, so draws can be gated with has_dlc.
+    """
     base = Path(directory)
     if not base.is_dir():
         raise NotADirectoryError(f"Not a directory: {directory}")
 
-    result = ParseResult()
+    if result is None:
+        result = ParseResult()
+    first_new = len(result.advances)
 
     for path in sorted(base.rglob('*')):
         if not path.is_file():
@@ -554,7 +561,28 @@ def parse_advances_from_directory(directory: str) -> ParseResult:
         if after > before:
             print(f"  {path.name}: {after - before} advance(s)")
 
+    for a in result.advances[first_new:]:
+        a["_dlc"] = dlc
     return result
+
+
+def find_dlc_advance_dirs(advances_dir: str) -> list[tuple[str, Path]]:
+    """
+    DLCs ship their own advances under <game>/dlc/<folder>/in_game/common/advances
+    (1.4.6's Across the Pillars was the first). The mod's replace_paths for
+    common/advances removes those too, so they must be generated like the base
+    ones. Returns (dlc id, advances dir) pairs, sorted for a stable order.
+    """
+    import json
+    game_dir = Path(advances_dir).resolve().parents[2]
+    out = []
+    for dlc_dir in sorted((game_dir / "dlc").glob("*")):
+        adv = dlc_dir / "in_game" / "common" / "advances"
+        meta = next(dlc_dir.glob("*.dlc.json"), None)
+        if adv.is_dir() and meta is not None:
+            dlc_id = json.loads(meta.read_text(encoding="utf-8-sig"))["name"]
+            out.append((dlc_id, adv))
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -739,6 +767,12 @@ def main():
 
     print(f"Scanning: {args.directory}")
     result = parse_advances_from_directory(args.directory)
+    # DLC advances are appended after the base ones, so adding a DLC never
+    # renumbers the base advances' option indices.
+    dlc_dirs = find_dlc_advance_dirs(args.directory)
+    for dlc_id, adv_dir in dlc_dirs:
+        print(f"Scanning DLC {dlc_id}: {adv_dir}")
+        parse_advances_from_directory(str(adv_dir), result, dlc=dlc_id)
     print(f"\nTotal advances parsed  : {len(result.advances)}")
     print(f"Traditions pass-through: {len(result.traditions_raw)}")
 
@@ -769,8 +803,16 @@ def main():
     # no option for one with neither modifiers nor unlocks, so drawing it
     # would leave an empty slot. (1.4 added two: suez_canal_advance and
     # panama_canal_advance, whose effect is hardcoded in the engine.)
+    # A DLC advance is only drawn for players who have that DLC: draws ignore
+    # an advance's own potential, and its unlocks / modifiers are DLC content.
+    def _draw_trigger(a: dict) -> str:
+        t = f"NOT = {{ has_variable = var_{a['_name']} }}"
+        if a.get("_dlc"):
+            t += f' has_dlc = "{a["_dlc"]}"'
+        return t
+
     rl_lines = [
-        f"\t\t1 = {{ trigger = {{ NOT = {{ has_variable = var_{a['_name']} }} }}"
+        f"\t\t1 = {{ trigger = {{ {_draw_trigger(a)} }}"
         f" set_variable = {{ name = rl_event_$v$ value = {i} }} }}"
         for i, a in enumerate(result.advances)
         if a["modifiers"] or set(a.keys()) & _UNLOCK_KEYS
@@ -808,7 +850,7 @@ def main():
         effects.append(f"rl_record_take = {{ n = {name} }}")
         effects.append("set_variable = { name = rl_fun_hit value = 1 }")
         grant_lines.append(
-            f"\t\t1 = {{ trigger = {{ NOT = {{ has_variable = var_{name} }} }} "
+            f"\t\t1 = {{ trigger = {{ {_draw_trigger(a)} }} "
             + " ".join(effects) + " }"
         )
     rl_output += (
@@ -851,6 +893,13 @@ def main():
     # the key we later define, so the guard has to exist before the events are
     # written.
     loc = parse_loc_dir(args.loc_dir) if args.loc_dir else {}
+    if args.loc_dir:
+        # DLC loc lives in each DLC's own main_menu/localization/english.
+        for _dlc_id, adv_dir in dlc_dirs:
+            dlc_loc = adv_dir.parents[2] / "main_menu" / "localization" / "english"
+            if dlc_loc.is_dir():
+                for k, v in parse_loc_dir(str(dlc_loc)).items():
+                    loc.setdefault(k, v)
 
     taken = set(loc)
     manual_loc_path = Path("../main_menu/localization/english/rl_loc_l_english.yml")
